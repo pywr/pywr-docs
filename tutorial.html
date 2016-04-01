@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Tutorial &mdash; Pywr 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Pywr 0.1 documentation" href="index.html" />
+    <link rel="next" title="Problem formulation" href="formulation.html" />
+    <link rel="prev" title="Installing Pywr" href="install.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="a-minimal-example">
+<h2>A minimal example<a class="headerlink" href="#a-minimal-example" title="Permalink to this headline">¶</a></h2>
+<p>The simplest example has two nodes: an <code class="xref py py-func docutils literal"><span class="pre">Input()</span></code> which adds flow to the network and an <code class="xref py py-func docutils literal"><span class="pre">Output()</span></code> which removes flow from the network.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pywr.core</span> <span class="kn">import</span> <span class="n">Model</span><span class="p">,</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Output</span>
+
+<span class="c1"># create a model (including an empty network)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">()</span>
+
+<span class="c1"># create two nodes: a supply, and a demand</span>
+<span class="n">supply</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;supply&#39;</span><span class="p">)</span>
+<span class="n">demand</span> <span class="o">=</span> <span class="n">Output</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;demand&#39;</span><span class="p">)</span>
+
+<span class="c1"># create a connection from the supply to the demand</span>
+<span class="n">supply</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">demand</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>While technically valid, this model isn&#8217;t very interesting because we haven&#8217;t set any constraints or costs on flows in the network.</p>
+<p>Let&#8217;s add some flow constraints to the problem:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># set maximum flows</span>
+<span class="n">supply</span><span class="o">.</span><span class="n">max_flow</span> <span class="o">=</span> <span class="mf">10.0</span>
+<span class="n">demand</span><span class="o">.</span><span class="n">max_flow</span> <span class="o">=</span> <span class="mf">6.0</span>
+</pre></div>
+</div>
+<p>The default minimum flow for a <code class="xref py py-func docutils literal"><span class="pre">BaseNode()</span></code> is zero, so we don&#8217;t need to set it explicitly.</p>
+<p>The model still doesn&#8217;t do anything as it&#8217;s missing costs for flow through the nodes. If the cost of supply is less than the benefit received from satisfying demand, flow in the network will occur (within the models constraints).</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># set cost (+ve) or benefit (-ve)</span>
+<span class="n">supply</span><span class="o">.</span><span class="n">cost</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">demand</span><span class="o">.</span><span class="n">cost</span> <span class="o">=</span> <span class="o">-</span><span class="mf">100.0</span>
+</pre></div>
+</div>
+<p>Next we need to tell the model how long to run for. As an example, we&#8217;ll use a daily timestep for all of 2015.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">pywr.core</span> <span class="kn">import</span> <span class="n">Timestepper</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">timestepper</span> <span class="o">=</span> <span class="n">Timestepper</span><span class="p">(</span>
+    <span class="n">pandas</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2015-01-01&#39;</span><span class="p">),</span>  <span class="c1"># first day</span>
+    <span class="n">pandas</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2015-12-31&#39;</span><span class="p">),</span>  <span class="c1"># last day</span>
+    <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># interval</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>In order to capture the output from the model we need to use a recorder, such as the <code class="xref py py-func docutils literal"><span class="pre">pywr.core.NumpyArrayRecorder()</span></code>. The recorder takes one argument: the number of timesteps in the model, in this case 365 (the number of days in 2015). For convenience we use the <code class="xref py py-func docutils literal"><span class="pre">len()</span></code> method to calculate this.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pywr._core</span> <span class="kn">import</span> <span class="n">NumpyArrayRecorder</span>
+
+<span class="n">supply</span><span class="o">.</span><span class="n">recorder</span> <span class="o">=</span> <span class="n">NumpyArrayRecorder</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">timestepper</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Finally we are ready to run our model:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># lets get this party started!</span>
+<span class="n">model</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>We can check the result for the first timestep by accessing the recorder&#8217;s data property:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">supply</span><span class="o">.</span><span class="n">recorder</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># prints 6.0</span>
+</pre></div>
+</div>
+<p>The result of this example model is trivial: the supply exceeds the demand, so the maximum flow at the demand is the limiting factor.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Tutorial</a><ul>
+<li><a class="reference internal" href="#a-minimal-example">A minimal example</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="install.html" title="previous chapter">Installing Pywr</a></li>
+      <li>Next: <a href="formulation.html" title="next chapter">Problem formulation</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tutorial.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Joshua Arnott.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="_sources/tutorial.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
