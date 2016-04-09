@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pywr.domains package &mdash; Pywr 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Pywr 0.1 documentation" href="../index.html" />
+    <link rel="up" title="pywr package" href="pywr.html" />
+    <link rel="next" title="pywr.optimisation package" href="pywr.optimisation.html" />
+    <link rel="prev" title="pywr package" href="pywr.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pywr-domains-package">
+<h1>pywr.domains package<a class="headerlink" href="#pywr-domains-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pywr.domains.river">
+<span id="pywr-domains-river-module"></span><h2>pywr.domains.river module<a class="headerlink" href="#module-pywr.domains.river" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pywr.domains.river.Catchment">
+<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">Catchment</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Catchment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.RiverDomainMixin" title="pywr.domains.river.RiverDomainMixin"><code class="xref py py-class docutils literal"><span class="pre">pywr.domains.river.RiverDomainMixin</span></code></a>, <a class="reference internal" href="pywr.html#pywr.core.Input" title="pywr.core.Input"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.Input</span></code></a></p>
+<p>A hydrological catchment, supplying water to the river network</p>
+<dl class="method">
+<dt id="pywr.domains.river.Catchment.check">
+<code class="descname">check</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Catchment.check" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pywr.domains.river.Catchment.get_flow">
+<code class="descname">get_flow</code><span class="sig-paren">(</span><em>timestep</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Catchment.get_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>flow is ensured that both min_flow and max_flow are the same.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.domains.river.DemandCentre">
+<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">DemandCentre</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.DemandCentre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.RiverDomainMixin" title="pywr.domains.river.RiverDomainMixin"><code class="xref py py-class docutils literal"><span class="pre">pywr.domains.river.RiverDomainMixin</span></code></a>, <a class="reference internal" href="pywr.html#pywr.core.Output" title="pywr.core.Output"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.Output</span></code></a></p>
+<p>A demand centre</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.domains.river.DemandDischarge">
+<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">DemandDischarge</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.DemandDischarge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.River" title="pywr.domains.river.River"><code class="xref py py-class docutils literal"><span class="pre">pywr.domains.river.River</span></code></a></p>
+<p>River discharge for demands that aren&#8217;t entirely consumptive</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.domains.river.Discharge">
+<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">Discharge</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Discharge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.Catchment" title="pywr.domains.river.Catchment"><code class="xref py py-class docutils literal"><span class="pre">pywr.domains.river.Catchment</span></code></a></p>
+<p>An inline discharge to the river network</p>
+<p>This node is similar to a catchment, but sits inline to the river network,
+rather than at the head of the river.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.domains.river.Reservoir">
+<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">Reservoir</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Reservoir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.RiverDomainMixin" title="pywr.domains.river.RiverDomainMixin"><code class="xref py py-class docutils literal"><span class="pre">pywr.domains.river.RiverDomainMixin</span></code></a>, <a class="reference internal" href="pywr.html#pywr.core.Storage" title="pywr.core.Storage"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.Storage</span></code></a></p>
+<p>A reservoir node with control curve.</p>
+<p>The Reservoir is a subclass of Storage with additional functionality to provide a
+simple control curve. The Reservoir has above_curve_cost when it is above its curve
+and the user defined cost when it is below. Typically the costs are negative
+to represent a benefit of filling the reservoir when it is below its curve.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.domains.river.River">
+<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">River</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.River" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.RiverDomainMixin" title="pywr.domains.river.RiverDomainMixin"><code class="xref py py-class docutils literal"><span class="pre">pywr.domains.river.RiverDomainMixin</span></code></a>, <a class="reference internal" href="pywr.html#pywr.core.Link" title="pywr.core.Link"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.Link</span></code></a></p>
+<p>A node in the river network</p>
+<p>This node may have multiple upstream nodes (i.e. a confluence) but only
+one downstream node.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.domains.river.RiverAbstraction">
+<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">RiverAbstraction</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverAbstraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.RiverDomainMixin" title="pywr.domains.river.RiverDomainMixin"><code class="xref py py-class docutils literal"><span class="pre">pywr.domains.river.RiverDomainMixin</span></code></a>, <a class="reference internal" href="pywr.html#pywr.core.Output" title="pywr.core.Output"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.Output</span></code></a></p>
+<p>An abstraction from the river network</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.domains.river.RiverDomainMixin">
+<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">RiverDomainMixin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverDomainMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.domains.river.RiverGauge">
+<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">RiverGauge</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverGauge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.RiverDomainMixin" title="pywr.domains.river.RiverDomainMixin"><code class="xref py py-class docutils literal"><span class="pre">pywr.domains.river.RiverDomainMixin</span></code></a>, <a class="reference internal" href="pywr.html#pywr.core.PiecewiseLink" title="pywr.core.PiecewiseLink"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.PiecewiseLink</span></code></a></p>
+<p>A river gauging station, with a minimum residual flow (MRF)</p>
+<dl class="attribute">
+<dt id="pywr.domains.river.RiverGauge.mrf">
+<code class="descname">mrf</code><a class="headerlink" href="#pywr.domains.river.RiverGauge.mrf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.domains.river.RiverSplit">
+<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">RiverSplit</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverSplit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.River" title="pywr.domains.river.River"><code class="xref py py-class docutils literal"><span class="pre">pywr.domains.river.River</span></code></a></p>
+<p>A split in the river network</p>
+<dl class="method">
+<dt id="pywr.domains.river.RiverSplit.iter_slots">
+<code class="descname">iter_slots</code><span class="sig-paren">(</span><em>slot_name=None</em>, <em>is_connector=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverSplit.iter_slots" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.domains.river.Terminator">
+<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">Terminator</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Terminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.RiverDomainMixin" title="pywr.domains.river.RiverDomainMixin"><code class="xref py py-class docutils literal"><span class="pre">pywr.domains.river.RiverDomainMixin</span></code></a>, <a class="reference internal" href="pywr.html#pywr.core.Output" title="pywr.core.Output"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.Output</span></code></a></p>
+<p>A sink in the river network</p>
+<p>This node is required to close the network and is used by some of the
+routing algorithms. Every river must end in a Terminator.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pywr.domains">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pywr.domains" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Pywr</a></h1>
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=pywr&repo=pywr&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installing Pywr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../formulation.html">Problem formulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">API Reference</a><ul>
+  <li><a href="pywr.html">pywr package</a><ul>
+      <li>Previous: <a href="pywr.html" title="previous chapter">pywr package</a></li>
+      <li>Next: <a href="pywr.optimisation.html" title="next chapter">pywr.optimisation package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Joshua Arnott.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/api/pywr.domains.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

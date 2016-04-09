@@ -59,7 +59,7 @@ In order to capture the output from the model we need to use a recorder, such as
 
     from pywr.recorders import NumpyArrayNodeRecorder
 
-    recorder = NumpyArrayNodeRecorder(model, node)
+    recorder = NumpyArrayNodeRecorder(model, supply)
 
 Finally we are ready to run our model:
 
