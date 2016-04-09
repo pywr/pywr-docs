@@ -10,7 +10,7 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   install.rst
+   installation.rst
    tutorial.rst
    formulation.rst
    license.rst
