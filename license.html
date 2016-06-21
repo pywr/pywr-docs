@@ -25,14 +25,15 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Pywr 0.1 documentation" href="index.html" />
-    <link rel="next" title="API Reference" href="api/modules.html" />
-    <link rel="prev" title="Problem formulation" href="formulation.html" />
+    <link rel="prev" title="pywr.solvers package" href="api/pywr.solvers.html" />
    
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body role="document">  
+  <body role="document">
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -44,7 +45,7 @@
 <div class="section" id="software">
 <h2>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
 <p>Pywr is licensed under the <a class="reference external" href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License, Version 3.0 or later</a>.</p>
-<p>Copyright (C) 2015 Joshua Arnott</p>
+<p>Copyright (C) 2015-16 Joshua Arnott, James E. Tomlinson, Atkins, University of Manchester</p>
 <p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 1, or (at your option) any later version.</p>
 <p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301 USA.</p>
@@ -52,7 +53,7 @@
 <div class="section" id="documentation">
 <h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
 <p>This documentation is licensed under the <a class="reference external" href="http://www.gnu.org/licenses/fdl-1.3.en.html">GNU Free Documentation License, Version 1.3 or later</a>.</p>
-<p>Copyright (C) 2015 Joshua Arnott</p>
+<p>Copyright (C) 2015-16 Joshua Arnott, James E. Tomlinson, Atkins, University of Manchester</p>
 <p>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;.</p>
 </div>
 </div>
@@ -69,10 +70,12 @@
 
 
 
+
 <p>
-<iframe src="https://ghbtns.com/github-btn.html?user=pywr&repo=pywr&type=watch&count=true&size=large"
+<iframe src="https://ghbtns.com/github-btn.html?user=pywr&repo=pywr&type=watch&count=true&size=large&v=2"
   allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
 </p>
+
 
 
 
@@ -82,16 +85,16 @@
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installing Pywr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="formulation.html">Problem formulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="json.html">JSON model format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/pywr.html">Python API (autodoc)</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api/modules.html">API Reference</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="formulation.html" title="previous chapter">Problem formulation</a></li>
-      <li>Next: <a href="api/modules.html" title="next chapter">API Reference</a></li>
+      <li>Previous: <a href="api/pywr.solvers.html" title="previous chapter">pywr.solvers package</a></li>
   </ul></li>
 </ul>
 </div>
@@ -113,8 +116,8 @@
       &copy;2015, Joshua Arnott.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
       
       |
       <a href="_sources/license.txt"

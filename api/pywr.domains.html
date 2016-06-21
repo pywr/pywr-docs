@@ -25,15 +25,14 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Pywr 0.1 documentation" href="../index.html" />
-    <link rel="up" title="pywr package" href="pywr.html" />
-    <link rel="next" title="pywr.optimisation package" href="pywr.optimisation.html" />
-    <link rel="prev" title="pywr package" href="pywr.html" />
    
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body role="document">  
+  <body role="document">
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -62,6 +61,11 @@
 <code class="descname">get_flow</code><span class="sig-paren">(</span><em>timestep</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Catchment.get_flow" title="Permalink to this definition">¶</a></dt>
 <dd><p>flow is ensured that both min_flow and max_flow are the same.</p>
 </dd></dl>
+
+<dl class="classmethod">
+<dt id="pywr.domains.river.Catchment.load">
+<em class="property">classmethod </em><code class="descname">load</code><span class="sig-paren">(</span><em>data</em>, <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Catchment.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -126,9 +130,19 @@ one downstream node.</p>
 <em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">RiverGauge</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverGauge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.RiverDomainMixin" title="pywr.domains.river.RiverDomainMixin"><code class="xref py py-class docutils literal"><span class="pre">pywr.domains.river.RiverDomainMixin</span></code></a>, <a class="reference internal" href="pywr.html#pywr.core.PiecewiseLink" title="pywr.core.PiecewiseLink"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.PiecewiseLink</span></code></a></p>
 <p>A river gauging station, with a minimum residual flow (MRF)</p>
+<dl class="classmethod">
+<dt id="pywr.domains.river.RiverGauge.load">
+<em class="property">classmethod </em><code class="descname">load</code><span class="sig-paren">(</span><em>data</em>, <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverGauge.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="attribute">
 <dt id="pywr.domains.river.RiverGauge.mrf">
 <code class="descname">mrf</code><a class="headerlink" href="#pywr.domains.river.RiverGauge.mrf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pywr.domains.river.RiverGauge.mrf_cost">
+<code class="descname">mrf_cost</code><a class="headerlink" href="#pywr.domains.river.RiverGauge.mrf_cost" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -172,33 +186,28 @@ routing algorithms. Every river must end in a Terminator.</p>
 
 
 
+
 <p>
-<iframe src="https://ghbtns.com/github-btn.html?user=pywr&repo=pywr&type=watch&count=true&size=large"
+<iframe src="https://ghbtns.com/github-btn.html?user=pywr&repo=pywr&type=watch&count=true&size=large&v=2"
   allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
 </p>
 
 
 
 
+
 <h3>Navigation</h3>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installing Pywr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../formulation.html">Problem formulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Reference</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-  <li><a href="modules.html">API Reference</a><ul>
-  <li><a href="pywr.html">pywr package</a><ul>
-      <li>Previous: <a href="pywr.html" title="previous chapter">pywr package</a></li>
-      <li>Next: <a href="pywr.optimisation.html" title="next chapter">pywr.optimisation package</a></li>
-  </ul></li>
-  </ul></li>
   </ul></li>
 </ul>
 </div>
@@ -220,8 +229,8 @@ routing algorithms. Every river must end in a Terminator.</p>
       &copy;2015, Joshua Arnott.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
       
       |
       <a href="../_sources/api/pywr.domains.txt"

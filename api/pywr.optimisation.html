@@ -29,11 +29,13 @@
     <link rel="next" title="pywr.parameters package" href="pywr.parameters.html" />
     <link rel="prev" title="pywr.domains package" href="pywr.domains.html" />
    
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body role="document">  
+  <body role="document">
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -45,37 +47,8 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-pywr.optimisation.moea">
-<span id="pywr-optimisation-moea-module"></span><h2>pywr.optimisation.moea module<a class="headerlink" href="#module-pywr.optimisation.moea" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="pywr.optimisation.moea.InspyredOptimisationModel">
-<em class="property">class </em><code class="descclassname">pywr.optimisation.moea.</code><code class="descname">InspyredOptimisationModel</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.moea.InspyredOptimisationModel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pywr.html#pywr.core.Model" title="pywr.core.Model"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.Model</span></code></a></p>
-<p>A pywr.core.Model subclass to enable optimisation using inspyred.</p>
-<p>This classes overloads Model.setup() to create cached variable and objective maps to use with inspyred.</p>
-<p>A generator, bounder and evaluator method are provided to use with the inspyred algorithms.</p>
-<dl class="method">
-<dt id="pywr.optimisation.moea.InspyredOptimisationModel.bounder">
-<code class="descname">bounder</code><span class="sig-paren">(</span><em>candidate</em>, <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.moea.InspyredOptimisationModel.bounder" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.optimisation.moea.InspyredOptimisationModel.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>candidates</em>, <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.moea.InspyredOptimisationModel.evaluator" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.optimisation.moea.InspyredOptimisationModel.generator">
-<code class="descname">generator</code><span class="sig-paren">(</span><em>random</em>, <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.moea.InspyredOptimisationModel.generator" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.optimisation.moea.InspyredOptimisationModel.setup">
-<code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.moea.InspyredOptimisationModel.setup" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<div class="section" id="pywr-optimisation-moea-module">
+<h2>pywr.optimisation.moea module<a class="headerlink" href="#pywr-optimisation-moea-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-pywr.optimisation">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pywr.optimisation" title="Permalink to this headline">¶</a></h2>
@@ -94,10 +67,12 @@
 
 
 
+
 <p>
-<iframe src="https://ghbtns.com/github-btn.html?user=pywr&repo=pywr&type=watch&count=true&size=large"
+<iframe src="https://ghbtns.com/github-btn.html?user=pywr&repo=pywr&type=watch&count=true&size=large&v=2"
   allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
 </p>
+
 
 
 
@@ -107,8 +82,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installing Pywr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../formulation.html">Problem formulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../json.html">JSON model format</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Reference</a></li>
 </ul>
 
 <div class="relations">
@@ -142,8 +118,8 @@
       &copy;2015, Joshua Arnott.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
       
       |
       <a href="../_sources/api/pywr.optimisation.txt"
