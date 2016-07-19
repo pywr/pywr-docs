@@ -25,6 +25,9 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Pywr 0.1 documentation" href="../index.html" />
+    <link rel="up" title="pywr package" href="pywr.html" />
+    <link rel="next" title="pywr.optimisation package" href="pywr.optimisation.html" />
+    <link rel="prev" title="pywr package" href="pywr.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -150,13 +153,55 @@ one downstream node.</p>
 <dl class="class">
 <dt id="pywr.domains.river.RiverSplit">
 <em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">RiverSplit</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverSplit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.River" title="pywr.domains.river.River"><code class="xref py py-class docutils literal"><span class="pre">pywr.domains.river.River</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pywr.html#pywr.core.MultiSplitLink" title="pywr.core.MultiSplitLink"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.MultiSplitLink</span></code></a></p>
 <p>A split in the river network</p>
-<dl class="method">
-<dt id="pywr.domains.river.RiverSplit.iter_slots">
-<code class="descname">iter_slots</code><span class="sig-paren">(</span><em>slot_name=None</em>, <em>is_connector=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverSplit.iter_slots" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="docutils">
+<dt>RiverSplit is a specialised version of <cite>MultiSplitLink</cite> with a more convenient init method.</dt>
+<dd>It is intended for a simple case of where fixed ratio of flow is required to be distributed
+to multiple downstream routes.</dd>
+</dl>
+<dl class="docutils">
+<dt>factors</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">iterable of floats</span><dd>The factors to force on the additional splits. Number of extra_slot is assumed to be one less
+than the length of factors (as per <cite>MultiSplitLink</cite> documentation).</dd>
+<dt>slot_names</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">iterable</span><dd><dl class="first last docutils">
+<dt>The identifiers to refer to the slots when connect from this Node. Length must be one more than</dt>
+<dd>the number of extra slots required.</dd>
+</dl>
+</dd>
+</dl>
+<p><cite>MultiSplitLink</cite></p>
+</dd></dl>
 
+<dl class="class">
+<dt id="pywr.domains.river.RiverSplitWithGauge">
+<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">RiverSplitWithGauge</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverSplitWithGauge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.RiverSplit" title="pywr.domains.river.RiverSplit"><code class="xref py py-class docutils literal"><span class="pre">pywr.domains.river.RiverSplit</span></code></a></p>
+<p>A split in the river network with a minimum residual flow</p>
+<dl class="docutils">
+<dt>As per <cite>RiverSplit</cite> but by default creates another route in the underlying object</dt>
+<dd>to model a MRF. This route is such that the MRF is not part of forced ratios. The
+intent of this object is to model the case where a proportion of flow can be
+abstracted above the MRF (e.g. 90% of flow above MRF).</dd>
+</dl>
+<dl class="docutils">
+<dt>mrf</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">float</span><dd>The minimum residual flow (MRF) at the gauge</dd>
+<dt>mrf_cost</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">float</span><dd>The cost of the route via the MRF</dd>
+<dt>cost</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">float</span><dd>The cost of the other (unconstrained) route</dd>
+<dt>factors</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">iterable of floats</span><dd>The factors to force on the additional splits. Number of extra_slot is assumed to be one less
+than the length of factors (as per <cite>MultiSplitLink</cite> documentation).</dd>
+<dt>slot_names</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">iterable</span><dd><dl class="first last docutils">
+<dt>The identifiers to refer to the slots when connect from this Node. Length must be one more than</dt>
+<dd>the number of extra slots required.</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="class">
@@ -197,10 +242,16 @@ routing algorithms. Every river must end in a Terminator.</p>
 
 
 <h3>Navigation</h3>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installing Pywr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../formulation.html">Problem formulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../json.html">JSON model format</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pywr.html">pywr package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cookbook/demand_saving.html">Demand saving</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
 </ul>
 
@@ -208,6 +259,12 @@ routing algorithms. Every river must end in a Terminator.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">API Reference</a><ul>
+  <li><a href="pywr.html">pywr package</a><ul>
+      <li>Previous: <a href="pywr.html" title="previous chapter">pywr package</a></li>
+      <li>Next: <a href="pywr.optimisation.html" title="next chapter">pywr.optimisation package</a></li>
+  </ul></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>

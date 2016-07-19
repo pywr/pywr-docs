@@ -70,8 +70,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pywr.solvers.html">pywr.solvers package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pywr.solvers.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pywr.solvers.html#pywr-solvers-cython-glpk-module">pywr.solvers.cython_glpk module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pywr.solvers.html#pywr-solvers-cython-lpsolve-module">pywr.solvers.cython_lpsolve module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pywr.solvers.html#module-pywr.solvers.cython_glpk">pywr.solvers.cython_glpk module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pywr.solvers.html#module-pywr.solvers.cython_lpsolve">pywr.solvers.cython_lpsolve module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pywr.solvers.html#module-pywr.solvers">Module contents</a></li>
 </ul>
 </li>
@@ -83,6 +83,36 @@
 </div>
 <div class="section" id="module-pywr.core">
 <span id="pywr-core-module"></span><h2>pywr.core module<a class="headerlink" href="#module-pywr.core" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pywr.core.AggregatedNode">
+<em class="property">class </em><code class="descclassname">pywr.core.</code><code class="descname">AggregatedNode</code><span class="sig-paren">(</span><em>model</em>, <em>name</em>, <em>nodes</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.AggregatedNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.core.Drawable" title="pywr.core.Drawable"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.Drawable</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">pywr._core.AggregatedNode</span></code></p>
+<p>An aggregated sum of other <cite>Node</cite> nodes</p>
+<p>This object should behave like <cite>Node</cite> by returning current <cite>flow</cite>.
+However this object can not be connected to others within the network.</p>
+<p>model - <cite>Model</cite> instance
+name - str
+nodes - list or iterable of <cite>Node</cite> objects</p>
+<blockquote>
+<div>The <cite>Node</cite> objects which to return the sum total of</div></blockquote>
+<p>This node can not be connected to other nodes in the network.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.core.AggregatedStorage">
+<em class="property">class </em><code class="descclassname">pywr.core.</code><code class="descname">AggregatedStorage</code><span class="sig-paren">(</span><em>model</em>, <em>name</em>, <em>storage_nodes</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.AggregatedStorage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.core.Drawable" title="pywr.core.Drawable"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.Drawable</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">pywr._core.AggregatedStorage</span></code></p>
+<p>An aggregated sum of other <cite>Storage</cite> nodes</p>
+<p>This object should behave like <cite>Storage</cite> by returning current <cite>flow</cite>, <cite>volume</cite> and <cite>current_pc</cite>.
+However this object can not be connected to others within the network.</p>
+<p>model - <cite>Model</cite> instance
+name - str
+storage_nodes - list or iterable of <cite>Storage</cite> objects</p>
+<blockquote>
+<div>The <cite>Storage</cite> objects which to return the sum total of</div></blockquote>
+<p>This node can not be connected to other nodes in the network.</p>
+</dd></dl>
+
 <dl class="class">
 <dt id="pywr.core.Blender">
 <em class="property">class </em><code class="descclassname">pywr.core.</code><code class="descname">Blender</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.Blender" title="Permalink to this definition">¶</a></dt>
@@ -269,17 +299,21 @@ destination with the same domain has the source.</p>
 <dd><p>Load an existing model</p>
 <dl class="docutils">
 <dt>data</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">file-like, or dict</span><dd>A file-like object to read JSON data from, or a parsed dict</dd>
+ <span class="classifier-delimiter">:</span> <span class="classifier">file-like, string, or dict</span><dd>A file-like object to read JSON data from, a filename to read,
+or a parsed dict</dd>
 <dt>model</dt>
  <span class="classifier-delimiter">:</span> <span class="classifier">Model (optional)</span><dd>An existing model to append to</dd>
 <dt>path</dt>
  <span class="classifier-delimiter">:</span> <span class="classifier">str (optional)</span><dd>Path to the model document for relative pathnames</dd>
+<dt>solver</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">str (optional)</span><dd>Name of the solver to use for the model. This overrides the solver
+section of the model document.</dd>
 </dl>
 </dd></dl>
 
 <dl class="classmethod">
 <dt id="pywr.core.Model.loads">
-<em class="property">classmethod </em><code class="descname">loads</code><span class="sig-paren">(</span><em>data</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.Model.loads" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">loads</code><span class="sig-paren">(</span><em>data</em>, <em>model=None</em>, <em>path=None</em>, <em>solver=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.Model.loads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read JSON data from a string and parse it as a model document</p>
 </dd></dl>
 
@@ -336,12 +370,96 @@ last run.</p>
 <dd><p>Step the model forward by one day</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="pywr.core.Model.to_dataframe">
+<code class="descname">to_dataframe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.Model.to_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a DataFrame from any Recorders with a <cite>to_dataframe</cite> attribute</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="exception">
 <dt id="pywr.core.ModelStructureError">
 <em class="property">exception </em><code class="descclassname">pywr.core.</code><code class="descname">ModelStructureError</code><a class="headerlink" href="#pywr.core.ModelStructureError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.core.MultiSplitLink">
+<em class="property">class </em><code class="descclassname">pywr.core.</code><code class="descname">MultiSplitLink</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.MultiSplitLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.core.PiecewiseLink" title="pywr.core.PiecewiseLink"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.PiecewiseLink</span></code></a></p>
+<p>An extension of PiecewiseLink that includes additional additional slots to connect from.</p>
+<p>Conceptually this node looks like the following internally,</p>
+<blockquote>
+<div><p>/ &#8211;&gt;&#8211; X0 &#8211;&gt;&#8211;     A &#8211;&gt;&#8211; Xo &#8211;&gt;&#8211; X1 &#8211;&gt;&#8211; Xi &#8211;&gt;&#8211; C
+&#8211;&gt;&#8211; X2 &#8211;&gt;&#8211; /</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Bo &#8211;&gt;&#8211; Bi &#8211;&gt; D</p>
+</div></blockquote>
+</div></blockquote>
+<dl class="docutils">
+<dt>An additional sublink in the PiecewiseLink (i.e. X2 above) and nodes (i.e. Bo and Bi) in this</dt>
+<dd>class are added for each extra slot.</dd>
+<dt>Finally a mechanism is provided to (optionally) fix the ratio between the last non-split</dt>
+<dd>sublink (i.e. X1) and each of extra sublinks (i.e. X2). This mechanism uses <cite>AggregatedNode</cite>
+internally.</dd>
+</dl>
+<dl class="docutils">
+<dt>max_flow</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">iterable</span><dd>A monotonic increasing list of maximum flows for the piece wise function</dd>
+<dt>cost</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">iterable</span><dd>A list of costs corresponding to the max_flow steps</dd>
+<dt>extra_slots</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">int, optional (default 1)</span><dd>Number of additional slots (and sublinks) to provide. Must be greater than zero.</dd>
+<dt>slot_names</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">iterable, optional (default range of ints)</span><dd>The names to by which to refer to the slots during connection to other nodes. Length
+must be one more than the number of extra_slots. The first item refers to the PiecewiseLink
+connection with the following items for each extra slot.</dd>
+<dt>factors</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">iterable, optional (default None)</span><dd>If given the length must be equal one more than the number of extra_slots. Each item is the proportion
+of total flow to pass through the additional sublinks. If no factor is required for a particular
+sublink then use <cite>None</cite> for its items. Factors are normalised prior to use in the solver.</dd>
+</dl>
+<dl class="docutils">
+<dt>Users must be careful when using the factormechanism. Factors use the last non-split</dt>
+<dd>sublink (i.e. X1 but not X0). If this link is constrained with a maximum or minimum flow,
+or if it there is another unconstrained link (i.e. if X0 is unconstrained) then ratios
+across this whole node may not be enforced as expected.</dd>
+</dl>
+<dl class="method">
+<dt id="pywr.core.MultiSplitLink.iter_slots">
+<code class="descname">iter_slots</code><span class="sig-paren">(</span><em>slot_name=None</em>, <em>is_connector=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.MultiSplitLink.iter_slots" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.core.NamedIterator">
+<em class="property">class </em><code class="descclassname">pywr.core.</code><code class="descname">NamedIterator</code><a class="headerlink" href="#pywr.core.NamedIterator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pywr.core.NamedIterator.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.NamedIterator.append" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pywr.core.NamedIterator.items">
+<code class="descname">items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.NamedIterator.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pywr.core.NamedIterator.keys">
+<code class="descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.NamedIterator.keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pywr.core.NamedIterator.values">
+<code class="descname">values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.NamedIterator.values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -416,7 +534,7 @@ avoid using this class, and use Model.graph.nodes() directly.</p>
 <dt id="pywr.core.PiecewiseLink">
 <em class="property">class </em><code class="descclassname">pywr.core.</code><code class="descname">PiecewiseLink</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.PiecewiseLink" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.core.Node" title="pywr.core.Node"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.Node</span></code></a></p>
-<p>An extension of Nodes that represents a non-linear Link with a piece wise cost function.</p>
+<p>An extension of Node that represents a non-linear Link with a piece wise cost function.</p>
 <p>This object is intended to model situations where there is a benefit of supplying certain flow rates
 but beyond a fixed limit there is a change in (or zero) cost.</p>
 <dl class="docutils">
@@ -435,6 +553,12 @@ domain in the middle. Instead several new routes are made for each of
 the sublinks and connections to the Output/Input node. The reason for this
 breaking of the route is to avoid an geometric increase in the number
 of routes when multiple PiecewiseLinks are present in the same route.</p>
+<dl class="docutils">
+<dt>max_flow</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">iterable</span><dd>A monotonic increasing list of maximum flows for the piece wise function</dd>
+<dt>cost</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">iterable</span><dd>A list of costs corresponding to the max_flow steps</dd>
+</dl>
 <dl class="method">
 <dt id="pywr.core.PiecewiseLink.after">
 <code class="descname">after</code><span class="sig-paren">(</span><em>timestep</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.PiecewiseLink.after" title="Permalink to this definition">¶</a></dt>
@@ -449,30 +573,8 @@ of routes when multiple PiecewiseLinks are present in the same route.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="pywr.core.RecorderIterator">
-<em class="property">class </em><code class="descclassname">pywr.core.</code><code class="descname">RecorderIterator</code><a class="headerlink" href="#pywr.core.RecorderIterator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>Iterator for Recorder objects in a model that also supports indexing by name</p>
-<dl class="method">
-<dt id="pywr.core.RecorderIterator.items">
-<code class="descname">items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.RecorderIterator.items" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.core.RecorderIterator.keys">
-<code class="descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.RecorderIterator.keys" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.core.RecorderIterator.values">
-<code class="descname">values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.RecorderIterator.values" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="pywr.core.Scenario">
-<em class="property">class </em><code class="descclassname">pywr.core.</code><code class="descname">Scenario</code><span class="sig-paren">(</span><em>model</em>, <em>name</em>, <em>size=1</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.Scenario" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.core.</code><code class="descname">Scenario</code><a class="headerlink" href="#pywr.core.Scenario" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pywr._core.Scenario</span></code></p>
 </dd></dl>
 
@@ -524,13 +626,20 @@ sub-nodes record flow as normal.</p>
 
 <dl class="class">
 <dt id="pywr.core.Timestepper">
-<em class="property">class </em><code class="descclassname">pywr.core.</code><code class="descname">Timestepper</code><span class="sig-paren">(</span><em>start=Timestamp('2015-01-01 00:00:00')</em>, <em>end=Timestamp('2015-12-31 00:00:00')</em>, <em>delta=datetime.timedelta(1)</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.Timestepper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.core.</code><code class="descname">Timestepper</code><span class="sig-paren">(</span><em>start='2015-01-01'</em>, <em>end='2015-12-31'</em>, <em>delta=1</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.core.Timestepper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <dl class="attribute">
 <dt id="pywr.core.Timestepper.current">
 <code class="descname">current</code><a class="headerlink" href="#pywr.core.Timestepper.current" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the current Timestep.</p>
 <p>If iteration has not begun this will return the starting Timestep.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pywr.core.Timestepper.datetime_index">
+<code class="descname">datetime_index</code><a class="headerlink" href="#pywr.core.Timestepper.datetime_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a <cite>pandas.DatetimeIndex</cite> using the start, end and delta of this object</p>
+<p>This is useful for creating <cite>pandas.DataFrame</cite> objects from Model results</p>
 </dd></dl>
 
 <dl class="method">
@@ -681,11 +790,6 @@ is useful for analysis of Node statistics across multiple scenarios.</p>
 
 </dd></dl>
 
-<dl class="function">
-<dt id="pywr.recorders.load_recorder">
-<code class="descclassname">pywr.recorders.</code><code class="descname">load_recorder</code><span class="sig-paren">(</span><em>model</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.load_recorder" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </div>
 <div class="section" id="module-contents">
 <h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
@@ -720,7 +824,11 @@ is useful for analysis of Node statistics across multiple scenarios.</p>
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../formulation.html">Problem formulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../json.html">JSON model format</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pywr package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cookbook/demand_saving.html">Demand saving</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
 </ul>
 

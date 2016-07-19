@@ -25,6 +25,9 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Pywr 0.1 documentation" href="../index.html" />
+    <link rel="up" title="pywr package" href="pywr.html" />
+    <link rel="next" title="pywr.solvers package" href="pywr.solvers.html" />
+    <link rel="prev" title="pywr.optimisation package" href="pywr.optimisation.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -48,31 +51,150 @@
 <span id="pywr-parameters-control-curves-module"></span><h2>pywr.parameters.control_curves module<a class="headerlink" href="#module-pywr.parameters.control_curves" title="Permalink to this headline">¶</a></h2>
 <p>This module contains a set of pywr._core.Parameter subclasses for defining control curve based parameters.</p>
 <dl class="class">
-<dt id="pywr.parameters.control_curves.ControlCurvePiecewiseParameter">
-<em class="property">class </em><code class="descclassname">pywr.parameters.control_curves.</code><code class="descname">ControlCurvePiecewiseParameter</code><span class="sig-paren">(</span><em>control_curve</em>, <em>above_curve_value</em>, <em>below_curve_value</em>, <em>storage_node=None</em>, <em>above_curve_upper_bounds=None</em>, <em>above_curve_lower_bounds=None</em>, <em>below_curve_upper_bounds=None</em>, <em>below_curve_lower_bounds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.ControlCurvePiecewiseParameter" title="Permalink to this definition">¶</a></dt>
+<dt id="pywr.parameters.control_curves.AbstractProfileControlCurveParameter">
+<em class="property">class </em><code class="descclassname">pywr.parameters.control_curves.</code><code class="descname">AbstractProfileControlCurveParameter</code><span class="sig-paren">(</span><em>storage_node</em>, <em>control_curves</em>, <em>values</em>, <em>profile=None</em>, <em>scale=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.AbstractProfileControlCurveParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pywr.parameters._control_curves.BaseControlCurveParameter</span></code></p>
-<p>A control curve Parameter that returns one of two values depending on whether the current
-volume is above or below the control curve.</p>
-<dl class="method">
-<dt id="pywr.parameters.control_curves.ControlCurvePiecewiseParameter.lower_bounds">
-<code class="descname">lower_bounds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.ControlCurvePiecewiseParameter.lower_bounds" title="Permalink to this definition">¶</a></dt>
+<dl class="classmethod">
+<dt id="pywr.parameters.control_curves.AbstractProfileControlCurveParameter.load">
+<em class="property">classmethod </em><code class="descname">load</code><span class="sig-paren">(</span><em>model</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.AbstractProfileControlCurveParameter.load" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pywr.parameters.control_curves.ControlCurvePiecewiseParameter.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>values</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.ControlCurvePiecewiseParameter.update" title="Permalink to this definition">¶</a></dt>
+<dt id="pywr.parameters.control_curves.AbstractProfileControlCurveParameter.value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>ts</em>, <em>scenario_index</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.AbstractProfileControlCurveParameter.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.parameters.control_curves.ControlCurveParameter">
+<em class="property">class </em><code class="descclassname">pywr.parameters.control_curves.</code><code class="descname">ControlCurveParameter</code><span class="sig-paren">(</span><em>storage_node</em>, <em>control_curves</em>, <em>values=None</em>, <em>parameters=None</em>, <em>variable_indices=None</em>, <em>upper_bounds=None</em>, <em>lower_bounds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.ControlCurveParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pywr.parameters._control_curves.BaseControlCurveParameter</span></code></p>
+<p>A generic multi-levelled control curve Parameter.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>This parameter can be used to return different values when a <cite>Storage</cite> node&#8217;s current</dt>
+<dd>volumes is at different percentage of <cite>max_volume</cite> relative to predefined control curves.
+Control curves must be defined in the range [0, 1] corresponding to 0% and 100% volume.</dd>
+<dt>By default this parameter returns an integer sequence from zero if the first control curve</dt>
+<dd>is passed, and incrementing by one for each control curve (or &#8220;level&#8221;) the <cite>Storage</cite> node
+is below.</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>storage_node</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier"><cite>Storage</cite></span><dd>An optional <cite>Storage</cite> node that can be used to query the current percentage volume.</dd>
+<dt>control_curves</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier"><cite>float</cite>, <cite>int</cite> or <cite>Parameter</cite> object, or iterable thereof</span><dd>The position of the control curves. Internally <cite>float</cite> or <cite>int</cite> types are cast to
+<cite>ConstantParameter</cite>. Multiple values correspond to multiple control curve positions.
+These should be specified in descending order.</dd>
+<dt>values</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">array_like or <cite>None</cite>, optional</span><dd>The values to return if the <cite>Storage</cite> object is above the correspond control curve.
+I.e. the first value is returned if the current volume is above the first control curve,
+and second value if above the second control curve, and so on. The length of <cite>values</cite>
+must be one more than than the length of <cite>control_curves</cite>.</dd>
+<dt>parameters</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">iterable <cite>Parameter</cite> objects or <cite>None</cite>, optional</span><dd>If <cite>values</cite> is <cite>None</cite> then <cite>parameters</cite> can specify a <cite>Parameter</cite> object to use at level
+of the control curves. In the same way as <cite>values</cite> the first <cite>Parameter</cite> is used if
+<cite>Storage</cite> is above the first control curve, and second <cite>Parameter</cite> if above the
+second control curve, and so on.</dd>
+<dt>variable_indices</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">iterable of ints, optional</span><dd><dl class="first last docutils">
+<dt>A list of indices that correspond to items in <cite>values</cite> which are to be considered variables</dt>
+<dd>when <cite>self.is_variable</cite> is True. This mechanism allows a subset of <cite>values</cite> to be variable.</dd>
+</dl>
+</dd>
+<dt>lower_bounds, upper_bounds</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">array_like, optional</span><dd><dl class="first last docutils">
+<dt>Bounds of the variables. The length must correspond to the length of <cite>variable_indices</cite>, i.e.</dt>
+<dd>there are bounds for each index to be considered as a variable.</dd>
+</dl>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>If <cite>values</cite> and <cite>parameters</cite> are both <cite>None</cite>, the default, then <cite>values</cite> defaults to</dt>
+<dd>a range of integers, starting at zero, one more than length of <cite>control_curves</cite>.</dd>
+</dl>
+<p><cite>BaseControlCurveParameter</cite></p>
+<dl class="classmethod">
+<dt id="pywr.parameters.control_curves.ControlCurveParameter.load">
+<em class="property">classmethod </em><code class="descname">load</code><span class="sig-paren">(</span><em>model</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.ControlCurveParameter.load" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pywr.parameters.control_curves.ControlCurvePiecewiseParameter.upper_bounds">
-<code class="descname">upper_bounds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.ControlCurvePiecewiseParameter.upper_bounds" title="Permalink to this definition">¶</a></dt>
+<dt id="pywr.parameters.control_curves.ControlCurveParameter.lower_bounds">
+<code class="descname">lower_bounds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.ControlCurveParameter.lower_bounds" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pywr.parameters.control_curves.ControlCurvePiecewiseParameter.value">
-<code class="descname">value</code><span class="sig-paren">(</span><em>ts</em>, <em>scenario_index</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.ControlCurvePiecewiseParameter.value" title="Permalink to this definition">¶</a></dt>
+<dt id="pywr.parameters.control_curves.ControlCurveParameter.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>values</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.ControlCurveParameter.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="method">
+<dt id="pywr.parameters.control_curves.ControlCurveParameter.upper_bounds">
+<code class="descname">upper_bounds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.ControlCurveParameter.upper_bounds" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pywr.parameters.control_curves.ControlCurveParameter.value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>ts</em>, <em>scenario_index</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.ControlCurveParameter.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.parameters.control_curves.DailyProfileControlCurveParameter">
+<em class="property">class </em><code class="descclassname">pywr.parameters.control_curves.</code><code class="descname">DailyProfileControlCurveParameter</code><span class="sig-paren">(</span><em>storage_node</em>, <em>control_curves</em>, <em>values</em>, <em>profile=None</em>, <em>scale=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.DailyProfileControlCurveParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.parameters.control_curves.AbstractProfileControlCurveParameter" title="pywr.parameters.control_curves.AbstractProfileControlCurveParameter"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.control_curves.AbstractProfileControlCurveParameter</span></code></a></p>
+<p>A control curve Parameter that returns values from a set of daily profiles.</p>
+<dl class="docutils">
+<dt>storage_node</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier"><cite>Storage</cite></span><dd>An optional <cite>Storage</cite> node that can be used to query the current percentage volume.</dd>
+<dt>control_curves</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier"><cite>float</cite>, <cite>int</cite> or <cite>Parameter</cite> object, or iterable thereof</span><dd>The position of the control curves. Internally <cite>float</cite> or <cite>int</cite> types are cast to
+<cite>ConstantParameter</cite>. Multiple values correspond to multiple control curve positions.
+These should be specified in descending order.</dd>
+<dt>values</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span><dd>A two dimensional array_like where the first dimension corresponds to the current level
+of the corresponding <cite>Storage</cite> and the second dimension is of size 366, corresponding to
+the monthly value to return based on current time-step.</dd>
+<dt>profile</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">&#8216;Parameter` or array_like of length 12, optional</span><dd>An optional profile <cite>Parameter</cite> or monthly array to factor the values by. The default is
+np.ones(366) to have no scaling effect on the returned values.</dd>
+<dt>scale</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">float, optional</span><dd>An optional constant to factor the values by. The default is 1.0 to have scaling effect on
+the returned values.</dd>
+</dl>
+<p><cite>BaseControlCurveParameter</cite>
+<cite>MonthlyProfileControlCurveParameter</cite></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pywr.parameters.control_curves.MonthlyProfileControlCurveParameter">
+<em class="property">class </em><code class="descclassname">pywr.parameters.control_curves.</code><code class="descname">MonthlyProfileControlCurveParameter</code><span class="sig-paren">(</span><em>storage_node</em>, <em>control_curves</em>, <em>values</em>, <em>profile=None</em>, <em>scale=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.MonthlyProfileControlCurveParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.parameters.control_curves.AbstractProfileControlCurveParameter" title="pywr.parameters.control_curves.AbstractProfileControlCurveParameter"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.control_curves.AbstractProfileControlCurveParameter</span></code></a></p>
+<p>A control curve Parameter that returns values from a set of monthly profiles.</p>
+<dl class="docutils">
+<dt>storage_node</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier"><cite>Storage</cite></span><dd>An optional <cite>Storage</cite> node that can be used to query the current percentage volume.</dd>
+<dt>control_curves</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier"><cite>float</cite>, <cite>int</cite> or <cite>Parameter</cite> object, or iterable thereof</span><dd>The position of the control curves. Internally <cite>float</cite> or <cite>int</cite> types are cast to
+<cite>ConstantParameter</cite>. Multiple values correspond to multiple control curve positions.
+These should be specified in descending order.</dd>
+<dt>values</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span><dd>A two dimensional array_like where the first dimension corresponds to the current level
+of the corresponding <cite>Storage</cite> and the second dimension is of size 12, corresponding to
+the monthly value to return based on current time-step.</dd>
+<dt>profile</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">&#8216;Parameter` or array_like of length 12, optional</span><dd>An optional profile <cite>Parameter</cite> or monthly array to factor the values by. The default is
+np.ones(12) to have no scaling effect on the returned values.</dd>
+<dt>scale</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">float, optional</span><dd>An optional constant to factor the values by. The default is 1.0 to have scaling effect on
+the returned values.</dd>
+</dl>
+<p><cite>BaseControlCurveParameter</cite>
+<cite>DailyProfileControlCurveParameter</cite></p>
 </dd></dl>
 
 </div>
@@ -80,7 +202,7 @@ volume is above or below the control curve.</p>
 <span id="pywr-parameters-licenses-module"></span><h2>pywr.parameters.licenses module<a class="headerlink" href="#module-pywr.parameters.licenses" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="pywr.parameters.licenses.AnnualExponentialLicense">
-<em class="property">class </em><code class="descclassname">pywr.parameters.licenses.</code><code class="descname">AnnualExponentialLicense</code><span class="sig-paren">(</span><em>amount</em>, <em>max_value</em>, <em>k=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.AnnualExponentialLicense" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.parameters.licenses.</code><code class="descname">AnnualExponentialLicense</code><span class="sig-paren">(</span><em>node</em>, <em>amount</em>, <em>max_value</em>, <em>k=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.AnnualExponentialLicense" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.parameters.licenses.AnnualLicense" title="pywr.parameters.licenses.AnnualLicense"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.licenses.AnnualLicense</span></code></a></p>
 <p>An annual license that returns a value based on an exponential function of the license&#8217;s current state.</p>
 <p>The exponential function takes the form,</p>
@@ -97,7 +219,7 @@ expected daily averaged remaining licence. I.e. if the license is on track the r
 
 <dl class="class">
 <dt id="pywr.parameters.licenses.AnnualHyperbolaLicense">
-<em class="property">class </em><code class="descclassname">pywr.parameters.licenses.</code><code class="descname">AnnualHyperbolaLicense</code><span class="sig-paren">(</span><em>amount</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.AnnualHyperbolaLicense" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.parameters.licenses.</code><code class="descname">AnnualHyperbolaLicense</code><span class="sig-paren">(</span><em>node</em>, <em>amount</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.AnnualHyperbolaLicense" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.parameters.licenses.AnnualLicense" title="pywr.parameters.licenses.AnnualLicense"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.licenses.AnnualLicense</span></code></a></p>
 <p>An annual license that returns a value based on an hyperbola (1/x) function of the license&#8217;s current state.</p>
 <p>The hyperbola function takes the form,</p>
@@ -114,7 +236,7 @@ expected daily averaged remaining licence. I.e. if the license is on track the r
 
 <dl class="class">
 <dt id="pywr.parameters.licenses.AnnualLicense">
-<em class="property">class </em><code class="descclassname">pywr.parameters.licenses.</code><code class="descname">AnnualLicense</code><span class="sig-paren">(</span><em>amount</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.AnnualLicense" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.parameters.licenses.</code><code class="descname">AnnualLicense</code><span class="sig-paren">(</span><em>node</em>, <em>amount</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.AnnualLicense" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.parameters.licenses.StorageLicense" title="pywr.parameters.licenses.StorageLicense"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.licenses.StorageLicense</span></code></a></p>
 <p>An annual license</p>
 <dl class="method">
@@ -127,31 +249,21 @@ expected daily averaged remaining licence. I.e. if the license is on track the r
 <code class="descname">value</code><span class="sig-paren">(</span><em>timestep</em>, <em>scenario_index</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.AnnualLicense.value" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pywr.parameters.licenses.AnnualLicense.xml">
-<code class="descname">xml</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.AnnualLicense.xml" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pywr.parameters.licenses.DailyLicense">
-<em class="property">class </em><code class="descclassname">pywr.parameters.licenses.</code><code class="descname">DailyLicense</code><span class="sig-paren">(</span><em>amount</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.DailyLicense" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.parameters.licenses.</code><code class="descname">DailyLicense</code><span class="sig-paren">(</span><em>node</em>, <em>amount</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.DailyLicense" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.parameters.licenses.TimestepLicense" title="pywr.parameters.licenses.TimestepLicense"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.licenses.TimestepLicense</span></code></a></p>
 </dd></dl>
 
 <dl class="class">
 <dt id="pywr.parameters.licenses.License">
-<em class="property">class </em><code class="descclassname">pywr.parameters.licenses.</code><code class="descname">License</code><a class="headerlink" href="#pywr.parameters.licenses.License" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.parameters.licenses.</code><code class="descname">License</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.License" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pywr.parameters._parameters.Parameter</span></code></p>
 <p>Base license class from which others inherit</p>
 <p>This class should not be instantiated directly. Instead, use one of the
 subclasses (e.g. DailyLicense).</p>
-<dl class="classmethod">
-<dt id="pywr.parameters.licenses.License.from_xml">
-<em class="property">classmethod </em><code class="descname">from_xml</code><span class="sig-paren">(</span><em>xml</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.License.from_xml" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 <dl class="method">
 <dt id="pywr.parameters.licenses.License.resource_state">
 <code class="descname">resource_state</code><span class="sig-paren">(</span><em>timestep</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.License.resource_state" title="Permalink to this definition">¶</a></dt>
@@ -161,7 +273,7 @@ subclasses (e.g. DailyLicense).</p>
 
 <dl class="class">
 <dt id="pywr.parameters.licenses.StorageLicense">
-<em class="property">class </em><code class="descclassname">pywr.parameters.licenses.</code><code class="descname">StorageLicense</code><span class="sig-paren">(</span><em>amount</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.StorageLicense" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.parameters.licenses.</code><code class="descname">StorageLicense</code><span class="sig-paren">(</span><em>node</em>, <em>amount</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.StorageLicense" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.parameters.licenses.License" title="pywr.parameters.licenses.License"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.licenses.License</span></code></a></p>
 <dl class="method">
 <dt id="pywr.parameters.licenses.StorageLicense.after">
@@ -187,7 +299,7 @@ subclasses (e.g. DailyLicense).</p>
 
 <dl class="class">
 <dt id="pywr.parameters.licenses.TimestepLicense">
-<em class="property">class </em><code class="descclassname">pywr.parameters.licenses.</code><code class="descname">TimestepLicense</code><span class="sig-paren">(</span><em>amount</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.TimestepLicense" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.parameters.licenses.</code><code class="descname">TimestepLicense</code><span class="sig-paren">(</span><em>node</em>, <em>amount</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.TimestepLicense" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.parameters.licenses.License" title="pywr.parameters.licenses.License"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.licenses.License</span></code></a></p>
 <p>License limiting volume for a single timestep</p>
 <p>This is the simplest kind of license. The volume available each timestep
@@ -203,45 +315,14 @@ impact availability tomorrow.</p>
 <code class="descname">value</code><span class="sig-paren">(</span><em>timestep</em>, <em>scenario_index</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.TimestepLicense.value" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pywr.parameters.licenses.TimestepLicense.xml">
-<code class="descname">xml</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.licenses.TimestepLicense.xml" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 </div>
 <div class="section" id="module-pywr.parameters.parameters">
 <span id="pywr-parameters-parameters-module"></span><h2>pywr.parameters.parameters module<a class="headerlink" href="#module-pywr.parameters.parameters" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="pywr.parameters.parameters.AnnualHarmonicSeriesParameter">
-<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">AnnualHarmonicSeriesParameter</code><span class="sig-paren">(</span><em>mean</em>, <em>amplitudes</em>, <em>phases</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.AnnualHarmonicSeriesParameter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pywr.parameters.parameters.Parameter" title="pywr.parameters.parameters.Parameter"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.parameters.Parameter</span></code></a></p>
-<dl class="method">
-<dt id="pywr.parameters.parameters.AnnualHarmonicSeriesParameter.lower_bounds">
-<code class="descname">lower_bounds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.AnnualHarmonicSeriesParameter.lower_bounds" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.parameters.parameters.AnnualHarmonicSeriesParameter.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>values</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.AnnualHarmonicSeriesParameter.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.parameters.parameters.AnnualHarmonicSeriesParameter.upper_bounds">
-<code class="descname">upper_bounds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.AnnualHarmonicSeriesParameter.upper_bounds" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.parameters.parameters.AnnualHarmonicSeriesParameter.value">
-<code class="descname">value</code><span class="sig-paren">(</span><em>ts</em>, <em>scenario_index</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.AnnualHarmonicSeriesParameter.value" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="pywr.parameters.parameters.ConstantParameter">
-<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">ConstantParameter</code><span class="sig-paren">(</span><em>value=None</em>, <em>lower_bounds=0.0</em>, <em>upper_bounds=inf</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.ConstantParameter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">ConstantParameter</code><span class="sig-paren">(</span><em>value</em>, <em>lower_bounds=0.0</em>, <em>upper_bounds=inf</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.ConstantParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.parameters.parameters.Parameter" title="pywr.parameters.parameters.Parameter"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.parameters.Parameter</span></code></a></p>
 <dl class="method">
 <dt id="pywr.parameters.parameters.ConstantParameter.lower_bounds">
@@ -266,8 +347,29 @@ impact availability tomorrow.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pywr.parameters.parameters.DataFrameParameter">
+<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">DataFrameParameter</code><span class="sig-paren">(</span><em>df</em>, <em>scenario=None</em>, <em>metadata=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.DataFrameParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.parameters.parameters.Parameter" title="pywr.parameters.parameters.Parameter"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.parameters.Parameter</span></code></a></p>
+<dl class="classmethod">
+<dt id="pywr.parameters.parameters.DataFrameParameter.load">
+<em class="property">classmethod </em><code class="descname">load</code><span class="sig-paren">(</span><em>model</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.DataFrameParameter.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pywr.parameters.parameters.DataFrameParameter.setup">
+<code class="descname">setup</code><span class="sig-paren">(</span><em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.DataFrameParameter.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pywr.parameters.parameters.DataFrameParameter.value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>ts</em>, <em>scenario_index</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.DataFrameParameter.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pywr.parameters.parameters.FunctionParameter">
-<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">FunctionParameter</code><span class="sig-paren">(</span><em>parent</em>, <em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.FunctionParameter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">FunctionParameter</code><span class="sig-paren">(</span><em>parent</em>, <em>func</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.FunctionParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.parameters.parameters.Parameter" title="pywr.parameters.parameters.Parameter"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.parameters.Parameter</span></code></a></p>
 <dl class="method">
 <dt id="pywr.parameters.parameters.FunctionParameter.value">
@@ -278,7 +380,7 @@ impact availability tomorrow.</p>
 
 <dl class="class">
 <dt id="pywr.parameters.parameters.InterpolatedLevelParameter">
-<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">InterpolatedLevelParameter</code><span class="sig-paren">(</span><em>volumes</em>, <em>levels</em>, <em>kind='linear'</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.InterpolatedLevelParameter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">InterpolatedLevelParameter</code><span class="sig-paren">(</span><em>node</em>, <em>volumes</em>, <em>levels</em>, <em>kind='linear'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.InterpolatedLevelParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.parameters.parameters.Parameter" title="pywr.parameters.parameters.Parameter"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.parameters.Parameter</span></code></a></p>
 <p>Level parameter calculated by interpolation from current volume</p>
 <dl class="method">
@@ -289,30 +391,8 @@ impact availability tomorrow.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="pywr.parameters.parameters.MaximumParameterCollection">
-<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">MaximumParameterCollection</code><span class="sig-paren">(</span><em>parameters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.MaximumParameterCollection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pywr.parameters.parameters.ParameterCollection" title="pywr.parameters.parameters.ParameterCollection"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.parameters.ParameterCollection</span></code></a></p>
-<dl class="method">
-<dt id="pywr.parameters.parameters.MaximumParameterCollection.value">
-<code class="descname">value</code><span class="sig-paren">(</span><em>timestep</em>, <em>scenario_index</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.MaximumParameterCollection.value" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="pywr.parameters.parameters.MinimumParameterCollection">
-<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">MinimumParameterCollection</code><span class="sig-paren">(</span><em>parameters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.MinimumParameterCollection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pywr.parameters.parameters.ParameterCollection" title="pywr.parameters.parameters.ParameterCollection"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.parameters.ParameterCollection</span></code></a></p>
-<dl class="method">
-<dt id="pywr.parameters.parameters.MinimumParameterCollection.value">
-<code class="descname">value</code><span class="sig-paren">(</span><em>timestep</em>, <em>scenario_index</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.MinimumParameterCollection.value" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="pywr.parameters.parameters.MonthlyProfileParameter">
-<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">MonthlyProfileParameter</code><span class="sig-paren">(</span><em>values</em>, <em>lower_bounds=0.0</em>, <em>upper_bounds=inf</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.MonthlyProfileParameter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">MonthlyProfileParameter</code><span class="sig-paren">(</span><em>values</em>, <em>lower_bounds=0.0</em>, <em>upper_bounds=inf</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.MonthlyProfileParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.parameters.parameters.Parameter" title="pywr.parameters.parameters.Parameter"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.parameters.Parameter</span></code></a></p>
 <dl class="method">
 <dt id="pywr.parameters.parameters.MonthlyProfileParameter.lower_bounds">
@@ -348,64 +428,31 @@ impact availability tomorrow.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="pywr.parameters.parameters.ParameterCollection">
-<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">ParameterCollection</code><span class="sig-paren">(</span><em>parameters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.ParameterCollection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pywr.parameters.parameters.Parameter" title="pywr.parameters.parameters.Parameter"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.parameters.Parameter</span></code></a></p>
-<p>A collection of Parameters</p>
-<p>This object behaves like a set. Licenses can be added to or removed from it.</p>
-<dl class="method">
-<dt id="pywr.parameters.parameters.ParameterCollection.add">
-<code class="descname">add</code><span class="sig-paren">(</span><em>parameter</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.ParameterCollection.add" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.parameters.parameters.ParameterCollection.after">
-<code class="descname">after</code><span class="sig-paren">(</span><em>timestep</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.ParameterCollection.after" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.parameters.parameters.ParameterCollection.remove">
-<code class="descname">remove</code><span class="sig-paren">(</span><em>parameter</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.ParameterCollection.remove" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.parameters.parameters.ParameterCollection.reset">
-<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.ParameterCollection.reset" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.parameters.parameters.ParameterCollection.setup">
-<code class="descname">setup</code><span class="sig-paren">(</span><em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.ParameterCollection.setup" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.parameters.parameters.ParameterCollection.value">
-<code class="descname">value</code><span class="sig-paren">(</span><em>timestep</em>, <em>scenario_index</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.ParameterCollection.value" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="pywr.parameters.parameters.PropertiesDict">
 <em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">PropertiesDict</code><a class="headerlink" href="#pywr.parameters.parameters.PropertiesDict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">dict</span></code></p>
 </dd></dl>
 
 <dl class="class">
-<dt id="pywr.parameters.parameters.Timeseries">
-<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">Timeseries</code><span class="sig-paren">(</span><em>name</em>, <em>df</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.Timeseries" title="Permalink to this definition">¶</a></dt>
+<dt id="pywr.parameters.parameters.ScaledProfileParameter">
+<em class="property">class </em><code class="descclassname">pywr.parameters.parameters.</code><code class="descname">ScaledProfileParameter</code><span class="sig-paren">(</span><em>scale</em>, <em>profile</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.ScaledProfileParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.parameters.parameters.Parameter" title="pywr.parameters.parameters.Parameter"><code class="xref py py-class docutils literal"><span class="pre">pywr.parameters.parameters.Parameter</span></code></a></p>
 <dl class="classmethod">
-<dt id="pywr.parameters.parameters.Timeseries.read">
-<em class="property">classmethod </em><code class="descname">read</code><span class="sig-paren">(</span><em>model</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.Timeseries.read" title="Permalink to this definition">¶</a></dt>
+<dt id="pywr.parameters.parameters.ScaledProfileParameter.load">
+<em class="property">classmethod </em><code class="descname">load</code><span class="sig-paren">(</span><em>model</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.ScaledProfileParameter.load" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pywr.parameters.parameters.Timeseries.value">
-<code class="descname">value</code><span class="sig-paren">(</span><em>ts</em>, <em>scenario_index</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.Timeseries.value" title="Permalink to this definition">¶</a></dt>
+<dt id="pywr.parameters.parameters.ScaledProfileParameter.value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>ts</em>, <em>si</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.ScaledProfileParameter.value" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
+
+<dl class="function">
+<dt id="pywr.parameters.parameters.align_and_resample_dataframe">
+<code class="descclassname">pywr.parameters.parameters.</code><code class="descname">align_and_resample_dataframe</code><span class="sig-paren">(</span><em>df</em>, <em>datetime_index</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.parameters.align_and_resample_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="function">
 <dt id="pywr.parameters.parameters.pop_kwarg_parameter">
@@ -451,10 +498,16 @@ impact availability tomorrow.</p>
 
 
 <h3>Navigation</h3>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installing Pywr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../formulation.html">Problem formulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../json.html">JSON model format</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pywr.html">pywr package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cookbook/demand_saving.html">Demand saving</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
 </ul>
 
@@ -462,6 +515,12 @@ impact availability tomorrow.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">API Reference</a><ul>
+  <li><a href="pywr.html">pywr package</a><ul>
+      <li>Previous: <a href="pywr.optimisation.html" title="previous chapter">pywr.optimisation package</a></li>
+      <li>Next: <a href="pywr.solvers.html" title="next chapter">pywr.solvers package</a></li>
+  </ul></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>
