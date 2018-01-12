@@ -1,0 +1,166 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>API Reference &#8212; Pywr 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pywr package" href="pywr.html" />
+    <link rel="prev" title="JSON model format" href="../json.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pywr.html">pywr package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pywr.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pywr.domains.html">pywr.domains package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pywr.domains.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.domains.html#pywr-domains-river-module">pywr.domains.river module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.domains.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pywr.optimisation.html">pywr.optimisation package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pywr.optimisation.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.optimisation.html#pywr-optimisation-moea-module">pywr.optimisation.moea module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.optimisation.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pywr.parameters.html">pywr.parameters package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.html#pywr-parameters-control-curves-module">pywr.parameters.control_curves module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.html#pywr-parameters-licenses-module">pywr.parameters.licenses module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.html#pywr-parameters-parameters-module">pywr.parameters.parameters module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pywr.solvers.html">pywr.solvers package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pywr.solvers.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.solvers.html#pywr-solvers-cython-glpk-module">pywr.solvers.cython_glpk module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.solvers.html#pywr-solvers-cython-lpsolve-module">pywr.solvers.cython_lpsolve module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.solvers.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pywr.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pywr.html#pywr-core-module">pywr.core module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pywr.html#pywr-recorders-module">pywr.recorders module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pywr.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Pywr</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=pywr&repo=pywr&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installing Pywr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../formulation.html">Problem formulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../json.html">JSON model format</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python API reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pywr.html">pywr package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cookbook/demand_saving.html">Demand saving</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookbook/dataframes.html">Using external data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookbook/aggregated_parameter.html">Aggregated parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../json.html" title="previous chapter">JSON model format</a></li>
+      <li>Next: <a href="pywr.html" title="next chapter">pywr package</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Joshua Arnott.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/api/modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
