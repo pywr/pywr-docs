@@ -1,0 +1,35 @@
+pywr\.parameters\.ArrayIndexedParameter
+=======================================
+
+.. currentmodule:: pywr.parameters
+
+.. autoclass:: ArrayIndexedParameter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ArrayIndexedParameter.after
+      ~ArrayIndexedParameter.before
+      ~ArrayIndexedParameter.finish
+      ~ArrayIndexedParameter.get_all_values
+      ~ArrayIndexedParameter.get_value
+      ~ArrayIndexedParameter.load
+      ~ArrayIndexedParameter.lower_bounds
+      ~ArrayIndexedParameter.register
+      ~ArrayIndexedParameter.reset
+      ~ArrayIndexedParameter.setup
+      ~ArrayIndexedParameter.unregister
+      ~ArrayIndexedParameter.update
+      ~ArrayIndexedParameter.upper_bounds
+      ~ArrayIndexedParameter.value
+   
+   
+
+   
+   
+   

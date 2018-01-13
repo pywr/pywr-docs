@@ -1,0 +1,35 @@
+pywr\.parameters\.NegativeMaxParameter
+======================================
+
+.. currentmodule:: pywr.parameters
+
+.. autoclass:: NegativeMaxParameter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~NegativeMaxParameter.after
+      ~NegativeMaxParameter.before
+      ~NegativeMaxParameter.finish
+      ~NegativeMaxParameter.get_all_values
+      ~NegativeMaxParameter.get_value
+      ~NegativeMaxParameter.load
+      ~NegativeMaxParameter.lower_bounds
+      ~NegativeMaxParameter.register
+      ~NegativeMaxParameter.reset
+      ~NegativeMaxParameter.setup
+      ~NegativeMaxParameter.unregister
+      ~NegativeMaxParameter.update
+      ~NegativeMaxParameter.upper_bounds
+      ~NegativeMaxParameter.value
+   
+   
+
+   
+   
+   

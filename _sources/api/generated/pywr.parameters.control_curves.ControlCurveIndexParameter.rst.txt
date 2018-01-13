@@ -1,0 +1,38 @@
+pywr\.parameters\.control\_curves\.ControlCurveIndexParameter
+=============================================================
+
+.. currentmodule:: pywr.parameters.control_curves
+
+.. autoclass:: ControlCurveIndexParameter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ControlCurveIndexParameter.after
+      ~ControlCurveIndexParameter.before
+      ~ControlCurveIndexParameter.finish
+      ~ControlCurveIndexParameter.get_all_indices
+      ~ControlCurveIndexParameter.get_all_values
+      ~ControlCurveIndexParameter.get_index
+      ~ControlCurveIndexParameter.get_value
+      ~ControlCurveIndexParameter.index
+      ~ControlCurveIndexParameter.load
+      ~ControlCurveIndexParameter.lower_bounds
+      ~ControlCurveIndexParameter.register
+      ~ControlCurveIndexParameter.reset
+      ~ControlCurveIndexParameter.setup
+      ~ControlCurveIndexParameter.unregister
+      ~ControlCurveIndexParameter.update
+      ~ControlCurveIndexParameter.upper_bounds
+      ~ControlCurveIndexParameter.value
+   
+   
+
+   
+   
+   

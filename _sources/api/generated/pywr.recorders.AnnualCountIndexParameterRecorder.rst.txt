@@ -1,0 +1,31 @@
+pywr\.recorders\.AnnualCountIndexParameterRecorder
+==================================================
+
+.. currentmodule:: pywr.recorders
+
+.. autoclass:: AnnualCountIndexParameterRecorder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~AnnualCountIndexParameterRecorder.after
+      ~AnnualCountIndexParameterRecorder.aggregated_value
+      ~AnnualCountIndexParameterRecorder.before
+      ~AnnualCountIndexParameterRecorder.finish
+      ~AnnualCountIndexParameterRecorder.load
+      ~AnnualCountIndexParameterRecorder.register
+      ~AnnualCountIndexParameterRecorder.reset
+      ~AnnualCountIndexParameterRecorder.setup
+      ~AnnualCountIndexParameterRecorder.unregister
+      ~AnnualCountIndexParameterRecorder.values
+   
+   
+
+   
+   
+   

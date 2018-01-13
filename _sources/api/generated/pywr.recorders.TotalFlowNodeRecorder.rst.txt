@@ -1,0 +1,31 @@
+pywr\.recorders\.TotalFlowNodeRecorder
+======================================
+
+.. currentmodule:: pywr.recorders
+
+.. autoclass:: TotalFlowNodeRecorder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TotalFlowNodeRecorder.after
+      ~TotalFlowNodeRecorder.aggregated_value
+      ~TotalFlowNodeRecorder.before
+      ~TotalFlowNodeRecorder.finish
+      ~TotalFlowNodeRecorder.load
+      ~TotalFlowNodeRecorder.register
+      ~TotalFlowNodeRecorder.reset
+      ~TotalFlowNodeRecorder.setup
+      ~TotalFlowNodeRecorder.unregister
+      ~TotalFlowNodeRecorder.values
+   
+   
+
+   
+   
+   

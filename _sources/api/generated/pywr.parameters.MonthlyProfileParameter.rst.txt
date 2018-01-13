@@ -1,0 +1,35 @@
+pywr\.parameters\.MonthlyProfileParameter
+=========================================
+
+.. currentmodule:: pywr.parameters
+
+.. autoclass:: MonthlyProfileParameter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MonthlyProfileParameter.after
+      ~MonthlyProfileParameter.before
+      ~MonthlyProfileParameter.finish
+      ~MonthlyProfileParameter.get_all_values
+      ~MonthlyProfileParameter.get_value
+      ~MonthlyProfileParameter.load
+      ~MonthlyProfileParameter.lower_bounds
+      ~MonthlyProfileParameter.register
+      ~MonthlyProfileParameter.reset
+      ~MonthlyProfileParameter.setup
+      ~MonthlyProfileParameter.unregister
+      ~MonthlyProfileParameter.update
+      ~MonthlyProfileParameter.upper_bounds
+      ~MonthlyProfileParameter.value
+   
+   
+
+   
+   
+   

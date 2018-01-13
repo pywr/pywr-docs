@@ -1,0 +1,31 @@
+pywr\.recorders\.TotalDeficitNodeRecorder
+=========================================
+
+.. currentmodule:: pywr.recorders
+
+.. autoclass:: TotalDeficitNodeRecorder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TotalDeficitNodeRecorder.after
+      ~TotalDeficitNodeRecorder.aggregated_value
+      ~TotalDeficitNodeRecorder.before
+      ~TotalDeficitNodeRecorder.finish
+      ~TotalDeficitNodeRecorder.load
+      ~TotalDeficitNodeRecorder.register
+      ~TotalDeficitNodeRecorder.reset
+      ~TotalDeficitNodeRecorder.setup
+      ~TotalDeficitNodeRecorder.unregister
+      ~TotalDeficitNodeRecorder.values
+   
+   
+
+   
+   
+   

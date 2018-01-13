@@ -1,0 +1,35 @@
+pywr\.parameters\.DataFrameParameter
+====================================
+
+.. currentmodule:: pywr.parameters
+
+.. autoclass:: DataFrameParameter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DataFrameParameter.after
+      ~DataFrameParameter.before
+      ~DataFrameParameter.finish
+      ~DataFrameParameter.get_all_values
+      ~DataFrameParameter.get_value
+      ~DataFrameParameter.load
+      ~DataFrameParameter.lower_bounds
+      ~DataFrameParameter.register
+      ~DataFrameParameter.reset
+      ~DataFrameParameter.setup
+      ~DataFrameParameter.unregister
+      ~DataFrameParameter.update
+      ~DataFrameParameter.upper_bounds
+      ~DataFrameParameter.value
+   
+   
+
+   
+   
+   

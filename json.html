@@ -1,51 +1,186 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>JSON model format &mdash; Pywr 0.5dev documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
     
-    <title>JSON model format &mdash; Pywr 0.1 documentation</title>
-    
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="Pywr 0.1 documentation" href="index.html" />
-    <link rel="next" title="API Reference" href="api/modules.html" />
-    <link rel="prev" title="Problem formulation" href="formulation.html" />
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Pywr 0.5dev documentation" href="index.html"/>
+        <link rel="next" title="Pywr cookbook examples" href="cookbook/cookbook.html"/>
+        <link rel="prev" title="Problem formulation" href="formulation.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
    
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  <div class="wy-grid-for-nav">
 
-  </head>
-  <body role="document">
-  
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+          
+            <a href="index.html" class="icon icon-home"> Pywr
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installing Pywr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="formulation.html">Problem formulation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">JSON model format</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview-of-document-structure">Overview of document structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metadata">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#timestepper">Timestepper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#solver">Solver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nodes">Nodes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#non-storage-nodes">Non-storage nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#storage-nodes">Storage nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#edges">Edges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugging-and-syntax-errors">Debugging and syntax errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cookbook/cookbook.html">Cookbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/pywr.html">Python API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Pywr</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>JSON model format</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/json.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="json-model-format">
-<h1>JSON model format<a class="headerlink" href="#json-model-format" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>JSON model format<a class="headerlink" href="#json-model-format" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview-of-document-structure">
 <h2>Overview of document structure<a class="headerlink" href="#overview-of-document-structure" title="Permalink to this headline">¶</a></h2>
-<p>In addition to creating models programmatically using the Python API, models can be described in a JSON (JavaScript Object Notation) document <a class="footnote-reference" href="#id2" id="id1">[1]</a>.</p>
+<p>In addition to creating models programmatically using the Python API, models can be described in a JSON (JavaScript Object Notation) document <a class="footnote-reference" href="#id3" id="id2">[1]</a>.</p>
 <p>The overall structure of the model is given below. A description of the contents of each of the first level items is given in this document. The most important are the <a class="reference internal" href="#nodes">nodes</a> and <a class="reference internal" href="#edges">edges</a> sections.</p>
 <div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{},</span>
@@ -72,7 +207,7 @@
 </div>
 <div class="section" id="timestepper">
 <h2>Timestepper<a class="headerlink" href="#timestepper" title="Permalink to this headline">¶</a></h2>
-<p>The timestepper defines the period a model is run for and the timestep used. It corresponds directly to the <a class="reference internal" href="api/pywr.html#pywr.core.Timestepper" title="pywr.core.Timestepper"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.Timestepper</span></code></a> instance on the model. It has three properties: the start date, end date and timestep.</p>
+<p>The timestepper defines the period a model is run for and the timestep used. It corresponds directly to the <code class="xref py py-class docutils literal"><span class="pre">pywr.core.Timestepper</span></code> instance on the model. It has three properties: the start date, end date and timestep.</p>
 <p>The example below describes a model that will run from 1st January 2016 to 31st December 2016 using a 7 day timestep.</p>
 <div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;timestepper&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-01-01&quot;</span><span class="p">,</span>
@@ -93,11 +228,11 @@
 </div>
 <div class="section" id="nodes">
 <h2>Nodes<a class="headerlink" href="#nodes" title="Permalink to this headline">¶</a></h2>
-<p>The nodes section describes the nodes in the model. As a minimum a node must have a <code class="docutils literal"><span class="pre">name</span></code> and a <code class="docutils literal"><span class="pre">type</span></code>. There are two fundamental types of node in Pywr (<a class="reference internal" href="api/pywr.html#pywr.core.Node" title="pywr.core.Node"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.Node</span></code></a> and <a class="reference internal" href="api/pywr.html#pywr.core.Storage" title="pywr.core.Storage"><code class="xref py py-class docutils literal"><span class="pre">pywr.core.Storage</span></code></a>) which have different properties.</p>
+<p>The nodes section describes the nodes in the model. As a minimum a node must have a <code class="docutils literal"><span class="pre">name</span></code> and a <code class="docutils literal"><span class="pre">type</span></code>. There are two fundamental types of node in Pywr (<code class="xref py py-class docutils literal"><span class="pre">pywr.core.Node</span></code> and <code class="xref py py-class docutils literal"><span class="pre">pywr.core.Storage</span></code>) which have different properties.</p>
 <p>Where a parameter can be described as a simple scalar value it is sufficient to pass the value directly (e.g. <code class="docutils literal"><span class="pre">&quot;cost&quot;:</span> <span class="pre">10.0</span></code>). See also the <a class="reference internal" href="#parameters">parameters</a> section for details on defining non-scalar parameters.</p>
 <div class="section" id="non-storage-nodes">
 <h3>Non-storage nodes<a class="headerlink" href="#non-storage-nodes" title="Permalink to this headline">¶</a></h3>
-<p>The <code class="docutils literal"><span class="pre">Node</span></code> type and it&#8217;s subtypes have a <code class="docutils literal"><span class="pre">max_flow</span></code> and <code class="docutils literal"><span class="pre">cost</span></code> property, both of which have default values.</p>
+<p>The <code class="docutils literal"><span class="pre">Node</span></code> type and it’s subtypes have a <code class="docutils literal"><span class="pre">max_flow</span></code> and <code class="docutils literal"><span class="pre">cost</span></code> property, both of which have default values.</p>
 <div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
         <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;groundwater&quot;</span><span class="p">,</span>
@@ -123,7 +258,7 @@
 </div>
 <div class="section" id="storage-nodes">
 <h3>Storage nodes<a class="headerlink" href="#storage-nodes" title="Permalink to this headline">¶</a></h3>
-<p>The <code class="docutils literal"><span class="pre">Storage</span></code> type and it&#8217;s subtypes have a <code class="docutils literal"><span class="pre">max_volume</span></code>, <code class="docutils literal"><span class="pre">min_volume</span></code> and <code class="docutils literal"><span class="pre">initial_volume</span></code>, as well as <code class="docutils literal"><span class="pre">num_inputs</span></code> and <code class="docutils literal"><span class="pre">num_outputs</span></code>. The maximum and initial volumes must be specified, whereas the others have default values.</p>
+<p>The <code class="docutils literal"><span class="pre">Storage</span></code> type and it’s subtypes have a <code class="docutils literal"><span class="pre">max_volume</span></code>, <code class="docutils literal"><span class="pre">min_volume</span></code> and <code class="docutils literal"><span class="pre">initial_volume</span></code>, as well as <code class="docutils literal"><span class="pre">num_inputs</span></code> and <code class="docutils literal"><span class="pre">num_outputs</span></code>. The maximum and initial volumes must be specified, whereas the others have default values.</p>
 <div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
         <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Big Wet Lake&quot;</span><span class="p">,</span>
@@ -219,7 +354,7 @@
 <span class="gr">ValueError</span>: <span class="n">Expecting property name enclosed in double quotes: line 17 column 9 (char 372)</span>
 </pre></div>
 </div>
-<p>Common mistakes when writing JSON documents &#8220;by hand&#8221; include:</p>
+<p>Common mistakes when writing JSON documents “by hand” include:</p>
 <blockquote>
 <div><ul class="simple">
 <li>Trailing commas at the end of a list (<code class="docutils literal"><span class="pre">[&quot;like&quot;,</span> <span class="pre">&quot;this&quot;,]</span></code>)</li>
@@ -229,96 +364,86 @@
 </div>
 <div class="section" id="footnotes">
 <h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
+<table class="docutils footnote" frame="void" id="id3" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>In fact the model can be represented as a hierarchy of basic Python types, which can be conveniently parsed from a JSON document. Alternative formats are possible; for example, a YAML (Yet Another Markup Language) document as it can be translated to/from JSON losslessly.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>In fact the model can be represented as a hierarchy of basic Python types, which can be conveniently parsed from a JSON document. Alternative formats are possible; for example, a YAML (Yet Another Markup Language) document as it can be translated to/from JSON losslessly.</td></tr>
 </tbody>
 </table>
 </div>
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cookbook/cookbook.html" class="btn btn-neutral float-right" title="Pywr cookbook examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="formulation.html" class="btn btn-neutral" title="Problem formulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2014-17 Joshua Arnott, James E. Tomlinson, Atkins, University of Manchester.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">Pywr</a></h1>
+
+    </section>
+
+  </div>
+  
 
 
+  
 
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.5dev',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
+  
 
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
 
-<p>
-<iframe src="https://ghbtns.com/github-btn.html?user=pywr&repo=pywr&type=watch&count=true&size=large&v=2"
-  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
-</p>
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
 
-
-
-
-
-<h3>Navigation</h3>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installing Pywr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="formulation.html">Problem formulation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">JSON model format</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#overview-of-document-structure">Overview of document structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#metadata">Metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#timestepper">Timestepper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#solver">Solver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#nodes">Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#edges">Edges</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#debugging-and-syntax-errors">Debugging and syntax errors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#footnotes">Footnotes</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="api/modules.html">Python API reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cookbook/demand_saving.html">Demand saving</a></li>
-<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="formulation.html" title="previous chapter">Problem formulation</a></li>
-      <li>Next: <a href="api/modules.html" title="next chapter">API Reference</a></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2015, Joshua Arnott.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
-      
-      |
-      <a href="_sources/json.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
-    
-
-    
-  </body>
+</body>
 </html>

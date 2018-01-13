@@ -1,0 +1,32 @@
+pywr\.recorders\.NumpyArrayNodeRecorder
+=======================================
+
+.. currentmodule:: pywr.recorders
+
+.. autoclass:: NumpyArrayNodeRecorder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~NumpyArrayNodeRecorder.after
+      ~NumpyArrayNodeRecorder.aggregated_value
+      ~NumpyArrayNodeRecorder.before
+      ~NumpyArrayNodeRecorder.finish
+      ~NumpyArrayNodeRecorder.load
+      ~NumpyArrayNodeRecorder.register
+      ~NumpyArrayNodeRecorder.reset
+      ~NumpyArrayNodeRecorder.setup
+      ~NumpyArrayNodeRecorder.to_dataframe
+      ~NumpyArrayNodeRecorder.unregister
+      ~NumpyArrayNodeRecorder.values
+   
+   
+
+   
+   
+   

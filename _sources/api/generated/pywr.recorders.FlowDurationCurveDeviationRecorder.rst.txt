@@ -1,0 +1,32 @@
+pywr\.recorders\.FlowDurationCurveDeviationRecorder
+===================================================
+
+.. currentmodule:: pywr.recorders
+
+.. autoclass:: FlowDurationCurveDeviationRecorder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~FlowDurationCurveDeviationRecorder.after
+      ~FlowDurationCurveDeviationRecorder.aggregated_value
+      ~FlowDurationCurveDeviationRecorder.before
+      ~FlowDurationCurveDeviationRecorder.finish
+      ~FlowDurationCurveDeviationRecorder.load
+      ~FlowDurationCurveDeviationRecorder.register
+      ~FlowDurationCurveDeviationRecorder.reset
+      ~FlowDurationCurveDeviationRecorder.setup
+      ~FlowDurationCurveDeviationRecorder.to_dataframe
+      ~FlowDurationCurveDeviationRecorder.unregister
+      ~FlowDurationCurveDeviationRecorder.values
+   
+   
+
+   
+   
+   

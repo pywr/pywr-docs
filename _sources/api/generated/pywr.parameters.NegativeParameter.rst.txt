@@ -1,0 +1,35 @@
+pywr\.parameters\.NegativeParameter
+===================================
+
+.. currentmodule:: pywr.parameters
+
+.. autoclass:: NegativeParameter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~NegativeParameter.after
+      ~NegativeParameter.before
+      ~NegativeParameter.finish
+      ~NegativeParameter.get_all_values
+      ~NegativeParameter.get_value
+      ~NegativeParameter.load
+      ~NegativeParameter.lower_bounds
+      ~NegativeParameter.register
+      ~NegativeParameter.reset
+      ~NegativeParameter.setup
+      ~NegativeParameter.unregister
+      ~NegativeParameter.update
+      ~NegativeParameter.upper_bounds
+      ~NegativeParameter.value
+   
+   
+
+   
+   
+   

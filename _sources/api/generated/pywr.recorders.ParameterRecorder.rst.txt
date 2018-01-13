@@ -1,0 +1,31 @@
+pywr\.recorders\.ParameterRecorder
+==================================
+
+.. currentmodule:: pywr.recorders
+
+.. autoclass:: ParameterRecorder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ParameterRecorder.after
+      ~ParameterRecorder.aggregated_value
+      ~ParameterRecorder.before
+      ~ParameterRecorder.finish
+      ~ParameterRecorder.load
+      ~ParameterRecorder.register
+      ~ParameterRecorder.reset
+      ~ParameterRecorder.setup
+      ~ParameterRecorder.unregister
+      ~ParameterRecorder.values
+   
+   
+
+   
+   
+   

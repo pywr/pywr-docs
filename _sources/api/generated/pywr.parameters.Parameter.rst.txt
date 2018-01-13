@@ -1,0 +1,35 @@
+pywr\.parameters\.Parameter
+===========================
+
+.. currentmodule:: pywr.parameters
+
+.. autoclass:: Parameter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Parameter.after
+      ~Parameter.before
+      ~Parameter.finish
+      ~Parameter.get_all_values
+      ~Parameter.get_value
+      ~Parameter.load
+      ~Parameter.lower_bounds
+      ~Parameter.register
+      ~Parameter.reset
+      ~Parameter.setup
+      ~Parameter.unregister
+      ~Parameter.update
+      ~Parameter.upper_bounds
+      ~Parameter.value
+   
+   
+
+   
+   
+   

@@ -1,0 +1,35 @@
+pywr\.parameters\.ScenarioMonthlyProfileParameter
+=================================================
+
+.. currentmodule:: pywr.parameters
+
+.. autoclass:: ScenarioMonthlyProfileParameter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ScenarioMonthlyProfileParameter.after
+      ~ScenarioMonthlyProfileParameter.before
+      ~ScenarioMonthlyProfileParameter.finish
+      ~ScenarioMonthlyProfileParameter.get_all_values
+      ~ScenarioMonthlyProfileParameter.get_value
+      ~ScenarioMonthlyProfileParameter.load
+      ~ScenarioMonthlyProfileParameter.lower_bounds
+      ~ScenarioMonthlyProfileParameter.register
+      ~ScenarioMonthlyProfileParameter.reset
+      ~ScenarioMonthlyProfileParameter.setup
+      ~ScenarioMonthlyProfileParameter.unregister
+      ~ScenarioMonthlyProfileParameter.update
+      ~ScenarioMonthlyProfileParameter.upper_bounds
+      ~ScenarioMonthlyProfileParameter.value
+   
+   
+
+   
+   
+   

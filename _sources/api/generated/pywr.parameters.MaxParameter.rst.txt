@@ -1,0 +1,35 @@
+pywr\.parameters\.MaxParameter
+==============================
+
+.. currentmodule:: pywr.parameters
+
+.. autoclass:: MaxParameter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MaxParameter.after
+      ~MaxParameter.before
+      ~MaxParameter.finish
+      ~MaxParameter.get_all_values
+      ~MaxParameter.get_value
+      ~MaxParameter.load
+      ~MaxParameter.lower_bounds
+      ~MaxParameter.register
+      ~MaxParameter.reset
+      ~MaxParameter.setup
+      ~MaxParameter.unregister
+      ~MaxParameter.update
+      ~MaxParameter.upper_bounds
+      ~MaxParameter.value
+   
+   
+
+   
+   
+   

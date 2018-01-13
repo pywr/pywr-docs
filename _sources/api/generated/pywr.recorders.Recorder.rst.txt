@@ -1,0 +1,31 @@
+pywr\.recorders\.Recorder
+=========================
+
+.. currentmodule:: pywr.recorders
+
+.. autoclass:: Recorder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Recorder.after
+      ~Recorder.aggregated_value
+      ~Recorder.before
+      ~Recorder.finish
+      ~Recorder.load
+      ~Recorder.register
+      ~Recorder.reset
+      ~Recorder.setup
+      ~Recorder.unregister
+      ~Recorder.values
+   
+   
+
+   
+   
+   

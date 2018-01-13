@@ -1,0 +1,35 @@
+pywr\.parameters\.DailyProfileParameter
+=======================================
+
+.. currentmodule:: pywr.parameters
+
+.. autoclass:: DailyProfileParameter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DailyProfileParameter.after
+      ~DailyProfileParameter.before
+      ~DailyProfileParameter.finish
+      ~DailyProfileParameter.get_all_values
+      ~DailyProfileParameter.get_value
+      ~DailyProfileParameter.load
+      ~DailyProfileParameter.lower_bounds
+      ~DailyProfileParameter.register
+      ~DailyProfileParameter.reset
+      ~DailyProfileParameter.setup
+      ~DailyProfileParameter.unregister
+      ~DailyProfileParameter.update
+      ~DailyProfileParameter.upper_bounds
+      ~DailyProfileParameter.value
+   
+   
+
+   
+   
+   

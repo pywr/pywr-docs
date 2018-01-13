@@ -1,0 +1,33 @@
+pywr\.recorders\.SeasonalFlowDurationCurveRecorder
+==================================================
+
+.. currentmodule:: pywr.recorders
+
+.. autoclass:: SeasonalFlowDurationCurveRecorder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SeasonalFlowDurationCurveRecorder.after
+      ~SeasonalFlowDurationCurveRecorder.aggregated_value
+      ~SeasonalFlowDurationCurveRecorder.before
+      ~SeasonalFlowDurationCurveRecorder.finish
+      ~SeasonalFlowDurationCurveRecorder.is_season
+      ~SeasonalFlowDurationCurveRecorder.load
+      ~SeasonalFlowDurationCurveRecorder.register
+      ~SeasonalFlowDurationCurveRecorder.reset
+      ~SeasonalFlowDurationCurveRecorder.setup
+      ~SeasonalFlowDurationCurveRecorder.to_dataframe
+      ~SeasonalFlowDurationCurveRecorder.unregister
+      ~SeasonalFlowDurationCurveRecorder.values
+   
+   
+
+   
+   
+   

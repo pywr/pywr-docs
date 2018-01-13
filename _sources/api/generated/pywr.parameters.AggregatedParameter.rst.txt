@@ -1,0 +1,37 @@
+pywr\.parameters\.AggregatedParameter
+=====================================
+
+.. currentmodule:: pywr.parameters
+
+.. autoclass:: AggregatedParameter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~AggregatedParameter.add
+      ~AggregatedParameter.after
+      ~AggregatedParameter.before
+      ~AggregatedParameter.finish
+      ~AggregatedParameter.get_all_values
+      ~AggregatedParameter.get_value
+      ~AggregatedParameter.load
+      ~AggregatedParameter.lower_bounds
+      ~AggregatedParameter.register
+      ~AggregatedParameter.remove
+      ~AggregatedParameter.reset
+      ~AggregatedParameter.setup
+      ~AggregatedParameter.unregister
+      ~AggregatedParameter.update
+      ~AggregatedParameter.upper_bounds
+      ~AggregatedParameter.value
+   
+   
+
+   
+   
+   
