@@ -31,7 +31,7 @@
 ./_sources/api/generated/pywr.recorders.FlowDurationCurveDeviationRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.FlowDurationCurveRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.IndexParameterRecorder.rst.txt
-./_sources/api/generated/pywr.recorders.MeanFlowRecorder.rst.txt
+./_sources/api/generated/pywr.recorders.MeanFlowNodeRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.MinimumThresholdVolumeStorageRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.MinimumVolumeStorageRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.NodeRecorder.rst.txt
@@ -42,6 +42,7 @@
 ./_sources/api/generated/pywr.recorders.NumpyArrayStorageRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.ParameterRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.Recorder.rst.txt
+./_sources/api/generated/pywr.recorders.RollingMeanFlowNodeRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.RollingWindowParameterRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.SeasonalFlowDurationCurveRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.StorageDurationCurveRecorder.rst.txt
@@ -130,7 +131,7 @@
 ./api/generated/pywr.recorders.FlowDurationCurveDeviationRecorder.html
 ./api/generated/pywr.recorders.FlowDurationCurveRecorder.html
 ./api/generated/pywr.recorders.IndexParameterRecorder.html
-./api/generated/pywr.recorders.MeanFlowRecorder.html
+./api/generated/pywr.recorders.MeanFlowNodeRecorder.html
 ./api/generated/pywr.recorders.MinimumThresholdVolumeStorageRecorder.html
 ./api/generated/pywr.recorders.MinimumVolumeStorageRecorder.html
 ./api/generated/pywr.recorders.NodeRecorder.html
@@ -141,6 +142,7 @@
 ./api/generated/pywr.recorders.NumpyArrayStorageRecorder.html
 ./api/generated/pywr.recorders.ParameterRecorder.html
 ./api/generated/pywr.recorders.Recorder.html
+./api/generated/pywr.recorders.RollingMeanFlowNodeRecorder.html
 ./api/generated/pywr.recorders.RollingWindowParameterRecorder.html
 ./api/generated/pywr.recorders.SeasonalFlowDurationCurveRecorder.html
 ./api/generated/pywr.recorders.StorageDurationCurveRecorder.html

@@ -130,8 +130,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#statistical-recorders">Statistical recorders</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.MeanFlowRecorder.html">pywr.recorders.MeanFlowRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.MeanFlowNodeRecorder.html">pywr.recorders.MeanFlowNodeRecorder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.TotalFlowNodeRecorder.html">pywr.recorders.TotalFlowNodeRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.RollingMeanFlowNodeRecorder.html">pywr.recorders.RollingMeanFlowNodeRecorder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.MinimumVolumeStorageRecorder.html">pywr.recorders.MinimumVolumeStorageRecorder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.MinimumThresholdVolumeStorageRecorder.html">pywr.recorders.MinimumThresholdVolumeStorageRecorder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.RollingWindowParameterRecorder.html">pywr.recorders.RollingWindowParameterRecorder</a></li>
@@ -317,19 +318,22 @@ accessed following a model run before the model instances is destroyed.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="generated/pywr.recorders.MeanFlowRecorder.html#pywr.recorders.MeanFlowRecorder" title="pywr.recorders.MeanFlowRecorder"><code class="xref py py-obj docutils literal"><span class="pre">MeanFlowRecorder</span></code></a></td>
-<td>Records the mean flow of a Node for the previous N timesteps</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/pywr.recorders.MeanFlowNodeRecorder.html#pywr.recorders.MeanFlowNodeRecorder" title="pywr.recorders.MeanFlowNodeRecorder"><code class="xref py py-obj docutils literal"><span class="pre">MeanFlowNodeRecorder</span></code></a></td>
+<td>Record the mean flow for a Node.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/pywr.recorders.TotalFlowNodeRecorder.html#pywr.recorders.TotalFlowNodeRecorder" title="pywr.recorders.TotalFlowNodeRecorder"><code class="xref py py-obj docutils literal"><span class="pre">TotalFlowNodeRecorder</span></code></a></td>
 <td>Recorder to total the flow for a Node.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/pywr.recorders.MinimumVolumeStorageRecorder.html#pywr.recorders.MinimumVolumeStorageRecorder" title="pywr.recorders.MinimumVolumeStorageRecorder"><code class="xref py py-obj docutils literal"><span class="pre">MinimumVolumeStorageRecorder</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/pywr.recorders.RollingMeanFlowNodeRecorder.html#pywr.recorders.RollingMeanFlowNodeRecorder" title="pywr.recorders.RollingMeanFlowNodeRecorder"><code class="xref py py-obj docutils literal"><span class="pre">RollingMeanFlowNodeRecorder</span></code></a></td>
+<td>Records the mean flow of a Node for the previous N timesteps</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/pywr.recorders.MinimumVolumeStorageRecorder.html#pywr.recorders.MinimumVolumeStorageRecorder" title="pywr.recorders.MinimumVolumeStorageRecorder"><code class="xref py py-obj docutils literal"><span class="pre">MinimumVolumeStorageRecorder</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="generated/pywr.recorders.MinimumThresholdVolumeStorageRecorder.html#pywr.recorders.MinimumThresholdVolumeStorageRecorder" title="pywr.recorders.MinimumThresholdVolumeStorageRecorder"><code class="xref py py-obj docutils literal"><span class="pre">MinimumThresholdVolumeStorageRecorder</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/pywr.recorders.MinimumThresholdVolumeStorageRecorder.html#pywr.recorders.MinimumThresholdVolumeStorageRecorder" title="pywr.recorders.MinimumThresholdVolumeStorageRecorder"><code class="xref py py-obj docutils literal"><span class="pre">MinimumThresholdVolumeStorageRecorder</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/pywr.recorders.RollingWindowParameterRecorder.html#pywr.recorders.RollingWindowParameterRecorder" title="pywr.recorders.RollingWindowParameterRecorder"><code class="xref py py-obj docutils literal"><span class="pre">RollingWindowParameterRecorder</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="generated/pywr.recorders.RollingWindowParameterRecorder.html#pywr.recorders.RollingWindowParameterRecorder" title="pywr.recorders.RollingWindowParameterRecorder"><code class="xref py py-obj docutils literal"><span class="pre">RollingWindowParameterRecorder</span></code></a></td>
 <td>Records the mean value of a Parameter for the last N timesteps</td>
 </tr>
 </tbody>
