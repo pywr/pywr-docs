@@ -1,5 +1,5 @@
-pywr\.parameters\.MonthlyProfileParameter
-=========================================
+pywr.parameters.MonthlyProfileParameter
+=======================================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,17 @@ pywr\.parameters\.MonthlyProfileParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MonthlyProfileParameter.children
+      ~MonthlyProfileParameter.comment
+      ~MonthlyProfileParameter.is_variable
+      ~MonthlyProfileParameter.model
+      ~MonthlyProfileParameter.name
+      ~MonthlyProfileParameter.parents
+      ~MonthlyProfileParameter.size
    
    

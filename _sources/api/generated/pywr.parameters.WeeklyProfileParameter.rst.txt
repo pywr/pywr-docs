@@ -1,5 +1,5 @@
-pywr\.parameters\.WeeklyProfileParameter
-========================================
+pywr.parameters.WeeklyProfileParameter
+======================================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,17 @@ pywr\.parameters\.WeeklyProfileParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~WeeklyProfileParameter.children
+      ~WeeklyProfileParameter.comment
+      ~WeeklyProfileParameter.is_variable
+      ~WeeklyProfileParameter.model
+      ~WeeklyProfileParameter.name
+      ~WeeklyProfileParameter.parents
+      ~WeeklyProfileParameter.size
    
    

@@ -1,5 +1,5 @@
-pywr\.parameters\.DeficitParameter
-==================================
+pywr.parameters.DeficitParameter
+================================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,18 @@ pywr\.parameters\.DeficitParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DeficitParameter.children
+      ~DeficitParameter.comment
+      ~DeficitParameter.is_variable
+      ~DeficitParameter.model
+      ~DeficitParameter.name
+      ~DeficitParameter.node
+      ~DeficitParameter.parents
+      ~DeficitParameter.size
    
    

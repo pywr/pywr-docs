@@ -1,5 +1,5 @@
-pywr\.recorders\.NumpyArrayIndexParameterRecorder
-=================================================
+pywr.recorders.NumpyArrayIndexParameterRecorder
+===============================================
 
 .. currentmodule:: pywr.recorders
 
@@ -28,5 +28,22 @@ pywr\.recorders\.NumpyArrayIndexParameterRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~NumpyArrayIndexParameterRecorder.agg_func
+      ~NumpyArrayIndexParameterRecorder.children
+      ~NumpyArrayIndexParameterRecorder.comment
+      ~NumpyArrayIndexParameterRecorder.data
+      ~NumpyArrayIndexParameterRecorder.epsilon
+      ~NumpyArrayIndexParameterRecorder.ignore_nan
+      ~NumpyArrayIndexParameterRecorder.is_constraint
+      ~NumpyArrayIndexParameterRecorder.is_objective
+      ~NumpyArrayIndexParameterRecorder.model
+      ~NumpyArrayIndexParameterRecorder.name
+      ~NumpyArrayIndexParameterRecorder.parameter
+      ~NumpyArrayIndexParameterRecorder.parents
    
    

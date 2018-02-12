@@ -1,5 +1,5 @@
-pywr\.parameters\.IndexParameter
-================================
+pywr.parameters.IndexParameter
+==============================
 
 .. currentmodule:: pywr.parameters
 
@@ -34,5 +34,17 @@ pywr\.parameters\.IndexParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~IndexParameter.children
+      ~IndexParameter.comment
+      ~IndexParameter.is_variable
+      ~IndexParameter.model
+      ~IndexParameter.name
+      ~IndexParameter.parents
+      ~IndexParameter.size
    
    

@@ -1,5 +1,5 @@
-pywr\.parameters\.DailyProfileParameter
-=======================================
+pywr.parameters.DailyProfileParameter
+=====================================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,17 @@ pywr\.parameters\.DailyProfileParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DailyProfileParameter.children
+      ~DailyProfileParameter.comment
+      ~DailyProfileParameter.is_variable
+      ~DailyProfileParameter.model
+      ~DailyProfileParameter.name
+      ~DailyProfileParameter.parents
+      ~DailyProfileParameter.size
    
    

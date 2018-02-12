@@ -1,5 +1,5 @@
-pywr\.recorders\.Recorder
-=========================
+pywr.recorders.Recorder
+=======================
 
 .. currentmodule:: pywr.recorders
 
@@ -27,5 +27,20 @@ pywr\.recorders\.Recorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Recorder.agg_func
+      ~Recorder.children
+      ~Recorder.comment
+      ~Recorder.epsilon
+      ~Recorder.ignore_nan
+      ~Recorder.is_constraint
+      ~Recorder.is_objective
+      ~Recorder.model
+      ~Recorder.name
+      ~Recorder.parents
    
    

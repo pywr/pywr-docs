@@ -1,5 +1,5 @@
-pywr\.recorders\.FlowDurationCurveDeviationRecorder
-===================================================
+pywr.recorders.FlowDurationCurveDeviationRecorder
+=================================================
 
 .. currentmodule:: pywr.recorders
 
@@ -28,5 +28,25 @@ pywr\.recorders\.FlowDurationCurveDeviationRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FlowDurationCurveDeviationRecorder.agg_func
+      ~FlowDurationCurveDeviationRecorder.children
+      ~FlowDurationCurveDeviationRecorder.comment
+      ~FlowDurationCurveDeviationRecorder.data
+      ~FlowDurationCurveDeviationRecorder.epsilon
+      ~FlowDurationCurveDeviationRecorder.fdc
+      ~FlowDurationCurveDeviationRecorder.fdc_deviations
+      ~FlowDurationCurveDeviationRecorder.ignore_nan
+      ~FlowDurationCurveDeviationRecorder.is_constraint
+      ~FlowDurationCurveDeviationRecorder.is_objective
+      ~FlowDurationCurveDeviationRecorder.model
+      ~FlowDurationCurveDeviationRecorder.name
+      ~FlowDurationCurveDeviationRecorder.node
+      ~FlowDurationCurveDeviationRecorder.parents
+      ~FlowDurationCurveDeviationRecorder.scenario
    
    

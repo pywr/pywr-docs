@@ -1,5 +1,5 @@
-pywr\.parameters\.ArrayIndexedScenarioMonthlyFactorsParameter
-=============================================================
+pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter
+===========================================================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,17 @@ pywr\.parameters\.ArrayIndexedScenarioMonthlyFactorsParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ArrayIndexedScenarioMonthlyFactorsParameter.children
+      ~ArrayIndexedScenarioMonthlyFactorsParameter.comment
+      ~ArrayIndexedScenarioMonthlyFactorsParameter.is_variable
+      ~ArrayIndexedScenarioMonthlyFactorsParameter.model
+      ~ArrayIndexedScenarioMonthlyFactorsParameter.name
+      ~ArrayIndexedScenarioMonthlyFactorsParameter.parents
+      ~ArrayIndexedScenarioMonthlyFactorsParameter.size
    
    

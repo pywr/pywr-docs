@@ -173,19 +173,19 @@
 <span id="id1"></span><h1>Demand saving<a class="headerlink" href="#demand-saving" title="Permalink to this headline">¶</a></h1>
 <p>Demand saving is a common concept in water resource models. When the state of a water resource is poor (for example, lower than normal reservoir levels) demand restrictions may be imposed on customers in order to reduce the likelihood of a failure to supply.</p>
 <p>The demand at a given timestep can be represented using the equation below,</p>
-<div class="math">
+<div class="math notranslate">
 \[d = d_{mean} * p * (1-s)\]</div>
-<p>where <span class="math">\(d\)</span> is the baseline demand to be calculated, <span class="math">\(d_{mean}\)</span> is the baseline demand, <span class="math">\(p\)</span> is the annual profile and <span class="math">\(s\)</span> is the demand saving (e.g. 5%).</p>
-<p>The code snippets that follow belong in the <code class="docutils literal"><span class="pre">&quot;parameters&quot;:</span> <span class="pre">{}</span></code> section of the model document (except for the <code class="docutils literal"><span class="pre">node</span></code> at the end).</p>
+<p>where <span class="math notranslate">\(d\)</span> is the baseline demand to be calculated, <span class="math notranslate">\(d_{mean}\)</span> is the baseline demand, <span class="math notranslate">\(p\)</span> is the annual profile and <span class="math notranslate">\(s\)</span> is the demand saving (e.g. 5%).</p>
+<p>The code snippets that follow belong in the <code class="docutils literal notranslate"><span class="pre">&quot;parameters&quot;:</span> <span class="pre">{}</span></code> section of the model document (except for the <code class="docutils literal notranslate"><span class="pre">node</span></code> at the end).</p>
 <p>The baseline demand is specified as a constant (this is often the <em>mean</em> demand).</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="s2">&quot;demand_baseline&quot;</span><span class="o">:</span> <span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;demand_baseline&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;constant&quot;</span><span class="p">,</span>
     <span class="s2">&quot;values&quot;</span><span class="o">:</span> <span class="mi">50</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>A daily or monthly profile can be used to vary the demand throughout the year. In the example below the demand in May - August is 1.2x the baseline demand, with the rest of the year at 0.9x the baseline, forming the common “top hat” profile (illustrated below).</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="s2">&quot;demand_profile&quot;</span><span class="o">:</span> <span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;demand_profile&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;monthlyprofile&quot;</span><span class="p">,</span>
     <span class="s2">&quot;values&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]</span>
 <span class="p">},</span>
@@ -195,9 +195,9 @@
 <div class="figure">
 <img alt="../_images/top_hat.png" src="../_images/top_hat.png" />
 </div>
-<p>The demand saving level describes the level of restrictions as an integer, where 0 means no demand restrictions, level 1 (L1) is some restriction (or perhaps just publicity), level 2 (L2) more severe restrictions, and so on. The specifics will depend on the system being modelled. This is represented in Pywr using the <code class="docutils literal"><span class="pre">ControlCurveIndexParameter</span></code>. <code class="docutils literal"><span class="pre">IndexParameter</span></code> return an integer to be used as an index, rather than a decimal value.</p>
-<p>The demand saving level is often related to the storage of strategic reservoirs in relation to a control curve (the expected reservoir volume at a given time of the year). The example below two demand saving levels are defined (and implicitly a L0) based on the volume in the <code class="docutils literal"><span class="pre">&quot;Central</span> <span class="pre">Reservoir&quot;</span></code> storage node. L1 is defined as 80% of full, L2 as 50% of full. Control curves are commonly more complicated, as the expected level of a reservoir is usually lower in the summer than it is in the winter.</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="s2">&quot;demand_saving_level&quot;</span><span class="o">:</span> <span class="p">{</span>
+<p>The demand saving level describes the level of restrictions as an integer, where 0 means no demand restrictions, level 1 (L1) is some restriction (or perhaps just publicity), level 2 (L2) more severe restrictions, and so on. The specifics will depend on the system being modelled. This is represented in Pywr using the <code class="docutils literal notranslate"><span class="pre">ControlCurveIndexParameter</span></code>. <code class="docutils literal notranslate"><span class="pre">IndexParameter</span></code> return an integer to be used as an index, rather than a decimal value.</p>
+<p>The demand saving level is often related to the storage of strategic reservoirs in relation to a control curve (the expected reservoir volume at a given time of the year). The example below two demand saving levels are defined (and implicitly a L0) based on the volume in the <code class="docutils literal notranslate"><span class="pre">&quot;Central</span> <span class="pre">Reservoir&quot;</span></code> storage node. L1 is defined as 80% of full, L2 as 50% of full. Control curves are commonly more complicated, as the expected level of a reservoir is usually lower in the summer than it is in the winter.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;demand_saving_level&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;controlcurveindex&quot;</span><span class="p">,</span>
     <span class="s2">&quot;storage_node&quot;</span><span class="o">:</span> <span class="s2">&quot;Central Reservoir&quot;</span><span class="p">,</span>
     <span class="s2">&quot;control_curves&quot;</span><span class="o">:</span> <span class="p">[</span>
@@ -215,8 +215,8 @@
 <span class="p">},</span>
 </pre></div>
 </div>
-<p>The demand saving factor is calculated by indexing an array of demand saving profiles with the demand saving level. In the example below the list of profiles (<code class="docutils literal"><span class="pre">&quot;params&quot;</span></code>) corresponds to the L0, L1 and L2 profiles respectively. At L0 a constant <code class="docutils literal"><span class="pre">1.0</span></code> is used to represent no savings. At L1 there is a 10% reduction in demand (<code class="docutils literal"><span class="pre">0.90</span></code> as a factor) during the summer months and a 5% reduction elsewhere (<code class="docutils literal"><span class="pre">0.95</span></code>). At L2 there are further reductions to 75%/80%.</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="s2">&quot;demand_saving_factor&quot;</span><span class="o">:</span> <span class="p">{</span>
+<p>The demand saving factor is calculated by indexing an array of demand saving profiles with the demand saving level. In the example below the list of profiles (<code class="docutils literal notranslate"><span class="pre">&quot;params&quot;</span></code>) corresponds to the L0, L1 and L2 profiles respectively. At L0 a constant <code class="docutils literal notranslate"><span class="pre">1.0</span></code> is used to represent no savings. At L1 there is a 10% reduction in demand (<code class="docutils literal notranslate"><span class="pre">0.90</span></code> as a factor) during the summer months and a 5% reduction elsewhere (<code class="docutils literal notranslate"><span class="pre">0.95</span></code>). At L2 there are further reductions to 75%/80%.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;demand_saving_factor&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;indexedarray&quot;</span><span class="p">,</span>
     <span class="s2">&quot;index_parameter&quot;</span><span class="o">:</span> <span class="s2">&quot;demand_saving_level&quot;</span><span class="p">,</span>
     <span class="s2">&quot;params&quot;</span><span class="o">:</span> <span class="p">[</span>
@@ -237,14 +237,14 @@
 </pre></div>
 </div>
 <p>To understand how the index works, the following equivalent Python code may help:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">month</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">month</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">demand_saving_level</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">demand_factors</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.95</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.8</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span>
 <span class="n">demand_saving_factor</span> <span class="o">=</span> <span class="n">demand_factors</span><span class="p">[</span><span class="n">demand_saving_level</span><span class="p">][</span><span class="n">month</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Finally the demand components can be combined as in the equation at the beginning using an <code class="docutils literal"><span class="pre">AggregatedParameter</span></code>. Each timestep the value of each of the components is calculated and the values are multiplied to give the final demand value.</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="s2">&quot;demand_max_flow&quot;</span><span class="o">:</span> <span class="p">{</span>
+<p>Finally the demand components can be combined as in the equation at the beginning using an <code class="docutils literal notranslate"><span class="pre">AggregatedParameter</span></code>. Each timestep the value of each of the components is calculated and the values are multiplied to give the final demand value.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;demand_max_flow&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;aggregated&quot;</span><span class="p">,</span>
     <span class="s2">&quot;agg_func&quot;</span><span class="o">:</span> <span class="s2">&quot;product&quot;</span><span class="p">,</span>
     <span class="s2">&quot;parameters&quot;</span><span class="o">:</span> <span class="p">[</span>
@@ -260,8 +260,8 @@
 <div class="figure">
 <img alt="../_images/demand_saving_levels.png" src="../_images/demand_saving_levels.png" />
 </div>
-<p>This parameter can then be applied to the <code class="docutils literal"><span class="pre">max_flow</span></code> attribute of the demand node.</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<p>This parameter can then be applied to the <code class="docutils literal notranslate"><span class="pre">max_flow</span></code> attribute of the demand node.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;output&quot;</span><span class="p">,</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Demand&quot;</span><span class="p">,</span>
     <span class="s2">&quot;max_flow&quot;</span><span class="o">:</span> <span class="s2">&quot;demand_max_flow&quot;</span><span class="p">,</span>

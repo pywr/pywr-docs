@@ -1,5 +1,5 @@
-pywr\.parameters\.ScenarioMonthlyProfileParameter
-=================================================
+pywr.parameters.ScenarioMonthlyProfileParameter
+===============================================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,17 @@ pywr\.parameters\.ScenarioMonthlyProfileParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ScenarioMonthlyProfileParameter.children
+      ~ScenarioMonthlyProfileParameter.comment
+      ~ScenarioMonthlyProfileParameter.is_variable
+      ~ScenarioMonthlyProfileParameter.model
+      ~ScenarioMonthlyProfileParameter.name
+      ~ScenarioMonthlyProfileParameter.parents
+      ~ScenarioMonthlyProfileParameter.size
    
    

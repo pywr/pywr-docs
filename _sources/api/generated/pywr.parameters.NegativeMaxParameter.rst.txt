@@ -1,5 +1,5 @@
-pywr\.parameters\.NegativeMaxParameter
-======================================
+pywr.parameters.NegativeMaxParameter
+====================================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,19 @@ pywr\.parameters\.NegativeMaxParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~NegativeMaxParameter.children
+      ~NegativeMaxParameter.comment
+      ~NegativeMaxParameter.is_variable
+      ~NegativeMaxParameter.model
+      ~NegativeMaxParameter.name
+      ~NegativeMaxParameter.parameter
+      ~NegativeMaxParameter.parents
+      ~NegativeMaxParameter.size
+      ~NegativeMaxParameter.threshold
    
    

@@ -168,8 +168,8 @@
 <h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="a-minimal-example">
 <h2>A minimal example<a class="headerlink" href="#a-minimal-example" title="Permalink to this headline">¶</a></h2>
-<p>The simplest example has two nodes: an <code class="xref py py-func docutils literal"><span class="pre">Input()</span></code> which adds flow to the network and an <code class="xref py py-func docutils literal"><span class="pre">Output()</span></code> which removes flow from the network.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pywr.core</span> <span class="kn">import</span> <span class="n">Model</span><span class="p">,</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Output</span>
+<p>The simplest example has two nodes: an <code class="xref py py-func docutils literal notranslate"><span class="pre">Input()</span></code> which adds flow to the network and an <code class="xref py py-func docutils literal notranslate"><span class="pre">Output()</span></code> which removes flow from the network.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pywr.core</span> <span class="kn">import</span> <span class="n">Model</span><span class="p">,</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Output</span>
 
 <span class="c1"># create a model (including an empty network)</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">()</span>
@@ -184,20 +184,20 @@
 </div>
 <p>While technically valid, this model isn’t very interesting because we haven’t set any constraints or costs on flows in the network.</p>
 <p>Let’s add some flow constraints to the problem:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># set maximum flows</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># set maximum flows</span>
 <span class="n">supply</span><span class="o">.</span><span class="n">max_flow</span> <span class="o">=</span> <span class="mf">10.0</span>
 <span class="n">demand</span><span class="o">.</span><span class="n">max_flow</span> <span class="o">=</span> <span class="mf">6.0</span>
 </pre></div>
 </div>
-<p>The default minimum flow for a <code class="xref py py-func docutils literal"><span class="pre">BaseNode()</span></code> is zero, so we don’t need to set it explicitly.</p>
+<p>The default minimum flow for a <code class="xref py py-func docutils literal notranslate"><span class="pre">BaseNode()</span></code> is zero, so we don’t need to set it explicitly.</p>
 <p>The model still doesn’t do anything as it’s missing costs for flow through the nodes. If the cost of supply is less than the benefit received from satisfying demand, flow in the network will occur (within the models constraints).</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># set cost (+ve) or benefit (-ve)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># set cost (+ve) or benefit (-ve)</span>
 <span class="n">supply</span><span class="o">.</span><span class="n">cost</span> <span class="o">=</span> <span class="mf">3.0</span>
 <span class="n">demand</span><span class="o">.</span><span class="n">cost</span> <span class="o">=</span> <span class="o">-</span><span class="mf">100.0</span>
 </pre></div>
 </div>
 <p>Next we need to tell the model how long to run for. As an example, we’ll use a daily timestep for all of 2015.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">from</span> <span class="nn">pywr.core</span> <span class="kn">import</span> <span class="n">Timestepper</span>
 
 <span class="n">model</span><span class="o">.</span><span class="n">timestepper</span> <span class="o">=</span> <span class="n">Timestepper</span><span class="p">(</span>
@@ -207,27 +207,27 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>In order to capture the output from the model we need to use a recorder, such as the <a class="reference internal" href="api/generated/pywr.recorders.NumpyArrayNodeRecorder.html#pywr.recorders.NumpyArrayNodeRecorder" title="pywr.recorders.NumpyArrayNodeRecorder"><code class="xref py py-func docutils literal"><span class="pre">pywr.recorders.NumpyArrayNodeRecorder()</span></code></a>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pywr.recorders</span> <span class="kn">import</span> <span class="n">NumpyArrayNodeRecorder</span>
+<p>In order to capture the output from the model we need to use a recorder, such as the <a class="reference internal" href="api/generated/pywr.recorders.NumpyArrayNodeRecorder.html#pywr.recorders.NumpyArrayNodeRecorder" title="pywr.recorders.NumpyArrayNodeRecorder"><code class="xref py py-func docutils literal notranslate"><span class="pre">pywr.recorders.NumpyArrayNodeRecorder()</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pywr.recorders</span> <span class="kn">import</span> <span class="n">NumpyArrayNodeRecorder</span>
 
 <span class="n">recorder</span> <span class="o">=</span> <span class="n">NumpyArrayNodeRecorder</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">supply</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Finally we are ready to run our model:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># lets get this party started!</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># lets get this party started!</span>
 <span class="n">model</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>We can check the result for the first timestep by accessing the recorder’s data property:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">scenario</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">scenario</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">timestep</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">print</span><span class="p">(</span><span class="n">recorder</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">scenario</span><span class="p">][</span><span class="n">timestep</span><span class="p">])</span>  <span class="c1"># prints 6.0</span>
 </pre></div>
 </div>
 <p>The result of this example model is trivial: the supply exceeds the demand, so the maximum flow at the demand is the limiting factor.</p>
 <p>The model defined about could equally have been defined in a JSON document:</p>
-<p>The model can be loaded using the <code class="docutils literal"><span class="pre">Model.load</span></code> method:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># load the model</span>
+<p>The model can be loaded using the <code class="docutils literal notranslate"><span class="pre">Model.load</span></code> method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># load the model</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;tutorial.json&quot;</span><span class="p">)</span>
 <span class="c1"># run, forest, run!</span>
 <span class="n">model</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>

@@ -1,5 +1,5 @@
-pywr\.recorders\.AnnualCountIndexParameterRecorder
-==================================================
+pywr.recorders.AnnualCountIndexParameterRecorder
+================================================
 
 .. currentmodule:: pywr.recorders
 
@@ -27,5 +27,22 @@ pywr\.recorders\.AnnualCountIndexParameterRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~AnnualCountIndexParameterRecorder.agg_func
+      ~AnnualCountIndexParameterRecorder.children
+      ~AnnualCountIndexParameterRecorder.comment
+      ~AnnualCountIndexParameterRecorder.epsilon
+      ~AnnualCountIndexParameterRecorder.ignore_nan
+      ~AnnualCountIndexParameterRecorder.is_constraint
+      ~AnnualCountIndexParameterRecorder.is_objective
+      ~AnnualCountIndexParameterRecorder.model
+      ~AnnualCountIndexParameterRecorder.name
+      ~AnnualCountIndexParameterRecorder.parameter
+      ~AnnualCountIndexParameterRecorder.parents
+      ~AnnualCountIndexParameterRecorder.threshold
    
    

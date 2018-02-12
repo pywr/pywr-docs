@@ -1,5 +1,5 @@
-pywr\.recorders\.NumpyArrayLevelRecorder
-========================================
+pywr.recorders.NumpyArrayLevelRecorder
+======================================
 
 .. currentmodule:: pywr.recorders
 
@@ -27,5 +27,22 @@ pywr\.recorders\.NumpyArrayLevelRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~NumpyArrayLevelRecorder.agg_func
+      ~NumpyArrayLevelRecorder.children
+      ~NumpyArrayLevelRecorder.comment
+      ~NumpyArrayLevelRecorder.data
+      ~NumpyArrayLevelRecorder.epsilon
+      ~NumpyArrayLevelRecorder.ignore_nan
+      ~NumpyArrayLevelRecorder.is_constraint
+      ~NumpyArrayLevelRecorder.is_objective
+      ~NumpyArrayLevelRecorder.model
+      ~NumpyArrayLevelRecorder.name
+      ~NumpyArrayLevelRecorder.node
+      ~NumpyArrayLevelRecorder.parents
    
    

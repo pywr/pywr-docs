@@ -215,12 +215,12 @@
 </div>
 <div class="section" id="installing-in-general">
 <h2>Installing (in general)<a class="headerlink" href="#installing-in-general" title="Permalink to this headline">¶</a></h2>
-<p>When installing Pywr you must specific which solvers to build. This is done by passing <code class="docutils literal"><span class="pre">--with-&lt;solver&gt;</span></code> as an argument to <code class="docutils literal"><span class="pre">setup.py</span></code>. The following command will build and install Pywr with both the GLPK and lpsolve solvers:</p>
-<div class="highlight-shell"><div class="highlight"><pre><span></span>python setup.py install --with-glpk --with-lpsolve
+<p>When installing Pywr you must specific which solvers to build. This is done by passing <code class="docutils literal notranslate"><span class="pre">--with-&lt;solver&gt;</span></code> as an argument to <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>. The following command will build and install Pywr with both the GLPK and lpsolve solvers:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python setup.py install --with-glpk --with-lpsolve
 </pre></div>
 </div>
-<p>To install Pywr in-place in developer mode, use the <code class="docutils literal"><span class="pre">develop</span></code> command instead of <code class="docutils literal"><span class="pre">install</span></code>. This is only useful if you plan to modify the Pywr source code and is not required for general use.</p>
-<div class="highlight-shell"><div class="highlight"><pre><span></span>python setup.py develop --with-glpk --with-lpsolve
+<p>To install Pywr in-place in developer mode, use the <code class="docutils literal notranslate"><span class="pre">develop</span></code> command instead of <code class="docutils literal notranslate"><span class="pre">install</span></code>. This is only useful if you plan to modify the Pywr source code and is not required for general use.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python setup.py develop --with-glpk --with-lpsolve
 </pre></div>
 </div>
 </div>
@@ -229,7 +229,7 @@
 <p>A binary distribution of Pywr is provided for 3.4 (64-bit) on Windows, Linux and OS X for the <a class="reference external" href="https://www.continuum.io/downloads">Anaconda Python distribution</a>. Note that this release may lag behind the development version.</p>
 <p>You will need to install and configure Anaconda before proceeding. The <a class="reference external" href="http://conda.pydata.org/docs/test-drive.html">conda 30-minute test drive</a> is a good place to start.</p>
 <p>The following commands add the “channel” the binary is hosted on, then install Pywr including all dependencies. The conda-forge channel is also recommended to satisfy some of the dependencies.</p>
-<div class="highlight-shell"><div class="highlight"><pre><span></span>conda config --add channels conda-forge
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda config --add channels conda-forge
 conda config --add channels pywr
 conda install pywr
 </pre></div>
@@ -238,7 +238,7 @@ conda install pywr
 <div class="section" id="installing-from-source-with-anaconda">
 <h2>Installing from source with Anaconda<a class="headerlink" href="#installing-from-source-with-anaconda" title="Permalink to this headline">¶</a></h2>
 <p>It’s possible to install the dependencies as Anaconda packages, but still build from source. This is only required if you want to keep up with development versions, rather than using the binaries done for releases. In this case you need to specify the include and library paths in your environment as the libraries will be installed in a non-standard location. This can be done by passing the relevant flags to setup.py. As an example, the following batch script should work on Windows (with a similar approach taken on Linux/macOS)</p>
-<div class="highlight-shell"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="nv">LIBRARY</span><span class="o">=</span>%CONDA_PREFIX%<span class="se">\L</span>ibrary
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="nv">LIBRARY</span><span class="o">=</span>%CONDA_PREFIX%<span class="se">\L</span>ibrary
 <span class="nb">set</span> <span class="nv">LIBRARY_INC</span><span class="o">=</span>%LIBRARY%<span class="se">\i</span>nclude
 <span class="nb">set</span> <span class="nv">LIBRARY_LIB</span><span class="o">=</span>%LIBRARY%<span class="se">\l</span>ib
 python setup.py build_ext -I<span class="s2">&quot;%LIBRARY_INC%&quot;</span> -L<span class="s2">&quot;%LIBRARY_LIB%&quot;</span> --inplace --with-glpk --with-lpsolve install
@@ -257,12 +257,12 @@ python setup.py build_ext -I<span class="s2">&quot;%LIBRARY_INC%&quot;</span> -L
 <div class="section" id="ubuntu">
 <h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h3>
 <p>The following commands should install the GLPK and lpsolve libraries:</p>
-<div class="highlight-shell"><div class="highlight"><pre><span></span>sudo apt-get install libgmp3-dev libglpk-dev glpk
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt-get install libgmp3-dev libglpk-dev glpk
 sudo apt-get install liblpsolve55-dev lp-solve
 </pre></div>
 </div>
 <p>The Ubuntu package for lpsolve includes a static library which can confuse the compiler. The easiest work-around is to remove it:</p>
-<div class="highlight-shell"><div class="highlight"><pre><span></span>sudo rm /usr/lib/liblpsolve55.a
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo rm /usr/lib/liblpsolve55.a
 sudo ln -s /usr/lib/lp_solve/liblpsolve55.so /usr/lib/liblpsolve55.so
 </pre></div>
 </div>
@@ -272,15 +272,15 @@ sudo ln -s /usr/lib/lp_solve/liblpsolve55.so /usr/lib/liblpsolve55.so
 <h2>Installing on OS X<a class="headerlink" href="#installing-on-os-x" title="Permalink to this headline">¶</a></h2>
 <p>Follow instructions as for <a class="reference internal" href="#installing-in-general">installing (in general)</a> to build from source. A conda package is also available.</p>
 <p>If external libraries are located in a non-standard location you either need to set the <cite>DYLD_LIBRARY_PATH</cite> environment variable at runtime:</p>
-<div class="highlight-shell"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">DYLD_LIBRARY_PATH</span><span class="o">=</span>/path/to/library/directory
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">DYLD_LIBRARY_PATH</span><span class="o">=</span>/path/to/library/directory
 </pre></div>
 </div>
 <p>Alternatively (and recommended) set the <cite>rpath</cite> of the extension during compilation.</p>
-<div class="highlight-shell"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">CFLAGS</span><span class="o">=</span><span class="s2">&quot;-Wl,-rpath,/path/to/library/directory&quot;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">CFLAGS</span><span class="o">=</span><span class="s2">&quot;-Wl,-rpath,/path/to/library/directory&quot;</span>
 </pre></div>
 </div>
 <p>You may also need to specify the location of the library headers:</p>
-<div class="highlight-shell"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">C_INCLUDE_PATH</span><span class="o">=</span>/path/to/include/directory
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">C_INCLUDE_PATH</span><span class="o">=</span>/path/to/include/directory
 </pre></div>
 </div>
 <p>Examples of the above can be seen in the conda recipe (see <cite>conda-recipe/build.sh</cite>).</p>
@@ -289,12 +289,12 @@ sudo ln -s /usr/lib/lp_solve/liblpsolve55.so /usr/lib/liblpsolve55.so
 <div class="section" id="development-and-testing">
 <h2>Development and testing<a class="headerlink" href="#development-and-testing" title="Permalink to this headline">¶</a></h2>
 <p>The source code for Pywr is managed using Git and is hosted on GitHub: <a class="reference external" href="https://github.com/pywr/pywr/">https://github.com/pywr/pywr/</a> .</p>
-<p>There are a collection of unit tests for Pywr written using <code class="docutils literal"><span class="pre">pytest</span></code>. These can be run using:</p>
-<div class="highlight-shell"><div class="highlight"><pre><span></span>py.test tests
+<p>There are a collection of unit tests for Pywr written using <code class="docutils literal notranslate"><span class="pre">pytest</span></code>. These can be run using:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py.test tests
 </pre></div>
 </div>
 <p>This will run all avaialble tests using the default solver. A specific solver can be tested by specifying at the command line:</p>
-<div class="highlight-shell"><div class="highlight"><pre><span></span>py.test tests --solver<span class="o">=</span>lpsolve
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py.test tests --solver<span class="o">=</span>lpsolve
 </pre></div>
 </div>
 <div class="section" id="continuous-integration">

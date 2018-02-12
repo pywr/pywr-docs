@@ -1,5 +1,5 @@
-pywr\.parameters\.control\_curves\.ControlCurveIndexParameter
-=============================================================
+pywr.parameters.control\_curves.ControlCurveIndexParameter
+==========================================================
 
 .. currentmodule:: pywr.parameters.control_curves
 
@@ -34,5 +34,19 @@ pywr\.parameters\.control\_curves\.ControlCurveIndexParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ControlCurveIndexParameter.children
+      ~ControlCurveIndexParameter.comment
+      ~ControlCurveIndexParameter.control_curves
+      ~ControlCurveIndexParameter.is_variable
+      ~ControlCurveIndexParameter.model
+      ~ControlCurveIndexParameter.name
+      ~ControlCurveIndexParameter.parents
+      ~ControlCurveIndexParameter.size
+      ~ControlCurveIndexParameter.storage_node
    
    

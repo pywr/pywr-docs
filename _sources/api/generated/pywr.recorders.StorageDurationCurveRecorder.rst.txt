@@ -1,5 +1,5 @@
-pywr\.recorders\.StorageDurationCurveRecorder
-=============================================
+pywr.recorders.StorageDurationCurveRecorder
+===========================================
 
 .. currentmodule:: pywr.recorders
 
@@ -28,5 +28,23 @@ pywr\.recorders\.StorageDurationCurveRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~StorageDurationCurveRecorder.agg_func
+      ~StorageDurationCurveRecorder.children
+      ~StorageDurationCurveRecorder.comment
+      ~StorageDurationCurveRecorder.data
+      ~StorageDurationCurveRecorder.epsilon
+      ~StorageDurationCurveRecorder.ignore_nan
+      ~StorageDurationCurveRecorder.is_constraint
+      ~StorageDurationCurveRecorder.is_objective
+      ~StorageDurationCurveRecorder.model
+      ~StorageDurationCurveRecorder.name
+      ~StorageDurationCurveRecorder.node
+      ~StorageDurationCurveRecorder.parents
+      ~StorageDurationCurveRecorder.sdc
    
    

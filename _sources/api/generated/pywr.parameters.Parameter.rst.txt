@@ -1,5 +1,5 @@
-pywr\.parameters\.Parameter
-===========================
+pywr.parameters.Parameter
+=========================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,17 @@ pywr\.parameters\.Parameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Parameter.children
+      ~Parameter.comment
+      ~Parameter.is_variable
+      ~Parameter.model
+      ~Parameter.name
+      ~Parameter.parents
+      ~Parameter.size
    
    

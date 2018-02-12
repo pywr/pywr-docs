@@ -1,5 +1,5 @@
-pywr\.parameters\.NegativeMinParameter
-======================================
+pywr.parameters.NegativeMinParameter
+====================================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,19 @@ pywr\.parameters\.NegativeMinParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~NegativeMinParameter.children
+      ~NegativeMinParameter.comment
+      ~NegativeMinParameter.is_variable
+      ~NegativeMinParameter.model
+      ~NegativeMinParameter.name
+      ~NegativeMinParameter.parameter
+      ~NegativeMinParameter.parents
+      ~NegativeMinParameter.size
+      ~NegativeMinParameter.threshold
    
    

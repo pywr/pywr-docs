@@ -1,5 +1,5 @@
-pywr\.recorders\.DeficitFrequencyNodeRecorder
-=============================================
+pywr.recorders.DeficitFrequencyNodeRecorder
+===========================================
 
 .. currentmodule:: pywr.recorders
 
@@ -27,5 +27,21 @@ pywr\.recorders\.DeficitFrequencyNodeRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DeficitFrequencyNodeRecorder.agg_func
+      ~DeficitFrequencyNodeRecorder.children
+      ~DeficitFrequencyNodeRecorder.comment
+      ~DeficitFrequencyNodeRecorder.epsilon
+      ~DeficitFrequencyNodeRecorder.ignore_nan
+      ~DeficitFrequencyNodeRecorder.is_constraint
+      ~DeficitFrequencyNodeRecorder.is_objective
+      ~DeficitFrequencyNodeRecorder.model
+      ~DeficitFrequencyNodeRecorder.name
+      ~DeficitFrequencyNodeRecorder.node
+      ~DeficitFrequencyNodeRecorder.parents
    
    

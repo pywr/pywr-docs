@@ -1,5 +1,5 @@
-pywr\.recorders\.StorageRecorder
-================================
+pywr.recorders.StorageRecorder
+==============================
 
 .. currentmodule:: pywr.recorders
 
@@ -27,5 +27,21 @@ pywr\.recorders\.StorageRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~StorageRecorder.agg_func
+      ~StorageRecorder.children
+      ~StorageRecorder.comment
+      ~StorageRecorder.epsilon
+      ~StorageRecorder.ignore_nan
+      ~StorageRecorder.is_constraint
+      ~StorageRecorder.is_objective
+      ~StorageRecorder.model
+      ~StorageRecorder.name
+      ~StorageRecorder.node
+      ~StorageRecorder.parents
    
    

@@ -1,5 +1,5 @@
-pywr\.parameters\.AnnualHarmonicSeriesParameter
-===============================================
+pywr.parameters.AnnualHarmonicSeriesParameter
+=============================================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,20 @@ pywr\.parameters\.AnnualHarmonicSeriesParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~AnnualHarmonicSeriesParameter.amplitudes
+      ~AnnualHarmonicSeriesParameter.children
+      ~AnnualHarmonicSeriesParameter.comment
+      ~AnnualHarmonicSeriesParameter.is_variable
+      ~AnnualHarmonicSeriesParameter.mean
+      ~AnnualHarmonicSeriesParameter.model
+      ~AnnualHarmonicSeriesParameter.name
+      ~AnnualHarmonicSeriesParameter.parents
+      ~AnnualHarmonicSeriesParameter.phases
+      ~AnnualHarmonicSeriesParameter.size
    
    

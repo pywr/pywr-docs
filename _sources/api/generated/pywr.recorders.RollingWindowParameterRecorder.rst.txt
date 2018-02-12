@@ -1,5 +1,5 @@
-pywr\.recorders\.RollingWindowParameterRecorder
-===============================================
+pywr.recorders.RollingWindowParameterRecorder
+=============================================
 
 .. currentmodule:: pywr.recorders
 
@@ -28,5 +28,23 @@ pywr\.recorders\.RollingWindowParameterRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RollingWindowParameterRecorder.agg_func
+      ~RollingWindowParameterRecorder.children
+      ~RollingWindowParameterRecorder.comment
+      ~RollingWindowParameterRecorder.data
+      ~RollingWindowParameterRecorder.epsilon
+      ~RollingWindowParameterRecorder.ignore_nan
+      ~RollingWindowParameterRecorder.is_constraint
+      ~RollingWindowParameterRecorder.is_objective
+      ~RollingWindowParameterRecorder.model
+      ~RollingWindowParameterRecorder.name
+      ~RollingWindowParameterRecorder.parameter
+      ~RollingWindowParameterRecorder.parents
+      ~RollingWindowParameterRecorder.window
    
    

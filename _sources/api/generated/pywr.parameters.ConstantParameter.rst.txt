@@ -1,5 +1,5 @@
-pywr\.parameters\.ConstantParameter
-===================================
+pywr.parameters.ConstantParameter
+=================================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,19 @@ pywr\.parameters\.ConstantParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ConstantParameter.children
+      ~ConstantParameter.comment
+      ~ConstantParameter.is_variable
+      ~ConstantParameter.model
+      ~ConstantParameter.name
+      ~ConstantParameter.offset
+      ~ConstantParameter.parents
+      ~ConstantParameter.scale
+      ~ConstantParameter.size
    
    

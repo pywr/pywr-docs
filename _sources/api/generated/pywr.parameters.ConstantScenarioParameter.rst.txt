@@ -1,5 +1,5 @@
-pywr\.parameters\.ConstantScenarioParameter
-===========================================
+pywr.parameters.ConstantScenarioParameter
+=========================================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,17 @@ pywr\.parameters\.ConstantScenarioParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ConstantScenarioParameter.children
+      ~ConstantScenarioParameter.comment
+      ~ConstantScenarioParameter.is_variable
+      ~ConstantScenarioParameter.model
+      ~ConstantScenarioParameter.name
+      ~ConstantScenarioParameter.parents
+      ~ConstantScenarioParameter.size
    
    

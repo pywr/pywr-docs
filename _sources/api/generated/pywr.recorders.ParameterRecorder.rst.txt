@@ -1,5 +1,5 @@
-pywr\.recorders\.ParameterRecorder
-==================================
+pywr.recorders.ParameterRecorder
+================================
 
 .. currentmodule:: pywr.recorders
 
@@ -27,5 +27,21 @@ pywr\.recorders\.ParameterRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ParameterRecorder.agg_func
+      ~ParameterRecorder.children
+      ~ParameterRecorder.comment
+      ~ParameterRecorder.epsilon
+      ~ParameterRecorder.ignore_nan
+      ~ParameterRecorder.is_constraint
+      ~ParameterRecorder.is_objective
+      ~ParameterRecorder.model
+      ~ParameterRecorder.name
+      ~ParameterRecorder.parameter
+      ~ParameterRecorder.parents
    
    

@@ -1,5 +1,5 @@
-pywr\.recorders\.NumpyArrayStorageRecorder
-==========================================
+pywr.recorders.NumpyArrayStorageRecorder
+========================================
 
 .. currentmodule:: pywr.recorders
 
@@ -28,5 +28,22 @@ pywr\.recorders\.NumpyArrayStorageRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~NumpyArrayStorageRecorder.agg_func
+      ~NumpyArrayStorageRecorder.children
+      ~NumpyArrayStorageRecorder.comment
+      ~NumpyArrayStorageRecorder.data
+      ~NumpyArrayStorageRecorder.epsilon
+      ~NumpyArrayStorageRecorder.ignore_nan
+      ~NumpyArrayStorageRecorder.is_constraint
+      ~NumpyArrayStorageRecorder.is_objective
+      ~NumpyArrayStorageRecorder.model
+      ~NumpyArrayStorageRecorder.name
+      ~NumpyArrayStorageRecorder.node
+      ~NumpyArrayStorageRecorder.parents
    
    

@@ -1,5 +1,5 @@
-pywr\.parameters\.MinParameter
-==============================
+pywr.parameters.MinParameter
+============================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,19 @@ pywr\.parameters\.MinParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MinParameter.children
+      ~MinParameter.comment
+      ~MinParameter.is_variable
+      ~MinParameter.model
+      ~MinParameter.name
+      ~MinParameter.parameter
+      ~MinParameter.parents
+      ~MinParameter.size
+      ~MinParameter.threshold
    
    

@@ -1,5 +1,5 @@
-pywr\.recorders\.RollingMeanFlowNodeRecorder
-============================================
+pywr.recorders.RollingMeanFlowNodeRecorder
+==========================================
 
 .. currentmodule:: pywr.recorders
 
@@ -27,5 +27,24 @@ pywr\.recorders\.RollingMeanFlowNodeRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RollingMeanFlowNodeRecorder.agg_func
+      ~RollingMeanFlowNodeRecorder.children
+      ~RollingMeanFlowNodeRecorder.comment
+      ~RollingMeanFlowNodeRecorder.data
+      ~RollingMeanFlowNodeRecorder.days
+      ~RollingMeanFlowNodeRecorder.epsilon
+      ~RollingMeanFlowNodeRecorder.ignore_nan
+      ~RollingMeanFlowNodeRecorder.is_constraint
+      ~RollingMeanFlowNodeRecorder.is_objective
+      ~RollingMeanFlowNodeRecorder.model
+      ~RollingMeanFlowNodeRecorder.name
+      ~RollingMeanFlowNodeRecorder.node
+      ~RollingMeanFlowNodeRecorder.parents
+      ~RollingMeanFlowNodeRecorder.timesteps
    
    

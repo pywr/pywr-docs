@@ -1,5 +1,5 @@
-pywr\.recorders\.MinimumThresholdVolumeStorageRecorder
-======================================================
+pywr.recorders.MinimumThresholdVolumeStorageRecorder
+====================================================
 
 .. currentmodule:: pywr.recorders
 
@@ -27,5 +27,22 @@ pywr\.recorders\.MinimumThresholdVolumeStorageRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MinimumThresholdVolumeStorageRecorder.agg_func
+      ~MinimumThresholdVolumeStorageRecorder.children
+      ~MinimumThresholdVolumeStorageRecorder.comment
+      ~MinimumThresholdVolumeStorageRecorder.epsilon
+      ~MinimumThresholdVolumeStorageRecorder.ignore_nan
+      ~MinimumThresholdVolumeStorageRecorder.is_constraint
+      ~MinimumThresholdVolumeStorageRecorder.is_objective
+      ~MinimumThresholdVolumeStorageRecorder.model
+      ~MinimumThresholdVolumeStorageRecorder.name
+      ~MinimumThresholdVolumeStorageRecorder.node
+      ~MinimumThresholdVolumeStorageRecorder.parents
+      ~MinimumThresholdVolumeStorageRecorder.threshold
    
    

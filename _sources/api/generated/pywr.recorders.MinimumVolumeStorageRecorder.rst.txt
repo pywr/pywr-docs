@@ -1,5 +1,5 @@
-pywr\.recorders\.MinimumVolumeStorageRecorder
-=============================================
+pywr.recorders.MinimumVolumeStorageRecorder
+===========================================
 
 .. currentmodule:: pywr.recorders
 
@@ -27,5 +27,21 @@ pywr\.recorders\.MinimumVolumeStorageRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MinimumVolumeStorageRecorder.agg_func
+      ~MinimumVolumeStorageRecorder.children
+      ~MinimumVolumeStorageRecorder.comment
+      ~MinimumVolumeStorageRecorder.epsilon
+      ~MinimumVolumeStorageRecorder.ignore_nan
+      ~MinimumVolumeStorageRecorder.is_constraint
+      ~MinimumVolumeStorageRecorder.is_objective
+      ~MinimumVolumeStorageRecorder.model
+      ~MinimumVolumeStorageRecorder.name
+      ~MinimumVolumeStorageRecorder.node
+      ~MinimumVolumeStorageRecorder.parents
    
    

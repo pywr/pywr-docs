@@ -1,5 +1,5 @@
-pywr\.recorders\.TotalFlowNodeRecorder
-======================================
+pywr.recorders.TotalFlowNodeRecorder
+====================================
 
 .. currentmodule:: pywr.recorders
 
@@ -27,5 +27,22 @@ pywr\.recorders\.TotalFlowNodeRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TotalFlowNodeRecorder.agg_func
+      ~TotalFlowNodeRecorder.children
+      ~TotalFlowNodeRecorder.comment
+      ~TotalFlowNodeRecorder.epsilon
+      ~TotalFlowNodeRecorder.factor
+      ~TotalFlowNodeRecorder.ignore_nan
+      ~TotalFlowNodeRecorder.is_constraint
+      ~TotalFlowNodeRecorder.is_objective
+      ~TotalFlowNodeRecorder.model
+      ~TotalFlowNodeRecorder.name
+      ~TotalFlowNodeRecorder.node
+      ~TotalFlowNodeRecorder.parents
    
    

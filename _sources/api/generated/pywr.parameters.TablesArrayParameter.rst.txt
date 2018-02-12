@@ -1,5 +1,5 @@
-pywr\.parameters\.TablesArrayParameter
-======================================
+pywr.parameters.TablesArrayParameter
+====================================
 
 .. currentmodule:: pywr.parameters
 
@@ -34,5 +34,22 @@ pywr\.parameters\.TablesArrayParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TablesArrayParameter.children
+      ~TablesArrayParameter.comment
+      ~TablesArrayParameter.h5file
+      ~TablesArrayParameter.h5store
+      ~TablesArrayParameter.is_variable
+      ~TablesArrayParameter.model
+      ~TablesArrayParameter.name
+      ~TablesArrayParameter.node
+      ~TablesArrayParameter.parents
+      ~TablesArrayParameter.scenario
+      ~TablesArrayParameter.size
+      ~TablesArrayParameter.where
    
    

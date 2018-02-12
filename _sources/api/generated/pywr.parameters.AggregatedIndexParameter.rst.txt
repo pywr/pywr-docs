@@ -1,5 +1,5 @@
-pywr\.parameters\.AggregatedIndexParameter
-==========================================
+pywr.parameters.AggregatedIndexParameter
+========================================
 
 .. currentmodule:: pywr.parameters
 
@@ -36,5 +36,19 @@ pywr\.parameters\.AggregatedIndexParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~AggregatedIndexParameter.agg_func
+      ~AggregatedIndexParameter.children
+      ~AggregatedIndexParameter.comment
+      ~AggregatedIndexParameter.is_variable
+      ~AggregatedIndexParameter.model
+      ~AggregatedIndexParameter.name
+      ~AggregatedIndexParameter.parameters
+      ~AggregatedIndexParameter.parents
+      ~AggregatedIndexParameter.size
    
    

@@ -1,5 +1,5 @@
-pywr\.parameters\.IndexedArrayParameter
-=======================================
+pywr.parameters.IndexedArrayParameter
+=====================================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,19 @@ pywr\.parameters\.IndexedArrayParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~IndexedArrayParameter.children
+      ~IndexedArrayParameter.comment
+      ~IndexedArrayParameter.index_parameter
+      ~IndexedArrayParameter.is_variable
+      ~IndexedArrayParameter.model
+      ~IndexedArrayParameter.name
+      ~IndexedArrayParameter.params
+      ~IndexedArrayParameter.parents
+      ~IndexedArrayParameter.size
    
    

@@ -1,5 +1,5 @@
-pywr\.parameters\.MaxParameter
-==============================
+pywr.parameters.MaxParameter
+============================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,19 @@ pywr\.parameters\.MaxParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MaxParameter.children
+      ~MaxParameter.comment
+      ~MaxParameter.is_variable
+      ~MaxParameter.model
+      ~MaxParameter.name
+      ~MaxParameter.parameter
+      ~MaxParameter.parents
+      ~MaxParameter.size
+      ~MaxParameter.threshold
    
    

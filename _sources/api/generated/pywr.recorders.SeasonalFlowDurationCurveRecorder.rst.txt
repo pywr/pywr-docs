@@ -1,5 +1,5 @@
-pywr\.recorders\.SeasonalFlowDurationCurveRecorder
-==================================================
+pywr.recorders.SeasonalFlowDurationCurveRecorder
+================================================
 
 .. currentmodule:: pywr.recorders
 
@@ -29,5 +29,23 @@ pywr\.recorders\.SeasonalFlowDurationCurveRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SeasonalFlowDurationCurveRecorder.agg_func
+      ~SeasonalFlowDurationCurveRecorder.children
+      ~SeasonalFlowDurationCurveRecorder.comment
+      ~SeasonalFlowDurationCurveRecorder.data
+      ~SeasonalFlowDurationCurveRecorder.epsilon
+      ~SeasonalFlowDurationCurveRecorder.fdc
+      ~SeasonalFlowDurationCurveRecorder.ignore_nan
+      ~SeasonalFlowDurationCurveRecorder.is_constraint
+      ~SeasonalFlowDurationCurveRecorder.is_objective
+      ~SeasonalFlowDurationCurveRecorder.model
+      ~SeasonalFlowDurationCurveRecorder.name
+      ~SeasonalFlowDurationCurveRecorder.node
+      ~SeasonalFlowDurationCurveRecorder.parents
    
    

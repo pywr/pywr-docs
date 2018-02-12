@@ -1,5 +1,5 @@
-pywr\.parameters\.ArrayIndexedScenarioParameter
-===============================================
+pywr.parameters.ArrayIndexedScenarioParameter
+=============================================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,17 @@ pywr\.parameters\.ArrayIndexedScenarioParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ArrayIndexedScenarioParameter.children
+      ~ArrayIndexedScenarioParameter.comment
+      ~ArrayIndexedScenarioParameter.is_variable
+      ~ArrayIndexedScenarioParameter.model
+      ~ArrayIndexedScenarioParameter.name
+      ~ArrayIndexedScenarioParameter.parents
+      ~ArrayIndexedScenarioParameter.size
    
    

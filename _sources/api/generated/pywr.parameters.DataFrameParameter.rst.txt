@@ -1,5 +1,5 @@
-pywr\.parameters\.DataFrameParameter
-====================================
+pywr.parameters.DataFrameParameter
+==================================
 
 .. currentmodule:: pywr.parameters
 
@@ -31,5 +31,19 @@ pywr\.parameters\.DataFrameParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DataFrameParameter.children
+      ~DataFrameParameter.comment
+      ~DataFrameParameter.dataframe
+      ~DataFrameParameter.is_variable
+      ~DataFrameParameter.model
+      ~DataFrameParameter.name
+      ~DataFrameParameter.parents
+      ~DataFrameParameter.scenario
+      ~DataFrameParameter.size
    
    

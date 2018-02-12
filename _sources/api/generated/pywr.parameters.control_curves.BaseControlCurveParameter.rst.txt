@@ -1,5 +1,5 @@
-pywr\.parameters\.control\_curves\.BaseControlCurveParameter
-============================================================
+pywr.parameters.control\_curves.BaseControlCurveParameter
+=========================================================
 
 .. currentmodule:: pywr.parameters.control_curves
 
@@ -31,5 +31,19 @@ pywr\.parameters\.control\_curves\.BaseControlCurveParameter
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BaseControlCurveParameter.children
+      ~BaseControlCurveParameter.comment
+      ~BaseControlCurveParameter.control_curves
+      ~BaseControlCurveParameter.is_variable
+      ~BaseControlCurveParameter.model
+      ~BaseControlCurveParameter.name
+      ~BaseControlCurveParameter.parents
+      ~BaseControlCurveParameter.size
+      ~BaseControlCurveParameter.storage_node
    
    

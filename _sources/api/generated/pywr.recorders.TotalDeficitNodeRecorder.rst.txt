@@ -1,5 +1,5 @@
-pywr\.recorders\.TotalDeficitNodeRecorder
-=========================================
+pywr.recorders.TotalDeficitNodeRecorder
+=======================================
 
 .. currentmodule:: pywr.recorders
 
@@ -27,5 +27,21 @@ pywr\.recorders\.TotalDeficitNodeRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TotalDeficitNodeRecorder.agg_func
+      ~TotalDeficitNodeRecorder.children
+      ~TotalDeficitNodeRecorder.comment
+      ~TotalDeficitNodeRecorder.epsilon
+      ~TotalDeficitNodeRecorder.ignore_nan
+      ~TotalDeficitNodeRecorder.is_constraint
+      ~TotalDeficitNodeRecorder.is_objective
+      ~TotalDeficitNodeRecorder.model
+      ~TotalDeficitNodeRecorder.name
+      ~TotalDeficitNodeRecorder.node
+      ~TotalDeficitNodeRecorder.parents
    
    

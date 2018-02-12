@@ -1,5 +1,5 @@
-pywr\.recorders\.MeanFlowNodeRecorder
-=====================================
+pywr.recorders.MeanFlowNodeRecorder
+===================================
 
 .. currentmodule:: pywr.recorders
 
@@ -27,5 +27,22 @@ pywr\.recorders\.MeanFlowNodeRecorder
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MeanFlowNodeRecorder.agg_func
+      ~MeanFlowNodeRecorder.children
+      ~MeanFlowNodeRecorder.comment
+      ~MeanFlowNodeRecorder.epsilon
+      ~MeanFlowNodeRecorder.factor
+      ~MeanFlowNodeRecorder.ignore_nan
+      ~MeanFlowNodeRecorder.is_constraint
+      ~MeanFlowNodeRecorder.is_objective
+      ~MeanFlowNodeRecorder.model
+      ~MeanFlowNodeRecorder.name
+      ~MeanFlowNodeRecorder.node
+      ~MeanFlowNodeRecorder.parents
    
    
