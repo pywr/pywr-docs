@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.recorders.MinimumThresholdVolumeStorageRecorder &mdash; Pywr 0.5dev documentation</title>
+  <title>pywr.recorders.TablesRecorder &mdash; Pywr 0.5dev documentation</title>
   
 
   
@@ -37,8 +37,8 @@
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Pywr 0.5dev documentation" href="../../index.html"/>
         <link rel="up" title="Recorders" href="../pywr.recorders.html"/>
-        <link rel="next" title="pywr.recorders.RollingWindowParameterRecorder" href="pywr.recorders.RollingWindowParameterRecorder.html"/>
-        <link rel="prev" title="pywr.recorders.MinimumVolumeStorageRecorder" href="pywr.recorders.MinimumVolumeStorageRecorder.html"/> 
+        <link rel="next" title="pywr.recorders.HydroPowerRecorder" href="pywr.recorders.HydroPowerRecorder.html"/>
+        <link rel="prev" title="pywr.recorders.CSVRecorder" href="pywr.recorders.CSVRecorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -105,17 +105,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#numpy-array-recorders">Numpy array recorders</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#flow-duration-curve-recorders">Flow duration curve recorders</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#deficit-recorders">Deficit recorders</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../pywr.recorders.html#statistical-recorders">Statistical recorders</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.MeanFlowNodeRecorder.html">pywr.recorders.MeanFlowNodeRecorder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.TotalFlowNodeRecorder.html">pywr.recorders.TotalFlowNodeRecorder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.RollingMeanFlowNodeRecorder.html">pywr.recorders.RollingMeanFlowNodeRecorder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.MinimumVolumeStorageRecorder.html">pywr.recorders.MinimumVolumeStorageRecorder</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.recorders.MinimumThresholdVolumeStorageRecorder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.RollingWindowParameterRecorder.html">pywr.recorders.RollingWindowParameterRecorder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#statistical-recorders">Statistical recorders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#index-recorders">Index recorders</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../pywr.recorders.html#file-recorders">File recorders</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.CSVRecorder.html">pywr.recorders.CSVRecorder</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.recorders.TablesRecorder</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#index-recorders">Index recorders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#file-recorders">File recorders</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#hydro-power-recorders">Hydro-power recorders</a></li>
 </ul>
 </li>
@@ -171,13 +167,13 @@
         
           <li><a href="../pywr.recorders.html">Recorders</a> &raquo;</li>
         
-      <li>pywr.recorders.MinimumThresholdVolumeStorageRecorder</li>
+      <li>pywr.recorders.TablesRecorder</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/generated/pywr.recorders.MinimumThresholdVolumeStorageRecorder.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/pywr.recorders.TablesRecorder.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -190,15 +186,85 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pywr-recorders-minimumthresholdvolumestoragerecorder">
-<h1>pywr.recorders.MinimumThresholdVolumeStorageRecorder<a class="headerlink" href="#pywr-recorders-minimumthresholdvolumestoragerecorder" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pywr-recorders-tablesrecorder">
+<h1>pywr.recorders.TablesRecorder<a class="headerlink" href="#pywr-recorders-tablesrecorder" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="pywr.recorders.MinimumThresholdVolumeStorageRecorder">
-<em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">MinimumThresholdVolumeStorageRecorder</code><a class="headerlink" href="#pywr.recorders.MinimumThresholdVolumeStorageRecorder" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
-<dt id="pywr.recorders.MinimumThresholdVolumeStorageRecorder.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.MinimumThresholdVolumeStorageRecorder.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+<dt id="pywr.recorders.TablesRecorder">
+<em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">TablesRecorder</code><span class="sig-paren">(</span><em>model</em>, <em>h5file</em>, <em>nodes=None</em>, <em>parameters=None</em>, <em>where='/'</em>, <em>time='/time'</em>, <em>routes_flows=None</em>, <em>routes='/routes'</em>, <em>scenarios='/scenarios'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.TablesRecorder" title="Permalink to this definition">¶</a></dt>
+<dd><p>A recorder that saves to PyTables CArray</p>
+<p>This Recorder creates a CArray for every node passed to the constructor.
+Each CArray stores the data for all scenarios on the specific node. This
+is useful for analysis of Node statistics across multiple scenarios.</p>
+<dl class="method">
+<dt id="pywr.recorders.TablesRecorder.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>model</em>, <em>h5file</em>, <em>nodes=None</em>, <em>parameters=None</em>, <em>where='/'</em>, <em>time='/time'</em>, <em>routes_flows=None</em>, <em>routes='/routes'</em>, <em>scenarios='/scenarios'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.TablesRecorder.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : <cite>pywr.model.Model</cite></p>
+<blockquote>
+<div><p>The model to record nodes from.</p>
+</div></blockquote>
+<p><strong>h5file</strong> : tables.File or filename</p>
+<blockquote>
+<div><p>The tables file handle or filename to attach the CArray objects to. If a
+filename is given the object will open and close the file handles.</p>
+</div></blockquote>
+<p><strong>nodes</strong> : iterable or None</p>
+<blockquote>
+<div><p>Nodes to save in the tables database. Can be an iterable of Node objects or
+node names. It can also be a iterable of tuples with a node specific where
+keyword as the first item and a Node object or name as the second item. If
+an iterable of tuples is provided then the node specific where keyword is
+used in preference to the where keyword (see below).</p>
+</div></blockquote>
+<p><strong>parameters</strong> : iterable or None</p>
+<blockquote>
+<div><p>Parameters to save. Similar to the nodes keyword, except refers to Parameter
+objects or names thereof.</p>
+</div></blockquote>
+<p><strong>where</strong> : string</p>
+<blockquote>
+<div><p>Default path to create the CArrays inside the database.</p>
+</div></blockquote>
+<p><strong>time</strong> : string</p>
+<blockquote>
+<div><p>Default full node path to save a time tables.Table. If None no table is created.</p>
+</div></blockquote>
+<p><strong>scenarios</strong> : string</p>
+<blockquote>
+<div><p>Default full node path to save a scenarios tables.Table. If None no table is created.</p>
+</div></blockquote>
+<p><strong>routes_flows</strong> : string</p>
+<blockquote>
+<div><p>Relative (to <cite>where</cite>) node path to save the routes flow CArray. If None (default) no array is created.</p>
+</div></blockquote>
+<p><strong>routes</strong> : string</p>
+<blockquote>
+<div><p>Full node path to save the routes tables.Table. If None not table is created.</p>
+</div></blockquote>
+<p><strong>filter_kwds</strong> : dict</p>
+<blockquote>
+<div><p>Filter keywords to pass to tables.open_file when opening a file.</p>
+</div></blockquote>
+<p><strong>mode</strong> : string</p>
+<blockquote>
+<div><p>Model argument to pass to tables.open_file. Defaults to ‘w’</p>
+</div></blockquote>
+<p><strong>metadata</strong> : dict</p>
+<blockquote>
+<div><p>Dict of user defined attributes to save on the root node (<cite>root._v_attrs</cite>)</p>
+</div></blockquote>
+<p><strong>create_directories</strong> : bool</p>
+<blockquote class="last">
+<div><p>If a file path is given and create_directories is True then attempt to make the intermediate
+directories. This uses os.makedirs() underneath.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <p class="rubric">Methods</p>
@@ -208,34 +274,45 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code></td>
+<tr class="row-odd"><td><a class="reference internal" href="#pywr.recorders.TablesRecorder.__init__" title="pywr.recorders.TablesRecorder.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(model,&nbsp;h5file[,&nbsp;nodes,&nbsp;parameters,&nbsp;…])</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code>()</td>
+<td>Save data to the tables</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">aggregated_value</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">aggregated_value</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">before</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">before</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">finish</span></code>()</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">finish</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code>(model,&nbsp;data)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code>()</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code>()</td>
+<td>Setup the tables</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">unregister</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">unregister</span></code></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></td>
 <td></td>
 </tr>
 </tbody>
@@ -274,13 +351,7 @@
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">node</span></code></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></td>
 <td></td>
 </tr>
 </tbody>
@@ -299,10 +370,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pywr.recorders.RollingWindowParameterRecorder.html" class="btn btn-neutral float-right" title="pywr.recorders.RollingWindowParameterRecorder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pywr.recorders.HydroPowerRecorder.html" class="btn btn-neutral float-right" title="pywr.recorders.HydroPowerRecorder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pywr.recorders.MinimumVolumeStorageRecorder.html" class="btn btn-neutral" title="pywr.recorders.MinimumVolumeStorageRecorder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pywr.recorders.CSVRecorder.html" class="btn btn-neutral" title="pywr.recorders.CSVRecorder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

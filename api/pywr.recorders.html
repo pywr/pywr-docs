@@ -142,6 +142,16 @@
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.AnnualCountIndexParameterRecorder.html">pywr.recorders.AnnualCountIndexParameterRecorder</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#file-recorders">File recorders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.CSVRecorder.html">pywr.recorders.CSVRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.TablesRecorder.html">pywr.recorders.TablesRecorder</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hydro-power-recorders">Hydro-power recorders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.HydroPowerRecorder.html">pywr.recorders.HydroPowerRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.TotalHydroEnergyRecorder.html">pywr.recorders.TotalHydroEnergyRecorder</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="pywr.domains.html">pywr.domains package</a></li>
@@ -349,6 +359,40 @@ accessed following a model run before the model instances is destroyed.</p>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="generated/pywr.recorders.AnnualCountIndexParameterRecorder.html#pywr.recorders.AnnualCountIndexParameterRecorder" title="pywr.recorders.AnnualCountIndexParameterRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnnualCountIndexParameterRecorder</span></code></a></td>
 <td>Record the number of years where an IndexParameter is greater than or equal to a threshold</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="file-recorders">
+<h2>File recorders<a class="headerlink" href="#file-recorders" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/pywr.recorders.CSVRecorder.html#pywr.recorders.CSVRecorder" title="pywr.recorders.CSVRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CSVRecorder</span></code></a>(model,&nbsp;csvfile[,&nbsp;…])</td>
+<td>A Recorder that saves Node values to a CSV file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/pywr.recorders.TablesRecorder.html#pywr.recorders.TablesRecorder" title="pywr.recorders.TablesRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TablesRecorder</span></code></a>(model,&nbsp;h5file[,&nbsp;nodes,&nbsp;…])</td>
+<td>A recorder that saves to PyTables CArray</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="hydro-power-recorders">
+<h2>Hydro-power recorders<a class="headerlink" href="#hydro-power-recorders" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/pywr.recorders.HydroPowerRecorder.html#pywr.recorders.HydroPowerRecorder" title="pywr.recorders.HydroPowerRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HydroPowerRecorder</span></code></a></td>
+<td>Calculates the power production using the hydropower equation</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/pywr.recorders.TotalHydroEnergyRecorder.html#pywr.recorders.TotalHydroEnergyRecorder" title="pywr.recorders.TotalHydroEnergyRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TotalHydroEnergyRecorder</span></code></a></td>
+<td>Calculates the total energy production using the hydropower equation from a model run.</td>
 </tr>
 </tbody>
 </table>
