@@ -25,27 +25,19 @@
   
 
   
-  
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
-        <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Pywr 0.5dev documentation" href="../../index.html"/>
-        <link rel="up" title="Recorders" href="../pywr.recorders.html"/>
-        <link rel="next" title="pywr.recorders.FlowDurationCurveDeviationRecorder" href="pywr.recorders.FlowDurationCurveDeviationRecorder.html"/>
-        <link rel="prev" title="pywr.recorders.FlowDurationCurveRecorder" href="pywr.recorders.FlowDurationCurveRecorder.html"/> 
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="pywr.recorders.FlowDurationCurveDeviationRecorder" href="pywr.recorders.FlowDurationCurveDeviationRecorder.html" />
+    <link rel="prev" title="pywr.recorders.FlowDurationCurveRecorder" href="pywr.recorders.FlowDurationCurveRecorder.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -132,7 +124,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Pywr</a>
@@ -140,9 +132,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -198,25 +191,24 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model</strong> : <cite>pywr.core.Model</cite></p>
-<p><strong>node</strong> : <cite>pywr.core.AbstractStorage</cite></p>
-<blockquote>
-<div><p>The node to record</p>
-</div></blockquote>
-<p><strong>percentiles</strong> : array</p>
-<blockquote>
-<div><p>The percentiles to use in the calculation of the flow duration curve.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>model</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><cite>pywr.core.Model</cite></span></dt>
+<dd></dd>
+<dt><strong>node</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><cite>pywr.core.AbstractStorage</cite></span></dt>
+<dd><p class="first last">The node to record</p>
+</dd>
+<dt><strong>percentiles</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">The percentiles to use in the calculation of the flow duration curve.
 Values must be in the range 0-100.</p>
-</div></blockquote>
-<p><strong>agg_func: str, optional</strong></p>
-<blockquote>
-<div><p>function used for aggregating the FDC across percentiles.
+</dd>
+<dt><strong>agg_func: str, optional</strong></dt>
+<dd><p class="first last">function used for aggregating the FDC across percentiles.
 Numpy style functions that support an axis argument are supported.</p>
-</div></blockquote>
-<p><strong>sdc_agg_func: str, optional</strong></p>
-<blockquote class="last">
-<div><p>optional different function for aggregating across scenarios.</p>
-</div></blockquote>
+</dd>
+<dt><strong>sdc_agg_func: str, optional</strong></dt>
+<dd><p class="first last">optional different function for aggregating across scenarios.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -259,7 +251,7 @@ Numpy style functions that support an axis argument are supported.</p>
 <td></td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dataframe</span></code></td>
-<td>Return a <cite>pandas.DataFrame</cite> of the recorder data.</td>
+<td>Return a <cite>pandas.DataFrame</cite> of the recorder data</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">unregister</span></code></td>
 <td></td>
@@ -323,9 +315,7 @@ Numpy style functions that support an axis argument are supported.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -347,7 +337,7 @@ Numpy style functions that support an axis argument are supported.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -366,6 +356,7 @@ Numpy style functions that support an axis argument are supported.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'0.5dev',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -384,14 +375,13 @@ Numpy style functions that support an axis argument are supported.</p>
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

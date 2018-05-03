@@ -25,27 +25,19 @@
   
 
   
-  
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
-        <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Pywr 0.5dev documentation" href="../../index.html"/>
-        <link rel="up" title="Parameters" href="../pywr.parameters.html"/>
-        <link rel="next" title="pywr.parameters.ArrayIndexedParameter" href="pywr.parameters.ArrayIndexedParameter.html"/>
-        <link rel="prev" title="pywr.parameters.DataFrameParameter" href="pywr.parameters.DataFrameParameter.html"/> 
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="pywr.parameters.ArrayIndexedParameter" href="pywr.parameters.ArrayIndexedParameter.html" />
+    <link rel="prev" title="pywr.parameters.DataFrameParameter" href="pywr.parameters.DataFrameParameter.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -130,7 +122,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Pywr</a>
@@ -138,9 +130,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -202,23 +195,21 @@ for large model runs.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>h5file</strong> : tables.File or filename</p>
-<blockquote>
-<div><p>The tables file handle or filename to attach the CArray objects to. If a
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>h5file</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tables.File or filename</span></dt>
+<dd><p class="first last">The tables file handle or filename to attach the CArray objects to. If a
 filename is given the object will open and close the file handles.</p>
-</div></blockquote>
-<p><strong>node</strong> : string</p>
-<blockquote>
-<div><p>Name of the node in the tables database to read data from</p>
-</div></blockquote>
-<p><strong>where</strong> : string</p>
-<blockquote>
-<div><p>Path to read the node from.</p>
-</div></blockquote>
-<p><strong>scenario</strong> : Scenario</p>
-<blockquote class="last">
-<div><p>Scenario to use as the second index in the array.</p>
-</div></blockquote>
+</dd>
+<dt><strong>node</strong> <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><p class="first last">Name of the node in the tables database to read data from</p>
+</dd>
+<dt><strong>where</strong> <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><p class="first last">Path to read the node from.</p>
+</dd>
+<dt><strong>scenario</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Scenario</span></dt>
+<dd><p class="first last">Scenario to use as the second index in the array.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -336,9 +327,7 @@ filename is given the object will open and close the file handles.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -360,7 +349,7 @@ filename is given the object will open and close the file handles.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -379,6 +368,7 @@ filename is given the object will open and close the file handles.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'0.5dev',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -397,14 +387,13 @@ filename is given the object will open and close the file handles.</p>
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

@@ -25,27 +25,19 @@
   
 
   
-  
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
-        <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Pywr 0.5dev documentation" href="../../index.html"/>
-        <link rel="up" title="Parameters" href="../pywr.parameters.html"/>
-        <link rel="next" title="pywr.parameters.DeficitParameter" href="pywr.parameters.DeficitParameter.html"/>
-        <link rel="prev" title="pywr.parameters.control_curves.ControlCurveIndexParameter" href="pywr.parameters.control_curves.ControlCurveIndexParameter.html"/> 
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="pywr.parameters.DeficitParameter" href="pywr.parameters.DeficitParameter.html" />
+    <link rel="prev" title="pywr.parameters.control_curves.ControlCurveIndexParameter" href="pywr.parameters.control_curves.ControlCurveIndexParameter.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -131,7 +123,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Pywr</a>
@@ -139,9 +131,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -198,26 +191,25 @@
 <dd>days. The calculation is performed using the Julien day of the year minus 1
 This causes a small discontinuity in non-leap years.</dd>
 </dl>
-<div class="math notranslate">
+<div class="math notranslate nohighlight">
 \[f(t) = A + \sum_{n=1}^N A_n\cdot \cos((2\pi nt)/365+\phi_n)\]</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>mean</strong> : float</p>
-<blockquote>
-<div><p>Mean value for the series (i.e. the position of zeroth harmonic)</p>
-</div></blockquote>
-<p><strong>amplitudes</strong> : array_like</p>
-<blockquote>
-<div><p>The amplitudes for the N harmonic cosine functions. Must be the same
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>mean</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Mean value for the series (i.e. the position of zeroth harmonic)</p>
+</dd>
+<dt><strong>amplitudes</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
+<dd><p class="first last">The amplitudes for the N harmonic cosine functions. Must be the same
 length as phases.</p>
-</div></blockquote>
-<p><strong>phases</strong> : array_like</p>
-<blockquote class="last">
-<div><p>The phase shift of the N harmonic cosine functions. Must be the same
+</dd>
+<dt><strong>phases</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
+<dd><p class="first last">The phase shift of the N harmonic cosine functions. Must be the same
 length as amplitudes.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -324,9 +316,7 @@ length as amplitudes.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -348,7 +338,7 @@ length as amplitudes.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -367,6 +357,7 @@ length as amplitudes.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'0.5dev',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -385,14 +376,13 @@ length as amplitudes.</p>
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

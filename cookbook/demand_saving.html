@@ -25,27 +25,19 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Pywr 0.5dev documentation" href="../index.html"/>
-        <link rel="up" title="Pywr cookbook examples" href="cookbook.html"/>
-        <link rel="next" title="Using external data" href="dataframes.html"/>
-        <link rel="prev" title="Pywr cookbook examples" href="cookbook.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using external data" href="dataframes.html" />
+    <link rel="prev" title="Pywr cookbook examples" href="cookbook.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -115,7 +107,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Pywr</a>
@@ -123,9 +115,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -173,9 +166,9 @@
 <span id="id1"></span><h1>Demand saving<a class="headerlink" href="#demand-saving" title="Permalink to this headline">¶</a></h1>
 <p>Demand saving is a common concept in water resource models. When the state of a water resource is poor (for example, lower than normal reservoir levels) demand restrictions may be imposed on customers in order to reduce the likelihood of a failure to supply.</p>
 <p>The demand at a given timestep can be represented using the equation below,</p>
-<div class="math notranslate">
+<div class="math notranslate nohighlight">
 \[d = d_{mean} * p * (1-s)\]</div>
-<p>where <span class="math notranslate">\(d\)</span> is the baseline demand to be calculated, <span class="math notranslate">\(d_{mean}\)</span> is the baseline demand, <span class="math notranslate">\(p\)</span> is the annual profile and <span class="math notranslate">\(s\)</span> is the demand saving (e.g. 5%).</p>
+<p>where <span class="math notranslate nohighlight">\(d\)</span> is the baseline demand to be calculated, <span class="math notranslate nohighlight">\(d_{mean}\)</span> is the baseline demand, <span class="math notranslate nohighlight">\(p\)</span> is the annual profile and <span class="math notranslate nohighlight">\(s\)</span> is the demand saving (e.g. 5%).</p>
 <p>The code snippets that follow belong in the <code class="docutils literal notranslate"><span class="pre">&quot;parameters&quot;:</span> <span class="pre">{}</span></code> section of the model document (except for the <code class="docutils literal notranslate"><span class="pre">node</span></code> at the end).</p>
 <p>The baseline demand is specified as a constant (this is often the <em>mean</em> demand).</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;demand_baseline&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -274,9 +267,7 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -298,7 +289,7 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -317,6 +308,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'0.5dev',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -335,14 +327,13 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

@@ -25,27 +25,19 @@
   
 
   
-  
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
-        <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Pywr 0.5dev documentation" href="../../index.html"/>
-        <link rel="up" title="Parameters" href="../pywr.parameters.html"/>
-        <link rel="next" title="pywr.parameters.NegativeParameter" href="pywr.parameters.NegativeParameter.html"/>
-        <link rel="prev" title="pywr.parameters.AggregatedParameter" href="pywr.parameters.AggregatedParameter.html"/> 
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="pywr.parameters.NegativeParameter" href="pywr.parameters.NegativeParameter.html" />
+    <link rel="prev" title="pywr.parameters.AggregatedParameter" href="pywr.parameters.AggregatedParameter.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -136,7 +128,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Pywr</a>
@@ -144,9 +136,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -205,15 +198,15 @@ aggregating function (e.g. sum).</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>parameters</strong> : iterable of <cite>IndexParameter</cite></p>
-<blockquote>
-<div><p>The parameters to aggregate</p>
-</div></blockquote>
-<p><strong>agg_func</strong> : callable or str</p>
-<blockquote class="last">
-<div><p>The aggregation function. Must be one of {“sum”, “min”, “max”, “any”,
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>parameters</strong> <span class="classifier-delimiter">:</span> <span class="classifier">iterable of <cite>IndexParameter</cite></span></dt>
+<dd><p class="first last">The parameters to aggregate</p>
+</dd>
+<dt><strong>agg_func</strong> <span class="classifier-delimiter">:</span> <span class="classifier">callable or str</span></dt>
+<dd><p class="first last">The aggregation function. Must be one of {“sum”, “min”, “max”, “any”,
 “all”, “product”}, or a callable function which accepts a list of values.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -332,9 +325,7 @@ aggregating function (e.g. sum).</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -356,7 +347,7 @@ aggregating function (e.g. sum).</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -375,6 +366,7 @@ aggregating function (e.g. sum).</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'0.5dev',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -393,14 +385,13 @@ aggregating function (e.g. sum).</p>
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

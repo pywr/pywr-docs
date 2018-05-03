@@ -25,27 +25,19 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Pywr 0.5dev documentation" href="../index.html"/>
-        <link rel="up" title="Pywr reference documentation." href="pywr.html"/>
-        <link rel="next" title="pywr.parameters.Parameter" href="generated/pywr.parameters.Parameter.html"/>
-        <link rel="prev" title="pywr.optimisation package" href="pywr.optimisation.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pywr.parameters.Parameter" href="generated/pywr.parameters.Parameter.html" />
+    <link rel="prev" title="pywr.optimisation package" href="pywr.optimisation.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -171,7 +163,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Pywr</a>
@@ -179,9 +171,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -315,7 +308,7 @@
 <td>Parameter which provides a monthly profile per scenario</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter.html#pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter" title="pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayIndexedScenarioMonthlyFactorsParameter</span></code></a></td>
-<td>Time varying parameter using an array and Timestep.</td>
+<td>Time varying parameter using an array and Timestep._index with multiplicative factors per Scenario</td>
 </tr>
 </tbody>
 </table>
@@ -357,7 +350,7 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="generated/pywr.parameters.ArrayIndexedParameter.html#pywr.parameters.ArrayIndexedParameter" title="pywr.parameters.ArrayIndexedParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayIndexedParameter</span></code></a></td>
-<td>Time varying parameter using an array and Timestep.</td>
+<td>Time varying parameter using an array and Timestep._index</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/pywr.parameters.ArrayIndexedScenarioParameter.html#pywr.parameters.ArrayIndexedScenarioParameter" title="pywr.parameters.ArrayIndexedScenarioParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayIndexedScenarioParameter</span></code></a></td>
 <td>A Scenario varying Parameter</td>
@@ -409,9 +402,7 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -433,7 +424,7 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -452,6 +443,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'0.5dev',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -470,14 +462,13 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

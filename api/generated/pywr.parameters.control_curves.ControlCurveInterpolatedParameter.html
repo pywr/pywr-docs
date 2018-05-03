@@ -25,27 +25,19 @@
   
 
   
-  
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
-        <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Pywr 0.5dev documentation" href="../../index.html"/>
-        <link rel="up" title="Parameters" href="../pywr.parameters.html"/>
-        <link rel="next" title="pywr.parameters.control_curves.ControlCurveIndexParameter" href="pywr.parameters.control_curves.ControlCurveIndexParameter.html"/>
-        <link rel="prev" title="pywr.parameters.control_curves.BaseControlCurveParameter" href="pywr.parameters.control_curves.BaseControlCurveParameter.html"/> 
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="pywr.parameters.control_curves.ControlCurveIndexParameter" href="pywr.parameters.control_curves.ControlCurveIndexParameter.html" />
+    <link rel="prev" title="pywr.parameters.control_curves.BaseControlCurveParameter" href="pywr.parameters.control_curves.BaseControlCurveParameter.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -132,7 +124,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Pywr</a>
@@ -140,9 +132,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -200,22 +193,21 @@ first and last value being 100% and 0% respectively.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>storage_node</strong> : <cite>Storage</cite></p>
-<blockquote>
-<div><p>The storage node to compare the control curve(s) to.</p>
-</div></blockquote>
-<p><strong>control_curves</strong> : list of <cite>Parameter</cite> or floats</p>
-<blockquote>
-<div><p>A list of parameters representing the control curve(s). These are
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>storage_node</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><cite>Storage</cite></span></dt>
+<dd><p class="first last">The storage node to compare the control curve(s) to.</p>
+</dd>
+<dt><strong>control_curves</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of <cite>Parameter</cite> or floats</span></dt>
+<dd><p class="first last">A list of parameters representing the control curve(s). These are
 often MonthlyProfileParameters or DailyProfileParameters, but may be
 any Parameter that returns values between 0.0 and 1.0. If floats are
 passed they are converted to <cite>ConstantParameter</cite>.</p>
-</div></blockquote>
-<p><strong>values</strong> : list of float</p>
-<blockquote class="last">
-<div><p>A list of values to return corresponding to the control curves. The
+</dd>
+<dt><strong>values</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of float</span></dt>
+<dd><p class="first last">A list of values to return corresponding to the control curves. The
 length of the list should be 2 + len(control_curves).</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -340,9 +332,7 @@ and -20</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -364,7 +354,7 @@ and -20</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -383,6 +373,7 @@ and -20</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'0.5dev',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -401,14 +392,13 @@ and -20</p>
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
