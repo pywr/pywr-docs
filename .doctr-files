@@ -54,6 +54,7 @@
 ./_sources/api/generated/pywr.recorders.TotalFlowNodeRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.TotalHydroEnergyRecorder.rst.txt
 ./_sources/api/pywr.domains.rst.txt
+./_sources/api/pywr.notebook.rst.txt
 ./_sources/api/pywr.optimisation.rst.txt
 ./_sources/api/pywr.parameters.rst.txt
 ./_sources/api/pywr.recorders.rst.txt
@@ -163,6 +164,7 @@
 ./api/generated/pywr.recorders.TotalHydroEnergyRecorder.html
 ./api/pywr.domains.html
 ./api/pywr.html
+./api/pywr.notebook.html
 ./api/pywr.optimisation.html
 ./api/pywr.parameters.html
 ./api/pywr.recorders.html
