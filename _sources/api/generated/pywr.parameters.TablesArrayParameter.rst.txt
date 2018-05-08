@@ -18,13 +18,21 @@ pywr.parameters.TablesArrayParameter
       ~TablesArrayParameter.finish
       ~TablesArrayParameter.get_all_indices
       ~TablesArrayParameter.get_all_values
+      ~TablesArrayParameter.get_double_lower_bounds
+      ~TablesArrayParameter.get_double_upper_bounds
+      ~TablesArrayParameter.get_double_variables
       ~TablesArrayParameter.get_index
+      ~TablesArrayParameter.get_integer_lower_bounds
+      ~TablesArrayParameter.get_integer_upper_bounds
+      ~TablesArrayParameter.get_integer_variables
       ~TablesArrayParameter.get_value
       ~TablesArrayParameter.index
       ~TablesArrayParameter.load
       ~TablesArrayParameter.lower_bounds
       ~TablesArrayParameter.register
       ~TablesArrayParameter.reset
+      ~TablesArrayParameter.set_double_variables
+      ~TablesArrayParameter.set_integer_variables
       ~TablesArrayParameter.setup
       ~TablesArrayParameter.unregister
       ~TablesArrayParameter.update
@@ -41,8 +49,10 @@ pywr.parameters.TablesArrayParameter
    
       ~TablesArrayParameter.children
       ~TablesArrayParameter.comment
+      ~TablesArrayParameter.double_size
       ~TablesArrayParameter.h5file
       ~TablesArrayParameter.h5store
+      ~TablesArrayParameter.integer_size
       ~TablesArrayParameter.is_variable
       ~TablesArrayParameter.model
       ~TablesArrayParameter.name

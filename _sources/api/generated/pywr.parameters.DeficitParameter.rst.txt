@@ -17,11 +17,19 @@ pywr.parameters.DeficitParameter
       ~DeficitParameter.before
       ~DeficitParameter.finish
       ~DeficitParameter.get_all_values
+      ~DeficitParameter.get_double_lower_bounds
+      ~DeficitParameter.get_double_upper_bounds
+      ~DeficitParameter.get_double_variables
+      ~DeficitParameter.get_integer_lower_bounds
+      ~DeficitParameter.get_integer_upper_bounds
+      ~DeficitParameter.get_integer_variables
       ~DeficitParameter.get_value
       ~DeficitParameter.load
       ~DeficitParameter.lower_bounds
       ~DeficitParameter.register
       ~DeficitParameter.reset
+      ~DeficitParameter.set_double_variables
+      ~DeficitParameter.set_integer_variables
       ~DeficitParameter.setup
       ~DeficitParameter.unregister
       ~DeficitParameter.update
@@ -38,6 +46,8 @@ pywr.parameters.DeficitParameter
    
       ~DeficitParameter.children
       ~DeficitParameter.comment
+      ~DeficitParameter.double_size
+      ~DeficitParameter.integer_size
       ~DeficitParameter.is_variable
       ~DeficitParameter.model
       ~DeficitParameter.name

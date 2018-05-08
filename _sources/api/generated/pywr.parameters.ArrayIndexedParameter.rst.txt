@@ -17,11 +17,19 @@ pywr.parameters.ArrayIndexedParameter
       ~ArrayIndexedParameter.before
       ~ArrayIndexedParameter.finish
       ~ArrayIndexedParameter.get_all_values
+      ~ArrayIndexedParameter.get_double_lower_bounds
+      ~ArrayIndexedParameter.get_double_upper_bounds
+      ~ArrayIndexedParameter.get_double_variables
+      ~ArrayIndexedParameter.get_integer_lower_bounds
+      ~ArrayIndexedParameter.get_integer_upper_bounds
+      ~ArrayIndexedParameter.get_integer_variables
       ~ArrayIndexedParameter.get_value
       ~ArrayIndexedParameter.load
       ~ArrayIndexedParameter.lower_bounds
       ~ArrayIndexedParameter.register
       ~ArrayIndexedParameter.reset
+      ~ArrayIndexedParameter.set_double_variables
+      ~ArrayIndexedParameter.set_integer_variables
       ~ArrayIndexedParameter.setup
       ~ArrayIndexedParameter.unregister
       ~ArrayIndexedParameter.update
@@ -38,6 +46,8 @@ pywr.parameters.ArrayIndexedParameter
    
       ~ArrayIndexedParameter.children
       ~ArrayIndexedParameter.comment
+      ~ArrayIndexedParameter.double_size
+      ~ArrayIndexedParameter.integer_size
       ~ArrayIndexedParameter.is_variable
       ~ArrayIndexedParameter.model
       ~ArrayIndexedParameter.name

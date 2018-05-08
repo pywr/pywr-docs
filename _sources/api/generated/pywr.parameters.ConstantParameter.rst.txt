@@ -17,11 +17,19 @@ pywr.parameters.ConstantParameter
       ~ConstantParameter.before
       ~ConstantParameter.finish
       ~ConstantParameter.get_all_values
+      ~ConstantParameter.get_double_lower_bounds
+      ~ConstantParameter.get_double_upper_bounds
+      ~ConstantParameter.get_double_variables
+      ~ConstantParameter.get_integer_lower_bounds
+      ~ConstantParameter.get_integer_upper_bounds
+      ~ConstantParameter.get_integer_variables
       ~ConstantParameter.get_value
       ~ConstantParameter.load
       ~ConstantParameter.lower_bounds
       ~ConstantParameter.register
       ~ConstantParameter.reset
+      ~ConstantParameter.set_double_variables
+      ~ConstantParameter.set_integer_variables
       ~ConstantParameter.setup
       ~ConstantParameter.unregister
       ~ConstantParameter.update
@@ -38,6 +46,8 @@ pywr.parameters.ConstantParameter
    
       ~ConstantParameter.children
       ~ConstantParameter.comment
+      ~ConstantParameter.double_size
+      ~ConstantParameter.integer_size
       ~ConstantParameter.is_variable
       ~ConstantParameter.model
       ~ConstantParameter.name

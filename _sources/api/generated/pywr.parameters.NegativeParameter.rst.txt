@@ -17,11 +17,19 @@ pywr.parameters.NegativeParameter
       ~NegativeParameter.before
       ~NegativeParameter.finish
       ~NegativeParameter.get_all_values
+      ~NegativeParameter.get_double_lower_bounds
+      ~NegativeParameter.get_double_upper_bounds
+      ~NegativeParameter.get_double_variables
+      ~NegativeParameter.get_integer_lower_bounds
+      ~NegativeParameter.get_integer_upper_bounds
+      ~NegativeParameter.get_integer_variables
       ~NegativeParameter.get_value
       ~NegativeParameter.load
       ~NegativeParameter.lower_bounds
       ~NegativeParameter.register
       ~NegativeParameter.reset
+      ~NegativeParameter.set_double_variables
+      ~NegativeParameter.set_integer_variables
       ~NegativeParameter.setup
       ~NegativeParameter.unregister
       ~NegativeParameter.update
@@ -38,6 +46,8 @@ pywr.parameters.NegativeParameter
    
       ~NegativeParameter.children
       ~NegativeParameter.comment
+      ~NegativeParameter.double_size
+      ~NegativeParameter.integer_size
       ~NegativeParameter.is_variable
       ~NegativeParameter.model
       ~NegativeParameter.name

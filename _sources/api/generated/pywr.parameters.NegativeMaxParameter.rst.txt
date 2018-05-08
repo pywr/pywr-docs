@@ -17,11 +17,19 @@ pywr.parameters.NegativeMaxParameter
       ~NegativeMaxParameter.before
       ~NegativeMaxParameter.finish
       ~NegativeMaxParameter.get_all_values
+      ~NegativeMaxParameter.get_double_lower_bounds
+      ~NegativeMaxParameter.get_double_upper_bounds
+      ~NegativeMaxParameter.get_double_variables
+      ~NegativeMaxParameter.get_integer_lower_bounds
+      ~NegativeMaxParameter.get_integer_upper_bounds
+      ~NegativeMaxParameter.get_integer_variables
       ~NegativeMaxParameter.get_value
       ~NegativeMaxParameter.load
       ~NegativeMaxParameter.lower_bounds
       ~NegativeMaxParameter.register
       ~NegativeMaxParameter.reset
+      ~NegativeMaxParameter.set_double_variables
+      ~NegativeMaxParameter.set_integer_variables
       ~NegativeMaxParameter.setup
       ~NegativeMaxParameter.unregister
       ~NegativeMaxParameter.update
@@ -38,6 +46,8 @@ pywr.parameters.NegativeMaxParameter
    
       ~NegativeMaxParameter.children
       ~NegativeMaxParameter.comment
+      ~NegativeMaxParameter.double_size
+      ~NegativeMaxParameter.integer_size
       ~NegativeMaxParameter.is_variable
       ~NegativeMaxParameter.model
       ~NegativeMaxParameter.name

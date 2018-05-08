@@ -17,11 +17,19 @@ pywr.parameters.MinParameter
       ~MinParameter.before
       ~MinParameter.finish
       ~MinParameter.get_all_values
+      ~MinParameter.get_double_lower_bounds
+      ~MinParameter.get_double_upper_bounds
+      ~MinParameter.get_double_variables
+      ~MinParameter.get_integer_lower_bounds
+      ~MinParameter.get_integer_upper_bounds
+      ~MinParameter.get_integer_variables
       ~MinParameter.get_value
       ~MinParameter.load
       ~MinParameter.lower_bounds
       ~MinParameter.register
       ~MinParameter.reset
+      ~MinParameter.set_double_variables
+      ~MinParameter.set_integer_variables
       ~MinParameter.setup
       ~MinParameter.unregister
       ~MinParameter.update
@@ -38,6 +46,8 @@ pywr.parameters.MinParameter
    
       ~MinParameter.children
       ~MinParameter.comment
+      ~MinParameter.double_size
+      ~MinParameter.integer_size
       ~MinParameter.is_variable
       ~MinParameter.model
       ~MinParameter.name
