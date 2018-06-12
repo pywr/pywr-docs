@@ -219,6 +219,43 @@
 </div>
 <p>The result of this example model is trivial: the supply exceeds the demand, so the maximum flow at the demand is the limiting factor.</p>
 <p>The model defined about could equally have been defined in a JSON document:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;tutorial&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;minimum_version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.1&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;timestepper&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-01-01&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timestep&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;supply&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Input&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;max_flow&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;cost&quot;</span><span class="p">:</span> <span class="mi">3</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;demand&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Output&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;max_flow&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+            <span class="s2">&quot;cost&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">100</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;edges&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot;supply&quot;</span><span class="p">,</span> <span class="s2">&quot;demand&quot;</span><span class="p">]</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;recorders&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;recorder&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;NumpyArrayNodeRecorder&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;node&quot;</span><span class="p">:</span> <span class="s2">&quot;supply&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
 <p>The model can be loaded using the <code class="docutils literal notranslate"><span class="pre">Model.load</span></code> method:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># load the model</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;tutorial.json&quot;</span><span class="p">)</span>
