@@ -185,51 +185,51 @@
 <dt id="pywr.recorders.TotalHydroEnergyRecorder">
 <em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">TotalHydroEnergyRecorder</code><a class="headerlink" href="#pywr.recorders.TotalHydroEnergyRecorder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the total energy production using the hydropower equation from a model run.</p>
-<blockquote>
-<div>This recorder saves the total energy production in each scenario during a model run. It does not save a timeseries
-or power, but rather total energy.</div></blockquote>
+<p>This recorder saves the total energy production in each scenario during a model run. It does not save a timeseries
+or power, but rather total energy.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
 <dt><strong>water_elevation_parameter</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Parameter instance (default=None)</span></dt>
-<dd><blockquote class="first">
-<div><p>Elevation of water entering the turbine. The difference of this value with the <cite>turbine_elevation</cite> gives
+<dd><p class="first last">Elevation of water entering the turbine. The difference of this value with the <cite>turbine_elevation</cite> gives
 the working head of the turbine.</p>
-</div></blockquote>
-<dl class="last docutils">
-<dt>turbine_elevation <span class="classifier-delimiter">:</span> <span class="classifier">double</span></dt>
+</dd>
+<dt><strong>turbine_elevation</strong> <span class="classifier-delimiter">:</span> <span class="classifier">double</span></dt>
 <dd><p class="first last">Elevation of the turbine itself. The difference between the <cite>water_elevation</cite> and this value gives
 the working head of the turbine.</p>
 </dd>
-<dt>efficiency <span class="classifier-delimiter">:</span> <span class="classifier">float (default=1.0)</span></dt>
+<dt><strong>efficiency</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float (default=1.0)</span></dt>
 <dd><p class="first last">The efficiency of the turbine.</p>
 </dd>
-<dt>density <span class="classifier-delimiter">:</span> <span class="classifier">float (default=1000.0)</span></dt>
+<dt><strong>density</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float (default=1000.0)</span></dt>
 <dd><p class="first last">The density of water.</p>
 </dd>
-<dt>flow_unit_conversion <span class="classifier-delimiter">:</span> <span class="classifier">float (default=1.0)</span></dt>
+<dt><strong>flow_unit_conversion</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float (default=1.0)</span></dt>
 <dd><p class="first last">A factor used to transform the units of flow to be compatible with the equation here. This
-should convert flow to units of $m^3/day$</p>
+should convert flow to units of <span class="math notranslate nohighlight">\(m^3/day\)</span></p>
 </dd>
-<dt>energy_unit_conversion <span class="classifier-delimiter">:</span> <span class="classifier">float (default=1e-6)</span></dt>
-<dd><p class="first last">A factor used to transform the units of total energy. Defaults to 1e-6 to return $MJ$.</p>
-</dd>
-</dl>
+<dt><strong>energy_unit_conversion</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float (default=1e-6)</span></dt>
+<dd><p class="first last">A factor used to transform the units of total energy. Defaults to 1e-6 to return <span class="math notranslate nohighlight">\(MJ\)</span>.</p>
 </dd>
 </dl>
 </td>
 </tr>
 </tbody>
 </table>
-<p>ho * g * deltaH * q</p>
-<blockquote>
-<div><p>The flow rate in should be converted to units of <span class="math notranslate nohighlight">\(m^3\)</span> per day using the <cite>flow_unit_conversion</cite> parameter.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="pywr.recorders.HydroPowerRecorder.html#pywr.recorders.HydroPowerRecorder" title="pywr.recorders.HydroPowerRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HydroPowerRecorder</span></code></a></p>
+</div>
+<p class="rubric">Notes</p>
+<p>The hydropower calculation uses the following equation.</p>
+<div class="math notranslate nohighlight">
+\[P = \rho * g * \delta H * q\]</div>
+<p>The flow rate in should be converted to units of <span class="math notranslate nohighlight">\(m^3\)</span> per day using the <cite>flow_unit_conversion</cite> parameter.</p>
 <p>Head is calculated from the given <cite>water_elevation_parameter</cite> and <cite>turbine_elevation</cite> value. If water elevation
 is given then head is the difference in elevation between the water and the turbine. If water elevation parameter
 is <cite>None</cite> then the head is simply the turbine elevation.</p>
-</div></blockquote>
 <dl class="method">
 <dt id="pywr.recorders.TotalHydroEnergyRecorder.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.TotalHydroEnergyRecorder.__init__" title="Permalink to this definition">¶</a></dt>
