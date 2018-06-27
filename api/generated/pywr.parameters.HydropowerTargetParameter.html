@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter &mdash; Pywr 0.5dev documentation</title>
+  <title>pywr.parameters.HydropowerTargetParameter &mdash; Pywr 0.5dev documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="pywr.parameters.DataFrameParameter" href="pywr.parameters.DataFrameParameter.html" />
-    <link rel="prev" title="pywr.parameters.ScenarioMonthlyProfileParameter" href="pywr.parameters.ScenarioMonthlyProfileParameter.html" /> 
+    <link rel="next" title="pywr.parameters.AnnualHarmonicSeriesParameter" href="pywr.parameters.AnnualHarmonicSeriesParameter.html" />
+    <link rel="prev" title="pywr.parameters.control_curves.ControlCurveIndexParameter" href="pywr.parameters.control_curves.ControlCurveIndexParameter.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -94,19 +94,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#base-parameter-class">Base Parameter class</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#simple-parameters">Simple parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#combining-multiple-parameters">Combining multiple parameters</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../pywr.parameters.html#annual-profile-parameters">Annual profile parameters</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.DailyProfileParameter.html">pywr.parameters.DailyProfileParameter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.WeeklyProfileParameter.html">pywr.parameters.WeeklyProfileParameter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.MonthlyProfileParameter.html">pywr.parameters.MonthlyProfileParameter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.ScenarioMonthlyProfileParameter.html">pywr.parameters.ScenarioMonthlyProfileParameter</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#annual-profile-parameters">Annual profile parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#dataframe-parameter">Dataframe parameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#hdf5-parameter">HDF5 Parameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#array-based-parameters">Array based parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#control-curve-parameters">Control curve parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#hydropower-parameters">Hydropower parameters</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../pywr.parameters.html#hydropower-parameters">Hydropower parameters</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.parameters.HydropowerTargetParameter</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#other-parameters">Other parameters</a></li>
 </ul>
 </li>
@@ -165,13 +161,13 @@
         
           <li><a href="../pywr.parameters.html">Parameters</a> &raquo;</li>
         
-      <li>pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter</li>
+      <li>pywr.parameters.HydropowerTargetParameter</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/generated/pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/pywr.parameters.HydropowerTargetParameter.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -184,19 +180,77 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pywr-parameters-arrayindexedscenariomonthlyfactorsparameter">
-<h1>pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter<a class="headerlink" href="#pywr-parameters-arrayindexedscenariomonthlyfactorsparameter" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pywr-parameters-hydropowertargetparameter">
+<h1>pywr.parameters.HydropowerTargetParameter<a class="headerlink" href="#pywr-parameters-hydropowertargetparameter" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter">
-<em class="property">class </em><code class="descclassname">pywr.parameters.</code><code class="descname">ArrayIndexedScenarioMonthlyFactorsParameter</code><a class="headerlink" href="#pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Time varying parameter using an array and Timestep._index with
-multiplicative factors per Scenario</p>
+<dt id="pywr.parameters.HydropowerTargetParameter">
+<em class="property">class </em><code class="descclassname">pywr.parameters.</code><code class="descname">HydropowerTargetParameter</code><a class="headerlink" href="#pywr.parameters.HydropowerTargetParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>A parameter that returns flow from a hydropower generation target.</p>
+<p>This parameter calculates the flow required to generate a particular hydropower production target. It
+is intended to be used on a node representing a turbine where a particular production target is required
+each time-step.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>target</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Parameter instance</span></dt>
+<dd><p class="first last">Hydropower production target. Units should be in units of energy per day.</p>
+</dd>
+<dt><strong>water_elevation_parameter</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Parameter instance (default=None)</span></dt>
+<dd><p class="first last">Elevation of water entering the turbine. The difference of this value with the <cite>turbine_elevation</cite> gives
+the working head of the turbine.</p>
+</dd>
+<dt><strong>max_flow</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Parameter instance (default=None)</span></dt>
+<dd><p class="first last">Upper bounds on the calculated flow. If set the flow returned by this parameter is at most the value
+of the max_flow parameter.</p>
+</dd>
+<dt><strong>min_flow</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Parameter instance (default=None)</span></dt>
+<dd><p class="first last">Lower bounds on the calculated flow. If set the flow returned by this parameter is at least the value
+of the min_flow parameter.</p>
+</dd>
+<dt><strong>min_head</strong> <span class="classifier-delimiter">:</span> <span class="classifier">double (default=0.0)</span></dt>
+<dd><p class="first last">Minimum head for flow to occur. If actual head is less than this value zero flow is returned.</p>
+</dd>
+<dt><strong>turbine_elevation</strong> <span class="classifier-delimiter">:</span> <span class="classifier">double</span></dt>
+<dd><p class="first last">Elevation of the turbine itself. The difference between the <cite>water_elevation</cite> and this value gives
+the working head of the turbine.</p>
+</dd>
+<dt><strong>efficiency</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float (default=1.0)</span></dt>
+<dd><p class="first last">The efficiency of the turbine.</p>
+</dd>
+<dt><strong>density</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float (default=1000.0)</span></dt>
+<dd><p class="first last">The density of water.</p>
+</dd>
+<dt><strong>flow_unit_conversion</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float (default=1.0)</span></dt>
+<dd><p class="first last">A factor used to transform the units of flow to be compatible with the equation here. This
+should convert flow to units of <span class="math notranslate nohighlight">\(m^3/day\)</span></p>
+</dd>
+<dt><strong>energy_unit_conversion</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float (default=1e-6)</span></dt>
+<dd><p class="first last">A factor used to transform the units of total energy. Defaults to 1e-6 to return <span class="math notranslate nohighlight">\(MJ\)</span>.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="pywr.recorders.TotalHydroEnergyRecorder.html#pywr.recorders.TotalHydroEnergyRecorder" title="pywr.recorders.TotalHydroEnergyRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pywr.recorders.TotalHydroEnergyRecorder</span></code></a>, <a class="reference internal" href="pywr.recorders.HydropowerRecorder.html#pywr.recorders.HydropowerRecorder" title="pywr.recorders.HydropowerRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pywr.recorders.HydropowerRecorder</span></code></a></p>
+</div>
+<p class="rubric">Notes</p>
+<p>The inverse hydropower calculation uses the following equation.</p>
+<div class="math notranslate nohighlight">
+\[q = \frac{P}{\rho * g * \delta H}\]</div>
+<p>The energy rate in should be converted to units of energy per day. The returned flow rate in should is
+converted from units of <span class="math notranslate nohighlight">\(m^3\)</span> per day to those used by the model using the <cite>flow_unit_conversion</cite> parameter.</p>
+<p>Head is calculated from the given <cite>water_elevation_parameter</cite> and <cite>turbine_elevation</cite> value. If water elevation
+is given then head is the difference in elevation between the water and the turbine. If water elevation parameter
+is <cite>None</cite> then the head is simply the turbine elevation.</p>
 <dl class="method">
-<dt id="pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>values is the baseline timeseries data that is perturbed by a factor. The
-factor is taken from factors which is shape (scenario.size, 12). Therefore
-factors vary with the individual scenarios in scenario and month.</p>
+<dt id="pywr.parameters.HydropowerTargetParameter.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.HydropowerTargetParameter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <p class="rubric">Methods</p>
@@ -287,7 +341,19 @@ factors vary with the individual scenarios in scenario and month.</p>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">comment</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">double_size</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">density</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">double_size</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">efficiency</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">energy_unit_conversion</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">flow_unit_conversion</span></code></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">integer_size</span></code></td>
@@ -296,16 +362,34 @@ factors vary with the individual scenarios in scenario and month.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_variable</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">max_flow</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">min_flow</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">min_head</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">size</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">size</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">target</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">turbine_elevation</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">water_elevation_parameter</span></code></td>
 <td></td>
 </tr>
 </tbody>
@@ -322,10 +406,10 @@ factors vary with the individual scenarios in scenario and month.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pywr.parameters.DataFrameParameter.html" class="btn btn-neutral float-right" title="pywr.parameters.DataFrameParameter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pywr.parameters.AnnualHarmonicSeriesParameter.html" class="btn btn-neutral float-right" title="pywr.parameters.AnnualHarmonicSeriesParameter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pywr.parameters.ScenarioMonthlyProfileParameter.html" class="btn btn-neutral" title="pywr.parameters.ScenarioMonthlyProfileParameter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pywr.parameters.control_curves.ControlCurveIndexParameter.html" class="btn btn-neutral" title="pywr.parameters.control_curves.ControlCurveIndexParameter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

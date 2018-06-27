@@ -11,6 +11,7 @@
 ./_sources/api/generated/pywr.parameters.DailyProfileParameter.rst.txt
 ./_sources/api/generated/pywr.parameters.DataFrameParameter.rst.txt
 ./_sources/api/generated/pywr.parameters.DeficitParameter.rst.txt
+./_sources/api/generated/pywr.parameters.HydropowerTargetParameter.rst.txt
 ./_sources/api/generated/pywr.parameters.IndexParameter.rst.txt
 ./_sources/api/generated/pywr.parameters.IndexedArrayParameter.rst.txt
 ./_sources/api/generated/pywr.parameters.MaxParameter.rst.txt
@@ -31,7 +32,7 @@
 ./_sources/api/generated/pywr.recorders.DeficitFrequencyNodeRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.FlowDurationCurveDeviationRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.FlowDurationCurveRecorder.rst.txt
-./_sources/api/generated/pywr.recorders.HydroPowerRecorder.rst.txt
+./_sources/api/generated/pywr.recorders.HydropowerRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.IndexParameterRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.MeanFlowNodeRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.MinimumThresholdVolumeStorageRecorder.rst.txt
@@ -136,6 +137,7 @@
 ./api/generated/pywr.parameters.DailyProfileParameter.html
 ./api/generated/pywr.parameters.DataFrameParameter.html
 ./api/generated/pywr.parameters.DeficitParameter.html
+./api/generated/pywr.parameters.HydropowerTargetParameter.html
 ./api/generated/pywr.parameters.IndexParameter.html
 ./api/generated/pywr.parameters.IndexedArrayParameter.html
 ./api/generated/pywr.parameters.MaxParameter.html
@@ -156,7 +158,7 @@
 ./api/generated/pywr.recorders.DeficitFrequencyNodeRecorder.html
 ./api/generated/pywr.recorders.FlowDurationCurveDeviationRecorder.html
 ./api/generated/pywr.recorders.FlowDurationCurveRecorder.html
-./api/generated/pywr.recorders.HydroPowerRecorder.html
+./api/generated/pywr.recorders.HydropowerRecorder.html
 ./api/generated/pywr.recorders.IndexParameterRecorder.html
 ./api/generated/pywr.recorders.MeanFlowNodeRecorder.html
 ./api/generated/pywr.recorders.MinimumThresholdVolumeStorageRecorder.html
