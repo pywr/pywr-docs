@@ -27,6 +27,7 @@
 ./_sources/api/generated/pywr.parameters.control_curves.BaseControlCurveParameter.rst.txt
 ./_sources/api/generated/pywr.parameters.control_curves.ControlCurveIndexParameter.rst.txt
 ./_sources/api/generated/pywr.parameters.control_curves.ControlCurveInterpolatedParameter.rst.txt
+./_sources/api/generated/pywr.recorders.AggregatedRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.AnnualCountIndexParameterRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.CSVRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.DeficitFrequencyNodeRecorder.rst.txt
@@ -35,6 +36,7 @@
 ./_sources/api/generated/pywr.recorders.HydropowerRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.IndexParameterRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.MeanFlowNodeRecorder.rst.txt
+./_sources/api/generated/pywr.recorders.MeanParameterRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.MinimumThresholdVolumeStorageRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.MinimumVolumeStorageRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.NodeRecorder.rst.txt
@@ -54,6 +56,7 @@
 ./_sources/api/generated/pywr.recorders.TotalDeficitNodeRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.TotalFlowNodeRecorder.rst.txt
 ./_sources/api/generated/pywr.recorders.TotalHydroEnergyRecorder.rst.txt
+./_sources/api/generated/pywr.recorders.TotalParameterRecorder.rst.txt
 ./_sources/api/pywr.domains.rst.txt
 ./_sources/api/pywr.notebook.rst.txt
 ./_sources/api/pywr.optimisation.rst.txt
@@ -153,6 +156,7 @@
 ./api/generated/pywr.parameters.control_curves.BaseControlCurveParameter.html
 ./api/generated/pywr.parameters.control_curves.ControlCurveIndexParameter.html
 ./api/generated/pywr.parameters.control_curves.ControlCurveInterpolatedParameter.html
+./api/generated/pywr.recorders.AggregatedRecorder.html
 ./api/generated/pywr.recorders.AnnualCountIndexParameterRecorder.html
 ./api/generated/pywr.recorders.CSVRecorder.html
 ./api/generated/pywr.recorders.DeficitFrequencyNodeRecorder.html
@@ -161,6 +165,7 @@
 ./api/generated/pywr.recorders.HydropowerRecorder.html
 ./api/generated/pywr.recorders.IndexParameterRecorder.html
 ./api/generated/pywr.recorders.MeanFlowNodeRecorder.html
+./api/generated/pywr.recorders.MeanParameterRecorder.html
 ./api/generated/pywr.recorders.MinimumThresholdVolumeStorageRecorder.html
 ./api/generated/pywr.recorders.MinimumVolumeStorageRecorder.html
 ./api/generated/pywr.recorders.NodeRecorder.html
@@ -180,6 +185,7 @@
 ./api/generated/pywr.recorders.TotalDeficitNodeRecorder.html
 ./api/generated/pywr.recorders.TotalFlowNodeRecorder.html
 ./api/generated/pywr.recorders.TotalHydroEnergyRecorder.html
+./api/generated/pywr.recorders.TotalParameterRecorder.html
 ./api/pywr.domains.html
 ./api/pywr.html
 ./api/pywr.notebook.html

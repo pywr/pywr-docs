@@ -45,6 +45,7 @@ pywr.recorders.RollingWindowParameterRecorder
       ~RollingWindowParameterRecorder.name
       ~RollingWindowParameterRecorder.parameter
       ~RollingWindowParameterRecorder.parents
+      ~RollingWindowParameterRecorder.temporal_agg_func
       ~RollingWindowParameterRecorder.window
    
    

@@ -47,5 +47,6 @@ pywr.recorders.SeasonalFlowDurationCurveRecorder
       ~SeasonalFlowDurationCurveRecorder.name
       ~SeasonalFlowDurationCurveRecorder.node
       ~SeasonalFlowDurationCurveRecorder.parents
+      ~SeasonalFlowDurationCurveRecorder.temporal_agg_func
    
    

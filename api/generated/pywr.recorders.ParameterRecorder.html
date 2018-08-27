@@ -187,7 +187,26 @@
 <dl class="class">
 <dt id="pywr.recorders.ParameterRecorder">
 <em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">ParameterRecorder</code><a class="headerlink" href="#pywr.recorders.ParameterRecorder" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
+<dd><p>Base class for recorders that track <cite>Parameter</cite> values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>model</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><cite>pywr.core.Model</cite></span></dt>
+<dd></dd>
+<dt><strong>param</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><cite>pywr.parameters.Parameter</cite></span></dt>
+<dd><p class="first last">The parameter to record.</p>
+</dd>
+<dt><strong>name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (optional)</span></dt>
+<dd><p class="first last">The name of the recorder</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
 <dt id="pywr.recorders.ParameterRecorder.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.ParameterRecorder.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>

@@ -45,5 +45,6 @@ pywr.recorders.NumpyArrayNodeRecorder
       ~NumpyArrayNodeRecorder.name
       ~NumpyArrayNodeRecorder.node
       ~NumpyArrayNodeRecorder.parents
+      ~NumpyArrayNodeRecorder.temporal_agg_func
    
    

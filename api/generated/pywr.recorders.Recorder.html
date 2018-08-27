@@ -187,7 +187,43 @@
 <dl class="class">
 <dt id="pywr.recorders.Recorder">
 <em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">Recorder</code><a class="headerlink" href="#pywr.recorders.Recorder" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
+<dd><p>Base class for recording information from a <cite>pywr.model.Model</cite>.</p>
+<p>Recorder components are used to calculate, aggregate and save data from a simulation. This
+base class provides the basic functionality for all recorders.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>model</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><cite>pywr.core.Model</cite></span></dt>
+<dd></dd>
+<dt><strong>agg_func</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str or callable (default=”mean”)</span></dt>
+<dd><p class="first last">Scenario aggregation function to use when <cite>aggregated_value</cite> is called.</p>
+</dd>
+<dt><strong>name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (default=None)</span></dt>
+<dd><p class="first last">Name of the recorder.</p>
+</dd>
+<dt><strong>comment</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (default=None)</span></dt>
+<dd><p class="first last">Comment or description of the recorder.</p>
+</dd>
+<dt><strong>ignore_nan</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default=False)</span></dt>
+<dd><p class="first last">Flag to ignore NaN values when calling <cite>aggregated_value</cite>.</p>
+</dd>
+<dt><strong>is_objective</strong> <span class="classifier-delimiter">:</span> <span class="classifier">{None, ‘maximize’, ‘maximise’, ‘max’, ‘minimize’, ‘minimise’, ‘min’}</span></dt>
+<dd><p class="first last">Flag to denote the direction, if any, of optimisation undertaken with this recorder.</p>
+</dd>
+<dt><strong>is_constraint</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default=False)</span></dt>
+<dd><p class="first last">Flag to denote whether this recorder is to be used as a constraint during optimisation.</p>
+</dd>
+<dt><strong>epsilon</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float (default=1.0)</span></dt>
+<dd><p class="first last">Epsilon distance used by some optimisation algorithms.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
 <dt id="pywr.recorders.Recorder.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.Recorder.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>

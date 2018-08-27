@@ -46,5 +46,6 @@ pywr.recorders.FlowDurationCurveRecorder
       ~FlowDurationCurveRecorder.name
       ~FlowDurationCurveRecorder.node
       ~FlowDurationCurveRecorder.parents
+      ~FlowDurationCurveRecorder.temporal_agg_func
    
    

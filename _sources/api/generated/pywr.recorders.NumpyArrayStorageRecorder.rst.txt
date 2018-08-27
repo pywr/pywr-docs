@@ -45,5 +45,7 @@ pywr.recorders.NumpyArrayStorageRecorder
       ~NumpyArrayStorageRecorder.name
       ~NumpyArrayStorageRecorder.node
       ~NumpyArrayStorageRecorder.parents
+      ~NumpyArrayStorageRecorder.proportional
+      ~NumpyArrayStorageRecorder.temporal_agg_func
    
    

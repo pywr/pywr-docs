@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.recorders.FlowDurationCurveRecorder &mdash; Pywr 0.5dev documentation</title>
+  <title>pywr.recorders.AggregatedRecorder &mdash; Pywr 0.5dev documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="pywr.recorders.StorageDurationCurveRecorder" href="pywr.recorders.StorageDurationCurveRecorder.html" />
-    <link rel="prev" title="pywr.recorders.NumpyArrayIndexParameterRecorder" href="pywr.recorders.NumpyArrayIndexParameterRecorder.html" /> 
+    <link rel="next" title="pywr.recorders.MeanFlowNodeRecorder" href="pywr.recorders.MeanFlowNodeRecorder.html" />
+    <link rel="prev" title="pywr.recorders.DeficitFrequencyNodeRecorder" href="pywr.recorders.DeficitFrequencyNodeRecorder.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -94,15 +94,20 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../pywr.recorders.html">Recorders</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#base-recorder-classes">Base Recorder classes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#numpy-array-recorders">Numpy array recorders</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../pywr.recorders.html#flow-duration-curve-recorders">Flow duration curve recorders</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.recorders.FlowDurationCurveRecorder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.StorageDurationCurveRecorder.html">pywr.recorders.StorageDurationCurveRecorder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.FlowDurationCurveDeviationRecorder.html">pywr.recorders.FlowDurationCurveDeviationRecorder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.SeasonalFlowDurationCurveRecorder.html">pywr.recorders.SeasonalFlowDurationCurveRecorder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#flow-duration-curve-recorders">Flow duration curve recorders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#deficit-recorders">Deficit recorders</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../pywr.recorders.html#statistical-recorders">Statistical recorders</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.recorders.AggregatedRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.MeanFlowNodeRecorder.html">pywr.recorders.MeanFlowNodeRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.TotalFlowNodeRecorder.html">pywr.recorders.TotalFlowNodeRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.MeanParameterRecorder.html">pywr.recorders.MeanParameterRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.TotalParameterRecorder.html">pywr.recorders.TotalParameterRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.RollingMeanFlowNodeRecorder.html">pywr.recorders.RollingMeanFlowNodeRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.MinimumVolumeStorageRecorder.html">pywr.recorders.MinimumVolumeStorageRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.MinimumThresholdVolumeStorageRecorder.html">pywr.recorders.MinimumThresholdVolumeStorageRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.RollingWindowParameterRecorder.html">pywr.recorders.RollingWindowParameterRecorder</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#deficit-recorders">Deficit recorders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#statistical-recorders">Statistical recorders</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#index-recorders">Index recorders</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#file-recorders">File recorders</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#hydro-power-recorders">Hydro-power recorders</a></li>
@@ -162,13 +167,13 @@
         
           <li><a href="../pywr.recorders.html">Recorders</a> &raquo;</li>
         
-      <li>pywr.recorders.FlowDurationCurveRecorder</li>
+      <li>pywr.recorders.AggregatedRecorder</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/generated/pywr.recorders.FlowDurationCurveRecorder.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/pywr.recorders.AggregatedRecorder.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -181,12 +186,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pywr-recorders-flowdurationcurverecorder">
-<h1>pywr.recorders.FlowDurationCurveRecorder<a class="headerlink" href="#pywr-recorders-flowdurationcurverecorder" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pywr-recorders-aggregatedrecorder">
+<h1>pywr.recorders.AggregatedRecorder<a class="headerlink" href="#pywr-recorders-aggregatedrecorder" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="pywr.recorders.FlowDurationCurveRecorder">
-<em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">FlowDurationCurveRecorder</code><a class="headerlink" href="#pywr.recorders.FlowDurationCurveRecorder" title="Permalink to this definition">¶</a></dt>
-<dd><p>This recorder calculates a flow duration curve for each scenario.</p>
+<dt id="pywr.recorders.AggregatedRecorder">
+<em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">AggregatedRecorder</code><a class="headerlink" href="#pywr.recorders.AggregatedRecorder" title="Permalink to this definition">¶</a></dt>
+<dd><p>This Recorder is used to aggregate across multiple other Recorder objects.</p>
+<p>The class provides a method to produce a complex aggregated recorder by taking
+the results of other records. The <cite>.values()</cite> method first collects unaggregated values
+from the provided recorders. These are then aggregated on a per scenario basis and returned
+by this classes <cite>.values()</cite> method. This method allows <cite>AggregatedRecorder</cite> to be used as
+a recorder for in other <cite>AggregatedRecorder</cite> instances.</p>
+<p>By default the same <cite>agg_func</cite> function is used for both steps, but an optional
+<cite>recorder_agg_func</cite> can undertake a different aggregation across scenarios. For
+example summing recorders per scenario, and then taking a mean of the sum totals.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -194,19 +207,14 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
 <dt><strong>model</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><cite>pywr.core.Model</cite></span></dt>
 <dd></dd>
-<dt><strong>node</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><cite>pywr.core.Node</cite></span></dt>
-<dd><p class="first last">The node to record</p>
+<dt><strong>recorders: iterable of `Recorder` objects.</strong></dt>
+<dd><p class="first last">The other <cite>Recorder</cite> instances to perform aggregation over.</p>
 </dd>
-<dt><strong>percentiles</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
-<dd><p class="first last">The percentiles to use in the calculation of the flow duration curve.
-Values must be in the range 0-100.</p>
+<dt><strong>agg_func</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str or callable, optional</span></dt>
+<dd><p class="first last">Scenario aggregation function to use when <cite>aggregated_value</cite> is called (default=”mean”).</p>
 </dd>
-<dt><strong>agg_func: str, optional</strong></dt>
-<dd><p class="first last">function used for aggregating the FDC across percentiles.
-Numpy style functions that support an axis argument are supported.</p>
-</dd>
-<dt><strong>fdc_agg_func: str, optional</strong></dt>
-<dd><p class="first last">optional different function for aggregating across scenarios.</p>
+<dt><strong>recorder_agg_func</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str or callable, optional</span></dt>
+<dd><p class="first last">Recorder aggregation function to use when <cite>aggregated_value</cite> is called (default=`agg_func`).</p>
 </dd>
 </dl>
 </td>
@@ -214,8 +222,8 @@ Numpy style functions that support an axis argument are supported.</p>
 </tbody>
 </table>
 <dl class="method">
-<dt id="pywr.recorders.FlowDurationCurveRecorder.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.FlowDurationCurveRecorder.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pywr.recorders.AggregatedRecorder.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.AggregatedRecorder.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
@@ -250,14 +258,11 @@ Numpy style functions that support an axis argument are supported.</p>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dataframe</span></code></td>
-<td>Return a <cite>pandas.DataFrame</cite> of the recorder data</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">unregister</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">unregister</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></td>
-<td>Compute a value for each scenario using <cite>temporal_agg_func</cite>.</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -277,13 +282,7 @@ Numpy style functions that support an axis argument are supported.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">comment</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">epsilon</span></code></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">fdc</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">epsilon</span></code></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">ignore_nan</span></code></td>
@@ -301,13 +300,10 @@ Numpy style functions that support an axis argument are supported.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">node</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">temporal_agg_func</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">recorders</span></code></td>
 <td></td>
 </tr>
 </tbody>
@@ -324,10 +320,10 @@ Numpy style functions that support an axis argument are supported.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pywr.recorders.StorageDurationCurveRecorder.html" class="btn btn-neutral float-right" title="pywr.recorders.StorageDurationCurveRecorder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pywr.recorders.MeanFlowNodeRecorder.html" class="btn btn-neutral float-right" title="pywr.recorders.MeanFlowNodeRecorder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pywr.recorders.NumpyArrayIndexParameterRecorder.html" class="btn btn-neutral" title="pywr.recorders.NumpyArrayIndexParameterRecorder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pywr.recorders.DeficitFrequencyNodeRecorder.html" class="btn btn-neutral" title="pywr.recorders.DeficitFrequencyNodeRecorder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

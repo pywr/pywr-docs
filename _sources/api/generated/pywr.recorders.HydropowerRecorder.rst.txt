@@ -49,6 +49,7 @@ pywr.recorders.HydropowerRecorder
       ~HydropowerRecorder.name
       ~HydropowerRecorder.node
       ~HydropowerRecorder.parents
+      ~HydropowerRecorder.temporal_agg_func
       ~HydropowerRecorder.turbine_elevation
       ~HydropowerRecorder.water_elevation_parameter
    

@@ -45,6 +45,8 @@ pywr.recorders.StorageDurationCurveRecorder
       ~StorageDurationCurveRecorder.name
       ~StorageDurationCurveRecorder.node
       ~StorageDurationCurveRecorder.parents
+      ~StorageDurationCurveRecorder.proportional
       ~StorageDurationCurveRecorder.sdc
+      ~StorageDurationCurveRecorder.temporal_agg_func
    
    

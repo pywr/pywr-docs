@@ -48,5 +48,6 @@ pywr.recorders.FlowDurationCurveDeviationRecorder
       ~FlowDurationCurveDeviationRecorder.node
       ~FlowDurationCurveDeviationRecorder.parents
       ~FlowDurationCurveDeviationRecorder.scenario
+      ~FlowDurationCurveDeviationRecorder.temporal_agg_func
    
    

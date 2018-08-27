@@ -187,7 +187,31 @@
 <dl class="class">
 <dt id="pywr.recorders.NumpyArrayNodeRecorder">
 <em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">NumpyArrayNodeRecorder</code><a class="headerlink" href="#pywr.recorders.NumpyArrayNodeRecorder" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
+<dd><p>Recorder for timeseries information from a <cite>Node</cite>.</p>
+<p>This class stores flow from a specific node for each time-step of a simulation. The
+data is saved internally using a memory view. The data can be accessed through the <cite>data</cite>
+attribute or <cite>to_dataframe()</cite> method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>model</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><cite>pywr.core.Model</cite></span></dt>
+<dd></dd>
+<dt><strong>node</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><cite>pywr.core.Node</cite></span></dt>
+<dd><p class="first last">Node instance to record.</p>
+</dd>
+<dt><strong>temporal_agg_func</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str or callable (default=”mean”)</span></dt>
+<dd><p class="first last">Aggregation function used over time when computing a value per scenario. This can be used
+to return, for example, the median flow over a simulation. For aggregation over scenarios
+see the <cite>agg_func</cite> keyword argument.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
 <dt id="pywr.recorders.NumpyArrayNodeRecorder.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.NumpyArrayNodeRecorder.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
@@ -231,7 +255,7 @@
 <td></td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></td>
-<td></td>
+<td>Compute a value for each scenario using <cite>temporal_agg_func</cite>.</td>
 </tr>
 </tbody>
 </table>
@@ -276,6 +300,9 @@
 <td></td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">temporal_agg_func</span></code></td>
 <td></td>
 </tr>
 </tbody>

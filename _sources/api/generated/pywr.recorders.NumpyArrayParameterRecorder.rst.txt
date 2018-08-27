@@ -45,5 +45,6 @@ pywr.recorders.NumpyArrayParameterRecorder
       ~NumpyArrayParameterRecorder.name
       ~NumpyArrayParameterRecorder.parameter
       ~NumpyArrayParameterRecorder.parents
+      ~NumpyArrayParameterRecorder.temporal_agg_func
    
    
