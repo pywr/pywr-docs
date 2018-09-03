@@ -7,6 +7,7 @@
 ./_sources/api/generated/pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter.rst.txt
 ./_sources/api/generated/pywr.parameters.ArrayIndexedScenarioParameter.rst.txt
 ./_sources/api/generated/pywr.parameters.ConstantParameter.rst.txt
+./_sources/api/generated/pywr.parameters.ConstantScenarioIndexParameter.rst.txt
 ./_sources/api/generated/pywr.parameters.ConstantScenarioParameter.rst.txt
 ./_sources/api/generated/pywr.parameters.DailyProfileParameter.rst.txt
 ./_sources/api/generated/pywr.parameters.DataFrameParameter.rst.txt
@@ -136,6 +137,7 @@
 ./api/generated/pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter.html
 ./api/generated/pywr.parameters.ArrayIndexedScenarioParameter.html
 ./api/generated/pywr.parameters.ConstantParameter.html
+./api/generated/pywr.parameters.ConstantScenarioIndexParameter.html
 ./api/generated/pywr.parameters.ConstantScenarioParameter.html
 ./api/generated/pywr.parameters.DailyProfileParameter.html
 ./api/generated/pywr.parameters.DataFrameParameter.html

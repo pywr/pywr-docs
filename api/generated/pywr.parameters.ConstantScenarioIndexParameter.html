@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.parameters.AggregatedParameter &mdash; Pywr 0.5dev documentation</title>
+  <title>pywr.parameters.ConstantScenarioIndexParameter &mdash; Pywr 0.5dev documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="pywr.parameters.AggregatedIndexParameter" href="pywr.parameters.AggregatedIndexParameter.html" />
-    <link rel="prev" title="pywr.parameters.ConstantScenarioIndexParameter" href="pywr.parameters.ConstantScenarioIndexParameter.html" /> 
+    <link rel="next" title="pywr.parameters.AggregatedParameter" href="pywr.parameters.AggregatedParameter.html" />
+    <link rel="prev" title="pywr.parameters.ConstantScenarioParameter" href="pywr.parameters.ConstantScenarioParameter.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -92,17 +92,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../pywr.optimisation.html">pywr.optimisation package</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../pywr.parameters.html">Parameters</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#base-parameter-class">Base Parameter class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#simple-parameters">Simple parameters</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../pywr.parameters.html#combining-multiple-parameters">Combining multiple parameters</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.parameters.AggregatedParameter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.AggregatedIndexParameter.html">pywr.parameters.AggregatedIndexParameter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.NegativeParameter.html">pywr.parameters.NegativeParameter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.MaxParameter.html">pywr.parameters.MaxParameter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.NegativeMaxParameter.html">pywr.parameters.NegativeMaxParameter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.MinParameter.html">pywr.parameters.MinParameter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.NegativeMinParameter.html">pywr.parameters.NegativeMinParameter</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../pywr.parameters.html#simple-parameters">Simple parameters</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.ConstantParameter.html">pywr.parameters.ConstantParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.ConstantScenarioParameter.html">pywr.parameters.ConstantScenarioParameter</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.parameters.ConstantScenarioIndexParameter</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#combining-multiple-parameters">Combining multiple parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#annual-profile-parameters">Annual profile parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#dataframe-parameter">Dataframe parameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#hdf5-parameter">HDF5 Parameter</a></li>
@@ -167,13 +163,13 @@
         
           <li><a href="../pywr.parameters.html">Parameters</a> &raquo;</li>
         
-      <li>pywr.parameters.AggregatedParameter</li>
+      <li>pywr.parameters.ConstantScenarioIndexParameter</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/generated/pywr.parameters.AggregatedParameter.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/pywr.parameters.ConstantScenarioIndexParameter.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -186,36 +182,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pywr-parameters-aggregatedparameter">
-<h1>pywr.parameters.AggregatedParameter<a class="headerlink" href="#pywr-parameters-aggregatedparameter" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pywr-parameters-constantscenarioindexparameter">
+<h1>pywr.parameters.ConstantScenarioIndexParameter<a class="headerlink" href="#pywr-parameters-constantscenarioindexparameter" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="pywr.parameters.AggregatedParameter">
-<em class="property">class </em><code class="descclassname">pywr.parameters.</code><code class="descname">AggregatedParameter</code><a class="headerlink" href="#pywr.parameters.AggregatedParameter" title="Permalink to this definition">¶</a></dt>
-<dd><p>A collection of IndexParameters</p>
-<p>This class behaves like a set. Parameters can be added or removed from it.
-It’s value is the value of it’s child parameters aggregated using a
-aggregating function (e.g. sum).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>parameters</strong> <span class="classifier-delimiter">:</span> <span class="classifier">iterable of <cite>IndexParameter</cite></span></dt>
-<dd><p class="first last">The parameters to aggregate</p>
-</dd>
-<dt><strong>agg_func</strong> <span class="classifier-delimiter">:</span> <span class="classifier">callable or str</span></dt>
-<dd><p class="first last">The aggregation function. Must be one of {“sum”, “min”, “max”, “mean”,
-“product”}, or a callable function which accepts a list of values.</p>
-</dd>
-</dl>
-</td>
-</tr>
-</tbody>
-</table>
+<dt id="pywr.parameters.ConstantScenarioIndexParameter">
+<em class="property">class </em><code class="descclassname">pywr.parameters.</code><code class="descname">ConstantScenarioIndexParameter</code><a class="headerlink" href="#pywr.parameters.ConstantScenarioIndexParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Scenario varying IndexParameter</p>
+<p>The values in this parameter are constant in time, but vary within a single Scenario.</p>
 <dl class="method">
-<dt id="pywr.parameters.AggregatedParameter.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.AggregatedParameter.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+<dt id="pywr.parameters.ConstantScenarioIndexParameter.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.ConstantScenarioIndexParameter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>values should be an iterable that is the same length as scenario.size</p>
 </dd></dl>
 
 <p class="rubric">Methods</p>
@@ -225,16 +202,16 @@ aggregating function (e.g. sum).</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">add</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">before</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">before</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">finish</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">finish</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_indices</span></code></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_values</span></code></td>
@@ -249,17 +226,23 @@ aggregating function (e.g. sum).</p>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_double_variables</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_integer_lower_bounds</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_index</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_integer_upper_bounds</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_integer_lower_bounds</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_integer_variables</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_integer_upper_bounds</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_value</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_integer_variables</span></code></td>
 <td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_value</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">index</span></code></td>
+<td>Returns the current index</td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></td>
 <td></td>
@@ -270,32 +253,29 @@ aggregating function (e.g. sum).</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_double_variables</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_double_variables</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_integer_variables</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_integer_variables</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">unregister</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">unregister</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">upper_bounds</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">upper_bounds</span></code></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code></td>
-<td></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code></td>
+<td>Returns the current index as a float</td>
 </tr>
 </tbody>
 </table>
@@ -306,31 +286,25 @@ aggregating function (e.g. sum).</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">agg_func</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">children</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">children</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">comment</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">comment</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">double_size</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">double_size</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">integer_size</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">integer_size</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_variable</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_variable</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">parameters</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></td>
@@ -353,10 +327,10 @@ aggregating function (e.g. sum).</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pywr.parameters.AggregatedIndexParameter.html" class="btn btn-neutral float-right" title="pywr.parameters.AggregatedIndexParameter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pywr.parameters.AggregatedParameter.html" class="btn btn-neutral float-right" title="pywr.parameters.AggregatedParameter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pywr.parameters.ConstantScenarioIndexParameter.html" class="btn btn-neutral" title="pywr.parameters.ConstantScenarioIndexParameter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pywr.parameters.ConstantScenarioParameter.html" class="btn btn-neutral" title="pywr.parameters.ConstantScenarioParameter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
