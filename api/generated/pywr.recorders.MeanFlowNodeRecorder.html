@@ -190,7 +190,7 @@
 <h1>pywr.recorders.MeanFlowNodeRecorder<a class="headerlink" href="#pywr-recorders-meanflownoderecorder" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pywr.recorders.MeanFlowNodeRecorder">
-<em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">MeanFlowNodeRecorder</code><a class="headerlink" href="#pywr.recorders.MeanFlowNodeRecorder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">MeanFlowNodeRecorder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.MeanFlowNodeRecorder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Record the mean flow for a Node.</p>
 <p>A factor can be provided to scale the total flow (e.g. for calculating operational costs).</p>
 <dl class="method">
@@ -206,34 +206,34 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code>(self)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">aggregated_value</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">aggregated_value</span></code>(self)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">before</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">before</span></code>(self)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">finish</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">finish</span></code>(self)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code>(type&nbsp;cls,&nbsp;model,&nbsp;data)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(type&nbsp;cls)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code>(self)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code>(self)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">unregister</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">unregister</span></code>(type&nbsp;cls)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code>(self)</td>
 <td></td>
 </tr>
 </tbody>
@@ -252,19 +252,19 @@
 <td></td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">comment</span></code></td>
-<td></td>
+<td>comment: basestring</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">epsilon</span></code></td>
-<td></td>
+<td>epsilon: ‘double’</td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">factor</span></code></td>
-<td></td>
+<td>factor: ‘double’</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">ignore_nan</span></code></td>
-<td></td>
+<td>ignore_nan: ‘bool’</td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_constraint</span></code></td>
-<td></td>
+<td>is_constraint: ‘bool’</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_objective</span></code></td>
 <td></td>
