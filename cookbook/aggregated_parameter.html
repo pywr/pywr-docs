@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Pywr reference documentation." href="../api/pywr.html" />
+    <link rel="next" title="Dynamic behaviour and control curves" href="control_curves.html" />
     <link rel="prev" title="Using external data" href="dataframes.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -99,8 +102,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#maxparameter-minparameter-and-negativeparameter-negativemaxparameter">MaxParameter, MinParameter and NegativeParameter, NegativeMaxParameter</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="control_curves.html">Control curves</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../extending_pywr/index.html">Extending Pywr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/pywr.html">Python API reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
 </ul>
@@ -198,7 +203,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Aggregated parameters can be used to build up complex functions. A more detailed explanation of the above example can be found in <a class="reference internal" href="demand_saving.html#demand-saving"><span class="std std-ref">Demand saving</span></a>.</p>
+<p>Aggregated parameters can be used to build up complex functions. A more detailed explanation of the above example can be found in <a class="reference internal" href="demand_saving.html#demand-saving"><span class="std std-ref">Demand restrictions</span></a>.</p>
 </div>
 <div class="section" id="sum-min-max-product">
 <h2>Sum, Min, Max, Product<a class="headerlink" href="#sum-min-max-product" title="Permalink to this headline">¶</a></h2>
@@ -281,10 +286,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../api/pywr.html" class="btn btn-neutral float-right" title="Pywr reference documentation." accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="control_curves.html" class="btn btn-neutral float-right" title="Dynamic behaviour and control curves" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="dataframes.html" class="btn btn-neutral" title="Using external data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="dataframes.html" class="btn btn-neutral float-left" title="Using external data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -293,7 +298,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright Copyright (C) 2014-17 Joshua Arnott, James E. Tomlinson, Atkins, University of Manchester
+        &copy; Copyright Copyright (C) 2014-18 Joshua Arnott, James E. Tomlinson, Atkins, University of Manchester
 
     </p>
   </div>
@@ -310,27 +315,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
