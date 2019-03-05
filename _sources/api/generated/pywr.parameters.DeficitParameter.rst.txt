@@ -25,15 +25,12 @@ pywr.parameters.DeficitParameter
       ~DeficitParameter.get_integer_variables
       ~DeficitParameter.get_value
       ~DeficitParameter.load
-      ~DeficitParameter.lower_bounds
       ~DeficitParameter.register
       ~DeficitParameter.reset
       ~DeficitParameter.set_double_variables
       ~DeficitParameter.set_integer_variables
       ~DeficitParameter.setup
       ~DeficitParameter.unregister
-      ~DeficitParameter.update
-      ~DeficitParameter.upper_bounds
       ~DeficitParameter.value
    
    

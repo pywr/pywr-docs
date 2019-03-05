@@ -25,15 +25,12 @@ pywr.parameters.ConstantScenarioParameter
       ~ConstantScenarioParameter.get_integer_variables
       ~ConstantScenarioParameter.get_value
       ~ConstantScenarioParameter.load
-      ~ConstantScenarioParameter.lower_bounds
       ~ConstantScenarioParameter.register
       ~ConstantScenarioParameter.reset
       ~ConstantScenarioParameter.set_double_variables
       ~ConstantScenarioParameter.set_integer_variables
       ~ConstantScenarioParameter.setup
       ~ConstantScenarioParameter.unregister
-      ~ConstantScenarioParameter.update
-      ~ConstantScenarioParameter.upper_bounds
       ~ConstantScenarioParameter.value
    
    

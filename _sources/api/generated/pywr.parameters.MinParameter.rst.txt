@@ -25,15 +25,12 @@ pywr.parameters.MinParameter
       ~MinParameter.get_integer_variables
       ~MinParameter.get_value
       ~MinParameter.load
-      ~MinParameter.lower_bounds
       ~MinParameter.register
       ~MinParameter.reset
       ~MinParameter.set_double_variables
       ~MinParameter.set_integer_variables
       ~MinParameter.setup
       ~MinParameter.unregister
-      ~MinParameter.update
-      ~MinParameter.upper_bounds
       ~MinParameter.value
    
    

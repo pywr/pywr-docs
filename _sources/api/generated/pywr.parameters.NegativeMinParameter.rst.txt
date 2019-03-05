@@ -25,15 +25,12 @@ pywr.parameters.NegativeMinParameter
       ~NegativeMinParameter.get_integer_variables
       ~NegativeMinParameter.get_value
       ~NegativeMinParameter.load
-      ~NegativeMinParameter.lower_bounds
       ~NegativeMinParameter.register
       ~NegativeMinParameter.reset
       ~NegativeMinParameter.set_double_variables
       ~NegativeMinParameter.set_integer_variables
       ~NegativeMinParameter.setup
       ~NegativeMinParameter.unregister
-      ~NegativeMinParameter.update
-      ~NegativeMinParameter.upper_bounds
       ~NegativeMinParameter.value
    
    

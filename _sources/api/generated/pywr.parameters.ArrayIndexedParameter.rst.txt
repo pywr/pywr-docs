@@ -25,15 +25,12 @@ pywr.parameters.ArrayIndexedParameter
       ~ArrayIndexedParameter.get_integer_variables
       ~ArrayIndexedParameter.get_value
       ~ArrayIndexedParameter.load
-      ~ArrayIndexedParameter.lower_bounds
       ~ArrayIndexedParameter.register
       ~ArrayIndexedParameter.reset
       ~ArrayIndexedParameter.set_double_variables
       ~ArrayIndexedParameter.set_integer_variables
       ~ArrayIndexedParameter.setup
       ~ArrayIndexedParameter.unregister
-      ~ArrayIndexedParameter.update
-      ~ArrayIndexedParameter.upper_bounds
       ~ArrayIndexedParameter.value
    
    

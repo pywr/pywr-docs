@@ -29,7 +29,6 @@ pywr.parameters.AggregatedIndexParameter
       ~AggregatedIndexParameter.get_value
       ~AggregatedIndexParameter.index
       ~AggregatedIndexParameter.load
-      ~AggregatedIndexParameter.lower_bounds
       ~AggregatedIndexParameter.register
       ~AggregatedIndexParameter.remove
       ~AggregatedIndexParameter.reset
@@ -37,8 +36,6 @@ pywr.parameters.AggregatedIndexParameter
       ~AggregatedIndexParameter.set_integer_variables
       ~AggregatedIndexParameter.setup
       ~AggregatedIndexParameter.unregister
-      ~AggregatedIndexParameter.update
-      ~AggregatedIndexParameter.upper_bounds
       ~AggregatedIndexParameter.value
    
    

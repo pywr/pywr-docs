@@ -28,15 +28,12 @@ pywr.parameters.TablesArrayParameter
       ~TablesArrayParameter.get_value
       ~TablesArrayParameter.index
       ~TablesArrayParameter.load
-      ~TablesArrayParameter.lower_bounds
       ~TablesArrayParameter.register
       ~TablesArrayParameter.reset
       ~TablesArrayParameter.set_double_variables
       ~TablesArrayParameter.set_integer_variables
       ~TablesArrayParameter.setup
       ~TablesArrayParameter.unregister
-      ~TablesArrayParameter.update
-      ~TablesArrayParameter.upper_bounds
       ~TablesArrayParameter.value
    
    

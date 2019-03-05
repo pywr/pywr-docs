@@ -25,15 +25,12 @@ pywr.parameters.DailyProfileParameter
       ~DailyProfileParameter.get_integer_variables
       ~DailyProfileParameter.get_value
       ~DailyProfileParameter.load
-      ~DailyProfileParameter.lower_bounds
       ~DailyProfileParameter.register
       ~DailyProfileParameter.reset
       ~DailyProfileParameter.set_double_variables
       ~DailyProfileParameter.set_integer_variables
       ~DailyProfileParameter.setup
       ~DailyProfileParameter.unregister
-      ~DailyProfileParameter.update
-      ~DailyProfileParameter.upper_bounds
       ~DailyProfileParameter.value
    
    

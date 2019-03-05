@@ -25,15 +25,12 @@ pywr.parameters.ScenarioMonthlyProfileParameter
       ~ScenarioMonthlyProfileParameter.get_integer_variables
       ~ScenarioMonthlyProfileParameter.get_value
       ~ScenarioMonthlyProfileParameter.load
-      ~ScenarioMonthlyProfileParameter.lower_bounds
       ~ScenarioMonthlyProfileParameter.register
       ~ScenarioMonthlyProfileParameter.reset
       ~ScenarioMonthlyProfileParameter.set_double_variables
       ~ScenarioMonthlyProfileParameter.set_integer_variables
       ~ScenarioMonthlyProfileParameter.setup
       ~ScenarioMonthlyProfileParameter.unregister
-      ~ScenarioMonthlyProfileParameter.update
-      ~ScenarioMonthlyProfileParameter.upper_bounds
       ~ScenarioMonthlyProfileParameter.value
    
    

@@ -25,15 +25,12 @@ pywr.parameters.HydropowerTargetParameter
       ~HydropowerTargetParameter.get_integer_variables
       ~HydropowerTargetParameter.get_value
       ~HydropowerTargetParameter.load
-      ~HydropowerTargetParameter.lower_bounds
       ~HydropowerTargetParameter.register
       ~HydropowerTargetParameter.reset
       ~HydropowerTargetParameter.set_double_variables
       ~HydropowerTargetParameter.set_integer_variables
       ~HydropowerTargetParameter.setup
       ~HydropowerTargetParameter.unregister
-      ~HydropowerTargetParameter.update
-      ~HydropowerTargetParameter.upper_bounds
       ~HydropowerTargetParameter.value
    
    

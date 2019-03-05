@@ -25,15 +25,12 @@ pywr.parameters.MonthlyProfileParameter
       ~MonthlyProfileParameter.get_integer_variables
       ~MonthlyProfileParameter.get_value
       ~MonthlyProfileParameter.load
-      ~MonthlyProfileParameter.lower_bounds
       ~MonthlyProfileParameter.register
       ~MonthlyProfileParameter.reset
       ~MonthlyProfileParameter.set_double_variables
       ~MonthlyProfileParameter.set_integer_variables
       ~MonthlyProfileParameter.setup
       ~MonthlyProfileParameter.unregister
-      ~MonthlyProfileParameter.update
-      ~MonthlyProfileParameter.upper_bounds
       ~MonthlyProfileParameter.value
    
    

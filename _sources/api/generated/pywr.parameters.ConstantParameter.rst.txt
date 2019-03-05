@@ -25,15 +25,12 @@ pywr.parameters.ConstantParameter
       ~ConstantParameter.get_integer_variables
       ~ConstantParameter.get_value
       ~ConstantParameter.load
-      ~ConstantParameter.lower_bounds
       ~ConstantParameter.register
       ~ConstantParameter.reset
       ~ConstantParameter.set_double_variables
       ~ConstantParameter.set_integer_variables
       ~ConstantParameter.setup
       ~ConstantParameter.unregister
-      ~ConstantParameter.update
-      ~ConstantParameter.upper_bounds
       ~ConstantParameter.value
    
    

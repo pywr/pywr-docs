@@ -25,15 +25,12 @@ pywr.parameters.MaxParameter
       ~MaxParameter.get_integer_variables
       ~MaxParameter.get_value
       ~MaxParameter.load
-      ~MaxParameter.lower_bounds
       ~MaxParameter.register
       ~MaxParameter.reset
       ~MaxParameter.set_double_variables
       ~MaxParameter.set_integer_variables
       ~MaxParameter.setup
       ~MaxParameter.unregister
-      ~MaxParameter.update
-      ~MaxParameter.upper_bounds
       ~MaxParameter.value
    
    

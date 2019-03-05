@@ -25,15 +25,12 @@ pywr.parameters.control\_curves.BaseControlCurveParameter
       ~BaseControlCurveParameter.get_integer_variables
       ~BaseControlCurveParameter.get_value
       ~BaseControlCurveParameter.load
-      ~BaseControlCurveParameter.lower_bounds
       ~BaseControlCurveParameter.register
       ~BaseControlCurveParameter.reset
       ~BaseControlCurveParameter.set_double_variables
       ~BaseControlCurveParameter.set_integer_variables
       ~BaseControlCurveParameter.setup
       ~BaseControlCurveParameter.unregister
-      ~BaseControlCurveParameter.update
-      ~BaseControlCurveParameter.upper_bounds
       ~BaseControlCurveParameter.value
    
    

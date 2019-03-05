@@ -25,15 +25,12 @@ pywr.parameters.NegativeMaxParameter
       ~NegativeMaxParameter.get_integer_variables
       ~NegativeMaxParameter.get_value
       ~NegativeMaxParameter.load
-      ~NegativeMaxParameter.lower_bounds
       ~NegativeMaxParameter.register
       ~NegativeMaxParameter.reset
       ~NegativeMaxParameter.set_double_variables
       ~NegativeMaxParameter.set_integer_variables
       ~NegativeMaxParameter.setup
       ~NegativeMaxParameter.unregister
-      ~NegativeMaxParameter.update
-      ~NegativeMaxParameter.upper_bounds
       ~NegativeMaxParameter.value
    
    

@@ -25,15 +25,12 @@ pywr.parameters.AnnualHarmonicSeriesParameter
       ~AnnualHarmonicSeriesParameter.get_integer_variables
       ~AnnualHarmonicSeriesParameter.get_value
       ~AnnualHarmonicSeriesParameter.load
-      ~AnnualHarmonicSeriesParameter.lower_bounds
       ~AnnualHarmonicSeriesParameter.register
       ~AnnualHarmonicSeriesParameter.reset
       ~AnnualHarmonicSeriesParameter.set_double_variables
       ~AnnualHarmonicSeriesParameter.set_integer_variables
       ~AnnualHarmonicSeriesParameter.setup
       ~AnnualHarmonicSeriesParameter.unregister
-      ~AnnualHarmonicSeriesParameter.update
-      ~AnnualHarmonicSeriesParameter.upper_bounds
       ~AnnualHarmonicSeriesParameter.value
    
    

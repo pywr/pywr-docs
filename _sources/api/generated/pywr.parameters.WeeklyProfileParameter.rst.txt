@@ -25,15 +25,12 @@ pywr.parameters.WeeklyProfileParameter
       ~WeeklyProfileParameter.get_integer_variables
       ~WeeklyProfileParameter.get_value
       ~WeeklyProfileParameter.load
-      ~WeeklyProfileParameter.lower_bounds
       ~WeeklyProfileParameter.register
       ~WeeklyProfileParameter.reset
       ~WeeklyProfileParameter.set_double_variables
       ~WeeklyProfileParameter.set_integer_variables
       ~WeeklyProfileParameter.setup
       ~WeeklyProfileParameter.unregister
-      ~WeeklyProfileParameter.update
-      ~WeeklyProfileParameter.upper_bounds
       ~WeeklyProfileParameter.value
    
    

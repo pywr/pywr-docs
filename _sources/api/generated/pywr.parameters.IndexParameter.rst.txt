@@ -28,15 +28,12 @@ pywr.parameters.IndexParameter
       ~IndexParameter.get_value
       ~IndexParameter.index
       ~IndexParameter.load
-      ~IndexParameter.lower_bounds
       ~IndexParameter.register
       ~IndexParameter.reset
       ~IndexParameter.set_double_variables
       ~IndexParameter.set_integer_variables
       ~IndexParameter.setup
       ~IndexParameter.unregister
-      ~IndexParameter.update
-      ~IndexParameter.upper_bounds
       ~IndexParameter.value
    
    

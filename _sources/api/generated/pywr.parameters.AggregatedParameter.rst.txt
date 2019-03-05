@@ -26,7 +26,6 @@ pywr.parameters.AggregatedParameter
       ~AggregatedParameter.get_integer_variables
       ~AggregatedParameter.get_value
       ~AggregatedParameter.load
-      ~AggregatedParameter.lower_bounds
       ~AggregatedParameter.register
       ~AggregatedParameter.remove
       ~AggregatedParameter.reset
@@ -34,8 +33,6 @@ pywr.parameters.AggregatedParameter
       ~AggregatedParameter.set_integer_variables
       ~AggregatedParameter.setup
       ~AggregatedParameter.unregister
-      ~AggregatedParameter.update
-      ~AggregatedParameter.upper_bounds
       ~AggregatedParameter.value
    
    

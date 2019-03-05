@@ -25,15 +25,12 @@ pywr.parameters.ArrayIndexedScenarioParameter
       ~ArrayIndexedScenarioParameter.get_integer_variables
       ~ArrayIndexedScenarioParameter.get_value
       ~ArrayIndexedScenarioParameter.load
-      ~ArrayIndexedScenarioParameter.lower_bounds
       ~ArrayIndexedScenarioParameter.register
       ~ArrayIndexedScenarioParameter.reset
       ~ArrayIndexedScenarioParameter.set_double_variables
       ~ArrayIndexedScenarioParameter.set_integer_variables
       ~ArrayIndexedScenarioParameter.setup
       ~ArrayIndexedScenarioParameter.unregister
-      ~ArrayIndexedScenarioParameter.update
-      ~ArrayIndexedScenarioParameter.upper_bounds
       ~ArrayIndexedScenarioParameter.value
    
    

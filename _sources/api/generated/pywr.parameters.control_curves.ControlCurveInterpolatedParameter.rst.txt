@@ -25,15 +25,12 @@ pywr.parameters.control\_curves.ControlCurveInterpolatedParameter
       ~ControlCurveInterpolatedParameter.get_integer_variables
       ~ControlCurveInterpolatedParameter.get_value
       ~ControlCurveInterpolatedParameter.load
-      ~ControlCurveInterpolatedParameter.lower_bounds
       ~ControlCurveInterpolatedParameter.register
       ~ControlCurveInterpolatedParameter.reset
       ~ControlCurveInterpolatedParameter.set_double_variables
       ~ControlCurveInterpolatedParameter.set_integer_variables
       ~ControlCurveInterpolatedParameter.setup
       ~ControlCurveInterpolatedParameter.unregister
-      ~ControlCurveInterpolatedParameter.update
-      ~ControlCurveInterpolatedParameter.upper_bounds
       ~ControlCurveInterpolatedParameter.value
    
    

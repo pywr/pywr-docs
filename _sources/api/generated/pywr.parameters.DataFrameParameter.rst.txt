@@ -25,15 +25,12 @@ pywr.parameters.DataFrameParameter
       ~DataFrameParameter.get_integer_variables
       ~DataFrameParameter.get_value
       ~DataFrameParameter.load
-      ~DataFrameParameter.lower_bounds
       ~DataFrameParameter.register
       ~DataFrameParameter.reset
       ~DataFrameParameter.set_double_variables
       ~DataFrameParameter.set_integer_variables
       ~DataFrameParameter.setup
       ~DataFrameParameter.unregister
-      ~DataFrameParameter.update
-      ~DataFrameParameter.upper_bounds
       ~DataFrameParameter.value
    
    

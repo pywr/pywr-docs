@@ -25,15 +25,12 @@ pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter
       ~ArrayIndexedScenarioMonthlyFactorsParameter.get_integer_variables
       ~ArrayIndexedScenarioMonthlyFactorsParameter.get_value
       ~ArrayIndexedScenarioMonthlyFactorsParameter.load
-      ~ArrayIndexedScenarioMonthlyFactorsParameter.lower_bounds
       ~ArrayIndexedScenarioMonthlyFactorsParameter.register
       ~ArrayIndexedScenarioMonthlyFactorsParameter.reset
       ~ArrayIndexedScenarioMonthlyFactorsParameter.set_double_variables
       ~ArrayIndexedScenarioMonthlyFactorsParameter.set_integer_variables
       ~ArrayIndexedScenarioMonthlyFactorsParameter.setup
       ~ArrayIndexedScenarioMonthlyFactorsParameter.unregister
-      ~ArrayIndexedScenarioMonthlyFactorsParameter.update
-      ~ArrayIndexedScenarioMonthlyFactorsParameter.upper_bounds
       ~ArrayIndexedScenarioMonthlyFactorsParameter.value
    
    
