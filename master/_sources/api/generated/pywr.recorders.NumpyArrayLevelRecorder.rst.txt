@@ -21,6 +21,7 @@ pywr.recorders.NumpyArrayLevelRecorder
       ~NumpyArrayLevelRecorder.register
       ~NumpyArrayLevelRecorder.reset
       ~NumpyArrayLevelRecorder.setup
+      ~NumpyArrayLevelRecorder.to_dataframe
       ~NumpyArrayLevelRecorder.unregister
       ~NumpyArrayLevelRecorder.values
    
@@ -44,5 +45,6 @@ pywr.recorders.NumpyArrayLevelRecorder
       ~NumpyArrayLevelRecorder.name
       ~NumpyArrayLevelRecorder.node
       ~NumpyArrayLevelRecorder.parents
+      ~NumpyArrayLevelRecorder.temporal_agg_func
    
    

@@ -101,6 +101,7 @@
 <li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayNodeRecorder.html">pywr.recorders.NumpyArrayNodeRecorder</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.recorders.NumpyArrayStorageRecorder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayLevelRecorder.html">pywr.recorders.NumpyArrayLevelRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayAreaRecorder.html">pywr.recorders.NumpyArrayAreaRecorder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayParameterRecorder.html">pywr.recorders.NumpyArrayParameterRecorder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayIndexParameterRecorder.html">pywr.recorders.NumpyArrayIndexParameterRecorder</a></li>
 </ul>
@@ -191,7 +192,7 @@
 <h1>pywr.recorders.NumpyArrayStorageRecorder<a class="headerlink" href="#pywr-recorders-numpyarraystoragerecorder" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pywr.recorders.NumpyArrayStorageRecorder">
-<em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">NumpyArrayStorageRecorder</code><span class="sig-paren">(</span><em>model</em>, <em>AbstractStorage node</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.NumpyArrayStorageRecorder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">NumpyArrayStorageRecorder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.NumpyArrayStorageRecorder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Recorder for timeseries information from a <cite>Storage</cite> node.</p>
 <p>This class stores volume from a specific node for each time-step of a simulation. The
 data is saved internally using a memory view. The data can be accessed through the <cite>data</cite>
@@ -213,7 +214,7 @@ see the <cite>agg_func</cite> keyword argument.</p>
 </dl>
 <dl class="method">
 <dt id="pywr.recorders.NumpyArrayStorageRecorder.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.NumpyArrayStorageRecorder.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.NumpyArrayStorageRecorder.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
@@ -227,7 +228,7 @@ see the <cite>agg_func</cite> keyword argument.</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code>(self)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">aggregated_value</span></code>(self)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">aggregated_value</span></code>()</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">before</span></code>(self)</p></td>
@@ -248,13 +249,13 @@ see the <cite>agg_func</cite> keyword argument.</p>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code>(self)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dataframe</span></code>(self)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dataframe</span></code>()</p></td>
 <td><p>Return a <cite>pandas.DataFrame</cite> of the recorder data</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">unregister</span></code>(type cls)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code>(self)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code>()</p></td>
 <td><p>Compute a value for each scenario using <cite>temporal_agg_func</cite>.</p></td>
 </tr>
 </tbody>

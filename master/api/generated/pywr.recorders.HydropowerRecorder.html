@@ -215,7 +215,10 @@ should convert flow to units of <span class="math notranslate nohighlight">\(m^3
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="pywr.recorders.TotalHydroEnergyRecorder.html#pywr.recorders.TotalHydroEnergyRecorder" title="pywr.recorders.TotalHydroEnergyRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TotalHydroEnergyRecorder</span></code></a>, <a class="reference internal" href="pywr.parameters.HydropowerTargetParameter.html#pywr.parameters.HydropowerTargetParameter" title="pywr.parameters.HydropowerTargetParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pywr.parameters.HydropowerTargetParameter</span></code></a></p>
+<dl class="simple">
+<dt><a class="reference internal" href="pywr.recorders.TotalHydroEnergyRecorder.html#pywr.recorders.TotalHydroEnergyRecorder" title="pywr.recorders.TotalHydroEnergyRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TotalHydroEnergyRecorder</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="pywr.parameters.HydropowerTargetParameter.html#pywr.parameters.HydropowerTargetParameter" title="pywr.parameters.HydropowerTargetParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pywr.parameters.HydropowerTargetParameter</span></code></a></dt><dd></dd>
+</dl>
 </div>
 <p class="rubric">Notes</p>
 <p>The hydropower calculation uses the following equation.</p>
@@ -227,7 +230,7 @@ is given then head is the difference in elevation between the water and the turb
 is <cite>None</cite> then the head is simply the turbine elevation.</p>
 <dl class="method">
 <dt id="pywr.recorders.HydropowerRecorder.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.HydropowerRecorder.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.HydropowerRecorder.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
@@ -241,7 +244,7 @@ is <cite>None</cite> then the head is simply the turbine elevation.</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code>(self)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">aggregated_value</span></code>(self)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">aggregated_value</span></code>()</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">before</span></code>(self)</p></td>
@@ -262,13 +265,13 @@ is <cite>None</cite> then the head is simply the turbine elevation.</p>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code>(self)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dataframe</span></code>(self)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dataframe</span></code>()</p></td>
 <td><p>Return a <cite>pandas.DataFrame</cite> of the recorder data</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">unregister</span></code>(type cls)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code>(self)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code>()</p></td>
 <td><p>Compute a value for each scenario using <cite>temporal_agg_func</cite>.</p></td>
 </tr>
 </tbody>

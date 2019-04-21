@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="pywr.recorders.NumpyArrayParameterRecorder" href="pywr.recorders.NumpyArrayParameterRecorder.html" />
+    <link rel="next" title="pywr.recorders.NumpyArrayAreaRecorder" href="pywr.recorders.NumpyArrayAreaRecorder.html" />
     <link rel="prev" title="pywr.recorders.NumpyArrayStorageRecorder" href="pywr.recorders.NumpyArrayStorageRecorder.html" /> 
 </head>
 
@@ -101,6 +101,7 @@
 <li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayNodeRecorder.html">pywr.recorders.NumpyArrayNodeRecorder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayStorageRecorder.html">pywr.recorders.NumpyArrayStorageRecorder</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.recorders.NumpyArrayLevelRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayAreaRecorder.html">pywr.recorders.NumpyArrayAreaRecorder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayParameterRecorder.html">pywr.recorders.NumpyArrayParameterRecorder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayIndexParameterRecorder.html">pywr.recorders.NumpyArrayIndexParameterRecorder</a></li>
 </ul>
@@ -191,10 +192,27 @@
 <h1>pywr.recorders.NumpyArrayLevelRecorder<a class="headerlink" href="#pywr-recorders-numpyarraylevelrecorder" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pywr.recorders.NumpyArrayLevelRecorder">
-<em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">NumpyArrayLevelRecorder</code><span class="sig-paren">(</span><em>model</em>, <em>AbstractStorage node</em>, <em>name=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.NumpyArrayLevelRecorder" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
+<em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">NumpyArrayLevelRecorder</code><a class="headerlink" href="#pywr.recorders.NumpyArrayLevelRecorder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recorder for level timeseries from a <cite>Storage</cite> node.</p>
+<p>This class stores level from a specific node for each time-step of a simulation. The
+data is saved internally using a memory view. The data can be accessed through the <cite>data</cite>
+attribute or <cite>to_dataframe()</cite> method.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>model</strong><span class="classifier"><cite>pywr.core.Model</cite></span></dt><dd></dd>
+<dt><strong>node</strong><span class="classifier"><cite>pywr.core.Node</cite></span></dt><dd><p>Node instance to record.</p>
+</dd>
+<dt><strong>temporal_agg_func</strong><span class="classifier">str or callable (default=”mean”)</span></dt><dd><p>Aggregation function used over time when computing a value per scenario. This can be used
+to return, for example, the median flow over a simulation. For aggregation over scenarios
+see the <cite>agg_func</cite> keyword argument.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
 <dt id="pywr.recorders.NumpyArrayLevelRecorder.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.NumpyArrayLevelRecorder.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.NumpyArrayLevelRecorder.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
@@ -208,7 +226,7 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code>(self)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">aggregated_value</span></code>(self)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">aggregated_value</span></code>()</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">before</span></code>(self)</p></td>
@@ -229,11 +247,14 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code>(self)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">unregister</span></code>(type cls)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dataframe</span></code>()</p></td>
+<td><p>Return a <cite>pandas.DataFrame</cite> of the recorder data</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">unregister</span></code>(type cls)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code>(self)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code>()</p></td>
+<td><p>Compute a value for each scenario using <cite>temporal_agg_func</cite>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -280,6 +301,9 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></p></td>
 <td><p></p></td>
 </tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">temporal_agg_func</span></code></p></td>
+<td><p></p></td>
+</tr>
 </tbody>
 </table>
 </dd></dl>
@@ -294,7 +318,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pywr.recorders.NumpyArrayParameterRecorder.html" class="btn btn-neutral float-right" title="pywr.recorders.NumpyArrayParameterRecorder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pywr.recorders.NumpyArrayAreaRecorder.html" class="btn btn-neutral float-right" title="pywr.recorders.NumpyArrayAreaRecorder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="pywr.recorders.NumpyArrayStorageRecorder.html" class="btn btn-neutral float-left" title="pywr.recorders.NumpyArrayStorageRecorder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

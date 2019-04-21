@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.recorders.CSVRecorder &mdash; Pywr v1.1.0 documentation</title>
+  <title>pywr.recorders.NumpyArrayAreaRecorder &mdash; Pywr v1.1.0 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="pywr.recorders.TablesRecorder" href="pywr.recorders.TablesRecorder.html" />
-    <link rel="prev" title="pywr.recorders.AnnualCountIndexParameterRecorder" href="pywr.recorders.AnnualCountIndexParameterRecorder.html" /> 
+    <link rel="next" title="pywr.recorders.NumpyArrayParameterRecorder" href="pywr.recorders.NumpyArrayParameterRecorder.html" />
+    <link rel="prev" title="pywr.recorders.NumpyArrayLevelRecorder" href="pywr.recorders.NumpyArrayLevelRecorder.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,16 +97,20 @@
 <li class="toctree-l2"><a class="reference internal" href="../pywr.parameters.html">Parameters</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../pywr.recorders.html">Recorders</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#base-recorder-classes">Base Recorder classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#numpy-array-recorders">Numpy array recorders</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../pywr.recorders.html#numpy-array-recorders">Numpy array recorders</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayNodeRecorder.html">pywr.recorders.NumpyArrayNodeRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayStorageRecorder.html">pywr.recorders.NumpyArrayStorageRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayLevelRecorder.html">pywr.recorders.NumpyArrayLevelRecorder</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.recorders.NumpyArrayAreaRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayParameterRecorder.html">pywr.recorders.NumpyArrayParameterRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.NumpyArrayIndexParameterRecorder.html">pywr.recorders.NumpyArrayIndexParameterRecorder</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#flow-duration-curve-recorders">Flow duration curve recorders</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#deficit-recorders">Deficit recorders</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#statistical-recorders">Statistical recorders</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#index-recorders">Index recorders</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../pywr.recorders.html#file-recorders">File recorders</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.recorders.CSVRecorder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.recorders.TablesRecorder.html">pywr.recorders.TablesRecorder</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#file-recorders">File recorders</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pywr.recorders.html#hydro-power-recorders">Hydro-power recorders</a></li>
 </ul>
 </li>
@@ -165,13 +169,13 @@
         
           <li><a href="../pywr.recorders.html">Recorders</a> &raquo;</li>
         
-      <li>pywr.recorders.CSVRecorder</li>
+      <li>pywr.recorders.NumpyArrayAreaRecorder</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/generated/pywr.recorders.CSVRecorder.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/pywr.recorders.NumpyArrayAreaRecorder.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -184,31 +188,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pywr-recorders-csvrecorder">
-<h1>pywr.recorders.CSVRecorder<a class="headerlink" href="#pywr-recorders-csvrecorder" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pywr-recorders-numpyarrayarearecorder">
+<h1>pywr.recorders.NumpyArrayAreaRecorder<a class="headerlink" href="#pywr-recorders-numpyarrayarearecorder" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="pywr.recorders.CSVRecorder">
-<em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">CSVRecorder</code><span class="sig-paren">(</span><em>model</em>, <em>csvfile</em>, <em>scenario_index=0</em>, <em>nodes=None</em>, <em>complib=None</em>, <em>complevel=9</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.CSVRecorder" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Recorder that saves Node values to a CSV file.</p>
-<p>This class uses the csv package from the Python standard library</p>
+<dt id="pywr.recorders.NumpyArrayAreaRecorder">
+<em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">NumpyArrayAreaRecorder</code><a class="headerlink" href="#pywr.recorders.NumpyArrayAreaRecorder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recorder for area timeseries from a <cite>Storage</cite> node.</p>
+<p>This class stores area from a specific node for each time-step of a simulation. The
+data is saved internally using a memory view. The data can be accessed through the <cite>data</cite>
+attribute or <cite>to_dataframe()</cite> method.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>model</strong><span class="classifier"><cite>pywr.model.Model</cite></span></dt><dd><p>The model to record nodes from.</p>
+<dt><strong>model</strong><span class="classifier"><cite>pywr.core.Model</cite></span></dt><dd></dd>
+<dt><strong>node</strong><span class="classifier"><cite>pywr.core.Node</cite></span></dt><dd><p>Node instance to record.</p>
 </dd>
-<dt><strong>csvfile</strong><span class="classifier">str</span></dt><dd><p>The path to the CSV file.</p>
+<dt><strong>temporal_agg_func</strong><span class="classifier">str or callable (default=”mean”)</span></dt><dd><p>Aggregation function used over time when computing a value per scenario. This can be used
+to return, for example, the median flow over a simulation. For aggregation over scenarios
+see the <cite>agg_func</cite> keyword argument.</p>
 </dd>
-<dt><strong>scenario_index</strong><span class="classifier">int</span></dt><dd><p>The scenario index of the model to save.</p>
-</dd>
-<dt><strong>nodes</strong><span class="classifier">iterable (default=None)</span></dt><dd><p>An iterable of nodes to save data. It defaults to None which is all nodes in the model</p>
-</dd>
-<dt><strong>kwargs</strong><span class="classifier">Additional keyword arguments to pass to the <cite>csv.writer</cite> object</span></dt><dd></dd>
 </dl>
 </dd>
 </dl>
 <dl class="method">
-<dt id="pywr.recorders.CSVRecorder.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>model</em>, <em>csvfile</em>, <em>scenario_index=0</em>, <em>nodes=None</em>, <em>complib=None</em>, <em>complevel=9</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.CSVRecorder.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pywr.recorders.NumpyArrayAreaRecorder.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>/</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.NumpyArrayAreaRecorder.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
@@ -219,38 +223,38 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pywr.recorders.CSVRecorder.__init__" title="pywr.recorders.CSVRecorder.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, model, csvfile[, …])</p></td>
-<td><p>Initialize self.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code>(self)</p></td>
-<td><p>Write the node values to the CSV file</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">aggregated_value</span></code>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code>(self)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">before</span></code>(self)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">aggregated_value</span></code>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">finish</span></code>(self)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">before</span></code>(self)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code>(type cls, model, data)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">finish</span></code>(self)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(type cls)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code>(type cls, model, data)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code>(self)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(type cls)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code>(self)</p></td>
-<td><p>Setup the CSV file recorder.</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code>(self)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code>(self)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dataframe</span></code>()</p></td>
+<td><p>Return a <cite>pandas.DataFrame</cite> of the recorder data</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">unregister</span></code>(type cls)</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code>()</p></td>
-<td><p></p></td>
+<td><p>Compute a value for each scenario using <cite>temporal_agg_func</cite>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -270,25 +274,34 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">comment</span></code></p></td>
 <td><p>comment: basestring</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">epsilon</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">epsilon</span></code></p></td>
 <td><p>epsilon: ‘double’</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ignore_nan</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ignore_nan</span></code></p></td>
 <td><p>ignore_nan: ‘bool’</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_constraint</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_constraint</span></code></p></td>
 <td><p>is_constraint: ‘bool’</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_objective</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_objective</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">node</span></code></p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">temporal_agg_func</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -305,10 +318,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pywr.recorders.TablesRecorder.html" class="btn btn-neutral float-right" title="pywr.recorders.TablesRecorder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pywr.recorders.NumpyArrayParameterRecorder.html" class="btn btn-neutral float-right" title="pywr.recorders.NumpyArrayParameterRecorder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pywr.recorders.AnnualCountIndexParameterRecorder.html" class="btn btn-neutral float-left" title="pywr.recorders.AnnualCountIndexParameterRecorder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pywr.recorders.NumpyArrayLevelRecorder.html" class="btn btn-neutral float-left" title="pywr.recorders.NumpyArrayLevelRecorder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
