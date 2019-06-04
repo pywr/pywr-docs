@@ -13,6 +13,7 @@ pywr.recorders.TotalHydroEnergyRecorder
 
    .. autosummary::
    
+      ~TotalHydroEnergyRecorder.__init__
       ~TotalHydroEnergyRecorder.after
       ~TotalHydroEnergyRecorder.aggregated_value
       ~TotalHydroEnergyRecorder.before

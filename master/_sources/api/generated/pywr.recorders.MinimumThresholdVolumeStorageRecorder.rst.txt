@@ -13,6 +13,7 @@ pywr.recorders.MinimumThresholdVolumeStorageRecorder
 
    .. autosummary::
    
+      ~MinimumThresholdVolumeStorageRecorder.__init__
       ~MinimumThresholdVolumeStorageRecorder.after
       ~MinimumThresholdVolumeStorageRecorder.aggregated_value
       ~MinimumThresholdVolumeStorageRecorder.before

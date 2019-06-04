@@ -13,6 +13,7 @@ pywr.parameters.IndexedArrayParameter
 
    .. autosummary::
    
+      ~IndexedArrayParameter.__init__
       ~IndexedArrayParameter.after
       ~IndexedArrayParameter.before
       ~IndexedArrayParameter.finish

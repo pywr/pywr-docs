@@ -183,25 +183,30 @@
 <span id="pywr-domains-river-module"></span><h2>pywr.domains.river module<a class="headerlink" href="#module-pywr.domains.river" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="pywr.domains.river.Catchment">
-<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">Catchment</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Catchment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.domains.river.</code><code class="sig-name descname">Catchment</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Catchment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.RiverDomainMixin" title="pywr.domains.river.RiverDomainMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.domains.river.RiverDomainMixin</span></code></a>, <a class="reference internal" href="generated/pywr.nodes.Input.html#pywr.nodes.Input" title="pywr.nodes.Input"><code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.nodes.Input</span></code></a></p>
 <p>A hydrological catchment, supplying water to the river network</p>
 <dl class="method">
 <dt id="pywr.domains.river.Catchment.get_flow">
-<code class="descname">get_flow</code><span class="sig-paren">(</span><em>self</em>, <em>timestep</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Catchment.get_flow" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_flow</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">timestep</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Catchment.get_flow" title="Permalink to this definition">¶</a></dt>
 <dd><p>flow is ensured that both min_flow and max_flow are the same.</p>
 </dd></dl>
 
-<dl class="classmethod">
+<dl class="method">
 <dt id="pywr.domains.river.Catchment.load">
-<em class="property">classmethod </em><code class="descname">load</code><span class="sig-paren">(</span><em>data</em>, <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Catchment.load" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">model</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Catchment.load" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
+<dl class="data">
+<dt id="pywr.domains.river.DEFAULT_RIVER_DOMAIN">
+<code class="sig-prename descclassname">pywr.domains.river.</code><code class="sig-name descname">DEFAULT_RIVER_DOMAIN</code><em class="property"> = &lt;pywr.domains.Domain object&gt;</em><a class="headerlink" href="#pywr.domains.river.DEFAULT_RIVER_DOMAIN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="class">
 <dt id="pywr.domains.river.Discharge">
-<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">Discharge</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Discharge" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.domains.river.</code><code class="sig-name descname">Discharge</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Discharge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.Catchment" title="pywr.domains.river.Catchment"><code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.domains.river.Catchment</span></code></a></p>
 <p>An inline discharge to the river network</p>
 <p>This node is similar to a catchment, but sits inline to the river network,
@@ -210,7 +215,7 @@ rather than at the head of the river.</p>
 
 <dl class="class">
 <dt id="pywr.domains.river.Reservoir">
-<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">Reservoir</code><span class="sig-paren">(</span><em>model</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Reservoir" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.domains.river.</code><code class="sig-name descname">Reservoir</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Reservoir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.RiverDomainMixin" title="pywr.domains.river.RiverDomainMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.domains.river.RiverDomainMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.nodes.Storage</span></code></p>
 <p>A reservoir node with control curve.</p>
 <p>The Reservoir is a subclass of Storage with additional functionality to provide a
@@ -221,7 +226,7 @@ to represent a benefit of filling the reservoir when it is below its curve.</p>
 
 <dl class="class">
 <dt id="pywr.domains.river.River">
-<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">River</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.River" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.domains.river.</code><code class="sig-name descname">River</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.River" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.RiverDomainMixin" title="pywr.domains.river.RiverDomainMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.domains.river.RiverDomainMixin</span></code></a>, <a class="reference internal" href="generated/pywr.nodes.Link.html#pywr.nodes.Link" title="pywr.nodes.Link"><code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.nodes.Link</span></code></a></p>
 <p>A node in the river network</p>
 <p>This node may have multiple upstream nodes (i.e. a confluence) but only
@@ -230,35 +235,35 @@ one downstream node.</p>
 
 <dl class="class">
 <dt id="pywr.domains.river.RiverDomainMixin">
-<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">RiverDomainMixin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverDomainMixin" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.domains.river.</code><code class="sig-name descname">RiverDomainMixin</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverDomainMixin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
 <dl class="class">
 <dt id="pywr.domains.river.RiverGauge">
-<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">RiverGauge</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverGauge" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.domains.river.</code><code class="sig-name descname">RiverGauge</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverGauge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.RiverDomainMixin" title="pywr.domains.river.RiverDomainMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.domains.river.RiverDomainMixin</span></code></a>, <a class="reference internal" href="generated/pywr.nodes.PiecewiseLink.html#pywr.nodes.PiecewiseLink" title="pywr.nodes.PiecewiseLink"><code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.nodes.PiecewiseLink</span></code></a></p>
 <p>A river gauging station, with a minimum residual flow (MRF)</p>
-<dl class="classmethod">
+<dl class="method">
 <dt id="pywr.domains.river.RiverGauge.load">
-<em class="property">classmethod </em><code class="descname">load</code><span class="sig-paren">(</span><em>data</em>, <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverGauge.load" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">model</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverGauge.load" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pywr.domains.river.RiverGauge.mrf">
-<code class="descname">mrf</code><a class="headerlink" href="#pywr.domains.river.RiverGauge.mrf" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">mrf</code><a class="headerlink" href="#pywr.domains.river.RiverGauge.mrf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pywr.domains.river.RiverGauge.mrf_cost">
-<code class="descname">mrf_cost</code><a class="headerlink" href="#pywr.domains.river.RiverGauge.mrf_cost" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">mrf_cost</code><a class="headerlink" href="#pywr.domains.river.RiverGauge.mrf_cost" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pywr.domains.river.RiverSplit">
-<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">RiverSplit</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverSplit" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.domains.river.</code><code class="sig-name descname">RiverSplit</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverSplit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.nodes.MultiSplitLink</span></code></p>
 <p>A split in the river network</p>
 <dl class="simple">
@@ -290,7 +295,7 @@ than the length of factors (as per <cite>pywr.nodes.MultiSplitLink</cite> docume
 
 <dl class="class">
 <dt id="pywr.domains.river.RiverSplitWithGauge">
-<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">RiverSplitWithGauge</code><span class="sig-paren">(</span><em>model</em>, <em>name</em>, <em>mrf=0.0</em>, <em>cost=0.0</em>, <em>mrf_cost=0.0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverSplitWithGauge" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.domains.river.</code><code class="sig-name descname">RiverSplitWithGauge</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">name</em>, <em class="sig-param">mrf=0.0</em>, <em class="sig-param">cost=0.0</em>, <em class="sig-param">mrf_cost=0.0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverSplitWithGauge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.domains.river.RiverSplit" title="pywr.domains.river.RiverSplit"><code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.domains.river.RiverSplit</span></code></a></p>
 <p>A split in the river network with a minimum residual flow</p>
 <dl class="simple">
@@ -319,9 +324,9 @@ than the length of factors (as per <cite>MultiSplitLink</cite> documentation).</
 </dl>
 </dd>
 </dl>
-<dl class="classmethod">
+<dl class="method">
 <dt id="pywr.domains.river.RiverSplitWithGauge.load">
-<em class="property">classmethod </em><code class="descname">load</code><span class="sig-paren">(</span><em>data</em>, <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverSplitWithGauge.load" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">model</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.RiverSplitWithGauge.load" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -331,7 +336,7 @@ than the length of factors (as per <cite>MultiSplitLink</cite> documentation).</
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pywr.domains" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="pywr.domains.Domain">
-<em class="property">class </em><code class="descclassname">pywr.domains.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>name='default'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.Domain" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.domains.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param">name='default'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pywr._core.Domain</span></code></p>
 </dd></dl>
 

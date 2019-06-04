@@ -13,6 +13,7 @@ pywr.parameters.AnnualHarmonicSeriesParameter
 
    .. autosummary::
    
+      ~AnnualHarmonicSeriesParameter.__init__
       ~AnnualHarmonicSeriesParameter.after
       ~AnnualHarmonicSeriesParameter.before
       ~AnnualHarmonicSeriesParameter.finish

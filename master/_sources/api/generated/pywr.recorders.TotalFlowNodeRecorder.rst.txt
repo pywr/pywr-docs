@@ -13,6 +13,7 @@ pywr.recorders.TotalFlowNodeRecorder
 
    .. autosummary::
    
+      ~TotalFlowNodeRecorder.__init__
       ~TotalFlowNodeRecorder.after
       ~TotalFlowNodeRecorder.aggregated_value
       ~TotalFlowNodeRecorder.before

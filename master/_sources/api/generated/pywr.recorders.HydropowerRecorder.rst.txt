@@ -13,6 +13,7 @@ pywr.recorders.HydropowerRecorder
 
    .. autosummary::
    
+      ~HydropowerRecorder.__init__
       ~HydropowerRecorder.after
       ~HydropowerRecorder.aggregated_value
       ~HydropowerRecorder.before

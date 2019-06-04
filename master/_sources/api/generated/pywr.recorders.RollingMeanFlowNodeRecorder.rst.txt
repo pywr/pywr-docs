@@ -13,6 +13,7 @@ pywr.recorders.RollingMeanFlowNodeRecorder
 
    .. autosummary::
    
+      ~RollingMeanFlowNodeRecorder.__init__
       ~RollingMeanFlowNodeRecorder.after
       ~RollingMeanFlowNodeRecorder.aggregated_value
       ~RollingMeanFlowNodeRecorder.before

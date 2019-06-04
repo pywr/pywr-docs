@@ -13,6 +13,7 @@ pywr.parameters.ConstantScenarioIndexParameter
 
    .. autosummary::
    
+      ~ConstantScenarioIndexParameter.__init__
       ~ConstantScenarioIndexParameter.after
       ~ConstantScenarioIndexParameter.before
       ~ConstantScenarioIndexParameter.finish

@@ -13,6 +13,7 @@ pywr.recorders.RollingWindowParameterRecorder
 
    .. autosummary::
    
+      ~RollingWindowParameterRecorder.__init__
       ~RollingWindowParameterRecorder.after
       ~RollingWindowParameterRecorder.aggregated_value
       ~RollingWindowParameterRecorder.before

@@ -13,6 +13,7 @@ pywr.recorders.FlowDurationCurveRecorder
 
    .. autosummary::
    
+      ~FlowDurationCurveRecorder.__init__
       ~FlowDurationCurveRecorder.after
       ~FlowDurationCurveRecorder.aggregated_value
       ~FlowDurationCurveRecorder.before

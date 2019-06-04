@@ -13,6 +13,7 @@ pywr.parameters.ConstantScenarioParameter
 
    .. autosummary::
    
+      ~ConstantScenarioParameter.__init__
       ~ConstantScenarioParameter.after
       ~ConstantScenarioParameter.before
       ~ConstantScenarioParameter.finish

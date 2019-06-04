@@ -13,6 +13,7 @@ pywr.recorders.MeanFlowNodeRecorder
 
    .. autosummary::
    
+      ~MeanFlowNodeRecorder.__init__
       ~MeanFlowNodeRecorder.after
       ~MeanFlowNodeRecorder.aggregated_value
       ~MeanFlowNodeRecorder.before

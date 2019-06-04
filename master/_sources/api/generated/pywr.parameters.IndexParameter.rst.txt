@@ -13,6 +13,7 @@ pywr.parameters.IndexParameter
 
    .. autosummary::
    
+      ~IndexParameter.__init__
       ~IndexParameter.after
       ~IndexParameter.before
       ~IndexParameter.finish

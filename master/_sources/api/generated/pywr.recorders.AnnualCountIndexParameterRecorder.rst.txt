@@ -13,6 +13,7 @@ pywr.recorders.AnnualCountIndexParameterRecorder
 
    .. autosummary::
    
+      ~AnnualCountIndexParameterRecorder.__init__
       ~AnnualCountIndexParameterRecorder.after
       ~AnnualCountIndexParameterRecorder.aggregated_value
       ~AnnualCountIndexParameterRecorder.before

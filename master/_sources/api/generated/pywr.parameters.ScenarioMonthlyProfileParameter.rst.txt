@@ -13,6 +13,7 @@ pywr.parameters.ScenarioMonthlyProfileParameter
 
    .. autosummary::
    
+      ~ScenarioMonthlyProfileParameter.__init__
       ~ScenarioMonthlyProfileParameter.after
       ~ScenarioMonthlyProfileParameter.before
       ~ScenarioMonthlyProfileParameter.finish

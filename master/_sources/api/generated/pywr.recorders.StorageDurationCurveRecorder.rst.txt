@@ -13,6 +13,7 @@ pywr.recorders.StorageDurationCurveRecorder
 
    .. autosummary::
    
+      ~StorageDurationCurveRecorder.__init__
       ~StorageDurationCurveRecorder.after
       ~StorageDurationCurveRecorder.aggregated_value
       ~StorageDurationCurveRecorder.before

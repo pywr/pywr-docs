@@ -13,6 +13,7 @@ pywr.recorders.ParameterRecorder
 
    .. autosummary::
    
+      ~ParameterRecorder.__init__
       ~ParameterRecorder.after
       ~ParameterRecorder.aggregated_value
       ~ParameterRecorder.before

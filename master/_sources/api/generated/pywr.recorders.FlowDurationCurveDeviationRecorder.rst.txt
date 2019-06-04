@@ -13,6 +13,7 @@ pywr.recorders.FlowDurationCurveDeviationRecorder
 
    .. autosummary::
    
+      ~FlowDurationCurveDeviationRecorder.__init__
       ~FlowDurationCurveDeviationRecorder.after
       ~FlowDurationCurveDeviationRecorder.aggregated_value
       ~FlowDurationCurveDeviationRecorder.before

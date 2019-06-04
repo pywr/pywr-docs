@@ -13,6 +13,7 @@ pywr.recorders.NumpyArrayNodeRecorder
 
    .. autosummary::
    
+      ~NumpyArrayNodeRecorder.__init__
       ~NumpyArrayNodeRecorder.after
       ~NumpyArrayNodeRecorder.aggregated_value
       ~NumpyArrayNodeRecorder.before

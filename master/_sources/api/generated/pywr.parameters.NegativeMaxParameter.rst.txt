@@ -13,6 +13,7 @@ pywr.parameters.NegativeMaxParameter
 
    .. autosummary::
    
+      ~NegativeMaxParameter.__init__
       ~NegativeMaxParameter.after
       ~NegativeMaxParameter.before
       ~NegativeMaxParameter.finish

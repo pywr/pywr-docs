@@ -13,6 +13,7 @@ pywr.parameters.DeficitParameter
 
    .. autosummary::
    
+      ~DeficitParameter.__init__
       ~DeficitParameter.after
       ~DeficitParameter.before
       ~DeficitParameter.finish

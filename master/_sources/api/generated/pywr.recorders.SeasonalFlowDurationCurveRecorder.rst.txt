@@ -13,6 +13,7 @@ pywr.recorders.SeasonalFlowDurationCurveRecorder
 
    .. autosummary::
    
+      ~SeasonalFlowDurationCurveRecorder.__init__
       ~SeasonalFlowDurationCurveRecorder.after
       ~SeasonalFlowDurationCurveRecorder.aggregated_value
       ~SeasonalFlowDurationCurveRecorder.before

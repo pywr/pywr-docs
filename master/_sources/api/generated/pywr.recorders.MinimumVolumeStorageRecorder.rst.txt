@@ -13,6 +13,7 @@ pywr.recorders.MinimumVolumeStorageRecorder
 
    .. autosummary::
    
+      ~MinimumVolumeStorageRecorder.__init__
       ~MinimumVolumeStorageRecorder.after
       ~MinimumVolumeStorageRecorder.aggregated_value
       ~MinimumVolumeStorageRecorder.before

@@ -13,6 +13,7 @@ pywr.parameters.MinParameter
 
    .. autosummary::
    
+      ~MinParameter.__init__
       ~MinParameter.after
       ~MinParameter.before
       ~MinParameter.finish

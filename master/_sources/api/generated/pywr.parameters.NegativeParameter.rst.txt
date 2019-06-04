@@ -13,6 +13,7 @@ pywr.parameters.NegativeParameter
 
    .. autosummary::
    
+      ~NegativeParameter.__init__
       ~NegativeParameter.after
       ~NegativeParameter.before
       ~NegativeParameter.finish

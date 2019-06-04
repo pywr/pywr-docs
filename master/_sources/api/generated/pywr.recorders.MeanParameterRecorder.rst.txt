@@ -13,6 +13,7 @@ pywr.recorders.MeanParameterRecorder
 
    .. autosummary::
    
+      ~MeanParameterRecorder.__init__
       ~MeanParameterRecorder.after
       ~MeanParameterRecorder.aggregated_value
       ~MeanParameterRecorder.before

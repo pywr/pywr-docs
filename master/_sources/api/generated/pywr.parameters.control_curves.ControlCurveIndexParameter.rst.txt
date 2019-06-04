@@ -13,6 +13,7 @@ pywr.parameters.control\_curves.ControlCurveIndexParameter
 
    .. autosummary::
    
+      ~ControlCurveIndexParameter.__init__
       ~ControlCurveIndexParameter.after
       ~ControlCurveIndexParameter.before
       ~ControlCurveIndexParameter.finish

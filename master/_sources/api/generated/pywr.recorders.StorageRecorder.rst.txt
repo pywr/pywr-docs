@@ -13,6 +13,7 @@ pywr.recorders.StorageRecorder
 
    .. autosummary::
    
+      ~StorageRecorder.__init__
       ~StorageRecorder.after
       ~StorageRecorder.aggregated_value
       ~StorageRecorder.before

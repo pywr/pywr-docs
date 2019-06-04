@@ -13,6 +13,7 @@ pywr.recorders.DeficitFrequencyNodeRecorder
 
    .. autosummary::
    
+      ~DeficitFrequencyNodeRecorder.__init__
       ~DeficitFrequencyNodeRecorder.after
       ~DeficitFrequencyNodeRecorder.aggregated_value
       ~DeficitFrequencyNodeRecorder.before

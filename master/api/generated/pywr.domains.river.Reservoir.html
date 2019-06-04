@@ -192,7 +192,7 @@
 <h1>pywr.domains.river.Reservoir<a class="headerlink" href="#pywr-domains-river-reservoir" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pywr.domains.river.Reservoir">
-<em class="property">class </em><code class="descclassname">pywr.domains.river.</code><code class="descname">Reservoir</code><span class="sig-paren">(</span><em>model</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Reservoir" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.domains.river.</code><code class="sig-name descname">Reservoir</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Reservoir" title="Permalink to this definition">¶</a></dt>
 <dd><p>A reservoir node with control curve.</p>
 <p>The Reservoir is a subclass of Storage with additional functionality to provide a
 simple control curve. The Reservoir has above_curve_cost when it is above its curve
@@ -200,7 +200,7 @@ and the user defined cost when it is below. Typically the costs are negative
 to represent a benefit of filling the reservoir when it is below its curve.</p>
 <dl class="method">
 <dt id="pywr.domains.river.Reservoir.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>model</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Reservoir.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">model</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.domains.river.Reservoir.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Keywords:</dt><dd><dl class="simple">
 <dt>control_curve - A Parameter object that can return the control curve position,</dt><dd><p>as a percentage of fill, for the given timestep.</p>
@@ -211,7 +211,7 @@ to represent a benefit of filling the reservoir when it is below its curve.</p>
 </dd></dl>
 
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -274,7 +274,7 @@ to represent a benefit of filling the reservoir when it is below its curve.</p>
 </tbody>
 </table>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />

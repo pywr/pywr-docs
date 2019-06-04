@@ -13,6 +13,7 @@ pywr.parameters.TablesArrayParameter
 
    .. autosummary::
    
+      ~TablesArrayParameter.__init__
       ~TablesArrayParameter.after
       ~TablesArrayParameter.before
       ~TablesArrayParameter.finish

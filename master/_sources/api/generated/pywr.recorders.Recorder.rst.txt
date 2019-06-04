@@ -13,6 +13,7 @@ pywr.recorders.Recorder
 
    .. autosummary::
    
+      ~Recorder.__init__
       ~Recorder.after
       ~Recorder.aggregated_value
       ~Recorder.before

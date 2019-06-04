@@ -189,14 +189,14 @@
 <h1>pywr.recorders.TablesRecorder<a class="headerlink" href="#pywr-recorders-tablesrecorder" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pywr.recorders.TablesRecorder">
-<em class="property">class </em><code class="descclassname">pywr.recorders.</code><code class="descname">TablesRecorder</code><span class="sig-paren">(</span><em>model</em>, <em>h5file</em>, <em>nodes=None</em>, <em>parameters=None</em>, <em>where='/'</em>, <em>time='/time'</em>, <em>routes_flows=None</em>, <em>routes='/routes'</em>, <em>scenarios='/scenarios'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.TablesRecorder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.recorders.</code><code class="sig-name descname">TablesRecorder</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">h5file</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">where='/'</em>, <em class="sig-param">time='/time'</em>, <em class="sig-param">routes_flows=None</em>, <em class="sig-param">routes='/routes'</em>, <em class="sig-param">scenarios='/scenarios'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.TablesRecorder" title="Permalink to this definition">¶</a></dt>
 <dd><p>A recorder that saves to PyTables CArray</p>
 <p>This Recorder creates a CArray for every node passed to the constructor.
 Each CArray stores the data for all scenarios on the specific node. This
 is useful for analysis of Node statistics across multiple scenarios.</p>
 <dl class="method">
 <dt id="pywr.recorders.TablesRecorder.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self</em>, <em>model</em>, <em>h5file</em>, <em>nodes=None</em>, <em>parameters=None</em>, <em>where='/'</em>, <em>time='/time'</em>, <em>routes_flows=None</em>, <em>routes='/routes'</em>, <em>scenarios='/scenarios'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.TablesRecorder.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">model</em>, <em class="sig-param">h5file</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">where='/'</em>, <em class="sig-param">time='/time'</em>, <em class="sig-param">routes_flows=None</em>, <em class="sig-param">routes='/routes'</em>, <em class="sig-param">scenarios='/scenarios'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.TablesRecorder.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
@@ -239,7 +239,7 @@ directories. This uses os.makedirs() underneath.</p>
 </dd></dl>
 
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -285,7 +285,7 @@ directories. This uses os.makedirs() underneath.</p>
 </tbody>
 </table>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
