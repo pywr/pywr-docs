@@ -27,6 +27,9 @@ master/_sources/api/generated/pywr.parameters.DeficitParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.HydropowerTargetParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.IndexParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.IndexedArrayParameter.rst.txt
+master/_sources/api/generated/pywr.parameters.InterpolatedParameter.rst.txt
+master/_sources/api/generated/pywr.parameters.InterpolatedQuadratureParameter.rst.txt
+master/_sources/api/generated/pywr.parameters.InterpolatedVolumeParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.MaxParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.MinParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.MonthlyProfileParameter.rst.txt
@@ -176,6 +179,9 @@ master/api/generated/pywr.parameters.DeficitParameter.html
 master/api/generated/pywr.parameters.HydropowerTargetParameter.html
 master/api/generated/pywr.parameters.IndexParameter.html
 master/api/generated/pywr.parameters.IndexedArrayParameter.html
+master/api/generated/pywr.parameters.InterpolatedParameter.html
+master/api/generated/pywr.parameters.InterpolatedQuadratureParameter.html
+master/api/generated/pywr.parameters.InterpolatedVolumeParameter.html
 master/api/generated/pywr.parameters.MaxParameter.html
 master/api/generated/pywr.parameters.MinParameter.html
 master/api/generated/pywr.parameters.MonthlyProfileParameter.html

@@ -139,6 +139,12 @@
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.IndexedArrayParameter.html">pywr.parameters.IndexedArrayParameter</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#interpolation-parameters">Interpolation parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.InterpolatedParameter.html">pywr.parameters.InterpolatedParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.InterpolatedVolumeParameter.html">pywr.parameters.InterpolatedVolumeParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.InterpolatedQuadratureParameter.html">pywr.parameters.InterpolatedQuadratureParameter</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#control-curve-parameters">Control curve parameters</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.control_curves.BaseControlCurveParameter.html">pywr.parameters.control_curves.BaseControlCurveParameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.control_curves.ControlCurveInterpolatedParameter.html">pywr.parameters.control_curves.ControlCurveInterpolatedParameter</a></li>
@@ -374,6 +380,26 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.parameters.IndexedArrayParameter.html#pywr.parameters.IndexedArrayParameter" title="pywr.parameters.IndexedArrayParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IndexedArrayParameter</span></code></a>(model, …)</p></td>
 <td><p>Parameter which uses an IndexParameter to index an array of Parameters</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="interpolation-parameters">
+<h2>Interpolation parameters<a class="headerlink" href="#interpolation-parameters" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.parameters.InterpolatedParameter.html#pywr.parameters.InterpolatedParameter" title="pywr.parameters.InterpolatedParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InterpolatedParameter</span></code></a>(model, parameter, x, y)</p></td>
+<td><p>Parameter value is equal to the interpolation of another parameter</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.parameters.InterpolatedVolumeParameter.html#pywr.parameters.InterpolatedVolumeParameter" title="pywr.parameters.InterpolatedVolumeParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InterpolatedVolumeParameter</span></code></a>(model, node, x, y)</p></td>
+<td><p>Generic interpolation parameter calculated from current volume</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.parameters.InterpolatedQuadratureParameter.html#pywr.parameters.InterpolatedQuadratureParameter" title="pywr.parameters.InterpolatedQuadratureParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InterpolatedQuadratureParameter</span></code></a>(model, …)</p></td>
+<td><p>Parameter value is equal to the quadrature of the interpolation of another parameter</p></td>
 </tr>
 </tbody>
 </table>
