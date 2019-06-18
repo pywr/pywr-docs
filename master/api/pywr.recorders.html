@@ -122,6 +122,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#deficit-recorders">Deficit recorders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.NumpyArrayNodeDeficitRecorder.html">pywr.recorders.NumpyArrayNodeDeficitRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.NumpyArrayNodeSuppliedRatioRecorder.html">pywr.recorders.NumpyArrayNodeSuppliedRatioRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.NumpyArrayNodeCurtailmentRatioRecorder.html">pywr.recorders.NumpyArrayNodeCurtailmentRatioRecorder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.TotalDeficitNodeRecorder.html">pywr.recorders.TotalDeficitNodeRecorder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.recorders.DeficitFrequencyNodeRecorder.html">pywr.recorders.DeficitFrequencyNodeRecorder</a></li>
 </ul>
@@ -317,10 +320,19 @@ accessed following a model run before the model instances is destroyed.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.recorders.TotalDeficitNodeRecorder.html#pywr.recorders.TotalDeficitNodeRecorder" title="pywr.recorders.TotalDeficitNodeRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TotalDeficitNodeRecorder</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.recorders.NumpyArrayNodeDeficitRecorder.html#pywr.recorders.NumpyArrayNodeDeficitRecorder" title="pywr.recorders.NumpyArrayNodeDeficitRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumpyArrayNodeDeficitRecorder</span></code></a></p></td>
+<td><p>Recorder for timeseries of deficit from a <cite>Node</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.recorders.NumpyArrayNodeSuppliedRatioRecorder.html#pywr.recorders.NumpyArrayNodeSuppliedRatioRecorder" title="pywr.recorders.NumpyArrayNodeSuppliedRatioRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumpyArrayNodeSuppliedRatioRecorder</span></code></a></p></td>
+<td><p>Recorder for timeseries of ratio of supplied flow from a <cite>Node</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.recorders.NumpyArrayNodeCurtailmentRatioRecorder.html#pywr.recorders.NumpyArrayNodeCurtailmentRatioRecorder" title="pywr.recorders.NumpyArrayNodeCurtailmentRatioRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumpyArrayNodeCurtailmentRatioRecorder</span></code></a></p></td>
+<td><p>Recorder for timeseries of curtailment ratio from a <cite>Node</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.recorders.TotalDeficitNodeRecorder.html#pywr.recorders.TotalDeficitNodeRecorder" title="pywr.recorders.TotalDeficitNodeRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TotalDeficitNodeRecorder</span></code></a></p></td>
 <td><p>Recorder to total the difference between modelled flow and max_flow for a Node</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.recorders.DeficitFrequencyNodeRecorder.html#pywr.recorders.DeficitFrequencyNodeRecorder" title="pywr.recorders.DeficitFrequencyNodeRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DeficitFrequencyNodeRecorder</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.recorders.DeficitFrequencyNodeRecorder.html#pywr.recorders.DeficitFrequencyNodeRecorder" title="pywr.recorders.DeficitFrequencyNodeRecorder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DeficitFrequencyNodeRecorder</span></code></a></p></td>
 <td><p>Recorder to return the frequency of timesteps with a failure to meet max_flow.</p></td>
 </tr>
 </tbody>

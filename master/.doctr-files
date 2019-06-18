@@ -59,7 +59,10 @@ master/_sources/api/generated/pywr.recorders.NodeRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.NumpyArrayAreaRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.NumpyArrayIndexParameterRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.NumpyArrayLevelRecorder.rst.txt
+master/_sources/api/generated/pywr.recorders.NumpyArrayNodeCurtailmentRatioRecorder.rst.txt
+master/_sources/api/generated/pywr.recorders.NumpyArrayNodeDeficitRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.NumpyArrayNodeRecorder.rst.txt
+master/_sources/api/generated/pywr.recorders.NumpyArrayNodeSuppliedRatioRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.NumpyArrayParameterRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.NumpyArrayStorageRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.ParameterRecorder.rst.txt
@@ -211,7 +214,10 @@ master/api/generated/pywr.recorders.NodeRecorder.html
 master/api/generated/pywr.recorders.NumpyArrayAreaRecorder.html
 master/api/generated/pywr.recorders.NumpyArrayIndexParameterRecorder.html
 master/api/generated/pywr.recorders.NumpyArrayLevelRecorder.html
+master/api/generated/pywr.recorders.NumpyArrayNodeCurtailmentRatioRecorder.html
+master/api/generated/pywr.recorders.NumpyArrayNodeDeficitRecorder.html
 master/api/generated/pywr.recorders.NumpyArrayNodeRecorder.html
+master/api/generated/pywr.recorders.NumpyArrayNodeSuppliedRatioRecorder.html
 master/api/generated/pywr.recorders.NumpyArrayParameterRecorder.html
 master/api/generated/pywr.recorders.NumpyArrayStorageRecorder.html
 master/api/generated/pywr.recorders.ParameterRecorder.html
