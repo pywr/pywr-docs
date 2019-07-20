@@ -193,7 +193,7 @@
 <h1>pywr.parameters.control_curves.ControlCurveInterpolatedParameter<a class="headerlink" href="#pywr-parameters-control-curves-controlcurveinterpolatedparameter" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pywr.parameters.control_curves.ControlCurveInterpolatedParameter">
-<em class="property">class </em><code class="sig-prename descclassname">pywr.parameters.control_curves.</code><code class="sig-name descname">ControlCurveInterpolatedParameter</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">storage_node</em>, <em class="sig-param">control_curves</em>, <em class="sig-param">values</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.ControlCurveInterpolatedParameter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.parameters.control_curves.</code><code class="sig-name descname">ControlCurveInterpolatedParameter</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">storage_node</em>, <em class="sig-param">control_curves</em>, <em class="sig-param">values=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.control_curves.ControlCurveInterpolatedParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>A control curve Parameter that interpolates between three or more values</p>
 <p>Return values are linearly interpolated between control curves, with the
 first and last value being 100% and 0% respectively.</p>
@@ -209,6 +209,9 @@ passed they are converted to <cite>ConstantParameter</cite>.</p>
 </dd>
 <dt><strong>values</strong><span class="classifier">list of float</span></dt><dd><p>A list of values to return corresponding to the control curves. The
 length of the list should be 2 + len(control_curves).</p>
+</dd>
+<dt><strong>parameters</strong><span class="classifier">iterable <cite>Parameter</cite> objects or <cite>None</cite>, optional</span></dt><dd><p>If <cite>values</cite> is <cite>None</cite> then <cite>parameters</cite> can specify a <cite>Parameter</cite> object to use at each
+of the control curves. The number of parameters should be 2 + len(control_curves)</p>
 </dd>
 </dl>
 </dd>
@@ -337,16 +340,19 @@ and -20</p>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parameters</span></code></p></td>
+<td><p>parameters: list</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">size</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">size</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">storage_node</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">storage_node</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
