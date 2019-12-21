@@ -195,10 +195,33 @@
 <h1>pywr.parameters.MonthlyProfileParameter<a class="headerlink" href="#pywr-parameters-monthlyprofileparameter" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pywr.parameters.MonthlyProfileParameter">
-<em class="property">class </em><code class="sig-prename descclassname">pywr.parameters.</code><code class="sig-name descname">MonthlyProfileParameter</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">values</em>, <em class="sig-param">lower_bounds=0.0</em>, <em class="sig-param">upper_bounds=np.inf</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.MonthlyProfileParameter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parameter which provides a monthly profile</p>
-<p>A monthly profile is a static profile that returns a different
-value based on the current time-step.</p>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.parameters.</code><code class="sig-name descname">MonthlyProfileParameter</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">values</em>, <em class="sig-param">lower_bounds=0.0</em>, <em class="sig-param">upper_bounds=np.inf</em>, <em class="sig-param">interp_day=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.MonthlyProfileParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameter which provides a monthly profile.</p>
+<p>The monthly profile returns a different value based on the month of the current
+time-step. By default this creates a piecewise profile with a step change at the
+beginning of each month. An optional <cite>interp_day</cite> keyword can instead create a
+linearly interpolated daily profile assuming the given values correspond to either
+the first or last day of the month.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>values</strong><span class="classifier">iterable, array</span></dt><dd><p>The 12 values that represent the monthly profile.</p>
+</dd>
+<dt><strong>lower_bounds</strong><span class="classifier">float (default=0.0)</span></dt><dd><p>The lower bounds of the monthly profile values when used during optimisation.</p>
+</dd>
+<dt><strong>upper_bounds</strong><span class="classifier">float (default=np.inf)</span></dt><dd><p>The upper bounds of the monthly profile values when used during optimisation.</p>
+</dd>
+<dt><strong>inter_day</strong><span class="classifier">str or None (default=None)</span></dt><dd><dl class="simple">
+<dt>If <cite>interp_day</cite> is None then no interpolation is undertaken, and the parameter</dt><dd><p>returns values representing a piecewise monthly profile. Otherwise <cite>interp_day</cite>
+must be a string of either “first” or “last” representing which day of the month
+each of the 12 values represents. The parameter then returns linearly
+interpolated values between the given day of the month.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
@@ -300,19 +323,22 @@ value based on the current time-step.</p>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">integer_size</span></code></p></td>
 <td><p>integer_size: ‘int’</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_variable</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">interp_day</span></code></p></td>
+<td><p>interp_day: object</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_variable</span></code></p></td>
 <td><p>is_variable: ‘bool’</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">size</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">size</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>

@@ -46,6 +46,7 @@ pywr.parameters.MonthlyProfileParameter
       ~MonthlyProfileParameter.comment
       ~MonthlyProfileParameter.double_size
       ~MonthlyProfileParameter.integer_size
+      ~MonthlyProfileParameter.interp_day
       ~MonthlyProfileParameter.is_variable
       ~MonthlyProfileParameter.model
       ~MonthlyProfileParameter.name
