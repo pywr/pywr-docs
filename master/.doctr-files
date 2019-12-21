@@ -39,7 +39,9 @@ master/_sources/api/generated/pywr.parameters.NegativeMinParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.NegativeParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.Parameter.rst.txt
 master/_sources/api/generated/pywr.parameters.PiecewiseIntegralParameter.rst.txt
+master/_sources/api/generated/pywr.parameters.ScenarioDailyProfileParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.ScenarioMonthlyProfileParameter.rst.txt
+master/_sources/api/generated/pywr.parameters.ScenarioWeeklyProfileParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.ScenarioWrapperParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.TablesArrayParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.WeeklyProfileParameter.rst.txt
@@ -198,7 +200,9 @@ master/api/generated/pywr.parameters.NegativeMinParameter.html
 master/api/generated/pywr.parameters.NegativeParameter.html
 master/api/generated/pywr.parameters.Parameter.html
 master/api/generated/pywr.parameters.PiecewiseIntegralParameter.html
+master/api/generated/pywr.parameters.ScenarioDailyProfileParameter.html
 master/api/generated/pywr.parameters.ScenarioMonthlyProfileParameter.html
+master/api/generated/pywr.parameters.ScenarioWeeklyProfileParameter.html
 master/api/generated/pywr.parameters.ScenarioWrapperParameter.html
 master/api/generated/pywr.parameters.TablesArrayParameter.html
 master/api/generated/pywr.parameters.WeeklyProfileParameter.html

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.parameters.WeeklyProfileParameter &mdash; Pywr v1.4.0 documentation</title>
+  <title>pywr.parameters.ScenarioDailyProfileParameter &mdash; Pywr v1.4.0 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="pywr.parameters.MonthlyProfileParameter" href="pywr.parameters.MonthlyProfileParameter.html" />
-    <link rel="prev" title="pywr.parameters.DailyProfileParameter" href="pywr.parameters.DailyProfileParameter.html" /> 
+    <link rel="next" title="pywr.parameters.ScenarioWeeklyProfileParameter" href="pywr.parameters.ScenarioWeeklyProfileParameter.html" />
+    <link rel="prev" title="pywr.parameters.MonthlyProfileParameter" href="pywr.parameters.MonthlyProfileParameter.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -101,9 +101,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../pywr.parameters.html#combining-multiple-parameters">Combining multiple parameters</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../pywr.parameters.html#annual-profile-parameters">Annual profile parameters</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="pywr.parameters.DailyProfileParameter.html">pywr.parameters.DailyProfileParameter</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.parameters.WeeklyProfileParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.WeeklyProfileParameter.html">pywr.parameters.WeeklyProfileParameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.parameters.MonthlyProfileParameter.html">pywr.parameters.MonthlyProfileParameter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.parameters.ScenarioDailyProfileParameter.html">pywr.parameters.ScenarioDailyProfileParameter</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.parameters.ScenarioDailyProfileParameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.parameters.ScenarioWeeklyProfileParameter.html">pywr.parameters.ScenarioWeeklyProfileParameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.parameters.ScenarioMonthlyProfileParameter.html">pywr.parameters.ScenarioMonthlyProfileParameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter.html">pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter</a></li>
@@ -174,13 +174,13 @@
         
           <li><a href="../pywr.parameters.html">Parameters</a> &raquo;</li>
         
-      <li>pywr.parameters.WeeklyProfileParameter</li>
+      <li>pywr.parameters.ScenarioDailyProfileParameter</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/generated/pywr.parameters.WeeklyProfileParameter.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/pywr.parameters.ScenarioDailyProfileParameter.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -193,16 +193,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pywr-parameters-weeklyprofileparameter">
-<h1>pywr.parameters.WeeklyProfileParameter<a class="headerlink" href="#pywr-parameters-weeklyprofileparameter" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pywr-parameters-scenariodailyprofileparameter">
+<h1>pywr.parameters.ScenarioDailyProfileParameter<a class="headerlink" href="#pywr-parameters-scenariodailyprofileparameter" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="pywr.parameters.WeeklyProfileParameter">
-<em class="property">class </em><code class="sig-prename descclassname">pywr.parameters.</code><code class="sig-name descname">WeeklyProfileParameter</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">values</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs) Weekly profile (52-week year</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.WeeklyProfileParameter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Weekly profile (52-week year)</p>
-<p>The last week of the year will have more than 7 days, as 365 / 7 is not whole.</p>
+<dt id="pywr.parameters.ScenarioDailyProfileParameter">
+<em class="property">class </em><code class="sig-prename descclassname">pywr.parameters.</code><code class="sig-name descname">ScenarioDailyProfileParameter</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">Scenario scenario</em>, <em class="sig-param">values</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.ScenarioDailyProfileParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameter which provides a daily profile per scenario.</p>
+<p>This parameter provides a repeating annual profile with a daily resolution. A
+different profile is returned for each member of a given scenario</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>scenario: Scenario</strong></dt><dd><p>Scenario object over which different profiles should be provided</p>
+</dd>
+<dt><strong>values</strong><span class="classifier">iterable, array</span></dt><dd><p>Length of 1st dimension should equal the number of members in the scenario object 
+and the length of the second dimension should be 366</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <dl class="method">
-<dt id="pywr.parameters.WeeklyProfileParameter.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">/</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.WeeklyProfileParameter.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pywr.parameters.ScenarioDailyProfileParameter.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">/</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.parameters.ScenarioDailyProfileParameter.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
@@ -213,7 +225,7 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pywr.parameters.WeeklyProfileParameter.__init__" title="pywr.parameters.WeeklyProfileParameter.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, /, \*args, \*\*kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pywr.parameters.ScenarioDailyProfileParameter.__init__" title="pywr.parameters.ScenarioDailyProfileParameter.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, /, \*args, \*\*kwargs)</p></td>
 <td><p>Initialize self.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code>(self)</p></td>
@@ -323,10 +335,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pywr.parameters.MonthlyProfileParameter.html" class="btn btn-neutral float-right" title="pywr.parameters.MonthlyProfileParameter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pywr.parameters.ScenarioWeeklyProfileParameter.html" class="btn btn-neutral float-right" title="pywr.parameters.ScenarioWeeklyProfileParameter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pywr.parameters.DailyProfileParameter.html" class="btn btn-neutral float-left" title="pywr.parameters.DailyProfileParameter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pywr.parameters.MonthlyProfileParameter.html" class="btn btn-neutral float-left" title="pywr.parameters.MonthlyProfileParameter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
