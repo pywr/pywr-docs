@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.solvers package &mdash; Pywr 1.4.1.dev13+g675a238 documentation</title>
+  <title>pywr.solvers package &mdash; Pywr 1.4.1.dev14+gf6da4f1 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.4.1.dev13+g675a238
+                1.4.1.dev14+gf6da4f1
               </div>
             
           
@@ -202,22 +202,7 @@
 <dl class="class">
 <dt id="pywr.solvers.cython_glpk.CythonGLPKSolver">
 <em class="property">class </em><code class="sig-prename descclassname">pywr.solvers.cython_glpk.</code><code class="sig-name descname">CythonGLPKSolver</code><span class="sig-paren">(</span><em class="sig-param">use_presolve=False</em>, <em class="sig-param">time_limit=None</em>, <em class="sig-param">iteration_limit=None</em>, <em class="sig-param">message_level=u'error'</em>, <em class="sig-param">save_routes_flows=False</em>, <em class="sig-param">retry_solve=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.solvers.cython_glpk.CythonGLPKSolver" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="method">
-<dt id="pywr.solvers.cython_glpk.CythonGLPKSolver.dump_glpk">
-<code class="sig-name descname">dump_glpk</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.solvers.cython_glpk.CythonGLPKSolver.dump_glpk" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.solvers.cython_glpk.CythonGLPKSolver.dump_lp">
-<code class="sig-name descname">dump_lp</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.solvers.cython_glpk.CythonGLPKSolver.dump_lp" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pywr.solvers.cython_glpk.CythonGLPKSolver.dump_mps">
-<code class="sig-name descname">dump_mps</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.solvers.cython_glpk.CythonGLPKSolver.dump_mps" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.solvers.glpk.GLPKSolver</span></code></p>
 <dl class="method">
 <dt id="pywr.solvers.cython_glpk.CythonGLPKSolver.reset">
 <code class="sig-name descname">reset</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.solvers.cython_glpk.CythonGLPKSolver.reset" title="Permalink to this definition">¶</a></dt>
@@ -261,12 +246,6 @@
 <dt id="pywr.solvers.cython_glpk.CythonGLPKSolver.stats">
 <code class="sig-name descname">stats</code><a class="headerlink" href="#pywr.solvers.cython_glpk.CythonGLPKSolver.stats" title="Permalink to this definition">¶</a></dt>
 <dd><p>stats: object</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pywr.solvers.cython_glpk.CythonGLPKSolver.use_presolve">
-<code class="sig-name descname">use_presolve</code><a class="headerlink" href="#pywr.solvers.cython_glpk.CythonGLPKSolver.use_presolve" title="Permalink to this definition">¶</a></dt>
-<dd><p>use_presolve: ‘bool’</p>
 </dd></dl>
 
 </dd></dl>
