@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>JSON model format &mdash; Pywr 1.4.1.dev14+gf6da4f1 documentation</title>
+  <title>JSON model format &mdash; Pywr 1.4.1.dev18+gb64d3bf documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.4.1.dev14+gf6da4f1
+                1.4.1.dev18+gb64d3bf
               </div>
             
           
@@ -101,6 +101,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#edges">Edges</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-a-json-document">Loading a JSON document</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#debugging-and-syntax-errors">Debugging and syntax errors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#footnotes">Footnotes</a></li>
 </ul>
@@ -333,6 +334,13 @@
 <span class="p">]}</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="loading-a-json-document">
+<h2>Loading a JSON document<a class="headerlink" href="#loading-a-json-document" title="Permalink to this headline">¶</a></h2>
+<p>A Pywr JSON document can be loaded into a <cite>Model</cite> instance by using the <cite>Model.load</cite> class-method:</p>
+<p>Once a model is loaded if a reference to an actual node is required, using .get …</p>
+<p>… or try-except is preferable to avoid searching twice.</p>
+<p>It is also possible to test for node and component membership using their names:</p>
 </div>
 <div class="section" id="debugging-and-syntax-errors">
 <h2>Debugging and syntax errors<a class="headerlink" href="#debugging-and-syntax-errors" title="Permalink to this headline">¶</a></h2>
