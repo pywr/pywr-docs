@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>JSON model format &mdash; Pywr 1.4.1.dev21+g4cb870a documentation</title>
+  <title>JSON model format &mdash; Pywr 1.4.1.dev22+gcfa49de documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.4.1.dev21+g4cb870a
+                1.4.1.dev22+gcfa49de
               </div>
             
           
@@ -338,9 +338,33 @@
 <div class="section" id="loading-a-json-document">
 <h2>Loading a JSON document<a class="headerlink" href="#loading-a-json-document" title="Permalink to this headline">¶</a></h2>
 <p>A Pywr JSON document can be loaded into a <cite>Model</cite> instance by using the <cite>Model.load</cite> class-method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pywr.model</span> <span class="kn">import</span> <span class="n">Model</span>
+<span class="n">my_model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;/path/to/my_model.json&#39;</span><span class="p">)</span>
+<span class="n">my_model</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>Once a model is loaded if a reference to an actual node is required, using .get …</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">=</span> <span class="n">my_model</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;River Thames&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">node</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;max_flow: </span><span class="si">{node.max_flow}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not found&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>… or try-except is preferable to avoid searching twice.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s2">&quot;River Thames&quot;</span><span class="p">]</span>
+<span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not found&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;max_flow: </span><span class="si">{node.max_flow}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>It is also possible to test for node and component membership using their names:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="s2">&quot;River Thames&quot;</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">nodes</span>
+<span class="k">assert</span> <span class="s2">&quot;Demand&quot;</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">parameters</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="debugging-and-syntax-errors">
 <h2>Debugging and syntax errors<a class="headerlink" href="#debugging-and-syntax-errors" title="Permalink to this headline">¶</a></h2>
