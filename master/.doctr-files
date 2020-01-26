@@ -57,6 +57,8 @@ master/_sources/api/generated/pywr.parameters.control_curves.ControlCurveIndexPa
 master/_sources/api/generated/pywr.parameters.control_curves.ControlCurveInterpolatedParameter.rst.txt
 master/_sources/api/generated/pywr.recorders.AggregatedRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.AnnualCountIndexParameterRecorder.rst.txt
+master/_sources/api/generated/pywr.recorders.AnnualCountIndexThresholdRecorder.rst.txt
+master/_sources/api/generated/pywr.recorders.AnnualTotalFlowRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.CSVRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.DeficitFrequencyNodeRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.FlowDurationCurveDeviationRecorder.rst.txt
@@ -85,6 +87,7 @@ master/_sources/api/generated/pywr.recorders.SeasonalFlowDurationCurveRecorder.r
 master/_sources/api/generated/pywr.recorders.StorageDurationCurveRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.StorageRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.TablesRecorder.rst.txt
+master/_sources/api/generated/pywr.recorders.TimestepCountIndexParameterRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.TotalDeficitNodeRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.TotalFlowNodeRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.TotalHydroEnergyRecorder.rst.txt
@@ -224,6 +227,8 @@ master/api/generated/pywr.parameters.control_curves.ControlCurveIndexParameter.h
 master/api/generated/pywr.parameters.control_curves.ControlCurveInterpolatedParameter.html
 master/api/generated/pywr.recorders.AggregatedRecorder.html
 master/api/generated/pywr.recorders.AnnualCountIndexParameterRecorder.html
+master/api/generated/pywr.recorders.AnnualCountIndexThresholdRecorder.html
+master/api/generated/pywr.recorders.AnnualTotalFlowRecorder.html
 master/api/generated/pywr.recorders.CSVRecorder.html
 master/api/generated/pywr.recorders.DeficitFrequencyNodeRecorder.html
 master/api/generated/pywr.recorders.FlowDurationCurveDeviationRecorder.html
@@ -252,6 +257,7 @@ master/api/generated/pywr.recorders.SeasonalFlowDurationCurveRecorder.html
 master/api/generated/pywr.recorders.StorageDurationCurveRecorder.html
 master/api/generated/pywr.recorders.StorageRecorder.html
 master/api/generated/pywr.recorders.TablesRecorder.html
+master/api/generated/pywr.recorders.TimestepCountIndexParameterRecorder.html
 master/api/generated/pywr.recorders.TotalDeficitNodeRecorder.html
 master/api/generated/pywr.recorders.TotalFlowNodeRecorder.html
 master/api/generated/pywr.recorders.TotalHydroEnergyRecorder.html

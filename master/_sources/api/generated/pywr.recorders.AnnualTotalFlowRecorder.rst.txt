@@ -1,0 +1,50 @@
+pywr.recorders.AnnualTotalFlowRecorder
+======================================
+
+.. currentmodule:: pywr.recorders
+
+.. autoclass:: AnnualTotalFlowRecorder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~AnnualTotalFlowRecorder.__init__
+      ~AnnualTotalFlowRecorder.after
+      ~AnnualTotalFlowRecorder.aggregated_value
+      ~AnnualTotalFlowRecorder.before
+      ~AnnualTotalFlowRecorder.finish
+      ~AnnualTotalFlowRecorder.load
+      ~AnnualTotalFlowRecorder.register
+      ~AnnualTotalFlowRecorder.reset
+      ~AnnualTotalFlowRecorder.setup
+      ~AnnualTotalFlowRecorder.unregister
+      ~AnnualTotalFlowRecorder.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~AnnualTotalFlowRecorder.agg_func
+      ~AnnualTotalFlowRecorder.children
+      ~AnnualTotalFlowRecorder.comment
+      ~AnnualTotalFlowRecorder.data
+      ~AnnualTotalFlowRecorder.epsilon
+      ~AnnualTotalFlowRecorder.ignore_nan
+      ~AnnualTotalFlowRecorder.is_constraint
+      ~AnnualTotalFlowRecorder.is_objective
+      ~AnnualTotalFlowRecorder.model
+      ~AnnualTotalFlowRecorder.name
+      ~AnnualTotalFlowRecorder.nodes
+      ~AnnualTotalFlowRecorder.parents
+      ~AnnualTotalFlowRecorder.temporal_agg_func
+   
+   
