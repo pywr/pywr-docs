@@ -38,6 +38,7 @@ pywr.recorders.AnnualTotalFlowRecorder
       ~AnnualTotalFlowRecorder.comment
       ~AnnualTotalFlowRecorder.data
       ~AnnualTotalFlowRecorder.epsilon
+      ~AnnualTotalFlowRecorder.factors
       ~AnnualTotalFlowRecorder.ignore_nan
       ~AnnualTotalFlowRecorder.is_constraint
       ~AnnualTotalFlowRecorder.is_objective

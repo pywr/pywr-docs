@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.recorders.AnnualTotalFlowRecorder &mdash; Pywr 1.5.1.dev1+gf344d06 documentation</title>
+  <title>pywr.recorders.AnnualTotalFlowRecorder &mdash; Pywr 1.5.1.dev2+ga611f78 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.5.1.dev1+gf344d06
+                1.5.1.dev2+ga611f78
               </div>
             
           
@@ -201,6 +201,7 @@
 <em class="property">class </em><code class="sig-prename descclassname">pywr.recorders.</code><code class="sig-name descname">AnnualTotalFlowRecorder</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">unicode name</em>, <em class="sig-param">list nodes</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.AnnualTotalFlowRecorder" title="Permalink to this definition">¶</a></dt>
 <dd><p>For each scenario, record the total flow in each year across a list of nodes.
 Output from data property has shape: (years, scenario combinations)</p>
+<p>A list of factors can be provided to scale the total flow (e.g. for calculating operational costs).</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
@@ -208,6 +209,8 @@ Output from data property has shape: (years, scenario combinations)</p>
 <dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>The name of the recorder</p>
 </dd>
 <dt><strong>nodes</strong><span class="classifier">list</span></dt><dd><p>List of <cite>pywr.core.Node</cite> instances to record</p>
+</dd>
+<dt><strong>factors</strong><span class="classifier">list, optional</span></dt><dd><p>List of factors to apply to each node</p>
 </dd>
 </dl>
 </dd>
@@ -282,28 +285,31 @@ Output from data property has shape: (years, scenario combinations)</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">epsilon</span></code></p></td>
 <td><p>epsilon: ‘double’</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ignore_nan</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">factors</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ignore_nan</span></code></p></td>
 <td><p>ignore_nan: ‘bool’</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_constraint</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_constraint</span></code></p></td>
 <td><p>is_constraint: ‘bool’</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_objective</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_objective</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodes</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodes</span></code></p></td>
 <td><p>nodes: list</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">temporal_agg_func</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">temporal_agg_func</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
