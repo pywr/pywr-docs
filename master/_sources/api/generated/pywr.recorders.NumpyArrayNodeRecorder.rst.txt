@@ -39,6 +39,7 @@ pywr.recorders.NumpyArrayNodeRecorder
       ~NumpyArrayNodeRecorder.comment
       ~NumpyArrayNodeRecorder.data
       ~NumpyArrayNodeRecorder.epsilon
+      ~NumpyArrayNodeRecorder.factor
       ~NumpyArrayNodeRecorder.ignore_nan
       ~NumpyArrayNodeRecorder.is_constraint
       ~NumpyArrayNodeRecorder.is_objective

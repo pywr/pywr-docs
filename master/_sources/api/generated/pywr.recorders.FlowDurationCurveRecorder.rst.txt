@@ -39,6 +39,7 @@ pywr.recorders.FlowDurationCurveRecorder
       ~FlowDurationCurveRecorder.comment
       ~FlowDurationCurveRecorder.data
       ~FlowDurationCurveRecorder.epsilon
+      ~FlowDurationCurveRecorder.factor
       ~FlowDurationCurveRecorder.fdc
       ~FlowDurationCurveRecorder.ignore_nan
       ~FlowDurationCurveRecorder.is_constraint

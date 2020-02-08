@@ -39,6 +39,7 @@ pywr.recorders.NumpyArrayNodeDeficitRecorder
       ~NumpyArrayNodeDeficitRecorder.comment
       ~NumpyArrayNodeDeficitRecorder.data
       ~NumpyArrayNodeDeficitRecorder.epsilon
+      ~NumpyArrayNodeDeficitRecorder.factor
       ~NumpyArrayNodeDeficitRecorder.ignore_nan
       ~NumpyArrayNodeDeficitRecorder.is_constraint
       ~NumpyArrayNodeDeficitRecorder.is_objective

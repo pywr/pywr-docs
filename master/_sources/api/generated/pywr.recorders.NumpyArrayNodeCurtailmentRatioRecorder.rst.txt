@@ -39,6 +39,7 @@ pywr.recorders.NumpyArrayNodeCurtailmentRatioRecorder
       ~NumpyArrayNodeCurtailmentRatioRecorder.comment
       ~NumpyArrayNodeCurtailmentRatioRecorder.data
       ~NumpyArrayNodeCurtailmentRatioRecorder.epsilon
+      ~NumpyArrayNodeCurtailmentRatioRecorder.factor
       ~NumpyArrayNodeCurtailmentRatioRecorder.ignore_nan
       ~NumpyArrayNodeCurtailmentRatioRecorder.is_constraint
       ~NumpyArrayNodeCurtailmentRatioRecorder.is_objective

@@ -42,6 +42,7 @@ pywr.recorders.HydropowerRecorder
       ~HydropowerRecorder.efficiency
       ~HydropowerRecorder.energy_unit_conversion
       ~HydropowerRecorder.epsilon
+      ~HydropowerRecorder.factor
       ~HydropowerRecorder.flow_unit_conversion
       ~HydropowerRecorder.ignore_nan
       ~HydropowerRecorder.is_constraint

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.recorders.NumpyArrayNodeRecorder &mdash; Pywr 1.5.1.dev3+g2b07aa4 documentation</title>
+  <title>pywr.recorders.NumpyArrayNodeRecorder &mdash; Pywr 1.5.1.dev4+g273c0d4 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.5.1.dev3+g2b07aa4
+                1.5.1.dev4+g273c0d4
               </div>
             
           
@@ -207,6 +207,8 @@ attribute or <cite>to_dataframe()</cite> method.</p>
 to return, for example, the median flow over a simulation. For aggregation over scenarios
 see the <cite>agg_func</cite> keyword argument.</p>
 </dd>
+<dt><strong>factor: float (default=1.0)</strong></dt><dd><p>A factor can be provided to scale the total flow (e.g. for calculating operational costs).</p>
+</dd>
 </dl>
 </dd>
 </dl>
@@ -291,28 +293,31 @@ see the <cite>agg_func</cite> keyword argument.</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">epsilon</span></code></p></td>
 <td><p>epsilon: ‘double’</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ignore_nan</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">factor</span></code></p></td>
+<td><p>factor: ‘float’</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ignore_nan</span></code></p></td>
 <td><p>ignore_nan: ‘bool’</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_constraint</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_constraint</span></code></p></td>
 <td><p>is_constraint: ‘bool’</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_objective</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_objective</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">node</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">node</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parents</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">temporal_agg_func</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">temporal_agg_func</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>

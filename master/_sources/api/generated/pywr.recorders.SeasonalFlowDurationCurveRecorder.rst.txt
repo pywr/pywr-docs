@@ -40,6 +40,7 @@ pywr.recorders.SeasonalFlowDurationCurveRecorder
       ~SeasonalFlowDurationCurveRecorder.comment
       ~SeasonalFlowDurationCurveRecorder.data
       ~SeasonalFlowDurationCurveRecorder.epsilon
+      ~SeasonalFlowDurationCurveRecorder.factor
       ~SeasonalFlowDurationCurveRecorder.fdc
       ~SeasonalFlowDurationCurveRecorder.ignore_nan
       ~SeasonalFlowDurationCurveRecorder.is_constraint

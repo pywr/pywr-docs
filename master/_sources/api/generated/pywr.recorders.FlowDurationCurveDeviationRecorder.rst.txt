@@ -39,6 +39,7 @@ pywr.recorders.FlowDurationCurveDeviationRecorder
       ~FlowDurationCurveDeviationRecorder.comment
       ~FlowDurationCurveDeviationRecorder.data
       ~FlowDurationCurveDeviationRecorder.epsilon
+      ~FlowDurationCurveDeviationRecorder.factor
       ~FlowDurationCurveDeviationRecorder.fdc
       ~FlowDurationCurveDeviationRecorder.fdc_deviations
       ~FlowDurationCurveDeviationRecorder.ignore_nan
