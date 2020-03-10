@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>JSON model format &mdash; Pywr 1.5.1.dev9+g33d5c0b documentation</title>
+  <title>JSON model format &mdash; Pywr 1.5.1.dev10+g712e170 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.5.1.dev9+g33d5c0b
+                1.5.1.dev10+g712e170
               </div>
             
           
@@ -346,7 +346,7 @@
 <p>Once a model is loaded if a reference to an actual node is required, using .get …</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">=</span> <span class="n">my_model</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;River Thames&quot;</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">node</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;max_flow: </span><span class="si">{node.max_flow}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;max_flow: </span><span class="si">{</span><span class="n">node</span><span class="o">.</span><span class="n">max_flow</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not found&quot;</span><span class="p">)</span>
 </pre></div>
@@ -357,7 +357,7 @@
 <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not found&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;max_flow: </span><span class="si">{node.max_flow}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;max_flow: </span><span class="si">{</span><span class="n">node</span><span class="o">.</span><span class="n">max_flow</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>It is also possible to test for node and component membership using their names:</p>
