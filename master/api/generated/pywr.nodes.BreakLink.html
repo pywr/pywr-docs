@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.nodes.BreakLink &mdash; Pywr 1.5.1.dev11+g7b95824 documentation</title>
+  <title>pywr.nodes.BreakLink &mdash; Pywr 1.5.1.dev12+gfa8064b documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.5.1.dev11+g7b95824
+                1.5.1.dev12+gfa8064b
               </div>
             
           
@@ -197,7 +197,7 @@
 <h1>pywr.nodes.BreakLink<a class="headerlink" href="#pywr-nodes-breaklink" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pywr.nodes.BreakLink">
-<em class="property">class </em><code class="sig-prename descclassname">pywr.nodes.</code><code class="sig-name descname">BreakLink</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">name</em>, <em class="sig-param">min_flow=0.0</em>, <em class="sig-param">max_flow=None</em>, <em class="sig-param">cost=0.0</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.BreakLink" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.nodes.</code><code class="sig-name descname">BreakLink</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">name</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.BreakLink" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compound node used to reduce the number of routes in a model</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -226,7 +226,7 @@ with the benefit that it reduces the number of routes in the model (in
 the situation described above). The resulting LP is easier to solve.</p>
 <dl class="method">
 <dt id="pywr.nodes.BreakLink.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">model</em>, <em class="sig-param">name</em>, <em class="sig-param">min_flow=0.0</em>, <em class="sig-param">max_flow=None</em>, <em class="sig-param">cost=0.0</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.BreakLink.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">model</em>, <em class="sig-param">name</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.BreakLink.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialise a new Node object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -247,7 +247,7 @@ the situation described above). The resulting LP is easier to solve.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pywr.nodes.BreakLink.__init__" title="pywr.nodes.BreakLink.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, model, name[, min_flow, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pywr.nodes.BreakLink.__init__" title="pywr.nodes.BreakLink.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, model, name, \*\*kwargs)</p></td>
 <td><p>Initialise a new Node object</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code>(self, Timestep ts)</p></td>
