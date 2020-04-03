@@ -18,6 +18,7 @@ pywr.recorders.TablesRecorder
       ~TablesRecorder.aggregated_value
       ~TablesRecorder.before
       ~TablesRecorder.finish
+      ~TablesRecorder.generate_dataframes
       ~TablesRecorder.load
       ~TablesRecorder.register
       ~TablesRecorder.reset
