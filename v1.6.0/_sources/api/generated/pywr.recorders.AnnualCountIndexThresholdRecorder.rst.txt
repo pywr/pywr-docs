@@ -1,0 +1,51 @@
+pywr.recorders.AnnualCountIndexThresholdRecorder
+================================================
+
+.. currentmodule:: pywr.recorders
+
+.. autoclass:: AnnualCountIndexThresholdRecorder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~AnnualCountIndexThresholdRecorder.__init__
+      ~AnnualCountIndexThresholdRecorder.after
+      ~AnnualCountIndexThresholdRecorder.aggregated_value
+      ~AnnualCountIndexThresholdRecorder.before
+      ~AnnualCountIndexThresholdRecorder.finish
+      ~AnnualCountIndexThresholdRecorder.load
+      ~AnnualCountIndexThresholdRecorder.register
+      ~AnnualCountIndexThresholdRecorder.reset
+      ~AnnualCountIndexThresholdRecorder.setup
+      ~AnnualCountIndexThresholdRecorder.unregister
+      ~AnnualCountIndexThresholdRecorder.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~AnnualCountIndexThresholdRecorder.agg_func
+      ~AnnualCountIndexThresholdRecorder.children
+      ~AnnualCountIndexThresholdRecorder.comment
+      ~AnnualCountIndexThresholdRecorder.data
+      ~AnnualCountIndexThresholdRecorder.epsilon
+      ~AnnualCountIndexThresholdRecorder.ignore_nan
+      ~AnnualCountIndexThresholdRecorder.is_constraint
+      ~AnnualCountIndexThresholdRecorder.is_objective
+      ~AnnualCountIndexThresholdRecorder.model
+      ~AnnualCountIndexThresholdRecorder.name
+      ~AnnualCountIndexThresholdRecorder.parameters
+      ~AnnualCountIndexThresholdRecorder.parents
+      ~AnnualCountIndexThresholdRecorder.temporal_agg_func
+      ~AnnualCountIndexThresholdRecorder.threshold
+   
+   

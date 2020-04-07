@@ -1,0 +1,49 @@
+pywr.recorders.TimestepCountIndexParameterRecorder
+==================================================
+
+.. currentmodule:: pywr.recorders
+
+.. autoclass:: TimestepCountIndexParameterRecorder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TimestepCountIndexParameterRecorder.__init__
+      ~TimestepCountIndexParameterRecorder.after
+      ~TimestepCountIndexParameterRecorder.aggregated_value
+      ~TimestepCountIndexParameterRecorder.before
+      ~TimestepCountIndexParameterRecorder.finish
+      ~TimestepCountIndexParameterRecorder.load
+      ~TimestepCountIndexParameterRecorder.register
+      ~TimestepCountIndexParameterRecorder.reset
+      ~TimestepCountIndexParameterRecorder.setup
+      ~TimestepCountIndexParameterRecorder.unregister
+      ~TimestepCountIndexParameterRecorder.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TimestepCountIndexParameterRecorder.agg_func
+      ~TimestepCountIndexParameterRecorder.children
+      ~TimestepCountIndexParameterRecorder.comment
+      ~TimestepCountIndexParameterRecorder.epsilon
+      ~TimestepCountIndexParameterRecorder.ignore_nan
+      ~TimestepCountIndexParameterRecorder.is_constraint
+      ~TimestepCountIndexParameterRecorder.is_objective
+      ~TimestepCountIndexParameterRecorder.model
+      ~TimestepCountIndexParameterRecorder.name
+      ~TimestepCountIndexParameterRecorder.parameter
+      ~TimestepCountIndexParameterRecorder.parents
+      ~TimestepCountIndexParameterRecorder.threshold
+   
+   
