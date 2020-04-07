@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.optimisation package &mdash; Pywr 1.5.1.dev16+g2aaf3be documentation</title>
+  <title>pywr.optimisation package &mdash; Pywr 1.5.1.dev17+g57e109f documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.5.1.dev16+g2aaf3be
+                1.5.1.dev17+g57e109f
               </div>
             
           
@@ -182,25 +182,25 @@
 </div>
 <div class="section" id="module-pywr.optimisation.inspyred">
 <span id="inspyred-pywr-optimisation-inspyred"></span><h2>Inspyred (pywr.optimisation.inspyred)<a class="headerlink" href="#module-pywr.optimisation.inspyred" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="pywr.optimisation.inspyred.InspyredOptimisationWrapper">
-<em class="property">class </em><code class="sig-prename descclassname">pywr.optimisation.inspyred.</code><code class="sig-name descname">InspyredOptimisationWrapper</code><span class="sig-paren">(</span><em class="sig-param">pywr_model_json</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.inspyred.InspyredOptimisationWrapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.optimisation.inspyred.</code><code class="sig-name descname">InspyredOptimisationWrapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pywr_model_json</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.inspyred.InspyredOptimisationWrapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.optimisation.BaseOptimisationWrapper" title="pywr.optimisation.BaseOptimisationWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.optimisation.BaseOptimisationWrapper</span></code></a></p>
 <p>A wrapper to enable optimisation using inspyred.</p>
 <p>A generator, bounder and evaluator method are provided to use with the inspyred algorithms.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.inspyred.InspyredOptimisationWrapper.bounder">
-<code class="sig-name descname">bounder</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">candidate</em>, <em class="sig-param">args</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.inspyred.InspyredOptimisationWrapper.bounder" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bounder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">candidate</span></em>, <em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.inspyred.InspyredOptimisationWrapper.bounder" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.inspyred.InspyredOptimisationWrapper.evaluator">
-<code class="sig-name descname">evaluator</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">candidates</em>, <em class="sig-param">args</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.inspyred.InspyredOptimisationWrapper.evaluator" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">candidates</span></em>, <em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.inspyred.InspyredOptimisationWrapper.evaluator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.inspyred.InspyredOptimisationWrapper.generator">
-<code class="sig-name descname">generator</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">random</em>, <em class="sig-param">args</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.inspyred.InspyredOptimisationWrapper.generator" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">generator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">random</span></em>, <em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.inspyred.InspyredOptimisationWrapper.generator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -208,14 +208,14 @@
 </div>
 <div class="section" id="module-pywr.optimisation.platypus">
 <span id="platypus-pywr-optimisation-platypus"></span><h2>Platypus (pywr.optimisation.platypus)<a class="headerlink" href="#module-pywr.optimisation.platypus" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="pywr.optimisation.platypus.PlatypusWrapper">
-<em class="property">class </em><code class="sig-prename descclassname">pywr.optimisation.platypus.</code><code class="sig-name descname">PlatypusWrapper</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.platypus.PlatypusWrapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.optimisation.platypus.</code><code class="sig-name descname">PlatypusWrapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.platypus.PlatypusWrapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.optimisation.BaseOptimisationWrapper" title="pywr.optimisation.BaseOptimisationWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.optimisation.BaseOptimisationWrapper</span></code></a></p>
 <p>A helper class for running pywr optimisations with platypus.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.platypus.PlatypusWrapper.evaluate">
-<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">solution</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.platypus.PlatypusWrapper.evaluate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">solution</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.platypus.PlatypusWrapper.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -223,29 +223,29 @@
 </div>
 <div class="section" id="module-pywr.optimisation.pygmo">
 <span id="pygmo-pywr-optimisation-pygmo"></span><h2>Pygmo (pywr.optimisation.pygmo)<a class="headerlink" href="#module-pywr.optimisation.pygmo" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="pywr.optimisation.pygmo.PygmoWrapper">
-<em class="property">class </em><code class="sig-prename descclassname">pywr.optimisation.pygmo.</code><code class="sig-name descname">PygmoWrapper</code><span class="sig-paren">(</span><em class="sig-param">pywr_model_json</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.pygmo.PygmoWrapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.optimisation.pygmo.</code><code class="sig-name descname">PygmoWrapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pywr_model_json</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.pygmo.PygmoWrapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pywr.optimisation.BaseOptimisationWrapper" title="pywr.optimisation.BaseOptimisationWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.optimisation.BaseOptimisationWrapper</span></code></a></p>
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.pygmo.PygmoWrapper.fitness">
-<code class="sig-name descname">fitness</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">solution</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.pygmo.PygmoWrapper.fitness" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">fitness</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">solution</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.pygmo.PygmoWrapper.fitness" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.pygmo.PygmoWrapper.get_bounds">
-<code class="sig-name descname">get_bounds</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.pygmo.PygmoWrapper.get_bounds" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_bounds</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.pygmo.PygmoWrapper.get_bounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the variable bounds.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.pygmo.PygmoWrapper.get_nec">
-<code class="sig-name descname">get_nec</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.pygmo.PygmoWrapper.get_nec" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_nec</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.pygmo.PygmoWrapper.get_nec" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.pygmo.PygmoWrapper.get_nobj">
-<code class="sig-name descname">get_nobj</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.pygmo.PygmoWrapper.get_nobj" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_nobj</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.pygmo.PygmoWrapper.get_nobj" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -253,70 +253,70 @@
 </div>
 <div class="section" id="module-pywr.optimisation">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pywr.optimisation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="pywr.optimisation.BaseOptimisationWrapper">
-<em class="property">class </em><code class="sig-prename descclassname">pywr.optimisation.</code><code class="sig-name descname">BaseOptimisationWrapper</code><span class="sig-paren">(</span><em class="sig-param">pywr_model_json</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.BaseOptimisationWrapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.optimisation.</code><code class="sig-name descname">BaseOptimisationWrapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pywr_model_json</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.BaseOptimisationWrapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A helper class for running pywr optimisations with platypus.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.BaseOptimisationWrapper.customise_model">
-<code class="sig-name descname">customise_model</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">model</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.BaseOptimisationWrapper.customise_model" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">customise_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">model</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.BaseOptimisationWrapper.customise_model" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.BaseOptimisationWrapper.make_model">
-<code class="sig-name descname">make_model</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.BaseOptimisationWrapper.make_model" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">make_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.BaseOptimisationWrapper.make_model" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.BaseOptimisationWrapper.model">
 <em class="property">property </em><code class="sig-name descname">model</code><a class="headerlink" href="#pywr.optimisation.BaseOptimisationWrapper.model" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.BaseOptimisationWrapper.model_constraints">
 <em class="property">property </em><code class="sig-name descname">model_constraints</code><a class="headerlink" href="#pywr.optimisation.BaseOptimisationWrapper.model_constraints" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.BaseOptimisationWrapper.model_objectives">
 <em class="property">property </em><code class="sig-name descname">model_objectives</code><a class="headerlink" href="#pywr.optimisation.BaseOptimisationWrapper.model_objectives" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.BaseOptimisationWrapper.model_variable_map">
 <em class="property">property </em><code class="sig-name descname">model_variable_map</code><a class="headerlink" href="#pywr.optimisation.BaseOptimisationWrapper.model_variable_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.optimisation.BaseOptimisationWrapper.model_variables">
 <em class="property">property </em><code class="sig-name descname">model_variables</code><a class="headerlink" href="#pywr.optimisation.BaseOptimisationWrapper.model_variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pywr.optimisation.ModelCache">
 <em class="property">class </em><code class="sig-prename descclassname">pywr.optimisation.</code><code class="sig-name descname">ModelCache</code><a class="headerlink" href="#pywr.optimisation.ModelCache" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pywr.optimisation.cache_constraints">
-<code class="sig-prename descclassname">pywr.optimisation.</code><code class="sig-name descname">cache_constraints</code><span class="sig-paren">(</span><em class="sig-param">model</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.cache_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pywr.optimisation.</code><code class="sig-name descname">cache_constraints</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.cache_constraints" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pywr.optimisation.cache_objectives">
-<code class="sig-prename descclassname">pywr.optimisation.</code><code class="sig-name descname">cache_objectives</code><span class="sig-paren">(</span><em class="sig-param">model</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.cache_objectives" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pywr.optimisation.</code><code class="sig-name descname">cache_objectives</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.cache_objectives" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pywr.optimisation.cache_variable_parameters">
-<code class="sig-prename descclassname">pywr.optimisation.</code><code class="sig-name descname">cache_variable_parameters</code><span class="sig-paren">(</span><em class="sig-param">model</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.cache_variable_parameters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pywr.optimisation.</code><code class="sig-name descname">cache_variable_parameters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.cache_variable_parameters" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pywr.optimisation.clear_global_model_cache">
 <code class="sig-prename descclassname">pywr.optimisation.</code><code class="sig-name descname">clear_global_model_cache</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.clear_global_model_cache" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clear the module level model cache.</p>

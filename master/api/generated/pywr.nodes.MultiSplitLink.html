@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.nodes.MultiSplitLink &mdash; Pywr 1.5.1.dev16+g2aaf3be documentation</title>
+  <title>pywr.nodes.MultiSplitLink &mdash; Pywr 1.5.1.dev17+g57e109f documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.5.1.dev16+g2aaf3be
+                1.5.1.dev17+g57e109f
               </div>
             
           
@@ -195,9 +195,9 @@
             
   <div class="section" id="pywr-nodes-multisplitlink">
 <h1>pywr.nodes.MultiSplitLink<a class="headerlink" href="#pywr-nodes-multisplitlink" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="pywr.nodes.MultiSplitLink">
-<em class="property">class </em><code class="sig-prename descclassname">pywr.nodes.</code><code class="sig-name descname">MultiSplitLink</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.MultiSplitLink" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.nodes.</code><code class="sig-name descname">MultiSplitLink</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.MultiSplitLink" title="Permalink to this definition">¶</a></dt>
 <dd><p>An extension of PiecewiseLink that includes additional slots to connect from.</p>
 <p>Conceptually this node looks like the following internally,</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>         <span class="o">/</span> <span class="o">--&gt;--</span> <span class="n">X0</span> <span class="o">--&gt;--</span> \
@@ -242,9 +242,9 @@ non-split sublink (i.e. X1 but not X0). If this link is constrained with a
 maximum or minimum flow, or if it there is another unconstrained link
 (i.e. if X0 is unconstrained) then ratios across this whole node may not be
 enforced as expected.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.nodes.MultiSplitLink.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.MultiSplitLink.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">\*args</em>, <em class="sig-param">\*\*kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.MultiSplitLink.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialise a new Node object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

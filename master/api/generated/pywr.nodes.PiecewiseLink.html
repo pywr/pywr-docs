@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.nodes.PiecewiseLink &mdash; Pywr 1.5.1.dev16+g2aaf3be documentation</title>
+  <title>pywr.nodes.PiecewiseLink &mdash; Pywr 1.5.1.dev17+g57e109f documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.5.1.dev16+g2aaf3be
+                1.5.1.dev17+g57e109f
               </div>
             
           
@@ -195,9 +195,9 @@
             
   <div class="section" id="pywr-nodes-piecewiselink">
 <h1>pywr.nodes.PiecewiseLink<a class="headerlink" href="#pywr-nodes-piecewiselink" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="pywr.nodes.PiecewiseLink">
-<em class="property">class </em><code class="sig-prename descclassname">pywr.nodes.</code><code class="sig-name descname">PiecewiseLink</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.PiecewiseLink" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.nodes.</code><code class="sig-name descname">PiecewiseLink</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.PiecewiseLink" title="Permalink to this definition">¶</a></dt>
 <dd><p>An extension of Node that represents a non-linear Link with a piece wise cost function.</p>
 <p>This object is intended to model situations where there is a benefit of supplying certain flow rates
 but beyond a fixed limit there is a change in (or zero) cost.</p>
@@ -225,9 +225,9 @@ domain in the middle. Instead several new routes are made for each of
 the sublinks and connections to the Output/Input node. The reason for this
 breaking of the route is to avoid an geometric increase in the number
 of routes when multiple PiecewiseLinks are present in the same route.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.nodes.PiecewiseLink.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.PiecewiseLink.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">\*args</em>, <em class="sig-param">\*\*kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.PiecewiseLink.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialise a new Node object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

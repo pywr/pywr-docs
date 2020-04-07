@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.recorders.HydropowerRecorder &mdash; Pywr 1.5.1.dev16+g2aaf3be documentation</title>
+  <title>pywr.recorders.HydropowerRecorder &mdash; Pywr 1.5.1.dev17+g57e109f documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.5.1.dev16+g2aaf3be
+                1.5.1.dev17+g57e109f
               </div>
             
           
@@ -186,9 +186,9 @@
             
   <div class="section" id="pywr-recorders-hydropowerrecorder">
 <h1>pywr.recorders.HydropowerRecorder<a class="headerlink" href="#pywr-recorders-hydropowerrecorder" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="pywr.recorders.HydropowerRecorder">
-<em class="property">class </em><code class="sig-prename descclassname">pywr.recorders.</code><code class="sig-name descname">HydropowerRecorder</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">node</em>, <em class="sig-param">water_elevation_parameter=None</em>, <em class="sig-param">turbine_elevation=0.0</em>, <em class="sig-param">efficiency=1.0</em>, <em class="sig-param">density=1000</em>, <em class="sig-param">flow_unit_conversion=1.0</em>, <em class="sig-param">energy_unit_conversion=1e-6</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.HydropowerRecorder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.recorders.</code><code class="sig-name descname">HydropowerRecorder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">node</span></em>, <em class="sig-param"><span class="n">water_elevation_parameter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">turbine_elevation</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">efficiency</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">density</span><span class="o">=</span><span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">flow_unit_conversion</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">energy_unit_conversion</span><span class="o">=</span><span class="default_value">1e-06</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.HydropowerRecorder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the power production using the hydropower equation</p>
 <p>This recorder saves an array of the hydrpower production in each timestep. It can be converted to a dataframe
 after a model run has completed. It does not calculate total energy production.</p>
@@ -228,9 +228,9 @@ should convert flow to units of <span class="math notranslate nohighlight">\(m^3
 <p>Head is calculated from the given <cite>water_elevation_parameter</cite> and <cite>turbine_elevation</cite> value. If water elevation
 is given then head is the difference in elevation between the water and the turbine. If water elevation parameter
 is <cite>None</cite> then the head is simply the turbine elevation.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="pywr.recorders.HydropowerRecorder.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">/</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.HydropowerRecorder.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">/</em>, <em class="sig-param">\*args</em>, <em class="sig-param">\*\*kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.HydropowerRecorder.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
