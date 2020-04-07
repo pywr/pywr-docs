@@ -55,6 +55,7 @@ master/_sources/api/generated/pywr.parameters.WeeklyProfileParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.control_curves.BaseControlCurveParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.control_curves.ControlCurveIndexParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.control_curves.ControlCurveInterpolatedParameter.rst.txt
+master/_sources/api/generated/pywr.parameters.control_curves.ControlCurvePiecewiseInterpolatedParameter.rst.txt
 master/_sources/api/generated/pywr.recorders.AggregatedRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.Aggregator.rst.txt
 master/_sources/api/generated/pywr.recorders.AnnualCountIndexParameterRecorder.rst.txt
@@ -226,6 +227,7 @@ master/api/generated/pywr.parameters.WeeklyProfileParameter.html
 master/api/generated/pywr.parameters.control_curves.BaseControlCurveParameter.html
 master/api/generated/pywr.parameters.control_curves.ControlCurveIndexParameter.html
 master/api/generated/pywr.parameters.control_curves.ControlCurveInterpolatedParameter.html
+master/api/generated/pywr.parameters.control_curves.ControlCurvePiecewiseInterpolatedParameter.html
 master/api/generated/pywr.recorders.AggregatedRecorder.html
 master/api/generated/pywr.recorders.Aggregator.html
 master/api/generated/pywr.recorders.AnnualCountIndexParameterRecorder.html

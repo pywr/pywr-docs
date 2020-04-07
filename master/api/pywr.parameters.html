@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Parameters &mdash; Pywr 1.5.1.dev17+g57e109f documentation</title>
+  <title>Parameters &mdash; Pywr 1.6.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.5.1.dev17+g57e109f
+                1.6.0
               </div>
             
           
@@ -153,6 +153,7 @@
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.control_curves.BaseControlCurveParameter.html">pywr.parameters.control_curves.BaseControlCurveParameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.control_curves.ControlCurveInterpolatedParameter.html">pywr.parameters.control_curves.ControlCurveInterpolatedParameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.control_curves.ControlCurveIndexParameter.html">pywr.parameters.control_curves.ControlCurveIndexParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.control_curves.ControlCurvePiecewiseInterpolatedParameter.html">pywr.parameters.control_curves.ControlCurvePiecewiseInterpolatedParameter</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#hydropower-parameters">Hydropower parameters</a><ul>
@@ -332,16 +333,19 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.parameters.MonthlyProfileParameter.html#pywr.parameters.MonthlyProfileParameter" title="pywr.parameters.MonthlyProfileParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MonthlyProfileParameter</span></code></a>(model, values[, …])</p></td>
 <td><p>Parameter which provides a monthly profile.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.parameters.ScenarioDailyProfileParameter.html#pywr.parameters.ScenarioDailyProfileParameter" title="pywr.parameters.ScenarioDailyProfileParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScenarioDailyProfileParameter</span></code></a>(model, …)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">UniformDrawdownProfileParameter</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.parameters.ScenarioDailyProfileParameter.html#pywr.parameters.ScenarioDailyProfileParameter" title="pywr.parameters.ScenarioDailyProfileParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScenarioDailyProfileParameter</span></code></a>(model, …)</p></td>
 <td><p>Parameter which provides a daily profile per scenario.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.parameters.ScenarioWeeklyProfileParameter.html#pywr.parameters.ScenarioWeeklyProfileParameter" title="pywr.parameters.ScenarioWeeklyProfileParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScenarioWeeklyProfileParameter</span></code></a>(model, …)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.parameters.ScenarioWeeklyProfileParameter.html#pywr.parameters.ScenarioWeeklyProfileParameter" title="pywr.parameters.ScenarioWeeklyProfileParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScenarioWeeklyProfileParameter</span></code></a>(model, …)</p></td>
 <td><p>Parameter that provides a weekly profile per scenario</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.parameters.ScenarioMonthlyProfileParameter.html#pywr.parameters.ScenarioMonthlyProfileParameter" title="pywr.parameters.ScenarioMonthlyProfileParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScenarioMonthlyProfileParameter</span></code></a>(model, …)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.parameters.ScenarioMonthlyProfileParameter.html#pywr.parameters.ScenarioMonthlyProfileParameter" title="pywr.parameters.ScenarioMonthlyProfileParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScenarioMonthlyProfileParameter</span></code></a>(model, …)</p></td>
 <td><p>Parameter that provides a monthly profile per scenario</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter.html#pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter" title="pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayIndexedScenarioMonthlyFactorsParameter</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter.html#pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter" title="pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayIndexedScenarioMonthlyFactorsParameter</span></code></a>(…)</p></td>
 <td><p>Time varying parameter using an array and Timestep.index with multiplicative factors per Scenario</p></td>
 </tr>
 </tbody>
@@ -434,6 +438,9 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.parameters.control_curves.ControlCurveIndexParameter.html#pywr.parameters.control_curves.ControlCurveIndexParameter" title="pywr.parameters.control_curves.ControlCurveIndexParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">control_curves.ControlCurveIndexParameter</span></code></a>(…)</p></td>
 <td><p>Multiple control curve holder which returns an index not a value</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.parameters.control_curves.ControlCurvePiecewiseInterpolatedParameter.html#pywr.parameters.control_curves.ControlCurvePiecewiseInterpolatedParameter" title="pywr.parameters.control_curves.ControlCurvePiecewiseInterpolatedParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">control_curves.ControlCurvePiecewiseInterpolatedParameter</span></code></a>(…)</p></td>
+<td><p>A control curve Parameter that interpolates between two or more pairs of values.</p></td>
 </tr>
 </tbody>
 </table>
