@@ -18,6 +18,7 @@ pywr.recorders.StorageRecorder
       ~StorageRecorder.aggregated_value
       ~StorageRecorder.before
       ~StorageRecorder.finish
+      ~StorageRecorder.is_constraint_violated
       ~StorageRecorder.load
       ~StorageRecorder.register
       ~StorageRecorder.reset
@@ -36,10 +37,16 @@ pywr.recorders.StorageRecorder
       ~StorageRecorder.agg_func
       ~StorageRecorder.children
       ~StorageRecorder.comment
+      ~StorageRecorder.constraint_lower_bounds
+      ~StorageRecorder.constraint_upper_bounds
       ~StorageRecorder.epsilon
       ~StorageRecorder.ignore_nan
       ~StorageRecorder.is_constraint
+      ~StorageRecorder.is_double_bounded_constraint
+      ~StorageRecorder.is_equality_constraint
+      ~StorageRecorder.is_lower_bounded_constraint
       ~StorageRecorder.is_objective
+      ~StorageRecorder.is_upper_bounded_constraint
       ~StorageRecorder.model
       ~StorageRecorder.name
       ~StorageRecorder.node

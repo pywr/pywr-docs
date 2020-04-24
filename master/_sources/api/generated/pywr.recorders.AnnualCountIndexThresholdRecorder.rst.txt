@@ -18,6 +18,7 @@ pywr.recorders.AnnualCountIndexThresholdRecorder
       ~AnnualCountIndexThresholdRecorder.aggregated_value
       ~AnnualCountIndexThresholdRecorder.before
       ~AnnualCountIndexThresholdRecorder.finish
+      ~AnnualCountIndexThresholdRecorder.is_constraint_violated
       ~AnnualCountIndexThresholdRecorder.load
       ~AnnualCountIndexThresholdRecorder.register
       ~AnnualCountIndexThresholdRecorder.reset
@@ -36,11 +37,17 @@ pywr.recorders.AnnualCountIndexThresholdRecorder
       ~AnnualCountIndexThresholdRecorder.agg_func
       ~AnnualCountIndexThresholdRecorder.children
       ~AnnualCountIndexThresholdRecorder.comment
+      ~AnnualCountIndexThresholdRecorder.constraint_lower_bounds
+      ~AnnualCountIndexThresholdRecorder.constraint_upper_bounds
       ~AnnualCountIndexThresholdRecorder.data
       ~AnnualCountIndexThresholdRecorder.epsilon
       ~AnnualCountIndexThresholdRecorder.ignore_nan
       ~AnnualCountIndexThresholdRecorder.is_constraint
+      ~AnnualCountIndexThresholdRecorder.is_double_bounded_constraint
+      ~AnnualCountIndexThresholdRecorder.is_equality_constraint
+      ~AnnualCountIndexThresholdRecorder.is_lower_bounded_constraint
       ~AnnualCountIndexThresholdRecorder.is_objective
+      ~AnnualCountIndexThresholdRecorder.is_upper_bounded_constraint
       ~AnnualCountIndexThresholdRecorder.model
       ~AnnualCountIndexThresholdRecorder.name
       ~AnnualCountIndexThresholdRecorder.parameters

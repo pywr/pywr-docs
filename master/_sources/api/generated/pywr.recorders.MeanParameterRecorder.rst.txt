@@ -18,6 +18,7 @@ pywr.recorders.MeanParameterRecorder
       ~MeanParameterRecorder.aggregated_value
       ~MeanParameterRecorder.before
       ~MeanParameterRecorder.finish
+      ~MeanParameterRecorder.is_constraint_violated
       ~MeanParameterRecorder.load
       ~MeanParameterRecorder.register
       ~MeanParameterRecorder.reset
@@ -36,11 +37,17 @@ pywr.recorders.MeanParameterRecorder
       ~MeanParameterRecorder.agg_func
       ~MeanParameterRecorder.children
       ~MeanParameterRecorder.comment
+      ~MeanParameterRecorder.constraint_lower_bounds
+      ~MeanParameterRecorder.constraint_upper_bounds
       ~MeanParameterRecorder.epsilon
       ~MeanParameterRecorder.factor
       ~MeanParameterRecorder.ignore_nan
       ~MeanParameterRecorder.is_constraint
+      ~MeanParameterRecorder.is_double_bounded_constraint
+      ~MeanParameterRecorder.is_equality_constraint
+      ~MeanParameterRecorder.is_lower_bounded_constraint
       ~MeanParameterRecorder.is_objective
+      ~MeanParameterRecorder.is_upper_bounded_constraint
       ~MeanParameterRecorder.model
       ~MeanParameterRecorder.name
       ~MeanParameterRecorder.parameter

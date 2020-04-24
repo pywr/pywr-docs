@@ -19,6 +19,7 @@ pywr.recorders.TablesRecorder
       ~TablesRecorder.before
       ~TablesRecorder.finish
       ~TablesRecorder.generate_dataframes
+      ~TablesRecorder.is_constraint_violated
       ~TablesRecorder.load
       ~TablesRecorder.register
       ~TablesRecorder.reset
@@ -37,10 +38,16 @@ pywr.recorders.TablesRecorder
       ~TablesRecorder.agg_func
       ~TablesRecorder.children
       ~TablesRecorder.comment
+      ~TablesRecorder.constraint_lower_bounds
+      ~TablesRecorder.constraint_upper_bounds
       ~TablesRecorder.epsilon
       ~TablesRecorder.ignore_nan
       ~TablesRecorder.is_constraint
+      ~TablesRecorder.is_double_bounded_constraint
+      ~TablesRecorder.is_equality_constraint
+      ~TablesRecorder.is_lower_bounded_constraint
       ~TablesRecorder.is_objective
+      ~TablesRecorder.is_upper_bounded_constraint
       ~TablesRecorder.model
       ~TablesRecorder.name
       ~TablesRecorder.parents

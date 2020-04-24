@@ -18,6 +18,7 @@ pywr.recorders.TimestepCountIndexParameterRecorder
       ~TimestepCountIndexParameterRecorder.aggregated_value
       ~TimestepCountIndexParameterRecorder.before
       ~TimestepCountIndexParameterRecorder.finish
+      ~TimestepCountIndexParameterRecorder.is_constraint_violated
       ~TimestepCountIndexParameterRecorder.load
       ~TimestepCountIndexParameterRecorder.register
       ~TimestepCountIndexParameterRecorder.reset
@@ -36,10 +37,16 @@ pywr.recorders.TimestepCountIndexParameterRecorder
       ~TimestepCountIndexParameterRecorder.agg_func
       ~TimestepCountIndexParameterRecorder.children
       ~TimestepCountIndexParameterRecorder.comment
+      ~TimestepCountIndexParameterRecorder.constraint_lower_bounds
+      ~TimestepCountIndexParameterRecorder.constraint_upper_bounds
       ~TimestepCountIndexParameterRecorder.epsilon
       ~TimestepCountIndexParameterRecorder.ignore_nan
       ~TimestepCountIndexParameterRecorder.is_constraint
+      ~TimestepCountIndexParameterRecorder.is_double_bounded_constraint
+      ~TimestepCountIndexParameterRecorder.is_equality_constraint
+      ~TimestepCountIndexParameterRecorder.is_lower_bounded_constraint
       ~TimestepCountIndexParameterRecorder.is_objective
+      ~TimestepCountIndexParameterRecorder.is_upper_bounded_constraint
       ~TimestepCountIndexParameterRecorder.model
       ~TimestepCountIndexParameterRecorder.name
       ~TimestepCountIndexParameterRecorder.parameter

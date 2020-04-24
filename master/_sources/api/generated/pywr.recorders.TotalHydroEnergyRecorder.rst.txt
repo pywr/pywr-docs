@@ -18,6 +18,7 @@ pywr.recorders.TotalHydroEnergyRecorder
       ~TotalHydroEnergyRecorder.aggregated_value
       ~TotalHydroEnergyRecorder.before
       ~TotalHydroEnergyRecorder.finish
+      ~TotalHydroEnergyRecorder.is_constraint_violated
       ~TotalHydroEnergyRecorder.load
       ~TotalHydroEnergyRecorder.register
       ~TotalHydroEnergyRecorder.reset
@@ -36,6 +37,8 @@ pywr.recorders.TotalHydroEnergyRecorder
       ~TotalHydroEnergyRecorder.agg_func
       ~TotalHydroEnergyRecorder.children
       ~TotalHydroEnergyRecorder.comment
+      ~TotalHydroEnergyRecorder.constraint_lower_bounds
+      ~TotalHydroEnergyRecorder.constraint_upper_bounds
       ~TotalHydroEnergyRecorder.density
       ~TotalHydroEnergyRecorder.efficiency
       ~TotalHydroEnergyRecorder.energy_unit_conversion
@@ -43,7 +46,11 @@ pywr.recorders.TotalHydroEnergyRecorder
       ~TotalHydroEnergyRecorder.flow_unit_conversion
       ~TotalHydroEnergyRecorder.ignore_nan
       ~TotalHydroEnergyRecorder.is_constraint
+      ~TotalHydroEnergyRecorder.is_double_bounded_constraint
+      ~TotalHydroEnergyRecorder.is_equality_constraint
+      ~TotalHydroEnergyRecorder.is_lower_bounded_constraint
       ~TotalHydroEnergyRecorder.is_objective
+      ~TotalHydroEnergyRecorder.is_upper_bounded_constraint
       ~TotalHydroEnergyRecorder.model
       ~TotalHydroEnergyRecorder.name
       ~TotalHydroEnergyRecorder.node

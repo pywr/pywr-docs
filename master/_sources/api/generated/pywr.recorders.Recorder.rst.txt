@@ -18,6 +18,7 @@ pywr.recorders.Recorder
       ~Recorder.aggregated_value
       ~Recorder.before
       ~Recorder.finish
+      ~Recorder.is_constraint_violated
       ~Recorder.load
       ~Recorder.register
       ~Recorder.reset
@@ -36,10 +37,16 @@ pywr.recorders.Recorder
       ~Recorder.agg_func
       ~Recorder.children
       ~Recorder.comment
+      ~Recorder.constraint_lower_bounds
+      ~Recorder.constraint_upper_bounds
       ~Recorder.epsilon
       ~Recorder.ignore_nan
       ~Recorder.is_constraint
+      ~Recorder.is_double_bounded_constraint
+      ~Recorder.is_equality_constraint
+      ~Recorder.is_lower_bounded_constraint
       ~Recorder.is_objective
+      ~Recorder.is_upper_bounded_constraint
       ~Recorder.model
       ~Recorder.name
       ~Recorder.parents

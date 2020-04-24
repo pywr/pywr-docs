@@ -18,6 +18,7 @@ pywr.recorders.TotalFlowNodeRecorder
       ~TotalFlowNodeRecorder.aggregated_value
       ~TotalFlowNodeRecorder.before
       ~TotalFlowNodeRecorder.finish
+      ~TotalFlowNodeRecorder.is_constraint_violated
       ~TotalFlowNodeRecorder.load
       ~TotalFlowNodeRecorder.register
       ~TotalFlowNodeRecorder.reset
@@ -36,11 +37,17 @@ pywr.recorders.TotalFlowNodeRecorder
       ~TotalFlowNodeRecorder.agg_func
       ~TotalFlowNodeRecorder.children
       ~TotalFlowNodeRecorder.comment
+      ~TotalFlowNodeRecorder.constraint_lower_bounds
+      ~TotalFlowNodeRecorder.constraint_upper_bounds
       ~TotalFlowNodeRecorder.epsilon
       ~TotalFlowNodeRecorder.factor
       ~TotalFlowNodeRecorder.ignore_nan
       ~TotalFlowNodeRecorder.is_constraint
+      ~TotalFlowNodeRecorder.is_double_bounded_constraint
+      ~TotalFlowNodeRecorder.is_equality_constraint
+      ~TotalFlowNodeRecorder.is_lower_bounded_constraint
       ~TotalFlowNodeRecorder.is_objective
+      ~TotalFlowNodeRecorder.is_upper_bounded_constraint
       ~TotalFlowNodeRecorder.model
       ~TotalFlowNodeRecorder.name
       ~TotalFlowNodeRecorder.node

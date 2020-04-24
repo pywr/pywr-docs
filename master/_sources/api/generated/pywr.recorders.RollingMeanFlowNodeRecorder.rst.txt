@@ -18,6 +18,7 @@ pywr.recorders.RollingMeanFlowNodeRecorder
       ~RollingMeanFlowNodeRecorder.aggregated_value
       ~RollingMeanFlowNodeRecorder.before
       ~RollingMeanFlowNodeRecorder.finish
+      ~RollingMeanFlowNodeRecorder.is_constraint_violated
       ~RollingMeanFlowNodeRecorder.load
       ~RollingMeanFlowNodeRecorder.register
       ~RollingMeanFlowNodeRecorder.reset
@@ -36,12 +37,18 @@ pywr.recorders.RollingMeanFlowNodeRecorder
       ~RollingMeanFlowNodeRecorder.agg_func
       ~RollingMeanFlowNodeRecorder.children
       ~RollingMeanFlowNodeRecorder.comment
+      ~RollingMeanFlowNodeRecorder.constraint_lower_bounds
+      ~RollingMeanFlowNodeRecorder.constraint_upper_bounds
       ~RollingMeanFlowNodeRecorder.data
       ~RollingMeanFlowNodeRecorder.days
       ~RollingMeanFlowNodeRecorder.epsilon
       ~RollingMeanFlowNodeRecorder.ignore_nan
       ~RollingMeanFlowNodeRecorder.is_constraint
+      ~RollingMeanFlowNodeRecorder.is_double_bounded_constraint
+      ~RollingMeanFlowNodeRecorder.is_equality_constraint
+      ~RollingMeanFlowNodeRecorder.is_lower_bounded_constraint
       ~RollingMeanFlowNodeRecorder.is_objective
+      ~RollingMeanFlowNodeRecorder.is_upper_bounded_constraint
       ~RollingMeanFlowNodeRecorder.model
       ~RollingMeanFlowNodeRecorder.name
       ~RollingMeanFlowNodeRecorder.node

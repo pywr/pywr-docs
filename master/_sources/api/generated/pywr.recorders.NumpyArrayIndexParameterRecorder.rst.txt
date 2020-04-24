@@ -18,6 +18,7 @@ pywr.recorders.NumpyArrayIndexParameterRecorder
       ~NumpyArrayIndexParameterRecorder.aggregated_value
       ~NumpyArrayIndexParameterRecorder.before
       ~NumpyArrayIndexParameterRecorder.finish
+      ~NumpyArrayIndexParameterRecorder.is_constraint_violated
       ~NumpyArrayIndexParameterRecorder.load
       ~NumpyArrayIndexParameterRecorder.register
       ~NumpyArrayIndexParameterRecorder.reset
@@ -37,11 +38,17 @@ pywr.recorders.NumpyArrayIndexParameterRecorder
       ~NumpyArrayIndexParameterRecorder.agg_func
       ~NumpyArrayIndexParameterRecorder.children
       ~NumpyArrayIndexParameterRecorder.comment
+      ~NumpyArrayIndexParameterRecorder.constraint_lower_bounds
+      ~NumpyArrayIndexParameterRecorder.constraint_upper_bounds
       ~NumpyArrayIndexParameterRecorder.data
       ~NumpyArrayIndexParameterRecorder.epsilon
       ~NumpyArrayIndexParameterRecorder.ignore_nan
       ~NumpyArrayIndexParameterRecorder.is_constraint
+      ~NumpyArrayIndexParameterRecorder.is_double_bounded_constraint
+      ~NumpyArrayIndexParameterRecorder.is_equality_constraint
+      ~NumpyArrayIndexParameterRecorder.is_lower_bounded_constraint
       ~NumpyArrayIndexParameterRecorder.is_objective
+      ~NumpyArrayIndexParameterRecorder.is_upper_bounded_constraint
       ~NumpyArrayIndexParameterRecorder.model
       ~NumpyArrayIndexParameterRecorder.name
       ~NumpyArrayIndexParameterRecorder.parameter

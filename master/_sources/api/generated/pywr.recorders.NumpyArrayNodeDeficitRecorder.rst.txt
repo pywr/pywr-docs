@@ -18,6 +18,7 @@ pywr.recorders.NumpyArrayNodeDeficitRecorder
       ~NumpyArrayNodeDeficitRecorder.aggregated_value
       ~NumpyArrayNodeDeficitRecorder.before
       ~NumpyArrayNodeDeficitRecorder.finish
+      ~NumpyArrayNodeDeficitRecorder.is_constraint_violated
       ~NumpyArrayNodeDeficitRecorder.load
       ~NumpyArrayNodeDeficitRecorder.register
       ~NumpyArrayNodeDeficitRecorder.reset
@@ -37,12 +38,18 @@ pywr.recorders.NumpyArrayNodeDeficitRecorder
       ~NumpyArrayNodeDeficitRecorder.agg_func
       ~NumpyArrayNodeDeficitRecorder.children
       ~NumpyArrayNodeDeficitRecorder.comment
+      ~NumpyArrayNodeDeficitRecorder.constraint_lower_bounds
+      ~NumpyArrayNodeDeficitRecorder.constraint_upper_bounds
       ~NumpyArrayNodeDeficitRecorder.data
       ~NumpyArrayNodeDeficitRecorder.epsilon
       ~NumpyArrayNodeDeficitRecorder.factor
       ~NumpyArrayNodeDeficitRecorder.ignore_nan
       ~NumpyArrayNodeDeficitRecorder.is_constraint
+      ~NumpyArrayNodeDeficitRecorder.is_double_bounded_constraint
+      ~NumpyArrayNodeDeficitRecorder.is_equality_constraint
+      ~NumpyArrayNodeDeficitRecorder.is_lower_bounded_constraint
       ~NumpyArrayNodeDeficitRecorder.is_objective
+      ~NumpyArrayNodeDeficitRecorder.is_upper_bounded_constraint
       ~NumpyArrayNodeDeficitRecorder.model
       ~NumpyArrayNodeDeficitRecorder.name
       ~NumpyArrayNodeDeficitRecorder.node

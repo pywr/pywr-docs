@@ -18,6 +18,7 @@ pywr.recorders.NumpyArrayAreaRecorder
       ~NumpyArrayAreaRecorder.aggregated_value
       ~NumpyArrayAreaRecorder.before
       ~NumpyArrayAreaRecorder.finish
+      ~NumpyArrayAreaRecorder.is_constraint_violated
       ~NumpyArrayAreaRecorder.load
       ~NumpyArrayAreaRecorder.register
       ~NumpyArrayAreaRecorder.reset
@@ -37,11 +38,17 @@ pywr.recorders.NumpyArrayAreaRecorder
       ~NumpyArrayAreaRecorder.agg_func
       ~NumpyArrayAreaRecorder.children
       ~NumpyArrayAreaRecorder.comment
+      ~NumpyArrayAreaRecorder.constraint_lower_bounds
+      ~NumpyArrayAreaRecorder.constraint_upper_bounds
       ~NumpyArrayAreaRecorder.data
       ~NumpyArrayAreaRecorder.epsilon
       ~NumpyArrayAreaRecorder.ignore_nan
       ~NumpyArrayAreaRecorder.is_constraint
+      ~NumpyArrayAreaRecorder.is_double_bounded_constraint
+      ~NumpyArrayAreaRecorder.is_equality_constraint
+      ~NumpyArrayAreaRecorder.is_lower_bounded_constraint
       ~NumpyArrayAreaRecorder.is_objective
+      ~NumpyArrayAreaRecorder.is_upper_bounded_constraint
       ~NumpyArrayAreaRecorder.model
       ~NumpyArrayAreaRecorder.name
       ~NumpyArrayAreaRecorder.node

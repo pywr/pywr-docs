@@ -18,6 +18,7 @@ pywr.recorders.FlowDurationCurveRecorder
       ~FlowDurationCurveRecorder.aggregated_value
       ~FlowDurationCurveRecorder.before
       ~FlowDurationCurveRecorder.finish
+      ~FlowDurationCurveRecorder.is_constraint_violated
       ~FlowDurationCurveRecorder.load
       ~FlowDurationCurveRecorder.register
       ~FlowDurationCurveRecorder.reset
@@ -37,13 +38,19 @@ pywr.recorders.FlowDurationCurveRecorder
       ~FlowDurationCurveRecorder.agg_func
       ~FlowDurationCurveRecorder.children
       ~FlowDurationCurveRecorder.comment
+      ~FlowDurationCurveRecorder.constraint_lower_bounds
+      ~FlowDurationCurveRecorder.constraint_upper_bounds
       ~FlowDurationCurveRecorder.data
       ~FlowDurationCurveRecorder.epsilon
       ~FlowDurationCurveRecorder.factor
       ~FlowDurationCurveRecorder.fdc
       ~FlowDurationCurveRecorder.ignore_nan
       ~FlowDurationCurveRecorder.is_constraint
+      ~FlowDurationCurveRecorder.is_double_bounded_constraint
+      ~FlowDurationCurveRecorder.is_equality_constraint
+      ~FlowDurationCurveRecorder.is_lower_bounded_constraint
       ~FlowDurationCurveRecorder.is_objective
+      ~FlowDurationCurveRecorder.is_upper_bounded_constraint
       ~FlowDurationCurveRecorder.model
       ~FlowDurationCurveRecorder.name
       ~FlowDurationCurveRecorder.node

@@ -18,6 +18,7 @@ pywr.recorders.NumpyArrayStorageRecorder
       ~NumpyArrayStorageRecorder.aggregated_value
       ~NumpyArrayStorageRecorder.before
       ~NumpyArrayStorageRecorder.finish
+      ~NumpyArrayStorageRecorder.is_constraint_violated
       ~NumpyArrayStorageRecorder.load
       ~NumpyArrayStorageRecorder.register
       ~NumpyArrayStorageRecorder.reset
@@ -37,11 +38,17 @@ pywr.recorders.NumpyArrayStorageRecorder
       ~NumpyArrayStorageRecorder.agg_func
       ~NumpyArrayStorageRecorder.children
       ~NumpyArrayStorageRecorder.comment
+      ~NumpyArrayStorageRecorder.constraint_lower_bounds
+      ~NumpyArrayStorageRecorder.constraint_upper_bounds
       ~NumpyArrayStorageRecorder.data
       ~NumpyArrayStorageRecorder.epsilon
       ~NumpyArrayStorageRecorder.ignore_nan
       ~NumpyArrayStorageRecorder.is_constraint
+      ~NumpyArrayStorageRecorder.is_double_bounded_constraint
+      ~NumpyArrayStorageRecorder.is_equality_constraint
+      ~NumpyArrayStorageRecorder.is_lower_bounded_constraint
       ~NumpyArrayStorageRecorder.is_objective
+      ~NumpyArrayStorageRecorder.is_upper_bounded_constraint
       ~NumpyArrayStorageRecorder.model
       ~NumpyArrayStorageRecorder.name
       ~NumpyArrayStorageRecorder.node

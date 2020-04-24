@@ -18,6 +18,7 @@ pywr.recorders.MeanFlowNodeRecorder
       ~MeanFlowNodeRecorder.aggregated_value
       ~MeanFlowNodeRecorder.before
       ~MeanFlowNodeRecorder.finish
+      ~MeanFlowNodeRecorder.is_constraint_violated
       ~MeanFlowNodeRecorder.load
       ~MeanFlowNodeRecorder.register
       ~MeanFlowNodeRecorder.reset
@@ -36,11 +37,17 @@ pywr.recorders.MeanFlowNodeRecorder
       ~MeanFlowNodeRecorder.agg_func
       ~MeanFlowNodeRecorder.children
       ~MeanFlowNodeRecorder.comment
+      ~MeanFlowNodeRecorder.constraint_lower_bounds
+      ~MeanFlowNodeRecorder.constraint_upper_bounds
       ~MeanFlowNodeRecorder.epsilon
       ~MeanFlowNodeRecorder.factor
       ~MeanFlowNodeRecorder.ignore_nan
       ~MeanFlowNodeRecorder.is_constraint
+      ~MeanFlowNodeRecorder.is_double_bounded_constraint
+      ~MeanFlowNodeRecorder.is_equality_constraint
+      ~MeanFlowNodeRecorder.is_lower_bounded_constraint
       ~MeanFlowNodeRecorder.is_objective
+      ~MeanFlowNodeRecorder.is_upper_bounded_constraint
       ~MeanFlowNodeRecorder.model
       ~MeanFlowNodeRecorder.name
       ~MeanFlowNodeRecorder.node

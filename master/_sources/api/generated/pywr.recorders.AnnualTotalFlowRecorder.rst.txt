@@ -18,6 +18,7 @@ pywr.recorders.AnnualTotalFlowRecorder
       ~AnnualTotalFlowRecorder.aggregated_value
       ~AnnualTotalFlowRecorder.before
       ~AnnualTotalFlowRecorder.finish
+      ~AnnualTotalFlowRecorder.is_constraint_violated
       ~AnnualTotalFlowRecorder.load
       ~AnnualTotalFlowRecorder.register
       ~AnnualTotalFlowRecorder.reset
@@ -36,12 +37,18 @@ pywr.recorders.AnnualTotalFlowRecorder
       ~AnnualTotalFlowRecorder.agg_func
       ~AnnualTotalFlowRecorder.children
       ~AnnualTotalFlowRecorder.comment
+      ~AnnualTotalFlowRecorder.constraint_lower_bounds
+      ~AnnualTotalFlowRecorder.constraint_upper_bounds
       ~AnnualTotalFlowRecorder.data
       ~AnnualTotalFlowRecorder.epsilon
       ~AnnualTotalFlowRecorder.factors
       ~AnnualTotalFlowRecorder.ignore_nan
       ~AnnualTotalFlowRecorder.is_constraint
+      ~AnnualTotalFlowRecorder.is_double_bounded_constraint
+      ~AnnualTotalFlowRecorder.is_equality_constraint
+      ~AnnualTotalFlowRecorder.is_lower_bounded_constraint
       ~AnnualTotalFlowRecorder.is_objective
+      ~AnnualTotalFlowRecorder.is_upper_bounded_constraint
       ~AnnualTotalFlowRecorder.model
       ~AnnualTotalFlowRecorder.name
       ~AnnualTotalFlowRecorder.nodes

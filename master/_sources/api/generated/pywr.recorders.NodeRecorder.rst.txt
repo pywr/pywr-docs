@@ -18,6 +18,7 @@ pywr.recorders.NodeRecorder
       ~NodeRecorder.aggregated_value
       ~NodeRecorder.before
       ~NodeRecorder.finish
+      ~NodeRecorder.is_constraint_violated
       ~NodeRecorder.load
       ~NodeRecorder.register
       ~NodeRecorder.reset
@@ -36,10 +37,16 @@ pywr.recorders.NodeRecorder
       ~NodeRecorder.agg_func
       ~NodeRecorder.children
       ~NodeRecorder.comment
+      ~NodeRecorder.constraint_lower_bounds
+      ~NodeRecorder.constraint_upper_bounds
       ~NodeRecorder.epsilon
       ~NodeRecorder.ignore_nan
       ~NodeRecorder.is_constraint
+      ~NodeRecorder.is_double_bounded_constraint
+      ~NodeRecorder.is_equality_constraint
+      ~NodeRecorder.is_lower_bounded_constraint
       ~NodeRecorder.is_objective
+      ~NodeRecorder.is_upper_bounded_constraint
       ~NodeRecorder.model
       ~NodeRecorder.name
       ~NodeRecorder.node
