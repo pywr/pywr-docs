@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.optimisation package &mdash; Pywr 1.6.1.dev4+gc444b54 documentation</title>
+  <title>pywr.optimisation package &mdash; Pywr 1.6.1.dev5+g1cc713c documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.6.1.dev4+gc444b54
+                1.6.1.dev5+g1cc713c
               </div>
             
           
@@ -216,6 +216,29 @@
 <dl class="py method">
 <dt id="pywr.optimisation.platypus.PlatypusWrapper.evaluate">
 <code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">solution</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.platypus.PlatypusWrapper.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pywr.optimisation.platypus.PywrRandomGenerator">
+<em class="property">class </em><code class="sig-prename descclassname">pywr.optimisation.platypus.</code><code class="sig-name descname">PywrRandomGenerator</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.platypus.PywrRandomGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">platypus.operators.RandomGenerator</span></code></p>
+<p>A Platypus Generator that injects the current setup of the Pywr model into the population.</p>
+<p>The first Solution returned from the generate method is taken from the wrapper (i.e. the Pywr
+model being wrapped) as the current values of the variable Parameters. This allows the population
+to be seeded with the current model configuration, which is often a initial solution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>wrapper</strong><span class="classifier">PlatypusWrapper</span></dt><dd><p>Wrapper from which to grab the current model and decision variables.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pywr.optimisation.platypus.PywrRandomGenerator.generate">
+<code class="sig-name descname">generate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">problem</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.platypus.PywrRandomGenerator.generate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
