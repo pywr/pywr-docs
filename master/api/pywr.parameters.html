@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Parameters &mdash; Pywr 1.6.1.dev8+gb2d7b26 documentation</title>
+  <title>Parameters &mdash; Pywr 1.6.1.dev10+g034ef64 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.6.1.dev8+gb2d7b26
+                1.6.1.dev10+g034ef64
               </div>
             
           
@@ -140,6 +140,16 @@
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.ArrayIndexedParameter.html">pywr.parameters.ArrayIndexedParameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.ArrayIndexedScenarioParameter.html">pywr.parameters.ArrayIndexedScenarioParameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.IndexedArrayParameter.html">pywr.parameters.IndexedArrayParameter</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#threshold-parameters">Threshold parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.AbstractThresholdParameter.html">pywr.parameters.AbstractThresholdParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.StorageThresholdParameter.html">pywr.parameters.StorageThresholdParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.NodeThresholdParameter.html">pywr.parameters.NodeThresholdParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.ParameterThresholdParameter.html">pywr.parameters.ParameterThresholdParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.RecorderThresholdParameter.html">pywr.parameters.RecorderThresholdParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.CurrentYearThresholdParameter.html">pywr.parameters.CurrentYearThresholdParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.parameters.CurrentOrdinalDayThresholdParameter.html">pywr.parameters.CurrentOrdinalDayThresholdParameter</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#interpolation-parameters">Interpolation parameters</a><ul>
@@ -401,6 +411,38 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.parameters.IndexedArrayParameter.html#pywr.parameters.IndexedArrayParameter" title="pywr.parameters.IndexedArrayParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IndexedArrayParameter</span></code></a>(model, …)</p></td>
 <td><p>Parameter which uses an IndexParameter to index an array of Parameters</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="threshold-parameters">
+<h2>Threshold parameters<a class="headerlink" href="#threshold-parameters" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.parameters.AbstractThresholdParameter.html#pywr.parameters.AbstractThresholdParameter" title="pywr.parameters.AbstractThresholdParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AbstractThresholdParameter</span></code></a>(model, threshold)</p></td>
+<td><p>Base class for parameters returning one of two values depending on other state.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.parameters.StorageThresholdParameter.html#pywr.parameters.StorageThresholdParameter" title="pywr.parameters.StorageThresholdParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StorageThresholdParameter</span></code></a>(model, …)</p></td>
+<td><p>Returns one of two values depending on current volume in a Storage node</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.parameters.NodeThresholdParameter.html#pywr.parameters.NodeThresholdParameter" title="pywr.parameters.NodeThresholdParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NodeThresholdParameter</span></code></a>(model, …)</p></td>
+<td><p>Returns one of two values depending on previous flow in a node</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.parameters.ParameterThresholdParameter.html#pywr.parameters.ParameterThresholdParameter" title="pywr.parameters.ParameterThresholdParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParameterThresholdParameter</span></code></a>(model, …)</p></td>
+<td><p>Returns one of two values depending on the value of a Parameter</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.parameters.RecorderThresholdParameter.html#pywr.parameters.RecorderThresholdParameter" title="pywr.parameters.RecorderThresholdParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RecorderThresholdParameter</span></code></a>(model, …[, …])</p></td>
+<td><p>Returns one of two values depending on a Recorder value and a threshold</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.parameters.CurrentYearThresholdParameter.html#pywr.parameters.CurrentYearThresholdParameter" title="pywr.parameters.CurrentYearThresholdParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CurrentYearThresholdParameter</span></code></a></p></td>
+<td><p>Returns one of two values depending on the year of the current timestep..</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.parameters.CurrentOrdinalDayThresholdParameter.html#pywr.parameters.CurrentOrdinalDayThresholdParameter" title="pywr.parameters.CurrentOrdinalDayThresholdParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CurrentOrdinalDayThresholdParameter</span></code></a></p></td>
+<td><p>Returns one of two values depending on the ordinal of the current timestep.</p></td>
 </tr>
 </tbody>
 </table>

@@ -18,6 +18,7 @@ master/_sources/api/generated/pywr.nodes.Output.rst.txt
 master/_sources/api/generated/pywr.nodes.PiecewiseLink.rst.txt
 master/_sources/api/generated/pywr.nodes.Storage.rst.txt
 master/_sources/api/generated/pywr.nodes.VirtualStorage.rst.txt
+master/_sources/api/generated/pywr.parameters.AbstractThresholdParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.AggregatedIndexParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.AggregatedParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.AnnualHarmonicSeriesParameter.rst.txt
@@ -27,6 +28,8 @@ master/_sources/api/generated/pywr.parameters.ArrayIndexedScenarioParameter.rst.
 master/_sources/api/generated/pywr.parameters.ConstantParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.ConstantScenarioIndexParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.ConstantScenarioParameter.rst.txt
+master/_sources/api/generated/pywr.parameters.CurrentOrdinalDayThresholdParameter.rst.txt
+master/_sources/api/generated/pywr.parameters.CurrentYearThresholdParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.DailyProfileParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.DataFrameParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.DeficitParameter.rst.txt
@@ -44,12 +47,16 @@ master/_sources/api/generated/pywr.parameters.MonthlyProfileParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.NegativeMaxParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.NegativeMinParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.NegativeParameter.rst.txt
+master/_sources/api/generated/pywr.parameters.NodeThresholdParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.Parameter.rst.txt
+master/_sources/api/generated/pywr.parameters.ParameterThresholdParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.PiecewiseIntegralParameter.rst.txt
+master/_sources/api/generated/pywr.parameters.RecorderThresholdParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.ScenarioDailyProfileParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.ScenarioMonthlyProfileParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.ScenarioWeeklyProfileParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.ScenarioWrapperParameter.rst.txt
+master/_sources/api/generated/pywr.parameters.StorageThresholdParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.TablesArrayParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.WeeklyProfileParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.control_curves.BaseControlCurveParameter.rst.txt
@@ -190,6 +197,7 @@ master/api/generated/pywr.nodes.Output.html
 master/api/generated/pywr.nodes.PiecewiseLink.html
 master/api/generated/pywr.nodes.Storage.html
 master/api/generated/pywr.nodes.VirtualStorage.html
+master/api/generated/pywr.parameters.AbstractThresholdParameter.html
 master/api/generated/pywr.parameters.AggregatedIndexParameter.html
 master/api/generated/pywr.parameters.AggregatedParameter.html
 master/api/generated/pywr.parameters.AnnualHarmonicSeriesParameter.html
@@ -199,6 +207,8 @@ master/api/generated/pywr.parameters.ArrayIndexedScenarioParameter.html
 master/api/generated/pywr.parameters.ConstantParameter.html
 master/api/generated/pywr.parameters.ConstantScenarioIndexParameter.html
 master/api/generated/pywr.parameters.ConstantScenarioParameter.html
+master/api/generated/pywr.parameters.CurrentOrdinalDayThresholdParameter.html
+master/api/generated/pywr.parameters.CurrentYearThresholdParameter.html
 master/api/generated/pywr.parameters.DailyProfileParameter.html
 master/api/generated/pywr.parameters.DataFrameParameter.html
 master/api/generated/pywr.parameters.DeficitParameter.html
@@ -216,12 +226,16 @@ master/api/generated/pywr.parameters.MonthlyProfileParameter.html
 master/api/generated/pywr.parameters.NegativeMaxParameter.html
 master/api/generated/pywr.parameters.NegativeMinParameter.html
 master/api/generated/pywr.parameters.NegativeParameter.html
+master/api/generated/pywr.parameters.NodeThresholdParameter.html
 master/api/generated/pywr.parameters.Parameter.html
+master/api/generated/pywr.parameters.ParameterThresholdParameter.html
 master/api/generated/pywr.parameters.PiecewiseIntegralParameter.html
+master/api/generated/pywr.parameters.RecorderThresholdParameter.html
 master/api/generated/pywr.parameters.ScenarioDailyProfileParameter.html
 master/api/generated/pywr.parameters.ScenarioMonthlyProfileParameter.html
 master/api/generated/pywr.parameters.ScenarioWeeklyProfileParameter.html
 master/api/generated/pywr.parameters.ScenarioWrapperParameter.html
+master/api/generated/pywr.parameters.StorageThresholdParameter.html
 master/api/generated/pywr.parameters.TablesArrayParameter.html
 master/api/generated/pywr.parameters.WeeklyProfileParameter.html
 master/api/generated/pywr.parameters.control_curves.BaseControlCurveParameter.html
