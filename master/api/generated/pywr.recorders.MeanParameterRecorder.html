@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.recorders.MeanParameterRecorder &mdash; Pywr 1.6.1.dev9+g14f781a documentation</title>
+  <title>pywr.recorders.MeanParameterRecorder &mdash; Pywr 1.6.1.dev11+gbe9e36c documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.6.1.dev9+g14f781a
+                1.6.1.dev11+gbe9e36c
               </div>
             
           
@@ -200,11 +200,9 @@
 <dt id="pywr.recorders.MeanParameterRecorder">
 <em class="property">class </em><code class="sig-prename descclassname">pywr.recorders.</code><code class="sig-name descname">MeanParameterRecorder</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.recorders.MeanParameterRecorder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Record the mean value of a <cite>Parameter</cite> during a simulation.</p>
-<p>This recorder can be used to track the sum total of the values returned by a
+<p>This recorder can be used to track the mean of the values returned by a
 <cite>Parameter</cite> during a models simulation. An optional factor can be provided to
-apply a linear scaling of the values. If the parameter represents a flux
-the <cite>integrate</cite> keyword argument can be used to multiply the values by the time-step
-length in days.</p>
+apply a linear scaling of the values.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
