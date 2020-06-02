@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.optimisation package &mdash; Pywr 1.6.1.dev16+gf2c39c3 documentation</title>
+  <title>pywr.optimisation package &mdash; Pywr 1.6.1.dev17+gb9510b9 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.6.1.dev16+gf2c39c3
+                1.6.1.dev17+gb9510b9
               </div>
             
           
@@ -197,14 +197,25 @@
 <dt id="pywr.optimisation.platypus.PywrRandomGenerator">
 <em class="property">class </em><code class="sig-prename descclassname">pywr.optimisation.platypus.</code><code class="sig-name descname">PywrRandomGenerator</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.optimisation.platypus.PywrRandomGenerator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">platypus.operators.RandomGenerator</span></code></p>
-<p>A Platypus Generator that injects the current setup of the Pywr model into the population.</p>
-<p>The first Solution returned from the generate method is taken from the wrapper (i.e. the Pywr
-model being wrapped) as the current values of the variable Parameters. This allows the population
-to be seeded with the current model configuration, which is often a initial solution.</p>
+<p>A Platypus Generator that injects current and/or alternative setups of the Pywr model into the population.</p>
+<p>When use_current is true the first Solution returned from the generate method is taken from the wrapper
+(i.e. the Pywr model being wrapped) as the current values of the variable Parameters. This allows the population
+to be seeded with the current model configuration, which is often an initial solution. Additional solutions
+can be provided in as an iterable of solutions. These can come from an alternative source such as previous
+optimisation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>wrapper</strong><span class="classifier">PlatypusWrapper</span></dt><dd><p>Wrapper from which to grab the current model and decision variables.</p>
+</dd>
+<dt><strong>use_current: Bool</strong></dt><dd><p>Whether to generate an initial solution using the model’s current configuration. Default is true.
+Set this to False and pass some solutions to use pre-generated</p>
+</dd>
+<dt><strong>solutions</strong><span class="classifier">List of dicts</span></dt><dd><p>An iterable of initial solutions to use (default is None). If given these alternative solutions
+are provided to Platypus in order. Each item in the list should be a dictionary containing keys
+for each of the variable Parameters in the optimisation. The value of each key should be another
+dictionary container keys “doubles” and/or “integers” to provide the appropriate values as
+dictated by the Parameter’s type.</p>
 </dd>
 </dl>
 </dd>
