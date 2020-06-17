@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.nodes.BreakLink &mdash; Pywr 1.6.1.dev18+g99c29cf documentation</title>
+  <title>pywr.nodes.BreakLink &mdash; Pywr 1.7.1.dev1+g68ff5c5 documentation</title>
   
 
   
@@ -25,7 +25,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.6.1.dev18+g99c29cf
+                1.7.1.dev1+g68ff5c5
               </div>
             
           
@@ -197,7 +197,7 @@
 <h1>pywr.nodes.BreakLink<a class="headerlink" href="#pywr-nodes-breaklink" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="pywr.nodes.BreakLink">
-<em class="property">class </em><code class="sig-prename descclassname">pywr.nodes.</code><code class="sig-name descname">BreakLink</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.BreakLink" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pywr.nodes.</code><code class="sig-name descname">BreakLink</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.BreakLink" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compound node used to reduce the number of routes in a model</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -323,7 +323,7 @@ the situation described above). The resulting LP is easier to solve.</p>
 <td><p>The conversion between inflow and outflow for the node</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cost</span></code></p></td>
-<td><p></p></td>
+<td><p>The cost per unit flow via the node</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">domain</span></code></p></td>
 <td><p></p></td>
@@ -335,10 +335,10 @@ the situation described above). The resulting LP is easier to solve.</p>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">max_flow</span></code></p></td>
-<td><p></p></td>
+<td><p>The maximum flow constraint on the node</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">min_flow</span></code></p></td>
-<td><p></p></td>
+<td><p>The minimum flow constraint on the node</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></p></td>
 <td><p>The recorder for the node, e.g.</p></td>

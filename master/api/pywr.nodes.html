@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Nodes &mdash; Pywr 1.6.1.dev18+g99c29cf documentation</title>
+  <title>Nodes &mdash; Pywr 1.7.1.dev1+g68ff5c5 documentation</title>
   
 
   
@@ -25,7 +25,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.6.1.dev18+g99c29cf
+                1.7.1.dev1+g68ff5c5
               </div>
             
           
@@ -202,7 +202,7 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.nodes.Node.html#pywr.nodes.Node" title="pywr.nodes.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a>(model, name, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.nodes.Node.html#pywr.nodes.Node" title="pywr.nodes.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a>(*args, **kwargs)</p></td>
 <td><p>Base object from which all other nodes inherit</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.nodes.Link.html#pywr.nodes.Link" title="pywr.nodes.Link"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Link</span></code></a>(*args, **kwargs)</p></td>
@@ -214,7 +214,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.nodes.Output.html#pywr.nodes.Output" title="pywr.nodes.Output"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Output</span></code></a>(*args, **kwargs)</p></td>
 <td><p>A general output at any point from the network</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.nodes.BreakLink.html#pywr.nodes.BreakLink" title="pywr.nodes.BreakLink"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BreakLink</span></code></a>(model, name, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.nodes.BreakLink.html#pywr.nodes.BreakLink" title="pywr.nodes.BreakLink"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BreakLink</span></code></a>(*args, **kwargs)</p></td>
 <td><p>Compound node used to reduce the number of routes in a model</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.nodes.PiecewiseLink.html#pywr.nodes.PiecewiseLink" title="pywr.nodes.PiecewiseLink"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PiecewiseLink</span></code></a>(*args, **kwargs)</p></td>
@@ -223,19 +223,19 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.nodes.MultiSplitLink.html#pywr.nodes.MultiSplitLink" title="pywr.nodes.MultiSplitLink"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiSplitLink</span></code></a>(*args, **kwargs)</p></td>
 <td><p>An extension of PiecewiseLink that includes additional slots to connect from.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.nodes.Storage.html#pywr.nodes.Storage" title="pywr.nodes.Storage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Storage</span></code></a>(model, name[, num_outputs, num_inputs])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.nodes.Storage.html#pywr.nodes.Storage" title="pywr.nodes.Storage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Storage</span></code></a>(*args, **kwargs)</p></td>
 <td><p>A generic storage Node</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.nodes.VirtualStorage.html#pywr.nodes.VirtualStorage" title="pywr.nodes.VirtualStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VirtualStorage</span></code></a>(model, name, nodes, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.nodes.VirtualStorage.html#pywr.nodes.VirtualStorage" title="pywr.nodes.VirtualStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VirtualStorage</span></code></a>(*args, **kwargs)</p></td>
 <td><p>A virtual storage unit</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.nodes.AnnualVirtualStorage.html#pywr.nodes.AnnualVirtualStorage" title="pywr.nodes.AnnualVirtualStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnnualVirtualStorage</span></code></a>(*args, **kwargs)</p></td>
 <td><p>A virtual storage which resets annually, useful for licences</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.nodes.AggregatedStorage.html#pywr.nodes.AggregatedStorage" title="pywr.nodes.AggregatedStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AggregatedStorage</span></code></a>(model, name, …)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.nodes.AggregatedStorage.html#pywr.nodes.AggregatedStorage" title="pywr.nodes.AggregatedStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AggregatedStorage</span></code></a>(*args, **kwargs)</p></td>
 <td><p>An aggregated sum of other <cite>Storage</cite> nodes</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.nodes.AggregatedNode.html#pywr.nodes.AggregatedNode" title="pywr.nodes.AggregatedNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AggregatedNode</span></code></a>(model, name, nodes, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.nodes.AggregatedNode.html#pywr.nodes.AggregatedNode" title="pywr.nodes.AggregatedNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AggregatedNode</span></code></a>(*args, **kwargs)</p></td>
 <td><p>An aggregated sum of other <cite>Node</cite> nodes</p></td>
 </tr>
 </tbody>
@@ -250,7 +250,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.domains.river.Catchment.html#pywr.domains.river.Catchment" title="pywr.domains.river.Catchment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Catchment</span></code></a>(*args, **kwargs)</p></td>
 <td><p>A hydrological catchment, supplying water to the river network</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.domains.river.Reservoir.html#pywr.domains.river.Reservoir" title="pywr.domains.river.Reservoir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reservoir</span></code></a>(model, *args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.domains.river.Reservoir.html#pywr.domains.river.Reservoir" title="pywr.domains.river.Reservoir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reservoir</span></code></a>(*args, **kwargs)</p></td>
 <td><p>A reservoir node with control curve.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.domains.river.River.html#pywr.domains.river.River" title="pywr.domains.river.River"><code class="xref py py-obj docutils literal notranslate"><span class="pre">River</span></code></a>(*args, **kwargs)</p></td>
@@ -259,7 +259,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.domains.river.RiverSplit.html#pywr.domains.river.RiverSplit" title="pywr.domains.river.RiverSplit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RiverSplit</span></code></a>(*args, **kwargs)</p></td>
 <td><p>A split in the river network</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.domains.river.RiverSplitWithGauge.html#pywr.domains.river.RiverSplitWithGauge" title="pywr.domains.river.RiverSplitWithGauge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RiverSplitWithGauge</span></code></a>(model, name[, mrf, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.domains.river.RiverSplitWithGauge.html#pywr.domains.river.RiverSplitWithGauge" title="pywr.domains.river.RiverSplitWithGauge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RiverSplitWithGauge</span></code></a>(*args, **kwargs)</p></td>
 <td><p>A split in the river network with a minimum residual flow</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.domains.river.RiverGauge.html#pywr.domains.river.RiverGauge" title="pywr.domains.river.RiverGauge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RiverGauge</span></code></a>(*args, **kwargs)</p></td>
