@@ -80,6 +80,7 @@ master/_sources/api/generated/pywr.recorders.MinimumThresholdVolumeStorageRecord
 master/_sources/api/generated/pywr.recorders.MinimumVolumeStorageRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.NodeRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.NumpyArrayAreaRecorder.rst.txt
+master/_sources/api/generated/pywr.recorders.NumpyArrayDailyProfileParameterRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.NumpyArrayIndexParameterRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.NumpyArrayLevelRecorder.rst.txt
 master/_sources/api/generated/pywr.recorders.NumpyArrayNodeCurtailmentRatioRecorder.rst.txt
@@ -289,6 +290,7 @@ master/api/generated/pywr.recorders.MinimumThresholdVolumeStorageRecorder.html
 master/api/generated/pywr.recorders.MinimumVolumeStorageRecorder.html
 master/api/generated/pywr.recorders.NodeRecorder.html
 master/api/generated/pywr.recorders.NumpyArrayAreaRecorder.html
+master/api/generated/pywr.recorders.NumpyArrayDailyProfileParameterRecorder.html
 master/api/generated/pywr.recorders.NumpyArrayIndexParameterRecorder.html
 master/api/generated/pywr.recorders.NumpyArrayLevelRecorder.html
 master/api/generated/pywr.recorders.NumpyArrayNodeCurtailmentRatioRecorder.html
