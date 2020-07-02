@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.nodes.BreakLink &mdash; Pywr 1.7.3.dev2+g2ffc94b documentation</title>
+  <title>pywr.nodes.BreakLink &mdash; Pywr 1.7.3.dev3+g8b0d2a5 documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                1.7.3.dev2+g2ffc94b
+                1.7.3.dev3+g8b0d2a5
               </div>
             
           
@@ -229,7 +229,7 @@ with the benefit that it reduces the number of routes in the model (in
 the situation described above). The resulting LP is easier to solve.</p>
 <dl class="py method">
 <dt id="pywr.nodes.BreakLink.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.BreakLink.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.BreakLink.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialise a new Node object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -250,55 +250,55 @@ the situation described above). The resulting LP is easier to solve.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pywr.nodes.BreakLink.__init__" title="pywr.nodes.BreakLink.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, model, name, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pywr.nodes.BreakLink.__init__" title="pywr.nodes.BreakLink.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(model, name, **kwargs)</p></td>
 <td><p>Initialise a new Node object</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code>(self, Timestep ts)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">before</span></code>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">before</span></code>(self, Timestep ts)</p></td>
 <td><p>Called at the beginning of the timestep</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">check</span></code>(self)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">check</span></code>()</p></td>
 <td><p>Check the node is valid</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">commit</span></code>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">commit</span></code>(self, int scenario_index, double value)</p></td>
 <td><p>Called once for each route the node is a member of</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">commit_all</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">commit_all</span></code>(self, double[)</p></td>
 <td><p>Called once for each route the node is a member of</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect</span></code>(self, node[, from_slot, to_slot])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect</span></code>(node[, from_slot, to_slot])</p></td>
 <td><p>Create an edge from this Node to another Node</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">disconnect</span></code>(self[, node, slot_name, all_slots])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">disconnect</span></code>([node, slot_name, all_slots])</p></td>
 <td><p>Remove a connection from this Node to another Node</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">finish</span></code>(self)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_conversion_factor</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_conversion_factor</span></code>(self)</p></td>
 <td><p>Get the conversion factor</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_cost</span></code>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_cost</span></code>(self, ScenarioIndex scenario_index)</p></td>
 <td><p>Get the cost per unit flow at a given timestep</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_max_flow</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_max_flow</span></code>(self, ScenarioIndex scenario_index)</p></td>
 <td><p>Get the maximum flow at a given timestep</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_min_flow</span></code>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_min_flow</span></code>(self, ScenarioIndex scenario_index)</p></td>
 <td><p>Get the minimum flow at a given timestep</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_slots</span></code>(self[, slot_name, is_connector])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_slots</span></code>([slot_name, is_connector])</p></td>
 <td><p>Returns the object(s) wich should be connected to given slot_name</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code>(data, model)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code>(self)</p></td>
 <td><p>Called at the beginning of a run</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code>(self, model)</p></td>
 <td><p>Called before the first run of the model</p></td>
 </tr>
 </tbody>
