@@ -14,6 +14,7 @@ master/_sources/api/generated/pywr.nodes.AggregatedNode.rst.txt
 master/_sources/api/generated/pywr.nodes.AggregatedStorage.rst.txt
 master/_sources/api/generated/pywr.nodes.AnnualVirtualStorage.rst.txt
 master/_sources/api/generated/pywr.nodes.BreakLink.rst.txt
+master/_sources/api/generated/pywr.nodes.DelayNode.rst.txt
 master/_sources/api/generated/pywr.nodes.Input.rst.txt
 master/_sources/api/generated/pywr.nodes.Link.rst.txt
 master/_sources/api/generated/pywr.nodes.MultiSplitLink.rst.txt
@@ -38,6 +39,7 @@ master/_sources/api/generated/pywr.parameters.DailyProfileParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.DataFrameParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.DeficitParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.DivisionParameter.rst.txt
+master/_sources/api/generated/pywr.parameters.FlowDelayParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.HydropowerTargetParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.IndexParameter.rst.txt
 master/_sources/api/generated/pywr.parameters.IndexedArrayParameter.rst.txt
@@ -232,6 +234,7 @@ master/api/generated/pywr.nodes.AggregatedNode.html
 master/api/generated/pywr.nodes.AggregatedStorage.html
 master/api/generated/pywr.nodes.AnnualVirtualStorage.html
 master/api/generated/pywr.nodes.BreakLink.html
+master/api/generated/pywr.nodes.DelayNode.html
 master/api/generated/pywr.nodes.Input.html
 master/api/generated/pywr.nodes.Link.html
 master/api/generated/pywr.nodes.MultiSplitLink.html
@@ -256,6 +259,7 @@ master/api/generated/pywr.parameters.DailyProfileParameter.html
 master/api/generated/pywr.parameters.DataFrameParameter.html
 master/api/generated/pywr.parameters.DeficitParameter.html
 master/api/generated/pywr.parameters.DivisionParameter.html
+master/api/generated/pywr.parameters.FlowDelayParameter.html
 master/api/generated/pywr.parameters.HydropowerTargetParameter.html
 master/api/generated/pywr.parameters.IndexParameter.html
 master/api/generated/pywr.parameters.IndexedArrayParameter.html

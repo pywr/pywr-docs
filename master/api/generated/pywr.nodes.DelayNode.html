@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.nodes.AggregatedNode &mdash; Pywr 1.7.3.dev6+g1b36139 documentation</title>
+  <title>pywr.nodes.DelayNode &mdash; Pywr 1.7.3.dev6+g1b36139 documentation</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="pywr.nodes.DelayNode" href="pywr.nodes.DelayNode.html" />
-    <link rel="prev" title="pywr.nodes.AggregatedStorage" href="pywr.nodes.AggregatedStorage.html" /> 
+    <link rel="next" title="pywr.domains.river.Catchment" href="pywr.domains.river.Catchment.html" />
+    <link rel="prev" title="pywr.nodes.AggregatedNode" href="pywr.nodes.AggregatedNode.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -109,8 +109,8 @@
 <li class="toctree-l4"><a class="reference internal" href="pywr.nodes.VirtualStorage.html">pywr.nodes.VirtualStorage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.nodes.AnnualVirtualStorage.html">pywr.nodes.AnnualVirtualStorage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.nodes.AggregatedStorage.html">pywr.nodes.AggregatedStorage</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.nodes.AggregatedNode</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pywr.nodes.DelayNode.html">pywr.nodes.DelayNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pywr.nodes.AggregatedNode.html">pywr.nodes.AggregatedNode</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pywr.nodes.DelayNode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.domains.river.Catchment.html">pywr.domains.river.Catchment</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.domains.river.Reservoir.html">pywr.domains.river.Reservoir</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pywr.domains.river.River.html">pywr.domains.river.River</a></li>
@@ -179,13 +179,13 @@
         
           <li><a href="../pywr.nodes.html">Nodes</a> &raquo;</li>
         
-      <li>pywr.nodes.AggregatedNode</li>
+      <li>pywr.nodes.DelayNode</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/generated/pywr.nodes.AggregatedNode.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/pywr.nodes.DelayNode.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -198,30 +198,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pywr-nodes-aggregatednode">
-<h1>pywr.nodes.AggregatedNode<a class="headerlink" href="#pywr-nodes-aggregatednode" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pywr-nodes-delaynode">
+<h1>pywr.nodes.DelayNode<a class="headerlink" href="#pywr-nodes-delaynode" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="pywr.nodes.AggregatedNode">
-<em class="property">class </em><code class="sig-prename descclassname">pywr.nodes.</code><code class="sig-name descname">AggregatedNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.AggregatedNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>An aggregated sum of other <cite>Node</cite> nodes</p>
-<p>This object should behave like <cite>Node</cite> by returning current <cite>flow</cite>.
-However this object can not be connected to others within the network.</p>
+<dt id="pywr.nodes.DelayNode">
+<em class="property">class </em><code class="sig-prename descclassname">pywr.nodes.</code><code class="sig-name descname">DelayNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.DelayNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>A node that delays flow for a given number of timesteps or days.</p>
+<p>This is a composite node consisting internally of an Input and an Output node. A
+<cite>FlowDelayParameter</cite> is used to delay the flow of the output node for a given period prior
+to this delayed flow being set as the flow of the input node. Connections to the node are connected
+to the internal output node and connection from the node are connected to the internal input node
+node.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>model</strong><span class="classifier"><cite>pywr.model.Model</cite></span></dt><dd></dd>
+<dt><strong>name</strong><span class="classifier">string</span></dt><dd><p>Name of the node.</p>
+</dd>
+<dt><strong>timesteps: int</strong></dt><dd><p>Number of timesteps to delay the flow.</p>
+</dd>
+<dt><strong>days: int</strong></dt><dd><p>Number of days to delay the flow. Specifying a number of days (instead of a number
+of timesteps) is only valid if the number of days is exactly divisible by the model
+timestep delta.</p>
+</dd>
+<dt><strong>initial_flow: float</strong></dt><dd><p>Flow provided by node for initial timesteps prior to any delayed flow being available.
+This is constant across all delayed timesteps and any model scenarios. Default is 0.0.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pywr.nodes.DelayNode.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.DelayNode.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialise a new Node object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>model - `Model` instance</strong></dt><dd></dd>
-<dt><strong>name - str</strong></dt><dd></dd>
-<dt><strong>nodes - list or iterable of `Node` objects</strong></dt><dd><p>The <cite>Node</cite> objects which to return the sum total of</p>
+<dt><strong>model</strong><span class="classifier">Model</span></dt><dd><p>The model the node belongs to</p>
+</dd>
+<dt><strong>name</strong><span class="classifier">string</span></dt><dd><p>A unique name for the node</p>
 </dd>
 </dl>
 </dd>
 </dl>
-<p class="rubric">Notes</p>
-<p>This node can not be connected to other nodes in the network.</p>
-<dl class="py method">
-<dt id="pywr.nodes.AggregatedNode.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">nodes</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.AggregatedNode.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <p class="rubric">Methods</p>
@@ -231,8 +250,8 @@ However this object can not be connected to others within the network.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pywr.nodes.AggregatedNode.__init__" title="pywr.nodes.AggregatedNode.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(model, name, nodes, **kwargs)</p></td>
-<td><p>Initialize self.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pywr.nodes.DelayNode.__init__" title="pywr.nodes.DelayNode.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(model, name, **kwargs)</p></td>
+<td><p>Initialise a new Node object</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">after</span></code>(self, Timestep ts)</p></td>
 <td><p></p></td>
@@ -240,8 +259,8 @@ However this object can not be connected to others within the network.</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">before</span></code>(self, Timestep ts)</p></td>
 <td><p>Called at the beginning of the timestep</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">check</span></code>(self)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">check</span></code>()</p></td>
+<td><p>Check the node is valid</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">commit</span></code>(self, int scenario_index, double value)</p></td>
 <td><p>Called once for each route the node is a member of</p></td>
@@ -249,19 +268,31 @@ However this object can not be connected to others within the network.</p>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">commit_all</span></code>(self, double[)</p></td>
 <td><p>Called once for each route the node is a member of</p></td>
 </tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect</span></code>(node[, from_slot, to_slot])</p></td>
+<td><p>Create an edge from this Node to another Node</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">disconnect</span></code>([node, slot_name, all_slots])</p></td>
+<td><p>Remove a connection from this Node to another Node</p></td>
+</tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">finish</span></code>(self)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_cost</span></code>(self, ScenarioIndex scenario_index)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_conversion_factor</span></code>(self)</p></td>
+<td><p>Get the conversion factor</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_max_flow</span></code>(self, ScenarioIndex scenario_index)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_cost</span></code>(self, ScenarioIndex scenario_index)</p></td>
+<td><p>Get the cost per unit flow at a given timestep</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_max_flow</span></code>(self, ScenarioIndex scenario_index)</p></td>
 <td><p>Get the maximum flow at a given timestep</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_min_flow</span></code>(self, ScenarioIndex scenario_index)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_min_flow</span></code>(self, ScenarioIndex scenario_index)</p></td>
 <td><p>Get the minimum flow at a given timestep</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code>(type cls, data, model)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_slots</span></code>([slot_name, is_connector])</p></td>
+<td><p>Returns the object(s) wich should be connected to given slot_name</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code>(data, model)</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code>(self)</p></td>
@@ -291,17 +322,17 @@ However this object can not be connected to others within the network.</p>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">components</span></code></p></td>
 <td><p>Generator that returns all of the Components attached to the Node</p></td>
 </tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">conversion_factor</span></code></p></td>
+<td><p>The conversion between inflow and outflow for the node</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cost</span></code></p></td>
+<td><p>The cost per unit flow via the node</p></td>
+</tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">domain</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">factors</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">flow</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">flow</span></code></p></td>
 <td><p>Total flow via this node in the current timestep</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">flow_weights</span></code></p></td>
-<td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fully_qualified_name</span></code></p></td>
 <td><p></p></td>
@@ -318,19 +349,16 @@ However this object can not be connected to others within the network.</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
 <td><p>Name of the node.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodes</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent</span></code></p></td>
 <td><p>The parent Node/Storage of this object.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">prev_flow</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">prev_flow</span></code></p></td>
 <td><p>Total flow via this node in the previous timestep</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">recorders</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">recorders</span></code></p></td>
 <td><p>Returns a list of <cite>pywr.recorders.Recorder</cite> objects attached to this node.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">virtual</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">virtual</span></code></p></td>
 <td><p>virtual: ‘bool’</p></td>
 </tr>
 </tbody>
@@ -347,10 +375,10 @@ However this object can not be connected to others within the network.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pywr.nodes.DelayNode.html" class="btn btn-neutral float-right" title="pywr.nodes.DelayNode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pywr.domains.river.Catchment.html" class="btn btn-neutral float-right" title="pywr.domains.river.Catchment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pywr.nodes.AggregatedStorage.html" class="btn btn-neutral float-left" title="pywr.nodes.AggregatedStorage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pywr.nodes.AggregatedNode.html" class="btn btn-neutral float-left" title="pywr.nodes.AggregatedNode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
