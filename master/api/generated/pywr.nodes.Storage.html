@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pywr.nodes.Storage &mdash; Pywr 1.7.3.dev6+g1b36139 documentation</title>
+  <title>pywr.nodes.Storage &mdash; Pywr 1.7.3.dev7+gb360367 documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                1.7.3.dev6+g1b36139
+                1.7.3.dev7+gb360367
               </div>
             
           
@@ -222,6 +222,33 @@ independently). For example:</p>
 <p>If a recorder is set on the storage node, instead of recording flow it
 records changes in storage. Any recorders set on the output or input
 sub-nodes record flow as normal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">Model</span></dt><dd><p>Model instance to which this storage node is attached.</p>
+</dd>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>The name of the storage node.</p>
+</dd>
+<dt><strong>num_inputs, num_outputs</strong><span class="classifier">integer (optional)</span></dt><dd><p>The number of input and output nodes to create internally. Defaults to 1.</p>
+</dd>
+<dt><strong>min_volume</strong><span class="classifier">float (optional)</span></dt><dd><p>The minimum volume of the storage. Defaults to 0.0.</p>
+</dd>
+<dt><strong>max_volume</strong><span class="classifier">float, Parameter (optional)</span></dt><dd><p>The maximum volume of the storage. Defaults to 0.0.</p>
+</dd>
+<dt><strong>initial_volume, initial_volume_pc</strong><span class="classifier">float (optional)</span></dt><dd><p>Specify initial volume in either absolute or proportional terms. Both are required if <cite>max_volume</cite>
+is a parameter because the parameter will not be evaluated at the first time-step. If both are given
+and <cite>max_volume</cite> is not a Parameter, then the absolute value is ignored.</p>
+</dd>
+<dt><strong>cost</strong><span class="classifier">float, Parameter (optional)</span></dt><dd><p>The cost of net flow in to the storage node. I.e. a positive cost penalises increasing volume by
+giving a benefit to negative net flow (release), and a negative cost penalises decreasing volume
+by giving a benefit to positive net flow (inflow).</p>
+</dd>
+<dt><strong>area, level</strong><span class="classifier">float, Parameter (optional)</span></dt><dd><p>Optional float or Parameter defining the area and level of the storage node. These values are
+accessible through the <cite>get_area</cite> and <cite>get_level</cite> methods respectively.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pywr.nodes.Storage.__init__">
 <code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">num_outputs</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">num_inputs</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.nodes.Storage.__init__" title="Permalink to this definition">¶</a></dt>
