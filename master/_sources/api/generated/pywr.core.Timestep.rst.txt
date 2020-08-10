@@ -1,4 +1,4 @@
-pywr.core.Timestep
+﻿pywr.core.Timestep
 ==================
 
 .. currentmodule:: pywr.core

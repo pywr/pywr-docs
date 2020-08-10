@@ -1,4 +1,4 @@
-pywr.parameters.ConstantScenarioIndexParameter
+﻿pywr.parameters.ConstantScenarioIndexParameter
 ==============================================
 
 .. currentmodule:: pywr.parameters

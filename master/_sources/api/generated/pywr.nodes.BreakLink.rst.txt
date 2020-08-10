@@ -1,4 +1,4 @@
-pywr.nodes.BreakLink
+﻿pywr.nodes.BreakLink
 ====================
 
 .. currentmodule:: pywr.nodes

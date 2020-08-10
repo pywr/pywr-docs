@@ -1,4 +1,4 @@
-pywr.recorders.ParameterRecorder
+﻿pywr.recorders.ParameterRecorder
 ================================
 
 .. currentmodule:: pywr.recorders

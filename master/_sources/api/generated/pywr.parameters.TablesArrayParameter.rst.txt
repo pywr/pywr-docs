@@ -1,4 +1,4 @@
-pywr.parameters.TablesArrayParameter
+﻿pywr.parameters.TablesArrayParameter
 ====================================
 
 .. currentmodule:: pywr.parameters

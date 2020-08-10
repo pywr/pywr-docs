@@ -1,4 +1,4 @@
-pywr.domains.river.RiverSplit
+﻿pywr.domains.river.RiverSplit
 =============================
 
 .. currentmodule:: pywr.domains.river

@@ -1,4 +1,4 @@
-pywr.parameters.ScenarioDailyProfileParameter
+﻿pywr.parameters.ScenarioDailyProfileParameter
 =============================================
 
 .. currentmodule:: pywr.parameters

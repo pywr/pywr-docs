@@ -1,4 +1,4 @@
-pywr.recorders.TotalHydroEnergyRecorder
+﻿pywr.recorders.TotalHydroEnergyRecorder
 =======================================
 
 .. currentmodule:: pywr.recorders

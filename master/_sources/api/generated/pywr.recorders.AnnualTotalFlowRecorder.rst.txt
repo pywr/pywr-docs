@@ -1,4 +1,4 @@
-pywr.recorders.AnnualTotalFlowRecorder
+﻿pywr.recorders.AnnualTotalFlowRecorder
 ======================================
 
 .. currentmodule:: pywr.recorders

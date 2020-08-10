@@ -1,4 +1,4 @@
-pywr.nodes.DelayNode
+﻿pywr.nodes.DelayNode
 ====================
 
 .. currentmodule:: pywr.nodes

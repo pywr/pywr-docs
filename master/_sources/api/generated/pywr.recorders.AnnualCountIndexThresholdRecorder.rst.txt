@@ -1,4 +1,4 @@
-pywr.recorders.AnnualCountIndexThresholdRecorder
+﻿pywr.recorders.AnnualCountIndexThresholdRecorder
 ================================================
 
 .. currentmodule:: pywr.recorders

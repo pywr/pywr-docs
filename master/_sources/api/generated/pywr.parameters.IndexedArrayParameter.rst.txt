@@ -1,4 +1,4 @@
-pywr.parameters.IndexedArrayParameter
+﻿pywr.parameters.IndexedArrayParameter
 =====================================
 
 .. currentmodule:: pywr.parameters

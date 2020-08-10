@@ -1,4 +1,4 @@
-pywr.parameters.MonthlyProfileParameter
+﻿pywr.parameters.MonthlyProfileParameter
 =======================================
 
 .. currentmodule:: pywr.parameters

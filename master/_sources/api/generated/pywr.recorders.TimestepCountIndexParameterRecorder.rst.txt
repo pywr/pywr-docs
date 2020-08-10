@@ -1,4 +1,4 @@
-pywr.recorders.TimestepCountIndexParameterRecorder
+﻿pywr.recorders.TimestepCountIndexParameterRecorder
 ==================================================
 
 .. currentmodule:: pywr.recorders

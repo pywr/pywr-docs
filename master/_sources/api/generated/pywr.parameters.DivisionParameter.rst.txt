@@ -1,4 +1,4 @@
-pywr.parameters.DivisionParameter
+﻿pywr.parameters.DivisionParameter
 =================================
 
 .. currentmodule:: pywr.parameters

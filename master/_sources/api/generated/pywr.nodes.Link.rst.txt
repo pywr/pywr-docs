@@ -1,4 +1,4 @@
-pywr.nodes.Link
+﻿pywr.nodes.Link
 ===============
 
 .. currentmodule:: pywr.nodes

@@ -1,4 +1,4 @@
-pywr.parameters.DeficitParameter
+﻿pywr.parameters.DeficitParameter
 ================================
 
 .. currentmodule:: pywr.parameters

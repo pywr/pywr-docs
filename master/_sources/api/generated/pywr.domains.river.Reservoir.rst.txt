@@ -1,4 +1,4 @@
-pywr.domains.river.Reservoir
+﻿pywr.domains.river.Reservoir
 ============================
 
 .. currentmodule:: pywr.domains.river

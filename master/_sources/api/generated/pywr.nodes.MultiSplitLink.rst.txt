@@ -1,4 +1,4 @@
-pywr.nodes.MultiSplitLink
+﻿pywr.nodes.MultiSplitLink
 =========================
 
 .. currentmodule:: pywr.nodes

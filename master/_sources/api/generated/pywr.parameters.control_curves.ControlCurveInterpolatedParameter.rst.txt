@@ -1,4 +1,4 @@
-pywr.parameters.control\_curves.ControlCurveInterpolatedParameter
+﻿pywr.parameters.control\_curves.ControlCurveInterpolatedParameter
 =================================================================
 
 .. currentmodule:: pywr.parameters.control_curves

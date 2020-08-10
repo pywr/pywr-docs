@@ -1,4 +1,4 @@
-pywr.parameters.CurrentOrdinalDayThresholdParameter
+﻿pywr.parameters.CurrentOrdinalDayThresholdParameter
 ===================================================
 
 .. currentmodule:: pywr.parameters

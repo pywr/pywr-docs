@@ -1,4 +1,4 @@
-pywr.parameters.NodeThresholdParameter
+﻿pywr.parameters.NodeThresholdParameter
 ======================================
 
 .. currentmodule:: pywr.parameters

@@ -1,4 +1,4 @@
-pywr.domains.river.RiverGauge
+﻿pywr.domains.river.RiverGauge
 =============================
 
 .. currentmodule:: pywr.domains.river

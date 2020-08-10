@@ -1,4 +1,4 @@
-pywr.parameters.InterpolatedVolumeParameter
+﻿pywr.parameters.InterpolatedVolumeParameter
 ===========================================
 
 .. currentmodule:: pywr.parameters

@@ -1,4 +1,4 @@
-pywr.parameters.control\_curves.ControlCurveIndexParameter
+﻿pywr.parameters.control\_curves.ControlCurveIndexParameter
 ==========================================================
 
 .. currentmodule:: pywr.parameters.control_curves

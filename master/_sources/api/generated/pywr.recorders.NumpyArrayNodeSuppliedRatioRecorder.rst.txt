@@ -1,4 +1,4 @@
-pywr.recorders.NumpyArrayNodeSuppliedRatioRecorder
+﻿pywr.recorders.NumpyArrayNodeSuppliedRatioRecorder
 ==================================================
 
 .. currentmodule:: pywr.recorders

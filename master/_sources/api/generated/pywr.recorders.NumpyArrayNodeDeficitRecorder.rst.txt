@@ -1,4 +1,4 @@
-pywr.recorders.NumpyArrayNodeDeficitRecorder
+﻿pywr.recorders.NumpyArrayNodeDeficitRecorder
 ============================================
 
 .. currentmodule:: pywr.recorders

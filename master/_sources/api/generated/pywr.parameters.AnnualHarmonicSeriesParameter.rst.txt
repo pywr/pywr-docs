@@ -1,4 +1,4 @@
-pywr.parameters.AnnualHarmonicSeriesParameter
+﻿pywr.parameters.AnnualHarmonicSeriesParameter
 =============================================
 
 .. currentmodule:: pywr.parameters

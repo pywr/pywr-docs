@@ -1,4 +1,4 @@
-pywr.parameters.ArrayIndexedScenarioParameter
+﻿pywr.parameters.ArrayIndexedScenarioParameter
 =============================================
 
 .. currentmodule:: pywr.parameters

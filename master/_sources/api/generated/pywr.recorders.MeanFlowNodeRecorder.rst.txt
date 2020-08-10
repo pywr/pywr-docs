@@ -1,4 +1,4 @@
-pywr.recorders.MeanFlowNodeRecorder
+﻿pywr.recorders.MeanFlowNodeRecorder
 ===================================
 
 .. currentmodule:: pywr.recorders

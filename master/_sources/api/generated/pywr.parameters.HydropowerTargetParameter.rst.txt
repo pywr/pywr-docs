@@ -1,4 +1,4 @@
-pywr.parameters.HydropowerTargetParameter
+﻿pywr.parameters.HydropowerTargetParameter
 =========================================
 
 .. currentmodule:: pywr.parameters

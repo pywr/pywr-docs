@@ -1,4 +1,4 @@
-pywr.parameters.Parameter
+﻿pywr.parameters.Parameter
 =========================
 
 .. currentmodule:: pywr.parameters

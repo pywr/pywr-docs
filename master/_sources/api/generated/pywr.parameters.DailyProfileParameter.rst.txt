@@ -1,4 +1,4 @@
-pywr.parameters.DailyProfileParameter
+﻿pywr.parameters.DailyProfileParameter
 =====================================
 
 .. currentmodule:: pywr.parameters

@@ -1,4 +1,4 @@
-pywr.nodes.AggregatedNode
+﻿pywr.nodes.AggregatedNode
 =========================
 
 .. currentmodule:: pywr.nodes

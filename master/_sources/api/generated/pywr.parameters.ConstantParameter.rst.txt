@@ -1,4 +1,4 @@
-pywr.parameters.ConstantParameter
+﻿pywr.parameters.ConstantParameter
 =================================
 
 .. currentmodule:: pywr.parameters

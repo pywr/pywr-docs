@@ -1,4 +1,4 @@
-pywr.parameters.RbfProfileParameter
+﻿pywr.parameters.RbfProfileParameter
 ===================================
 
 .. currentmodule:: pywr.parameters

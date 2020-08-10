@@ -1,4 +1,4 @@
-pywr.nodes.PiecewiseLink
+﻿pywr.nodes.PiecewiseLink
 ========================
 
 .. currentmodule:: pywr.nodes

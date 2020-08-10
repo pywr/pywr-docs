@@ -1,4 +1,4 @@
-pywr.nodes.VirtualStorage
+﻿pywr.nodes.VirtualStorage
 =========================
 
 .. currentmodule:: pywr.nodes

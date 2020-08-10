@@ -1,4 +1,4 @@
-pywr.parameters.ParameterThresholdParameter
+﻿pywr.parameters.ParameterThresholdParameter
 ===========================================
 
 .. currentmodule:: pywr.parameters

@@ -1,4 +1,4 @@
-pywr.recorders.RollingWindowParameterRecorder
+﻿pywr.recorders.RollingWindowParameterRecorder
 =============================================
 
 .. currentmodule:: pywr.recorders

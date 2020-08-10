@@ -1,4 +1,4 @@
-pywr.core.ScenarioCollection
+﻿pywr.core.ScenarioCollection
 ============================
 
 .. currentmodule:: pywr.core

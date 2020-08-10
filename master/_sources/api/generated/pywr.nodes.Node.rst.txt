@@ -1,4 +1,4 @@
-pywr.nodes.Node
+﻿pywr.nodes.Node
 ===============
 
 .. currentmodule:: pywr.nodes

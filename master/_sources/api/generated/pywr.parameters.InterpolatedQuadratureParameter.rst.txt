@@ -1,4 +1,4 @@
-pywr.parameters.InterpolatedQuadratureParameter
+﻿pywr.parameters.InterpolatedQuadratureParameter
 ===============================================
 
 .. currentmodule:: pywr.parameters

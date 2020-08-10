@@ -1,4 +1,4 @@
-pywr.domains.river.RiverSplitWithGauge
+﻿pywr.domains.river.RiverSplitWithGauge
 ======================================
 
 .. currentmodule:: pywr.domains.river

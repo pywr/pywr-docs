@@ -1,4 +1,4 @@
-pywr.parameters.ScenarioWrapperParameter
+﻿pywr.parameters.ScenarioWrapperParameter
 ========================================
 
 .. currentmodule:: pywr.parameters

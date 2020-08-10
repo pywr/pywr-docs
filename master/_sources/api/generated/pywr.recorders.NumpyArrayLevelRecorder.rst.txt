@@ -1,4 +1,4 @@
-pywr.recorders.NumpyArrayLevelRecorder
+﻿pywr.recorders.NumpyArrayLevelRecorder
 ======================================
 
 .. currentmodule:: pywr.recorders

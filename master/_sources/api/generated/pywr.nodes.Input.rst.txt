@@ -1,4 +1,4 @@
-pywr.nodes.Input
+﻿pywr.nodes.Input
 ================
 
 .. currentmodule:: pywr.nodes

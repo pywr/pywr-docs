@@ -1,4 +1,4 @@
-pywr.recorders.DeficitFrequencyNodeRecorder
+﻿pywr.recorders.DeficitFrequencyNodeRecorder
 ===========================================
 
 .. currentmodule:: pywr.recorders

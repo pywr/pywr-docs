@@ -1,4 +1,4 @@
-pywr.parameters.OffsetParameter
+﻿pywr.parameters.OffsetParameter
 ===============================
 
 .. currentmodule:: pywr.parameters

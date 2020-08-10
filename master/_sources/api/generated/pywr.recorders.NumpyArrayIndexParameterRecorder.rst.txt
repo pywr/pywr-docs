@@ -1,4 +1,4 @@
-pywr.recorders.NumpyArrayIndexParameterRecorder
+﻿pywr.recorders.NumpyArrayIndexParameterRecorder
 ===============================================
 
 .. currentmodule:: pywr.recorders

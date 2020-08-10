@@ -1,4 +1,4 @@
-pywr.recorders.MinimumVolumeStorageRecorder
+﻿pywr.recorders.MinimumVolumeStorageRecorder
 ===========================================
 
 .. currentmodule:: pywr.recorders

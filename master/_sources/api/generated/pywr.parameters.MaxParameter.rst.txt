@@ -1,4 +1,4 @@
-pywr.parameters.MaxParameter
+﻿pywr.parameters.MaxParameter
 ============================
 
 .. currentmodule:: pywr.parameters

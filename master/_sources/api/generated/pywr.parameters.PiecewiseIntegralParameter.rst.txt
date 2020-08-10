@@ -1,4 +1,4 @@
-pywr.parameters.PiecewiseIntegralParameter
+﻿pywr.parameters.PiecewiseIntegralParameter
 ==========================================
 
 .. currentmodule:: pywr.parameters

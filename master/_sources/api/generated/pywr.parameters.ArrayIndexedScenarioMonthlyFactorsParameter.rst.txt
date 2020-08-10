@@ -1,4 +1,4 @@
-pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter
+﻿pywr.parameters.ArrayIndexedScenarioMonthlyFactorsParameter
 ===========================================================
 
 .. currentmodule:: pywr.parameters

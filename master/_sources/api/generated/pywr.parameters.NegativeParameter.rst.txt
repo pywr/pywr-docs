@@ -1,4 +1,4 @@
-pywr.parameters.NegativeParameter
+﻿pywr.parameters.NegativeParameter
 =================================
 
 .. currentmodule:: pywr.parameters

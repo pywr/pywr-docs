@@ -1,4 +1,4 @@
-pywr.recorders.CSVRecorder
+﻿pywr.recorders.CSVRecorder
 ==========================
 
 .. currentmodule:: pywr.recorders

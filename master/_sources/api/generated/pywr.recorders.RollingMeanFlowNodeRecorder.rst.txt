@@ -1,4 +1,4 @@
-pywr.recorders.RollingMeanFlowNodeRecorder
+﻿pywr.recorders.RollingMeanFlowNodeRecorder
 ==========================================
 
 .. currentmodule:: pywr.recorders

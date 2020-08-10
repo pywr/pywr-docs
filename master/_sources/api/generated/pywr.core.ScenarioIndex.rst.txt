@@ -1,4 +1,4 @@
-pywr.core.ScenarioIndex
+﻿pywr.core.ScenarioIndex
 =======================
 
 .. currentmodule:: pywr.core

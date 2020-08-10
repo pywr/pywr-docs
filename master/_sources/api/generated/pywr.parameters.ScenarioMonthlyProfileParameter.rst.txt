@@ -1,4 +1,4 @@
-pywr.parameters.ScenarioMonthlyProfileParameter
+﻿pywr.parameters.ScenarioMonthlyProfileParameter
 ===============================================
 
 .. currentmodule:: pywr.parameters

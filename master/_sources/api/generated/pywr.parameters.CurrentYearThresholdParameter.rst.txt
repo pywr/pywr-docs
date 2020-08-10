@@ -1,4 +1,4 @@
-pywr.parameters.CurrentYearThresholdParameter
+﻿pywr.parameters.CurrentYearThresholdParameter
 =============================================
 
 .. currentmodule:: pywr.parameters

@@ -1,4 +1,4 @@
-pywr.recorders.MeanParameterRecorder
+﻿pywr.recorders.MeanParameterRecorder
 ====================================
 
 .. currentmodule:: pywr.recorders

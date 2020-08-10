@@ -1,4 +1,4 @@
-pywr.parameters.AggregatedIndexParameter
+﻿pywr.parameters.AggregatedIndexParameter
 ========================================
 
 .. currentmodule:: pywr.parameters

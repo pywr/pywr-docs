@@ -1,4 +1,4 @@
-pywr.recorders.FlowDurationCurveRecorder
+﻿pywr.recorders.FlowDurationCurveRecorder
 ========================================
 
 .. currentmodule:: pywr.recorders

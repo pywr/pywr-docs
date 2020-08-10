@@ -1,4 +1,4 @@
-pywr.parameters.NegativeMaxParameter
+﻿pywr.parameters.NegativeMaxParameter
 ====================================
 
 .. currentmodule:: pywr.parameters

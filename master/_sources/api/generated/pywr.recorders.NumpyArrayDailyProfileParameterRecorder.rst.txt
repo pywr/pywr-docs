@@ -1,4 +1,4 @@
-pywr.recorders.NumpyArrayDailyProfileParameterRecorder
+﻿pywr.recorders.NumpyArrayDailyProfileParameterRecorder
 ======================================================
 
 .. currentmodule:: pywr.recorders

@@ -1,4 +1,4 @@
-pywr.parameters.DataFrameParameter
+﻿pywr.parameters.DataFrameParameter
 ==================================
 
 .. currentmodule:: pywr.parameters

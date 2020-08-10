@@ -1,4 +1,4 @@
-pywr.nodes.AggregatedStorage
+﻿pywr.nodes.AggregatedStorage
 ============================
 
 .. currentmodule:: pywr.nodes

@@ -1,4 +1,4 @@
-pywr.recorders.StorageDurationCurveRecorder
+﻿pywr.recorders.StorageDurationCurveRecorder
 ===========================================
 
 .. currentmodule:: pywr.recorders

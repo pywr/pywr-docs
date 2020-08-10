@@ -1,4 +1,4 @@
-pywr.recorders.SeasonalFlowDurationCurveRecorder
+﻿pywr.recorders.SeasonalFlowDurationCurveRecorder
 ================================================
 
 .. currentmodule:: pywr.recorders

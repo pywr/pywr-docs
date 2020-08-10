@@ -1,4 +1,4 @@
-pywr.parameters.InterpolatedFlowParameter
+﻿pywr.parameters.InterpolatedFlowParameter
 =========================================
 
 .. currentmodule:: pywr.parameters

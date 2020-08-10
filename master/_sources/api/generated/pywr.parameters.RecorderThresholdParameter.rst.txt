@@ -1,4 +1,4 @@
-pywr.parameters.RecorderThresholdParameter
+﻿pywr.parameters.RecorderThresholdParameter
 ==========================================
 
 .. currentmodule:: pywr.parameters
