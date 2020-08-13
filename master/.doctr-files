@@ -119,6 +119,7 @@ master/_sources/api/pywr.parameters.rst.txt
 master/_sources/api/pywr.recorders.rst.txt
 master/_sources/api/pywr.rst.txt
 master/_sources/api/pywr.solvers.rst.txt
+master/_sources/api/pywr.utils.rst.txt
 master/_sources/cookbook/aggregated_node.rst.txt
 master/_sources/cookbook/aggregated_parameter.rst.txt
 master/_sources/cookbook/control_curves.rst.txt
@@ -339,6 +340,7 @@ master/api/pywr.optimisation.html
 master/api/pywr.parameters.html
 master/api/pywr.recorders.html
 master/api/pywr.solvers.html
+master/api/pywr.utils.html
 master/cookbook/aggregated_node.html
 master/cookbook/aggregated_parameter.html
 master/cookbook/control_curves.html
