@@ -24,6 +24,8 @@
       ~Reservoir.finish
       ~Reservoir.get_area
       ~Reservoir.get_cost
+      ~Reservoir.get_initial_pc
+      ~Reservoir.get_initial_volume
       ~Reservoir.get_level
       ~Reservoir.get_max_volume
       ~Reservoir.get_min_volume

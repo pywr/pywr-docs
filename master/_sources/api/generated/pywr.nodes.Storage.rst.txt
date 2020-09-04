@@ -24,6 +24,8 @@
       ~Storage.finish
       ~Storage.get_area
       ~Storage.get_cost
+      ~Storage.get_initial_pc
+      ~Storage.get_initial_volume
       ~Storage.get_level
       ~Storage.get_max_volume
       ~Storage.get_min_volume
