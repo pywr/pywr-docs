@@ -21,6 +21,7 @@ master/_sources/api/generated/pywr.nodes.MultiSplitLink.rst.txt
 master/_sources/api/generated/pywr.nodes.Node.rst.txt
 master/_sources/api/generated/pywr.nodes.Output.rst.txt
 master/_sources/api/generated/pywr.nodes.PiecewiseLink.rst.txt
+master/_sources/api/generated/pywr.nodes.RollingVirtualStorage.rst.txt
 master/_sources/api/generated/pywr.nodes.Storage.rst.txt
 master/_sources/api/generated/pywr.nodes.VirtualStorage.rst.txt
 master/_sources/api/generated/pywr.parameters.AbstractThresholdParameter.rst.txt
@@ -242,6 +243,7 @@ master/api/generated/pywr.nodes.MultiSplitLink.html
 master/api/generated/pywr.nodes.Node.html
 master/api/generated/pywr.nodes.Output.html
 master/api/generated/pywr.nodes.PiecewiseLink.html
+master/api/generated/pywr.nodes.RollingVirtualStorage.html
 master/api/generated/pywr.nodes.Storage.html
 master/api/generated/pywr.nodes.VirtualStorage.html
 master/api/generated/pywr.parameters.AbstractThresholdParameter.html

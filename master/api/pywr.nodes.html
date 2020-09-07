@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Nodes &mdash; Pywr 1.8.1.dev7+gbf1a41c documentation</title>
+  <title>Nodes &mdash; Pywr 1.8.1.dev8+g6d93086 documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                1.8.1.dev7+gbf1a41c
+                1.8.1.dev8+g6d93086
               </div>
             
           
@@ -107,6 +107,7 @@
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.nodes.MultiSplitLink.html">pywr.nodes.MultiSplitLink</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.nodes.Storage.html">pywr.nodes.Storage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.nodes.VirtualStorage.html">pywr.nodes.VirtualStorage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pywr.nodes.RollingVirtualStorage.html">pywr.nodes.RollingVirtualStorage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.nodes.AnnualVirtualStorage.html">pywr.nodes.AnnualVirtualStorage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.nodes.AggregatedStorage.html">pywr.nodes.AggregatedStorage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pywr.nodes.AggregatedNode.html">pywr.nodes.AggregatedNode</a></li>
@@ -235,16 +236,19 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.nodes.VirtualStorage.html#pywr.nodes.VirtualStorage" title="pywr.nodes.VirtualStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VirtualStorage</span></code></a>(*args, **kwargs)</p></td>
 <td><p>A virtual storage unit</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.nodes.AnnualVirtualStorage.html#pywr.nodes.AnnualVirtualStorage" title="pywr.nodes.AnnualVirtualStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnnualVirtualStorage</span></code></a>(*args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.nodes.RollingVirtualStorage.html#pywr.nodes.RollingVirtualStorage" title="pywr.nodes.RollingVirtualStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RollingVirtualStorage</span></code></a>(*args, **kwargs)</p></td>
+<td><p>A rolling virtual storage node useful for implementing rolling licences.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.nodes.AnnualVirtualStorage.html#pywr.nodes.AnnualVirtualStorage" title="pywr.nodes.AnnualVirtualStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnnualVirtualStorage</span></code></a>(*args, **kwargs)</p></td>
 <td><p>A virtual storage which resets annually, useful for licences</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.nodes.AggregatedStorage.html#pywr.nodes.AggregatedStorage" title="pywr.nodes.AggregatedStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AggregatedStorage</span></code></a>(*args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.nodes.AggregatedStorage.html#pywr.nodes.AggregatedStorage" title="pywr.nodes.AggregatedStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AggregatedStorage</span></code></a>(*args, **kwargs)</p></td>
 <td><p>An aggregated sum of other <cite>Storage</cite> nodes</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.nodes.AggregatedNode.html#pywr.nodes.AggregatedNode" title="pywr.nodes.AggregatedNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AggregatedNode</span></code></a>(*args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.nodes.AggregatedNode.html#pywr.nodes.AggregatedNode" title="pywr.nodes.AggregatedNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AggregatedNode</span></code></a>(*args, **kwargs)</p></td>
 <td><p>An aggregated sum of other <cite>Node</cite> nodes</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pywr.nodes.DelayNode.html#pywr.nodes.DelayNode" title="pywr.nodes.DelayNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DelayNode</span></code></a>(*args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pywr.nodes.DelayNode.html#pywr.nodes.DelayNode" title="pywr.nodes.DelayNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DelayNode</span></code></a>(*args, **kwargs)</p></td>
 <td><p>A node that delays flow for a given number of timesteps or days.</p></td>
 </tr>
 </tbody>
