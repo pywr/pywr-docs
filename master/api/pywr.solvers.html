@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Solvers &mdash; Pywr 1.8.1.dev6+g147f66f documentation</title>
+  <title>Solvers &mdash; Pywr 1.8.1.dev7+gbf1a41c documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                1.8.1.dev6+g147f66f
+                1.8.1.dev7+gbf1a41c
               </div>
             
           
@@ -213,6 +213,43 @@
 <dt id="pywr.solvers.cython_glpk.AbstractNodeData.out_edges">
 <code class="sig-name descname">out_edges</code><a class="headerlink" href="#pywr.solvers.cython_glpk.AbstractNodeData.out_edges" title="Permalink to this definition">¶</a></dt>
 <dd><p>out_edges: list</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pywr.solvers.cython_glpk.AggNodeFactorData">
+<em class="property">class </em><code class="sig-prename descclassname">pywr.solvers.cython_glpk.</code><code class="sig-name descname">AggNodeFactorData</code><a class="headerlink" href="#pywr.solvers.cython_glpk.AggNodeFactorData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Helper class for caching data for Aggregated Nodes that have factors defined by parameters.</p>
+<dl class="py attribute">
+<dt id="pywr.solvers.cython_glpk.AggNodeFactorData.ind_ptr">
+<code class="sig-name descname">ind_ptr</code><a class="headerlink" href="#pywr.solvers.cython_glpk.AggNodeFactorData.ind_ptr" title="Permalink to this definition">¶</a></dt>
+<dd><p>ind_ptr: View.MemoryView.array</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pywr.solvers.cython_glpk.AggNodeFactorData.inds">
+<code class="sig-name descname">inds</code><a class="headerlink" href="#pywr.solvers.cython_glpk.AggNodeFactorData.inds" title="Permalink to this definition">¶</a></dt>
+<dd><p>inds: View.MemoryView.array</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pywr.solvers.cython_glpk.AggNodeFactorData.node_ind">
+<code class="sig-name descname">node_ind</code><a class="headerlink" href="#pywr.solvers.cython_glpk.AggNodeFactorData.node_ind" title="Permalink to this definition">¶</a></dt>
+<dd><p>node_ind: ‘int’</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pywr.solvers.cython_glpk.AggNodeFactorData.row">
+<code class="sig-name descname">row</code><a class="headerlink" href="#pywr.solvers.cython_glpk.AggNodeFactorData.row" title="Permalink to this definition">¶</a></dt>
+<dd><p>row: ‘int’</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pywr.solvers.cython_glpk.AggNodeFactorData.vals">
+<code class="sig-name descname">vals</code><a class="headerlink" href="#pywr.solvers.cython_glpk.AggNodeFactorData.vals" title="Permalink to this definition">¶</a></dt>
+<dd><p>vals: View.MemoryView.array</p>
 </dd></dl>
 
 </dd></dl>
