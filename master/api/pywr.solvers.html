@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Solvers &mdash; Pywr 1.8.1.dev8+g6d93086 documentation</title>
+  <title>Solvers &mdash; Pywr 1.8.1.dev9+g5875a22 documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                1.8.1.dev8+g6d93086
+                1.8.1.dev9+g5875a22
               </div>
             
           
@@ -624,6 +624,34 @@ allocation problem every time step.</p>
 <dl class="py method">
 <dt id="pywr.solvers.CythonLPSolveSolver.stats">
 <em class="property">property </em><code class="sig-name descname">stats</code><a class="headerlink" href="#pywr.solvers.CythonLPSolveSolver.stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pywr.solvers.NullSolver">
+<em class="property">class </em><code class="sig-prename descclassname">pywr.solvers.</code><code class="sig-name descname">NullSolver</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.solvers.NullSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pywr.solvers.Solver" title="pywr.solvers.Solver"><code class="xref py py-class docutils literal notranslate"><span class="pre">pywr.solvers.Solver</span></code></a></p>
+<p>A null solver that performs no allocation routine.</p>
+<p>This solver does no allocation and is mainly useful for debugging purposes.</p>
+<dl class="py attribute">
+<dt id="pywr.solvers.NullSolver.name">
+<code class="sig-name descname">name</code><em class="property"> = 'null'</em><a class="headerlink" href="#pywr.solvers.NullSolver.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pywr.solvers.NullSolver.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pywr.solvers.NullSolver.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pywr.solvers.NullSolver.setup">
+<code class="sig-name descname">setup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.solvers.NullSolver.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pywr.solvers.NullSolver.solve">
+<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pywr.solvers.NullSolver.solve" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
