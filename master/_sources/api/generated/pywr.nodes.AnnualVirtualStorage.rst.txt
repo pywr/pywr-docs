@@ -39,6 +39,7 @@
 
    .. autosummary::
    
+      ~AnnualVirtualStorage.active
       ~AnnualVirtualStorage.allow_isolated
       ~AnnualVirtualStorage.area
       ~AnnualVirtualStorage.comment

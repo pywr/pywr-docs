@@ -39,6 +39,7 @@
 
    .. autosummary::
    
+      ~VirtualStorage.active
       ~VirtualStorage.allow_isolated
       ~VirtualStorage.area
       ~VirtualStorage.comment

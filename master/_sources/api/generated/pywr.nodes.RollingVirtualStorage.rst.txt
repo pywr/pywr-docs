@@ -39,6 +39,7 @@
 
    .. autosummary::
    
+      ~RollingVirtualStorage.active
       ~RollingVirtualStorage.allow_isolated
       ~RollingVirtualStorage.area
       ~RollingVirtualStorage.comment
