@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installing Pywr &mdash; Pywr 1.9.1.dev1+g144a6f7 documentation</title>
+  <title>Installing Pywr &mdash; Pywr 1.9.1.dev2+gc531323 documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                1.9.1.dev1+g144a6f7
+                1.9.1.dev2+gc531323
               </div>
             
           
@@ -299,11 +299,11 @@ sudo ln -s /usr/lib/lp_solve/liblpsolve55.so /usr/lib/liblpsolve55.so
 <h2>Development and testing<a class="headerlink" href="#development-and-testing" title="Permalink to this headline">¶</a></h2>
 <p>The source code for Pywr is managed using Git and is hosted on GitHub: <a class="reference external" href="https://github.com/pywr/pywr/">https://github.com/pywr/pywr/</a> .</p>
 <p>There are a collection of unit tests for Pywr written using <code class="docutils literal notranslate"><span class="pre">pytest</span></code>. These can be run using:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py.test tests
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pytest tests
 </pre></div>
 </div>
-<p>This will run all avaialble tests using the default solver. A specific solver can be tested by specifying at the command line:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>py.test tests --solver<span class="o">=</span>lpsolve
+<p>This will run all avaialble tests using the default solver. A specific solver can be tested by specifying the <cite>PYWR_SOLVER</cite> environment variable:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">PYWR_SOLVER</span><span class="o">=</span>lpsolve pytest tests
 </pre></div>
 </div>
 <div class="section" id="continuous-integration">
@@ -311,7 +311,7 @@ sudo ln -s /usr/lib/lp_solve/liblpsolve55.so /usr/lib/liblpsolve55.so
 <p>Pywr is automatically built and tested on Linux and Windows using Travis-CI and AppVeyor (respectively).</p>
 <p>Creating a pull request on GitHub will automatically trigger a build.</p>
 <p><a class="reference external" href="https://travis-ci.org/pywr/pywr">https://travis-ci.org/pywr/pywr</a></p>
-<p><a class="reference external" href="https://ci.appveyor.com/project/snorfalorpagus/pywr">https://ci.appveyor.com/project/snorfalorpagus/pywr</a></p>
+<p><a class="reference external" href="https://ci.appveyor.com/project/pywr-admin/pywr">https://ci.appveyor.com/project/pywr-admin/pywr</a></p>
 <p>Both services install Pywr using the Anaconda Python distribution, as this was the easiest way to install all the dependencies.</p>
 </div>
 </div>
