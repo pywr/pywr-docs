@@ -23,6 +23,7 @@
       ~AnnualTotalFlowRecorder.register
       ~AnnualTotalFlowRecorder.reset
       ~AnnualTotalFlowRecorder.setup
+      ~AnnualTotalFlowRecorder.to_dataframe
       ~AnnualTotalFlowRecorder.unregister
       ~AnnualTotalFlowRecorder.values
    

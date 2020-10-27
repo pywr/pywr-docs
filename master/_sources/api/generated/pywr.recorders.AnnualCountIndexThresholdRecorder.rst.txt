@@ -23,6 +23,7 @@
       ~AnnualCountIndexThresholdRecorder.register
       ~AnnualCountIndexThresholdRecorder.reset
       ~AnnualCountIndexThresholdRecorder.setup
+      ~AnnualCountIndexThresholdRecorder.to_dataframe
       ~AnnualCountIndexThresholdRecorder.unregister
       ~AnnualCountIndexThresholdRecorder.values
    
